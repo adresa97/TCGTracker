@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TCGTracker</string>
+    <string name="card_viewer">Visor de cartas</string>
 </resources>

@@ -2,7 +2,6 @@ package com.example.tcgtracker.utils
 
 import android.content.Context
 import android.util.Log
-import com.example.tcgtracker.R
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
