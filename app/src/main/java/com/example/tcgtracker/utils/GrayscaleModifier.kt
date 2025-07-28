@@ -12,7 +12,9 @@ import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 
 class GreyScaleModifier : DrawModifier {
     override fun ContentDrawScope.draw() {
-        val saturationMatrix = ColorMatrix().apply { setSaturation(0.1f) }
+        val saturationMatrix = ColorMatrix().apply {
+            setSaturation(0.1f)
+        }
         val saturationFilter = ColorMatrixColorFilter(saturationMatrix)
         val paint = Paint().apply {
             colorFilter = saturationFilter.asComposeColorFilter()

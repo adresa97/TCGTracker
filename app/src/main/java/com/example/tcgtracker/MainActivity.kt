@@ -4,18 +4,17 @@ import android.content.Context
 import android.os.Bundle
 import android.os.StrictMode
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.BottomAppBar
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -24,16 +23,15 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Snackbar
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -50,7 +48,7 @@ import com.example.tcgtracker.ui.SetScreen
 import com.example.tcgtracker.ui.TrackerUIState
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.TCGTrackerTheme
-import com.example.tcgtracker.utils.GetCustomContents
+import com.example.tcgtracker.ui.theme.setColors
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,6 +63,13 @@ class MainActivity : ComponentActivity() {
                 TCGTrackerApp(applicationContext)
             }
         }
+    }
+
+    override fun onPause() {
+        setContent {
+            TCGTrackerPause()
+        }
+        super.onPause()
     }
 }
 
@@ -92,64 +97,71 @@ fun TCGTrackerApp(
     trackerViewModel.loadCollectionsJSON(context, "collections.json")
     val trackerUIState by trackerViewModel.uiState.collectAsState()
 
-    Scaffold(
-        topBar = {
-            TCGTrackerTopBar(
-                currentScreen = currentScreen,
-                uiState = trackerUIState,
-                canNavigateBack = navController.previousBackStackEntry != null,
-                navigateUp = { navController.navigateUp() },
-                canNavigateToOptions = currentScreen != Screen.Options,
-                navigateToOptions = { navController.navigate(Screen.Options.name) }
-            )
-        },
-        bottomBar = {
-            BottomAppBar(
-                containerColor = MaterialTheme.colorScheme.primaryContainer,
-                contentColor = MaterialTheme.colorScheme.primary
-            ) {
-                Text(
-                    modifier = Modifier.fillMaxWidth(),
-                    textAlign = TextAlign.Center,
-                    text = "Bottom bar"
+    Surface(
+        modifier = Modifier.background(MaterialTheme.colorScheme.surface)
+    ) {
+        Scaffold(
+            topBar = {
+                TCGTrackerTopBar(
+                    currentScreen = currentScreen,
+                    uiState = trackerUIState,
+                    canNavigateBack = navController.previousBackStackEntry != null,
+                    navigateUp = { navController.navigateUp() },
+                    canNavigateToOptions = currentScreen != Screen.Options,
+                    navigateToOptions = { navController.navigate(Screen.Options.name) }
                 )
-            }
-        },
-        snackbarHost = {
-            SnackbarHost(
-                hostState = snackbarHostState
-            ) { data ->
-                Snackbar(
-                    modifier = Modifier.padding(16.dp),
-                ) {
-                    Text(data.visuals.message)
+            },
+            bottomBar = {
+                TCGTrackerBottomBar(
+                    currentScreen = currentScreen,
+                    uiState = trackerUIState
+                )
+            },
+            snackbarHost = {
+                SnackbarHost(
+                    hostState = snackbarHostState
+                ) { data ->
+                    Snackbar(
+                        modifier = Modifier.padding(16.dp),
+                    ) {
+                        Text(data.visuals.message)
+                    }
                 }
             }
-        }
-    ) { innerPadding ->
+        ) { innerPadding ->
 
-        NavHost(
-            navController = navController,
-            startDestination = Screen.SetSelector.name,
-            modifier = Modifier.padding(innerPadding)
-        )
-        {
-            composable(Screen.SetSelector.name) {
-                SetScreen(
-                    series = trackerUIState.collectionsData.getSeriesMap(),
-                    onSetTap = {
-                        trackerViewModel.setCurrentSet(it)
-                        navController.navigate(Screen.CardViewer.name)
-                    }
-                )
-            }
+            NavHost(
+                navController = navController,
+                startDestination = Screen.SetSelector.name,
+                modifier = Modifier.padding(innerPadding)
+            )
+            {
+                composable(Screen.SetSelector.name) {
+                    SetScreen(
+                        series = trackerUIState.collectionsData.getSeriesMap(),
+                        onSetTap = {
+                            trackerViewModel.setCurrentSet(it)
+                            navController.navigate(Screen.CardViewer.name)
+                        }
+                    )
+                }
 
-            composable(Screen.CardViewer.name) {
-                CardsScreen(context, trackerViewModel, trackerUIState.selectedSet)
-            }
+                composable(Screen.CardViewer.name) {
+                    val cardList = trackerViewModel.getCardsList(context)
+                    CardsScreen(
+                        cardList = cardList,
+                        onCardTap = { cardIndex ->
+                            trackerViewModel.changeOwnedCardState(
+                                trackerUIState.selectedSet,
+                                cardIndex
+                            )
+                        }
+                    )
+                }
 
-            composable(Screen.Options.name) {
-                OptionsScreen(context, scope, snackbarHostState)
+                composable(Screen.Options.name) {
+                    OptionsScreen(context, scope, snackbarHostState)
+                }
             }
         }
     }
@@ -174,10 +186,15 @@ fun TCGTrackerTopBar(
         else -> title = ""
     }
 
+    val currentSet = uiState.selectedSet.substringBefore('-')
+    val color = if (currentScreen == Screen.CardViewer) {
+        setColors[currentSet] ?: MaterialTheme.colorScheme.primaryContainer
+    } else MaterialTheme.colorScheme.primaryContainer
+
     TopAppBar(
         colors = topAppBarColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer,
-            titleContentColor = MaterialTheme.colorScheme.primary
+            containerColor = color,
+            titleContentColor = MaterialTheme.colorScheme.onSurface
         ),
         title = { Text(title)},
         modifier = modifier,
@@ -186,6 +203,7 @@ fun TCGTrackerTopBar(
                 IconButton(onClick = navigateUp) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        tint = MaterialTheme.colorScheme.onSurface,
                         contentDescription = null
                     )
                 }
@@ -193,15 +211,53 @@ fun TCGTrackerTopBar(
         },
         actions = {
             if (canNavigateToOptions) {
+                IconButton(onClick = {}) {
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.List,
+                        tint = MaterialTheme.colorScheme.onSurface,
+                        contentDescription = null
+                    )
+                }
                 IconButton(onClick = navigateToOptions) {
                     Icon(
                         imageVector = Icons.Default.MoreVert,
+                        tint = MaterialTheme.colorScheme.onSurface,
                         contentDescription = null
                     )
                 }
             }
         }
     )
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun TCGTrackerBottomBar(
+    currentScreen: Screen,
+    uiState: TrackerUIState
+) {
+    val currentSet = uiState.selectedSet.substringBefore('-')
+    val color = if (currentScreen == Screen.CardViewer) {
+        setColors[currentSet] ?: MaterialTheme.colorScheme.primaryContainer
+    } else MaterialTheme.colorScheme.primaryContainer
+
+    BottomAppBar(
+        containerColor = color,
+        contentColor = MaterialTheme.colorScheme.onSurface
+    ) {
+        Text(
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center,
+            text = ""
+        )
+    }
+}
+
+@Composable
+fun TCGTrackerPause(
+    trackerViewModel: TrackerViewModel = viewModel()
+) {
+    trackerViewModel.updateJSONSData()
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

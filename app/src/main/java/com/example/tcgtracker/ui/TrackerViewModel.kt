@@ -13,23 +13,9 @@ import kotlinx.coroutines.flow.update
 
 data class TrackerUIState(
     val collectionsData: CollectionsData = CollectionsData(),
-    val serviceTCGDex: TCGDexService = TCGDexService("en"),
     val ownedCardsData: OwnedCardsData = OwnedCardsData(),
     val selectedSet: String = ""
-) {
-    fun getCardsList(context: Context, set: String): List<Card> {
-        val cardList = serviceTCGDex.getCardsList(set)
-        val booleanList = ownedCardsData.getCardList(context, set)
-
-        if (booleanList.isEmpty()) return cardList
-
-        for(i in 0 until cardList.count()) {
-            cardList[i].owned = booleanList[i]
-        }
-
-        return cardList
-    }
-}
+)
 
 class TrackerViewModel() : ViewModel() {
     private val _uiState = MutableStateFlow(TrackerUIState())
@@ -45,11 +31,15 @@ class TrackerViewModel() : ViewModel() {
         }
     }
 
-    fun changeOwnedCardState(set: String, cardIndex: Int) {
-        _uiState.value.ownedCardsData.changeCardState(set, cardIndex)
+    fun updateJSONSData() {
+        _uiState.value.ownedCardsData.updateJSONSData()
     }
 
-    override fun onCleared() {
-        _uiState.value.ownedCardsData.updateJSONSData()
+    fun getCardsList(context: Context): List<Card> {
+        return _uiState.value.ownedCardsData.getCardList(context, _uiState.value.selectedSet)
+    }
+
+    fun changeOwnedCardState(set: String, cardIndex: Int) {
+        _uiState.value.ownedCardsData.changeCardState(set, cardIndex)
     }
 }

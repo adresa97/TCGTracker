@@ -7,6 +7,7 @@ import com.example.tcgtracker.models.ExternalJSONSet
 import com.example.tcgtracker.models.OWNED_CARDS_FOLDER
 import com.example.tcgtracker.utils.ReadJSONFromFile
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import java.io.File
 import java.io.FileOutputStream
@@ -32,7 +33,7 @@ object OwnedCardsImporterExporter {
         externalData.forEach { set ->
             val key = if (set.key == "pA") "P-A" else set.key
             val file = File(folder, "${key}.json")
-            val setString = Gson().toJson(set.value.values)
+            val setString = GsonBuilder().setPrettyPrinting().create().toJson(set.value.values)
 
             try {
                 val output = FileOutputStream(file)
@@ -54,7 +55,7 @@ object OwnedCardsImporterExporter {
         }
 
         val file = File(targetFolder, "${filename}.json")
-        val jsonString = Gson().toJson(jsonData)
+        val jsonString = GsonBuilder().setPrettyPrinting().create().toJson(jsonData)
 
         try {
             val output = FileOutputStream(file)
