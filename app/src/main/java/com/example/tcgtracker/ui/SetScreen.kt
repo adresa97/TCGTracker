@@ -1,4 +1,4 @@
-package com.example.tcgtracker
+package com.example.tcgtracker.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -24,7 +24,7 @@ import com.example.tcgtracker.models.Set
 import kotlin.collections.forEach
 
 @Composable
-fun SetSelectorList(series: Map<String, List<Set>>, onSetTap: (String) -> Unit, modifier: Modifier = Modifier) {
+fun SetScreen(series: Map<String, List<Set>>, onSetTap: (String) -> Unit, modifier: Modifier = Modifier) {
     series.forEach { element ->
         val expansionsMap = getExpansionsMap(series, element.key)
         SeriesGroup(element.key, expansionsMap, onSetTap)

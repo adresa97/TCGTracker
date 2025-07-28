@@ -7,11 +7,14 @@ import com.example.tcgtracker.models.emptyCover
 import com.example.tcgtracker.utils.ReadJSONFromAssets
 import com.google.gson.Gson
 
-class CollectionsData(applicationContext: Context, jsonPath: String) {
-    val collections: Array<Set>
-    init {
-        val jsonString = ReadJSONFromAssets(applicationContext, "collections.json")
-        collections = Gson().fromJson(jsonString, Array<Set>::class.java)
+class CollectionsData() {
+    private var collections = listOf<Set>()
+
+    fun loadJSONData(applicationContext: Context, jsonPath: String) {
+        if (!collections.isEmpty()) return
+
+        val jsonString = ReadJSONFromAssets(applicationContext, jsonPath)
+        collections = Gson().fromJson(jsonString, Array<Set>::class.java).asList()
         collections.forEach { set ->
             set.cover = coverMap[set.set] ?: emptyCover
         }
@@ -19,5 +22,9 @@ class CollectionsData(applicationContext: Context, jsonPath: String) {
 
     fun getSeriesMap(): Map<String, List<Set>> {
         return collections.groupBy({ set -> set.series })
+    }
+
+    fun getSetName(code: String): String {
+        return collections.firstOrNull({ set -> set.set == code })?.name ?: code
     }
 }

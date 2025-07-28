@@ -61,4 +61,5 @@ dependencies {
     implementation("net.tcgdex:java-sdk:2.0.1")
     implementation("io.coil-kt.coil3:coil-compose:3.3.0")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.3.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.2")
 }

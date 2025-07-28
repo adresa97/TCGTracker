@@ -1,5 +1,7 @@
-package com.example.tcgtracker
+package com.example.tcgtracker.ui
 
+import android.content.Context
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -13,21 +15,27 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import com.example.tcgtracker.R
 import com.example.tcgtracker.models.Card
 import com.example.tcgtracker.utils.greyScale
 
 @Composable
-fun CardsGrid(service: TCGDexService, set: String, modifier: Modifier = Modifier) {
+fun CardsScreen(context: Context, viewModel: TrackerViewModel, set: String, modifier: Modifier = Modifier) {
     LazyVerticalGrid(
         modifier = modifier.padding(horizontal = 20.dp),
         columns = GridCells.Fixed(3),
         horizontalArrangement = Arrangement.spacedBy(5.dp),
         verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {
-        val cardList = service.getCardsList(set)
+        val cardList = viewModel.uiState.value.getCardsList(context, set)
         cardList.forEach { card ->
             item {
-                CardElement(card)
+                CardElement(
+                    modifier = Modifier.clickable {
+                        viewModel.changeOwnedCardState(set, getCardIndex(cardList, card))
+                    },
+                    cardData = card
+                )
             }
         }
     }
@@ -36,13 +44,12 @@ fun CardsGrid(service: TCGDexService, set: String, modifier: Modifier = Modifier
 @Composable
 fun CardElement(cardData: Card, modifier: Modifier = Modifier)
 {
-    val isNotOwned = true
     Column(
         modifier = modifier.padding(vertical = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         AsyncImage(
-            modifier = if(isNotOwned) Modifier.greyScale() else Modifier,
+            modifier = if(cardData.owned) Modifier else Modifier.greyScale(),
             model = cardData.image,
             placeholder = painterResource(R.drawable.card_back),
             contentDescription = null,
@@ -53,4 +60,8 @@ fun CardElement(cardData: Card, modifier: Modifier = Modifier)
             modifier = Modifier.padding(bottom = 0.dp)
         )
     }
+}
+
+fun getCardIndex(cardList: List<Card>, card: Card): Int {
+    return cardList.indexOf(card)
 }

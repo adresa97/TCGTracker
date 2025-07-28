@@ -6,7 +6,8 @@ data class Card(
     val type: String,
     val booster: List<String>,
     val rarity: String,
-    val image: String?
+    val image: String?,
+    var owned: Boolean = false
 )
 
 val rarityMap = mapOf(

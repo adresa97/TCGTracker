@@ -3,12 +3,17 @@ package com.example.tcgtracker.utils
 import android.content.Context
 import android.util.Log
 import java.io.BufferedReader
+import java.io.File
+import java.io.InputStream
 import java.io.InputStreamReader
 
 fun ReadJSONFromAssets(context: Context, path:String): String {
+    return ReadJSONFromFile(context.assets.open(path))
+}
+
+fun ReadJSONFromFile(file: InputStream): String {
     val identifier = "[ReadJSON]"
     try {
-        val file = context.assets.open(path)
         Log.i(
             identifier,
             "Found file: $file.",
