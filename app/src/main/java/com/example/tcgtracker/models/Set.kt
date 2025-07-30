@@ -2,24 +2,64 @@ package com.example.tcgtracker.models
 
 import com.example.tcgtracker.R
 
+data class InnerJsonSet(
+    val series: String,
+    val expansion: String,
+    val set: String,
+    val name: String,
+    val boosters: List<String>
+)
+
+data class ExternalJsonSet (
+    val values: List<Boolean>
+)
+
 data class Set(
     val series: String,
     val expansion: String,
     val set: String,
     val name: String,
-    var cover: Int
+    val cover: CoverImage,
+    val boosters: List<Booster>,
+    var numbers: OwnedSetData
 )
 
-val coverMap = mapOf<String, Int>(
-    Pair("P-A", R.drawable.a_promo_en),
-    Pair("A1", R.drawable.a1_genetic_apex_en),
-    Pair("A1a", R.drawable.a1a_mythical_island_en),
-    Pair("A2", R.drawable.a2_spacetime_smackdown_en),
-    Pair("A2a", R.drawable.a2a_triumphant_light_en),
-    Pair("A2b", R.drawable.a2b_shining_revelry_en),
-    Pair("A3", R.drawable.a3_celestial_guardians_en),
-    Pair("A3a", R.drawable.a3a_extradimensional_crisis_en),
-    Pair("A3b", R.drawable.a3b_eevee_grove_en)
+data class OwnedSetData(
+    val all: OwnedData,
+    val byBooster: Map<Booster, OwnedData>,
+    val byRarity: Map<Rarity, OwnedData>
 )
 
-val emptyCover = R.drawable.a_promo_en
+data class UserJsonOwnedSetData(
+    val all: OwnedData,
+    val byBooster: Map<String, OwnedData>,
+    val byRarity: Map<String, OwnedData>
+)
+
+data class OwnedData(
+    val totalCards: Int,
+    val ownedCards: Int
+)
+
+enum class CoverImage(val id: Int) {
+    // Values
+    EMPTY(R.drawable.a_promo_en),
+    P_A(R.drawable.a_promo_en),
+    A1(R.drawable.a1_genetic_apex_en),
+    A1a(R.drawable.a1a_mythical_island_en),
+    A2(R.drawable.a2_spacetime_smackdown_en),
+    A2a(R.drawable.a2a_triumphant_light_en),
+    A2b(R.drawable.a2b_shining_revelry_en),
+    A3(R.drawable.a3_celestial_guardians_en),
+    A3a(R.drawable.a3a_extradimensional_crisis_en),
+    A3b(R.drawable.a3b_eevee_grove_en);
+
+    // Custom functions
+    companion object {
+        private val map = CoverImage.entries.associateBy { it.name }
+        infix fun from(value: String): CoverImage {
+            val fixedName = value.replace('-', '_')
+            return map[fixedName] ?: CoverImage.EMPTY
+        }
+    }
+}

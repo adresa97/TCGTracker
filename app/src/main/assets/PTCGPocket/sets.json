@@ -4,62 +4,84 @@
     "expansion": "P-A",
     "series": "A",
     "name": "Promo A",
-    "cover": 0
+    "boosters": [
+
+    ]
   },
   {
     "set": "A1",
     "expansion": "A1",
     "series": "A",
     "name": "Genes Formidables",
-    "cover": 0
+    "boosters": [
+      "MEWTWO",
+      "PIKACHU",
+      "CHARIZARD"
+    ]
   },
   {
     "set": "A1a",
     "expansion": "A1",
     "series": "A",
     "name": "Isla Singular",
-    "cover": 0
+    "boosters": [
+      "MEW"
+    ]
   },
   {
     "set": "A2",
     "expansion": "A2",
     "series": "A",
     "name": "Pugna Espaciotemporal",
-    "cover": 0
+    "boosters": [
+      "DIALGA",
+      "PALKIA"
+    ]
   },
   {
     "set": "A2a",
     "expansion": "A2",
     "series": "A",
     "name": "Luz Triunfal",
-    "cover": 0
+    "boosters": [
+      "ARCEUS"
+    ]
   },
   {
     "set": "A2b",
     "expansion": "A2",
     "series": "A",
     "name": "Festival Brillante",
-    "cover": 0
+    "boosters": [
+      "SHINY_CHARIZARD"
+    ]
   },
   {
     "set": "A3",
     "expansion": "A3",
     "series": "A",
     "name": "Guardianes Celestiales",
-    "cover": 0
+    "boosters": [
+      "SOLGALEO",
+      "LUNALA"
+    ]
   },
   {
     "set": "A3a",
     "expansion": "A3",
     "series": "A",
     "name": "Crisis Extradimensional",
-    "cover": 0
+    "boosters": [
+      "BUZZWOLE"
+    ]
   },
   {
     "set": "A3b",
     "expansion": "A3",
     "series": "A",
     "name": "Arboleda de Eevee",
-    "cover": 0
+    "boosters": [
+      "EEVEE"
+    ]
   }
 ]

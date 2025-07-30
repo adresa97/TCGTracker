@@ -1,8 +1,5 @@
 package com.example.tcgtracker.ui
 
-import android.content.Context
-import android.graphics.ColorMatrix
-import android.graphics.ColorMatrixColorFilter
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -10,14 +7,10 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.absolutePadding
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.paddingFromBaseline
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -26,8 +19,6 @@ import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonColors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.currentCompositeKeyHash
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -35,20 +26,15 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.graphics.asComposeColorFilter
-import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import coil3.request.premultipliedAlpha
-import com.example.tcgtracker.OwnedCardsData
 import com.example.tcgtracker.R
+import com.example.tcgtracker.models.Booster
 import com.example.tcgtracker.models.Card
-import com.example.tcgtracker.models.rarityMap
+import com.example.tcgtracker.models.Rarity
 import com.example.tcgtracker.ui.theme.PocketBlack
 import com.example.tcgtracker.ui.theme.boosterColors
 import com.example.tcgtracker.utils.greyScale
@@ -59,18 +45,18 @@ fun CardsScreen(
     onCardTap: (cardIndex: Int) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
-    /*
     CardGridView(
         cardList = cardList,
         onCardTap = onCardTap,
         modifier = modifier
     )
-     */
+    /*
     CardListView(
         cardList = cardList,
         onCardTap = onCardTap,
         modifier = modifier
     )
+    */
 }
 
 @Composable
@@ -118,19 +104,19 @@ fun CardListView(
                 mutableStateOf(cardList[index].owned)
             }
             val boosters = cardList[index].booster
-            val booster = if (boosters.count() == 0) {
-                "Unlockable"
-            } else if (boosters.count() > 1) {
-                "All"
+            val booster = if (boosters.count() > 1) {
+                "Todos"
+            } else if (boosters[0] == Booster.ERROR) {
+                "Desbloqueable"
             } else {
-                boosters[0]
+                boosters[0].prettyName
             }
 
             CardBullet(
                 id = cardList[index].id,
                 name = cardList[index].name,
                 booster = booster,
-                rarity = cardList[index].rarity,
+                rarity = cardList[index].rarity.symbol,
                 isOwned = cardOwnership,
                 onCardTap = {
                     onCardTap(index)
@@ -195,10 +181,10 @@ fun CardBullet(
                 modifier = Modifier,
                 selected = isOwned,
                 colors = RadioButtonColors(
-                    bulletColor,
-                    bulletColor,
-                    bulletColor,
-                    bulletColor,
+                    selectedColor = bulletColor,
+                    unselectedColor = bulletColor,
+                    disabledSelectedColor = bulletColor,
+                    disabledUnselectedColor = bulletColor,
                 ),
                 onClick = onCardTap
             )
@@ -256,7 +242,7 @@ fun Preview() {
         id = "A1-001",
         name = "Bulbasaur",
         booster = "Mewtwo",
-        rarity = rarityMap["One Diamond"] ?: "",
+        rarity = Rarity.ONE_DIAMOND.prettyName,
         isOwned = true,
         modifier = Modifier.fillMaxWidth()
     )

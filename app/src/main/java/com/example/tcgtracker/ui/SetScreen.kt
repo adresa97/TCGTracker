@@ -74,7 +74,7 @@ fun CollectionRow(sets: List<Set>, onSetTap: (String) -> Unit, modifier: Modifie
         sets.forEach { set ->
             SetButton(
                 collection = set.set,
-                resourceID = set.cover,
+                resourceID = set.cover.id,
                 modifier = Modifier.weight(1f)
                     .clickable { onSetTap(set.set) }
             )

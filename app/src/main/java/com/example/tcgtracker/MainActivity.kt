@@ -28,14 +28,20 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.currentRecomposeScope
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -49,6 +55,20 @@ import com.example.tcgtracker.ui.TrackerUIState
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.TCGTrackerTheme
 import com.example.tcgtracker.ui.theme.setColors
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.single
+import kotlinx.coroutines.flow.singleOrNull
+import kotlinx.coroutines.job
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import kotlin.coroutines.CoroutineContext
+import kotlin.coroutines.EmptyCoroutineContext
+import kotlin.coroutines.coroutineContext
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,13 +83,6 @@ class MainActivity : ComponentActivity() {
                 TCGTrackerApp(applicationContext)
             }
         }
-    }
-
-    override fun onPause() {
-        setContent {
-            TCGTrackerPause()
-        }
-        super.onPause()
     }
 }
 
@@ -94,8 +107,9 @@ fun TCGTrackerApp(
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
 
-    trackerViewModel.loadCollectionsJSON(context, "collections.json")
+    trackerViewModel.loadCollectionsJSON(context)
     val trackerUIState by trackerViewModel.uiState.collectAsState()
+    LocalLifecycleOwner.current.lifecycle.addObserver(trackerViewModel)
 
     Surface(
         modifier = Modifier.background(MaterialTheme.colorScheme.surface)
@@ -138,7 +152,7 @@ fun TCGTrackerApp(
             {
                 composable(Screen.SetSelector.name) {
                     SetScreen(
-                        series = trackerUIState.collectionsData.getSeriesMap(),
+                        series = trackerUIState.setsData.getSeriesMap(),
                         onSetTap = {
                             trackerViewModel.setCurrentSet(it)
                             navController.navigate(Screen.CardViewer.name)
@@ -152,6 +166,7 @@ fun TCGTrackerApp(
                         cardList = cardList,
                         onCardTap = { cardIndex ->
                             trackerViewModel.changeOwnedCardState(
+                                context,
                                 trackerUIState.selectedSet,
                                 cardIndex
                             )
@@ -181,7 +196,7 @@ fun TCGTrackerTopBar(
     val title: String
     when (currentScreen) {
         Screen.SetSelector -> title = "Pokémon TCG Pocket Tracker"
-        Screen.CardViewer -> title = uiState.collectionsData.getSetName(uiState.selectedSet)
+        Screen.CardViewer -> title = uiState.setsData.getSetName(uiState.selectedSet)
         Screen.Options -> title = "Opciones"
         else -> title = ""
     }
@@ -253,18 +268,11 @@ fun TCGTrackerBottomBar(
     }
 }
 
-@Composable
-fun TCGTrackerPause(
-    trackerViewModel: TrackerViewModel = viewModel()
-) {
-    trackerViewModel.updateJSONSData()
-}
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showSystemUi = true)
 @Composable
 fun TCGTrackerPreview() {
-    val collections = CollectionsData()
+    val collections = SetsData()
     val service = TCGDexService("en")
 
     TCGTrackerTheme {

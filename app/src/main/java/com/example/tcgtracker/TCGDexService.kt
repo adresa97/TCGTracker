@@ -1,11 +1,9 @@
 package com.example.tcgtracker
 
-import android.content.Context
+import com.example.tcgtracker.models.Booster
 import com.example.tcgtracker.models.Card
-import com.example.tcgtracker.models.Set
-import com.example.tcgtracker.models.coverMap
-import com.example.tcgtracker.models.emptyCover
-import com.example.tcgtracker.models.rarityMap
+import com.example.tcgtracker.models.InnerJsonSet
+import com.example.tcgtracker.models.Rarity
 import com.example.tcgtracker.utils.TCGDexGraphQLUtils
 import com.google.gson.Gson
 import net.tcgdex.sdk.Extension
@@ -18,14 +16,14 @@ import net.tcgdex.sdk.models.SetResume
 class TCGDexService(language: String) {
     val sdk: TCGdex = TCGdex(language)
 
-    fun getSeriesMap(): Map<String, List<Set>> {
+    fun getSeriesMap(): Map<String, List<InnerJsonSet>> {
         return sdk.fetchSerie("tcgp")!!.sets.groupBy({set -> extractSeries(set)}, {set ->
-            Set(
-                extractSeries(set),
-                extractExpansion(set),
-                set.id,
-                set.name,
-                coverMap[set.id] ?: emptyCover
+            InnerJsonSet(
+                series = extractSeries(set),
+                expansion = extractExpansion(set),
+                set = set.id,
+                name = set.name,
+                boosters = listOf<String>()
             )
         })
     }
@@ -38,13 +36,21 @@ class TCGDexService(language: String) {
         val cls = TCGDexGraphQLResponse::class.java
         return TCGDexGraphQLUtils.fetchWithBody(sdk, "${sdk.URI}/graphql", Gson().toJson(QLRequest), cls)!!
             .data.cards.map({ cardData ->
+                val set = cardData.id.substringBefore('-')
+                val boosterList = mutableListOf<Booster>()
+                cardData.boosters?.forEach{ booster ->
+                    val boosterEnum = Booster.fromPrettyName(booster.name)
+                    if (!boosterList.contains(boosterEnum)) boosterList.add(boosterEnum)
+                }
+                if (boosterList.isEmpty()) boosterList.add(defaultBooster[set] ?: Booster.ERROR)
+                val rarity = if (set == "P") Rarity.ERROR else Rarity.fromPrettyName(cardData.rarity)
                 Card(
-                    cardData.id,
-                    cardData.name,
-                    cardData.types?.elementAtOrNull(0) ?: "",
-                    cardData.boosters?.map({ booster -> booster.name }) ?: listOf<String>(),
-                    rarityMap[cardData.rarity] ?: "",
-                    cardData.getImageUrl(Quality.LOW, Extension.WEBP),
+                    id = cardData.id,
+                    name = cardData.name,
+                    type = cardData.types?.elementAtOrNull(0) ?: "",
+                    booster = boosterList,
+                    rarity = rarity,
+                    image = getImageUrl(cardData.id)
                 )
             })
     }
@@ -62,7 +68,40 @@ class TCGDexService(language: String) {
     private fun isPromo(set: SetResume): Boolean {
         return set.id.startsWith("P-")
     }
+
+    private fun getImageUrl(cardID: String): String {
+        var set = cardID.substringBeforeLast('-')
+        var number = cardID.substringAfterLast('-').toInt().toString()
+
+        return "https://cdn.pockettrade.app/images/webp/es/${set}_${number}_SPA.webp"
+    }
 }
+
+val defaultBooster = mutableMapOf<String, Booster>(
+    Pair("P", Booster.ERROR),
+    Pair("A1", Booster.ERROR),
+    Pair("A1a", Booster.MEW),
+    Pair("A2", Booster.ERROR),
+    Pair("A2a", Booster.ARCEUS),
+    Pair("A2b", Booster.SHINY_CHARIZARD),
+    Pair("A3", Booster.ERROR),
+    Pair("A3a", Booster.BUZZWOLE),
+    Pair("A3b", Booster.EEVEE)
+)
+
+//region GraphQL data classes
+data class TCGDexGraphQLRequest(
+    val operationName: String,
+    val query: String
+)
+
+data class TCGDexGraphQLResponse (
+    val data: TCGDexGraphQLCards
+)
+
+data class TCGDexGraphQLCards (
+    val cards: List<TCGDexCard>
+)
 
 data class TCGDexCard (
     val id: String,
@@ -81,17 +120,4 @@ data class TCGDexBooster (
     val id: String,
     val name: String
 )
-
-data class TCGDexGraphQLRequest(
-    val operationName: String,
-    val query: String
-)
-
-data class TCGDexGraphQLResponse (
-    val data: TCGDexGraphQLCards
-)
-
-data class TCGDexGraphQLCards (
-    val cards: List<TCGDexCard>
-)
-
+//endregion

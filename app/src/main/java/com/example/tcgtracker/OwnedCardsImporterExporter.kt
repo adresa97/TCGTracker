@@ -3,8 +3,7 @@ package com.example.tcgtracker
 import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
-import com.example.tcgtracker.models.ExternalJSONSet
-import com.example.tcgtracker.models.OWNED_CARDS_FOLDER
+import com.example.tcgtracker.models.ExternalJsonSet
 import com.example.tcgtracker.utils.ReadJSONFromFile
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -23,12 +22,12 @@ object OwnedCardsImporterExporter {
         }
         if (jsonString == "") return "ERROR: Archivo vacío"
 
-        val type = object : TypeToken<Map<String, ExternalJSONSet>>() {}.type
-        val externalData: Map<String, ExternalJSONSet> = Gson().fromJson(jsonString, type)
+        val type = object : TypeToken<Map<String, ExternalJsonSet>>() {}.type
+        val externalData: Map<String, ExternalJsonSet> = Gson().fromJson(jsonString, type)
 
         val extStorageDir = context.getExternalFilesDir(null)
-        val folder = File(extStorageDir, OWNED_CARDS_FOLDER)
-        folder.mkdir()
+        val folder = File(extStorageDir, USER_CARDS_DATA_FOLDER_PATH)
+        folder.mkdirs()
 
         externalData.forEach { set ->
             val key = if (set.key == "pA") "P-A" else set.key
@@ -49,9 +48,9 @@ object OwnedCardsImporterExporter {
     }
 
     fun exportToJSON(context: Context, ownedCards: Map<String, List<Boolean>>, targetFolder: File, filename: String): String {
-        val jsonData: MutableMap<String, ExternalJSONSet> = mutableMapOf()
+        val jsonData: MutableMap<String, ExternalJsonSet> = mutableMapOf()
         ownedCards.forEach { set->
-            jsonData.put(set.key, ExternalJSONSet(set.value))
+            jsonData.put(set.key, ExternalJsonSet(set.value))
         }
 
         val file = File(targetFolder, "${filename}.json")
