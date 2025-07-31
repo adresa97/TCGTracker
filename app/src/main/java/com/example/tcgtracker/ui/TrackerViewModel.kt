@@ -1,11 +1,8 @@
 package com.example.tcgtracker.ui
 
-import android.app.Fragment
 import android.content.Context
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.example.tcgtracker.SetsData
 import com.example.tcgtracker.CardsData
@@ -18,7 +15,8 @@ import kotlinx.coroutines.flow.update
 data class TrackerUIState(
     val setsData: SetsData = SetsData(),
     val cardsData: CardsData = CardsData(),
-    val selectedSet: String = ""
+    val selectedSet: String = "",
+    val isListMode: Boolean = false
 )
 
 class TrackerViewModel() : ViewModel(), DefaultLifecycleObserver {
@@ -35,6 +33,12 @@ class TrackerViewModel() : ViewModel(), DefaultLifecycleObserver {
     fun setCurrentSet(currentSet: String) {
         _uiState.update { currentState ->
             currentState.copy(selectedSet = currentSet)
+        }
+    }
+
+    fun changeViewMode() {
+        _uiState.update { currentState ->
+            currentState.copy(isListMode = !uiState.value.isListMode)
         }
     }
 
@@ -56,7 +60,7 @@ class TrackerViewModel() : ViewModel(), DefaultLifecycleObserver {
     }
 
     fun updateJSONSData() {
-        _uiState.value.cardsData.updateJSONSData()
+        _uiState.value.cardsData.updateUserJSONSData()
         _uiState.value.setsData.updateUserJSON()
     }
 }

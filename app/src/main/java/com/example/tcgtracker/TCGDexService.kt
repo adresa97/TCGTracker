@@ -2,6 +2,7 @@ package com.example.tcgtracker
 
 import com.example.tcgtracker.models.Booster
 import com.example.tcgtracker.models.Card
+import com.example.tcgtracker.models.CardName
 import com.example.tcgtracker.models.InnerJsonSet
 import com.example.tcgtracker.models.Rarity
 import com.example.tcgtracker.utils.TCGDexGraphQLUtils
@@ -46,9 +47,12 @@ class TCGDexService(language: String) {
                 val rarity = if (set == "P") Rarity.ERROR else Rarity.fromPrettyName(cardData.rarity)
                 Card(
                     id = cardData.id,
-                    name = cardData.name,
+                    name = CardName(
+                        cardData.name,
+                        cardData.name
+                    ),
                     type = cardData.types?.elementAtOrNull(0) ?: "",
-                    booster = boosterList,
+                    boosters = boosterList,
                     rarity = rarity,
                     image = getImageUrl(cardData.id)
                 )
@@ -86,7 +90,8 @@ val defaultBooster = mutableMapOf<String, Booster>(
     Pair("A2b", Booster.SHINY_CHARIZARD),
     Pair("A3", Booster.ERROR),
     Pair("A3a", Booster.BUZZWOLE),
-    Pair("A3b", Booster.EEVEE)
+    Pair("A3b", Booster.EEVEE),
+    Pair("A4", Booster.ERROR)
 )
 
 //region GraphQL data classes

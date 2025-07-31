@@ -1,0 +1,3166 @@
+[
+  {
+    "id": "A4-001",
+    "name": {
+      "en": "Oddish",
+      "es": "Oddish"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-002",
+    "name": {
+      "en": "Gloom",
+      "es": "Gloom"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-003",
+    "name": {
+      "en": "Bellossom",
+      "es": "Bellossom"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-004",
+    "name": {
+      "en": "Tangela",
+      "es": "Tangela"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-005",
+    "name": {
+      "en": "Tangrowth",
+      "es": "Tangrowth"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-006",
+    "name": {
+      "en": "Scyther",
+      "es": "Scyther"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-007",
+    "name": {
+      "en": "Pinsir",
+      "es": "Pinsir"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-008",
+    "name": {
+      "en": "Chikorita",
+      "es": "Chikorita"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-009",
+    "name": {
+      "en": "Bayleef",
+      "es": "Bayleef"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-010",
+    "name": {
+      "en": "Meganium",
+      "es": "Meganium"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-011",
+    "name": {
+      "en": "Ledyba",
+      "es": "Ledyba"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-012",
+    "name": {
+      "en": "Ledian",
+      "es": "Ledian"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-013",
+    "name": {
+      "en": "Hoppip",
+      "es": "Hoppip"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-014",
+    "name": {
+      "en": "Skiploom",
+      "es": "Skiploom"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-015",
+    "name": {
+      "en": "Jumpluff",
+      "es": "Jumpluff"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-016",
+    "name": {
+      "en": "Sunkern",
+      "es": "Sunkern"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-017",
+    "name": {
+      "en": "Sunflora",
+      "es": "Sunflora"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-018",
+    "name": {
+      "en": "Yanma",
+      "es": "Yanma"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-019",
+    "name": {
+      "en": "Yanmega",
+      "es": "Yanmega"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-020",
+    "name": {
+      "en": "Pineco",
+      "es": "Pineco"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-021",
+    "name": {
+      "en": "Shuckle ex",
+      "es": "Shuckle ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-022",
+    "name": {
+      "en": "Heracross",
+      "es": "Heracross"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-023",
+    "name": {
+      "en": "Cherubi",
+      "es": "Cherubi"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-024",
+    "name": {
+      "en": "Cherrim",
+      "es": "Cherrim"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-025",
+    "name": {
+      "en": "Vulpix",
+      "es": "Vulpix"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-026",
+    "name": {
+      "en": "Ninetales",
+      "es": "Ninetales"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-027",
+    "name": {
+      "en": "Cyndaquil",
+      "es": "Cyndaquil"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-028",
+    "name": {
+      "en": "Quilava",
+      "es": "Quilava"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-029",
+    "name": {
+      "en": "Typhlosion",
+      "es": "Typhlosion"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-030",
+    "name": {
+      "en": "Slugma",
+      "es": "Slugma"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-031",
+    "name": {
+      "en": "Magcargo",
+      "es": "Magcargo"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-032",
+    "name": {
+      "en": "Magby",
+      "es": "Magby"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": true
+  },
+  {
+    "id": "A4-033",
+    "name": {
+      "en": "Entei",
+      "es": "Entei"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-034",
+    "name": {
+      "en": "Ho-Oh ex",
+      "es": "Ho-Oh ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-035",
+    "name": {
+      "en": "Darumaka",
+      "es": "Darumaka"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-036",
+    "name": {
+      "en": "Darmanitan",
+      "es": "Darmanitan"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-037",
+    "name": {
+      "en": "Heatmor",
+      "es": "Heatmor"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-038",
+    "name": {
+      "en": "Poliwag",
+      "es": "Poliwag"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-039",
+    "name": {
+      "en": "Poliwhirl",
+      "es": "Poliwhirl"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-040",
+    "name": {
+      "en": "Politoed",
+      "es": "Politoed"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-041",
+    "name": {
+      "en": "Horsea",
+      "es": "Horsea"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-042",
+    "name": {
+      "en": "Seadra",
+      "es": "Seadra"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-043",
+    "name": {
+      "en": "Kingdra ex",
+      "es": "Kingdra ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-044",
+    "name": {
+      "en": "Magikarp",
+      "es": "Magikarp"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-045",
+    "name": {
+      "en": "Gyarados",
+      "es": "Gyarados"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-046",
+    "name": {
+      "en": "Totodile",
+      "es": "Totodile"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-047",
+    "name": {
+      "en": "Croconaw",
+      "es": "Croconaw"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-048",
+    "name": {
+      "en": "Feraligatr",
+      "es": "Feraligatr"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-049",
+    "name": {
+      "en": "Marill",
+      "es": "Marill"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-050",
+    "name": {
+      "en": "Azumarill",
+      "es": "Azumarill"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-051",
+    "name": {
+      "en": "Wooper",
+      "es": "Wooper"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-052",
+    "name": {
+      "en": "Quagsire",
+      "es": "Quagsire"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-053",
+    "name": {
+      "en": "Qwilfish",
+      "es": "Qwilfish"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-054",
+    "name": {
+      "en": "Corsola",
+      "es": "Corsola"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-055",
+    "name": {
+      "en": "Remoraid",
+      "es": "Remoraid"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-056",
+    "name": {
+      "en": "Octillery",
+      "es": "Octillery"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-057",
+    "name": {
+      "en": "Delibird",
+      "es": "Delibird"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-058",
+    "name": {
+      "en": "Mantine",
+      "es": "Mantine"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-059",
+    "name": {
+      "en": "Suicune",
+      "es": "Suicune"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-060",
+    "name": {
+      "en": "Corphish",
+      "es": "Corphish"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-061",
+    "name": {
+      "en": "Crawdaunt",
+      "es": "Crawdaunt"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-062",
+    "name": {
+      "en": "Ducklett",
+      "es": "Ducklett"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-063",
+    "name": {
+      "en": "Swanna",
+      "es": "Swanna"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-064",
+    "name": {
+      "en": "Chinchou",
+      "es": "Chinchou"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-065",
+    "name": {
+      "en": "Lanturn ex",
+      "es": "Lanturn ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-066",
+    "name": {
+      "en": "Pichu",
+      "es": "Pichu"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": true
+  },
+  {
+    "id": "A4-067",
+    "name": {
+      "en": "Mareep",
+      "es": "Mareep"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-068",
+    "name": {
+      "en": "Flaaffy",
+      "es": "Flaaffy"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-069",
+    "name": {
+      "en": "Ampharos",
+      "es": "Ampharos"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-070",
+    "name": {
+      "en": "Elekid",
+      "es": "Elekid"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": true
+  },
+  {
+    "id": "A4-071",
+    "name": {
+      "en": "Raikou",
+      "es": "Raikou"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-072",
+    "name": {
+      "en": "Emolga",
+      "es": "Emolga"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-073",
+    "name": {
+      "en": "Slowpoke",
+      "es": "Slowpoke"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-074",
+    "name": {
+      "en": "Slowking",
+      "es": "Slowking"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-075",
+    "name": {
+      "en": "Smoochum",
+      "es": "Smoochum"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": true
+  },
+  {
+    "id": "A4-076",
+    "name": {
+      "en": "Jynx",
+      "es": "Jynx"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-077",
+    "name": {
+      "en": "Cleffa",
+      "es": "Cleffa"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": true
+  },
+  {
+    "id": "A4-078",
+    "name": {
+      "en": "Togepi",
+      "es": "Togepi"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-079",
+    "name": {
+      "en": "Togetic",
+      "es": "Togetic"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-080",
+    "name": {
+      "en": "Togekiss",
+      "es": "Togekiss"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-081",
+    "name": {
+      "en": "Natu",
+      "es": "Natu"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-082",
+    "name": {
+      "en": "Xatu",
+      "es": "Xatu"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-083",
+    "name": {
+      "en": "Espeon ex",
+      "es": "Espeon ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-084",
+    "name": {
+      "en": "Unown",
+      "es": "Unown"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-085",
+    "name": {
+      "en": "Unown",
+      "es": "Unown"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-086",
+    "name": {
+      "en": "Wobbuffet",
+      "es": "Wobbuffet"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-087",
+    "name": {
+      "en": "Girafarig",
+      "es": "Girafarig"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-088",
+    "name": {
+      "en": "Snubbull",
+      "es": "Snubbull"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-089",
+    "name": {
+      "en": "Granbull",
+      "es": "Granbull"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-090",
+    "name": {
+      "en": "Munna",
+      "es": "Munna"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-091",
+    "name": {
+      "en": "Musharna",
+      "es": "Musharna"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-092",
+    "name": {
+      "en": "Onix",
+      "es": "Onix"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-093",
+    "name": {
+      "en": "Sudowoodo",
+      "es": "Sudowoodo"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-094",
+    "name": {
+      "en": "Gligar",
+      "es": "Gligar"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-095",
+    "name": {
+      "en": "Gliscor",
+      "es": "Gliscor"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-096",
+    "name": {
+      "en": "Swinub",
+      "es": "Swinub"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-097",
+    "name": {
+      "en": "Piloswine",
+      "es": "Piloswine"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-098",
+    "name": {
+      "en": "Mamoswine",
+      "es": "Mamoswine"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-099",
+    "name": {
+      "en": "Phanpy",
+      "es": "Phanpy"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-100",
+    "name": {
+      "en": "Donphan ex",
+      "es": "Donphan ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-101",
+    "name": {
+      "en": "Tyrogue",
+      "es": "Tyrogue"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": true
+  },
+  {
+    "id": "A4-102",
+    "name": {
+      "en": "Hitmontop",
+      "es": "Hitmontop"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-103",
+    "name": {
+      "en": "Larvitar",
+      "es": "Larvitar"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-104",
+    "name": {
+      "en": "Pupitar",
+      "es": "Pupitar"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-105",
+    "name": {
+      "en": "Binacle",
+      "es": "Binacle"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-106",
+    "name": {
+      "en": "Barbaracle",
+      "es": "Barbaracle"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-107",
+    "name": {
+      "en": "Zubat",
+      "es": "Zubat"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-108",
+    "name": {
+      "en": "Golbat",
+      "es": "Golbat"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-109",
+    "name": {
+      "en": "Crobat ex",
+      "es": "Crobat ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-110",
+    "name": {
+      "en": "Spinarak",
+      "es": "Spinarak"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-111",
+    "name": {
+      "en": "Ariados",
+      "es": "Ariados"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-112",
+    "name": {
+      "en": "Umbreon ex",
+      "es": "Umbreon ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-113",
+    "name": {
+      "en": "Murkrow",
+      "es": "Murkrow"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-114",
+    "name": {
+      "en": "Honchkrow",
+      "es": "Honchkrow"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-115",
+    "name": {
+      "en": "Sneasel",
+      "es": "Sneasel"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-116",
+    "name": {
+      "en": "Weavile",
+      "es": "Weavile"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-117",
+    "name": {
+      "en": "Houndour",
+      "es": "Houndour"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-118",
+    "name": {
+      "en": "Houndoom",
+      "es": "Houndoom"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-119",
+    "name": {
+      "en": "Tyranitar",
+      "es": "Tyranitar"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-120",
+    "name": {
+      "en": "Absol",
+      "es": "Absol"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-121",
+    "name": {
+      "en": "Forretress",
+      "es": "Forretress"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A4-122",
+    "name": {
+      "en": "Steelix",
+      "es": "Steelix"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A4-123",
+    "name": {
+      "en": "Scizor",
+      "es": "Scizor"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A4-124",
+    "name": {
+      "en": "Skarmory ex",
+      "es": "Skarmory ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A4-125",
+    "name": {
+      "en": "Mawile",
+      "es": "Mawile"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A4-126",
+    "name": {
+      "en": "Klink",
+      "es": "Klink"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A4-127",
+    "name": {
+      "en": "Klang",
+      "es": "Klang"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A4-128",
+    "name": {
+      "en": "Klinklang",
+      "es": "Klinklang"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A4-129",
+    "name": {
+      "en": "Spearow",
+      "es": "Spearow"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-130",
+    "name": {
+      "en": "Fearow",
+      "es": "Fearow"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-131",
+    "name": {
+      "en": "Chansey",
+      "es": "Chansey"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-132",
+    "name": {
+      "en": "Blissey",
+      "es": "Blissey"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-133",
+    "name": {
+      "en": "Kangaskhan",
+      "es": "Kangaskhan"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-134",
+    "name": {
+      "en": "Eevee",
+      "es": "Eevee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-135",
+    "name": {
+      "en": "Porygon",
+      "es": "Porygon"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-136",
+    "name": {
+      "en": "Porygon2",
+      "es": "Porygon2"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-137",
+    "name": {
+      "en": "Porygon-Z",
+      "es": "Porygon-Z"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-138",
+    "name": {
+      "en": "Sentret",
+      "es": "Sentret"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-139",
+    "name": {
+      "en": "Furret",
+      "es": "Furret"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-140",
+    "name": {
+      "en": "Hoothoot",
+      "es": "Hoothoot"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-141",
+    "name": {
+      "en": "Noctowl",
+      "es": "Noctowl"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-142",
+    "name": {
+      "en": "Aipom",
+      "es": "Aipom"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-143",
+    "name": {
+      "en": "Ambipom",
+      "es": "Ambipom"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-144",
+    "name": {
+      "en": "Dunsparce",
+      "es": "Dunsparce"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-145",
+    "name": {
+      "en": "Teddiursa",
+      "es": "Teddiursa"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-146",
+    "name": {
+      "en": "Ursaring",
+      "es": "Ursaring"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-147",
+    "name": {
+      "en": "Stantler",
+      "es": "Stantler"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-148",
+    "name": {
+      "en": "Smeargle",
+      "es": "Smeargle"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-149",
+    "name": {
+      "en": "Lugia ex",
+      "es": "Lugia ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-150",
+    "name": {
+      "en": "Bouffalant",
+      "es": "Bouffalant"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-151",
+    "name": {
+      "en": "Elemental Switch",
+      "es": "Permuta Elemental"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-152",
+    "name": {
+      "en": "Squirt Bottle",
+      "es": "Squirgadera"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-153",
+    "name": {
+      "en": "Steel Apron",
+      "es": "Peto de Acero"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-154",
+    "name": {
+      "en": "Dark Pendant",
+      "es": "Colgante Sombrío"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-155",
+    "name": {
+      "en": "Rescue Scarf",
+      "es": "Bufanda Rescatadora"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-156",
+    "name": {
+      "en": "Will",
+      "es": "Mento"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-157",
+    "name": {
+      "en": "Lyra",
+      "es": "Lira"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-158",
+    "name": {
+      "en": "Silver",
+      "es": "Plata"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-159",
+    "name": {
+      "en": "Fisher",
+      "es": "Pescador"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-160",
+    "name": {
+      "en": "Jasmine",
+      "es": "Yasmina"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-161",
+    "name": {
+      "en": "Hiker",
+      "es": "Montañero"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-162",
+    "name": {
+      "en": "Chikorita",
+      "es": "Chikorita"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-163",
+    "name": {
+      "en": "Bellossom",
+      "es": "Bellossom"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-164",
+    "name": {
+      "en": "Heracross",
+      "es": "Heracross"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-165",
+    "name": {
+      "en": "Cyndaquil",
+      "es": "Cyndaquil"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-166",
+    "name": {
+      "en": "Magby",
+      "es": "Magby"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": true
+  },
+  {
+    "id": "A4-167",
+    "name": {
+      "en": "Totodile",
+      "es": "Totodile"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-168",
+    "name": {
+      "en": "Qwilfish",
+      "es": "Qwilfish"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-169",
+    "name": {
+      "en": "Octillery",
+      "es": "Octillery"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-170",
+    "name": {
+      "en": "Delibird",
+      "es": "Delibird"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-171",
+    "name": {
+      "en": "Pichu",
+      "es": "Pichu"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": true
+  },
+  {
+    "id": "A4-172",
+    "name": {
+      "en": "Ampharos",
+      "es": "Ampharos"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-173",
+    "name": {
+      "en": "Togepi",
+      "es": "Togepi"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-174",
+    "name": {
+      "en": "Xatu",
+      "es": "Xatu"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-175",
+    "name": {
+      "en": "Wobbuffet",
+      "es": "Wobbuffet"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-176",
+    "name": {
+      "en": "Gligar",
+      "es": "Gligar"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-177",
+    "name": {
+      "en": "Spinarak",
+      "es": "Spinarak"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-178",
+    "name": {
+      "en": "Murkrow",
+      "es": "Murkrow"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-179",
+    "name": {
+      "en": "Tyranitar",
+      "es": "Tyranitar"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-180",
+    "name": {
+      "en": "Scizor",
+      "es": "Scizor"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A4-181",
+    "name": {
+      "en": "Sentret",
+      "es": "Sentret"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-182",
+    "name": {
+      "en": "Hoothoot",
+      "es": "Hoothoot"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-183",
+    "name": {
+      "en": "Stantler",
+      "es": "Stantler"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-184",
+    "name": {
+      "en": "Smeargle",
+      "es": "Smeargle"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-185",
+    "name": {
+      "en": "Blissey",
+      "es": "Blissey"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-186",
+    "name": {
+      "en": "Shuckle ex",
+      "es": "Shuckle ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-187",
+    "name": {
+      "en": "Ho-Oh ex",
+      "es": "Ho-Oh ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-188",
+    "name": {
+      "en": "Kingdra ex",
+      "es": "Kingdra ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-189",
+    "name": {
+      "en": "Lanturn ex",
+      "es": "Lanturn ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-190",
+    "name": {
+      "en": "Espeon ex",
+      "es": "Espeon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-191",
+    "name": {
+      "en": "Donphan ex",
+      "es": "Donphan ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-192",
+    "name": {
+      "en": "Crobat ex",
+      "es": "Crobat ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-193",
+    "name": {
+      "en": "Umbreon ex",
+      "es": "Umbreon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-194",
+    "name": {
+      "en": "Skarmory ex",
+      "es": "Skarmory ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A4-195",
+    "name": {
+      "en": "Lugia ex",
+      "es": "Lugia ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-196",
+    "name": {
+      "en": "Will",
+      "es": "Mento"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-197",
+    "name": {
+      "en": "Lyra",
+      "es": "Lira"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-198",
+    "name": {
+      "en": "Silver",
+      "es": "Plata"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-199",
+    "name": {
+      "en": "Fisher",
+      "es": "Pescador"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-200",
+    "name": {
+      "en": "Jasmine",
+      "es": "Yasmina"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-201",
+    "name": {
+      "en": "Hiker",
+      "es": "Montañero"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Unknown Type",
+    "baby": false
+  },
+  {
+    "id": "A4-202",
+    "name": {
+      "en": "Shuckle ex",
+      "es": "Shuckle ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-203",
+    "name": {
+      "en": "Kingdra ex",
+      "es": "Kingdra ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-204",
+    "name": {
+      "en": "Lanturn ex",
+      "es": "Lanturn ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-205",
+    "name": {
+      "en": "Espeon ex",
+      "es": "Espeon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-206",
+    "name": {
+      "en": "Donphan ex",
+      "es": "Donphan ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-207",
+    "name": {
+      "en": "Crobat ex",
+      "es": "Crobat ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-208",
+    "name": {
+      "en": "Umbreon ex",
+      "es": "Umbreon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-209",
+    "name": {
+      "en": "Skarmory ex",
+      "es": "Skarmory ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A4-210",
+    "name": {
+      "en": "Ho-Oh ex",
+      "es": "Ho-Oh ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-211",
+    "name": {
+      "en": "Lugia ex",
+      "es": "Lugia ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-212",
+    "name": {
+      "en": "Yanma",
+      "es": "Yanma"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-213",
+    "name": {
+      "en": "Flareon",
+      "es": "Flareon"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-214",
+    "name": {
+      "en": "Magikarp",
+      "es": "Magikarp"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-215",
+    "name": {
+      "en": "Gyarados",
+      "es": "Gyarados"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-216",
+    "name": {
+      "en": "Vaporeon",
+      "es": "Vaporeon"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-217",
+    "name": {
+      "en": "Magnemite",
+      "es": "Magnemite"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-218",
+    "name": {
+      "en": "Magneton",
+      "es": "Magneton"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-219",
+    "name": {
+      "en": "Jolteon",
+      "es": "Jolteon"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-220",
+    "name": {
+      "en": "Misdreavus",
+      "es": "Misdreavus"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-221",
+    "name": {
+      "en": "Mankey",
+      "es": "Mankey"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-222",
+    "name": {
+      "en": "Primeape",
+      "es": "Primeape"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A4-223",
+    "name": {
+      "en": "Nidoran♀",
+      "es": "Nidoran♀"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-224",
+    "name": {
+      "en": "Nidorina",
+      "es": "Nidorina"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-225",
+    "name": {
+      "en": "Nidoqueen",
+      "es": "Nidoqueen"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-226",
+    "name": {
+      "en": "Nidoran♂",
+      "es": "Nidoran♂"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-227",
+    "name": {
+      "en": "Nidorino",
+      "es": "Nidorino"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-228",
+    "name": {
+      "en": "Nidoking",
+      "es": "Nidoking"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-229",
+    "name": {
+      "en": "Sneasel",
+      "es": "Sneasel"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-230",
+    "name": {
+      "en": "Lickitung",
+      "es": "Lickitung"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-231",
+    "name": {
+      "en": "Eevee",
+      "es": "Eevee"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-232",
+    "name": {
+      "en": "Yanmega ex",
+      "es": "Yanmega ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-233",
+    "name": {
+      "en": "Leafeon ex",
+      "es": "Leafeon ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A4-234",
+    "name": {
+      "en": "Gyarados ex",
+      "es": "Gyarados ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-235",
+    "name": {
+      "en": "Glaceon ex",
+      "es": "Glaceon ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A4-236",
+    "name": {
+      "en": "Pachirisu ex",
+      "es": "Pachirisu ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A4-237",
+    "name": {
+      "en": "Mismagius ex",
+      "es": "Mismagius ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A4-238",
+    "name": {
+      "en": "Weavile ex",
+      "es": "Weavile ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Lugia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A4-239",
+    "name": {
+      "en": "Lickilicky ex",
+      "es": "Lickilicky ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A4-240",
+    "name": {
+      "en": "Ho-Oh ex",
+      "es": "Ho-Oh ex"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A4-241",
+    "name": {
+      "en": "Lugia ex",
+      "es": "Lugia ex"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Lugia",
+      "Ho-Oh"
+    ],
+    "type": "Colorless",
+    "baby": false
+  }
+]

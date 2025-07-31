@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.MaterialTheme
@@ -21,22 +22,37 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tcgtracker.models.Set
-import kotlin.collections.forEach
+import com.example.tcgtracker.ui.theme.PocketBlack
+import com.example.tcgtracker.ui.theme.setColors
 
 @Composable
-fun SetScreen(series: Map<String, List<Set>>, onSetTap: (String) -> Unit, modifier: Modifier = Modifier) {
+fun SetScreen(
+    series: Map<String, List<Set>>,
+    isListView: Boolean,
+    onSetTap: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
     series.forEach { element ->
         val expansionsMap = getExpansionsMap(series, element.key)
-        SeriesGroup(element.key, expansionsMap, onSetTap)
+        SeriesGroup(element.key, expansionsMap, isListView, onSetTap)
     }
 }
 
-fun getExpansionsMap(map: Map<String, List<Set>>, series: String): Map<String, List<Set>> {
+fun getExpansionsMap(
+    map: Map<String, List<Set>>,
+    series: String
+): Map<String, List<Set>> {
     return map.getOrDefault(series, listOf()).groupBy({set -> set.expansion})
 }
 
 @Composable
-fun SeriesGroup(series: String, expansions: Map<String, List<Set>>, onSetTap: (String) -> Unit, modifier: Modifier = Modifier) {
+fun SeriesGroup(
+    series: String,
+    expansions: Map<String, List<Set>>,
+    isListView: Boolean,
+    onSetTap: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
     LazyColumn(
         modifier = modifier.fillMaxSize()
     ) {
@@ -55,18 +71,116 @@ fun SeriesGroup(series: String, expansions: Map<String, List<Set>>, onSetTap: (S
             }
         }
         item {
-            expansions.forEach { expansion ->
-                CollectionRow(expansion.value, onSetTap)
+            val spacing = if (isListView) 5.dp else 20.dp
+            val verSpace = if (isListView) 20.dp else 40.dp
+            val horSpace = if (isListView) 20.dp else 0.dp
+            Column(
+                Modifier.padding(horizontal = horSpace, verSpace),
+                verticalArrangement = Arrangement.spacedBy(spacing)
+            ) {
+                expansions.forEach { expansion ->
+                    if (isListView) {
+                        CollectionList(
+                            expansion.value,
+                            onSetTap,
+                            Modifier.padding(horizontal = 20.dp)
+                        )
+                    } else {
+                        CollectionRow(
+                            expansion.value,
+                            onSetTap,
+                            Modifier.padding(horizontal = 20.dp)
+                        )
+                    }
+                }
             }
         }
     }
 }
 
 @Composable
-fun CollectionRow(sets: List<Set>, onSetTap: (String) -> Unit, modifier: Modifier = Modifier)
-{
+fun CollectionList(
+    sets: List<Set>,
+    onSetTap: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    sets.forEach { set ->
+        CollectionCell(set, onSetTap)
+    }
+}
+
+@Composable
+fun CollectionCell(
+    set: Set,
+    onSetTap: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val setColor = setColors[set.set] ?: MaterialTheme.colorScheme.primaryContainer
+    val fontColor = PocketBlack
+    Box(
+        modifier = modifier.background(setColor)
+            .height(50.dp)
+            .clickable{ onSetTap(set.set) }
+    ) {
+        Row(
+            modifier = Modifier.padding(horizontal = 10.dp),
+            horizontalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.Center
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(
+                        text = set.name,
+                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
+                        fontWeight = MaterialTheme.typography.bodyLarge.fontWeight,
+                        fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
+                        color = fontColor
+                    )
+                    Text(
+                        text = "${set.numbers.all.ownedCards} / ${set.numbers.all.totalCards}",
+                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
+                        fontWeight = MaterialTheme.typography.bodyLarge.fontWeight,
+                        fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
+                        color = fontColor
+                    )
+                }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(
+                        text = set.set,
+                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                        fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
+                        fontFamily = MaterialTheme.typography.bodySmall.fontFamily,
+                        color = fontColor
+                    )
+                    Text(
+                        text = "${set.numbers.all.ownedCards/set.numbers.all.totalCards*100} %",
+                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                        fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
+                        fontFamily = MaterialTheme.typography.bodySmall.fontFamily,
+                        color = fontColor
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun CollectionRow(
+    sets: List<Set>,
+    onSetTap: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
     Row(
-        modifier = modifier.fillMaxWidth().padding(all = 20.dp),
+        modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(5.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -94,8 +208,11 @@ fun CollectionRow(sets: List<Set>, onSetTap: (String) -> Unit, modifier: Modifie
 }
 
 @Composable
-fun SetButton(collection: String, resourceID: Int, modifier: Modifier = Modifier)
-{
+fun SetButton(
+    collection: String,
+    resourceID: Int,
+    modifier: Modifier = Modifier
+) {
     val image = painterResource(resourceID)
     Column(
         modifier = modifier,

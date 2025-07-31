@@ -114,15 +114,15 @@ class SetsData() {
 
         val boosters = mutableListOf<Booster>()
         cardList.forEach { card ->
-            val cardBoosters = card.booster
-            if (cardBoosters.isNotEmpty()) {
+            val cardBoosters = card.boosters
+            if (!cardBoosters.isEmpty()) {
                 val mainBooster = cardBoosters[0]
                 if (!boosters.contains(mainBooster)) boosters.add(mainBooster)
             }
         }
         val byBooster = mutableMapOf<Booster, OwnedData>()
         boosters.forEach { booster ->
-            val boosterCards = cardList.stream().filter{ card -> card.booster.contains(booster) }.toArray().asList() as List<Card>
+            val boosterCards = cardList.stream().filter{ card -> card.boosters.contains(booster) }.toArray().asList() as List<Card>
             val data = OwnedData(
                 totalCards = boosterCards.count(),
                 ownedCards = boosterCards.stream().filter{ card -> card.owned }.count().toInt()

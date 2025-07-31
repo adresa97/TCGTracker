@@ -1,0 +1,1393 @@
+[
+  {
+    "id": "A3b-001",
+    "name": {
+      "en": "Tropius",
+      "es": "Tropius"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3b-002",
+    "name": {
+      "en": "Leafeon",
+      "es": "Leafeon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3b-003",
+    "name": {
+      "en": "Bounsweet",
+      "es": "Bounsweet"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3b-004",
+    "name": {
+      "en": "Steenee",
+      "es": "Steenee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3b-005",
+    "name": {
+      "en": "Tsareena",
+      "es": "Tsareena"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3b-006",
+    "name": {
+      "en": "Applin",
+      "es": "Applin"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3b-007",
+    "name": {
+      "en": "Appletun",
+      "es": "Appletun"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3b-008",
+    "name": {
+      "en": "Flareon",
+      "es": "Flareon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-009",
+    "name": {
+      "en": "Flareon ex",
+      "es": "Flareon ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-010",
+    "name": {
+      "en": "Torkoal",
+      "es": "Torkoal"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-011",
+    "name": {
+      "en": "Litten",
+      "es": "Litten"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-012",
+    "name": {
+      "en": "Torracat",
+      "es": "Torracat"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-013",
+    "name": {
+      "en": "Incineroar",
+      "es": "Incineroar"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-014",
+    "name": {
+      "en": "Salandit",
+      "es": "Salandit"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-015",
+    "name": {
+      "en": "Salazzle",
+      "es": "Salazzle"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-016",
+    "name": {
+      "en": "Vaporeon",
+      "es": "Vaporeon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-017",
+    "name": {
+      "en": "Glaceon",
+      "es": "Glaceon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-018",
+    "name": {
+      "en": "Vanillite",
+      "es": "Vanillite"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-019",
+    "name": {
+      "en": "Vanillish",
+      "es": "Vanillish"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-020",
+    "name": {
+      "en": "Vanilluxe",
+      "es": "Vanilluxe"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-021",
+    "name": {
+      "en": "Alomomola",
+      "es": "Alomomola"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-022",
+    "name": {
+      "en": "Popplio",
+      "es": "Popplio"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-023",
+    "name": {
+      "en": "Brionne",
+      "es": "Brionne"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-024",
+    "name": {
+      "en": "Primarina ex",
+      "es": "Primarina ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-025",
+    "name": {
+      "en": "Jolteon",
+      "es": "Jolteon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3b-026",
+    "name": {
+      "en": "Joltik",
+      "es": "Joltik"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3b-027",
+    "name": {
+      "en": "Galvantula",
+      "es": "Galvantula"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3b-028",
+    "name": {
+      "en": "Espeon",
+      "es": "Espeon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-029",
+    "name": {
+      "en": "Woobat",
+      "es": "Woobat"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-030",
+    "name": {
+      "en": "Swoobat",
+      "es": "Swoobat"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-031",
+    "name": {
+      "en": "Swirlix",
+      "es": "Swirlix"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-032",
+    "name": {
+      "en": "Slurpuff",
+      "es": "Slurpuff"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-033",
+    "name": {
+      "en": "Sylveon",
+      "es": "Sylveon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-034",
+    "name": {
+      "en": "Sylveon ex",
+      "es": "Sylveon ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-035",
+    "name": {
+      "en": "Mimikyu",
+      "es": "Mimikyu"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-036",
+    "name": {
+      "en": "Milcery",
+      "es": "Milcery"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-037",
+    "name": {
+      "en": "Alcremie",
+      "es": "Alcremie"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-038",
+    "name": {
+      "en": "Barboach",
+      "es": "Barboach"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3b-039",
+    "name": {
+      "en": "Whiscash",
+      "es": "Whiscash"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3b-040",
+    "name": {
+      "en": "Mienfoo",
+      "es": "Mienfoo"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3b-041",
+    "name": {
+      "en": "Mienshao",
+      "es": "Mienshao"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3b-042",
+    "name": {
+      "en": "Carbink",
+      "es": "Carbink"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3b-043",
+    "name": {
+      "en": "Umbreon",
+      "es": "Umbreon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3b-044",
+    "name": {
+      "en": "Sableye",
+      "es": "Sableye"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3b-045",
+    "name": {
+      "en": "Purrloin",
+      "es": "Purrloin"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3b-046",
+    "name": {
+      "en": "Liepard",
+      "es": "Liepard"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3b-047",
+    "name": {
+      "en": "Mawile",
+      "es": "Mawile"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3b-048",
+    "name": {
+      "en": "Togedemaru",
+      "es": "Togedemaru"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3b-049",
+    "name": {
+      "en": "Meltan",
+      "es": "Meltan"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3b-050",
+    "name": {
+      "en": "Melmetal",
+      "es": "Melmetal"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3b-051",
+    "name": {
+      "en": "Dratini",
+      "es": "Dratini"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A3b-052",
+    "name": {
+      "en": "Dragonair",
+      "es": "Dragonair"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A3b-053",
+    "name": {
+      "en": "Dragonite ex",
+      "es": "Dragonite ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A3b-054",
+    "name": {
+      "en": "Drampa",
+      "es": "Drampa"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A3b-055",
+    "name": {
+      "en": "Eevee",
+      "es": "Eevee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-056",
+    "name": {
+      "en": "Eevee ex",
+      "es": "Eevee ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-057",
+    "name": {
+      "en": "Snorlax ex",
+      "es": "Snorlax ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-058",
+    "name": {
+      "en": "Aipom",
+      "es": "Aipom"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-059",
+    "name": {
+      "en": "Ambipom",
+      "es": "Ambipom"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-060",
+    "name": {
+      "en": "Chatot",
+      "es": "Chatot"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-061",
+    "name": {
+      "en": "Audino",
+      "es": "Audino"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-062",
+    "name": {
+      "en": "Minccino",
+      "es": "Minccino"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-063",
+    "name": {
+      "en": "Cinccino",
+      "es": "Cinccino"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-064",
+    "name": {
+      "en": "Skwovet",
+      "es": "Skwovet"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-065",
+    "name": {
+      "en": "Greedent",
+      "es": "Greedent"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-066",
+    "name": {
+      "en": "Eevee Bag",
+      "es": "Mochila de Eevee"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3b-067",
+    "name": {
+      "en": "Leftovers",
+      "es": "Restos"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3b-068",
+    "name": {
+      "en": "Hau",
+      "es": "Tilo"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3b-069",
+    "name": {
+      "en": "Penny",
+      "es": "Noa"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3b-070",
+    "name": {
+      "en": "Leafeon",
+      "es": "Leafeon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3b-071",
+    "name": {
+      "en": "Flareon",
+      "es": "Flareon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-072",
+    "name": {
+      "en": "Vaporeon",
+      "es": "Vaporeon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-073",
+    "name": {
+      "en": "Glaceon",
+      "es": "Glaceon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-074",
+    "name": {
+      "en": "Jolteon",
+      "es": "Jolteon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3b-075",
+    "name": {
+      "en": "Espeon",
+      "es": "Espeon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-076",
+    "name": {
+      "en": "Sylveon",
+      "es": "Sylveon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-077",
+    "name": {
+      "en": "Umbreon",
+      "es": "Umbreon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3b-078",
+    "name": {
+      "en": "Eevee",
+      "es": "Eevee"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-079",
+    "name": {
+      "en": "Flareon ex",
+      "es": "Flareon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-080",
+    "name": {
+      "en": "Primarina ex",
+      "es": "Primarina ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-081",
+    "name": {
+      "en": "Sylveon ex",
+      "es": "Sylveon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-082",
+    "name": {
+      "en": "Dragonite ex",
+      "es": "Dragonite ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A3b-083",
+    "name": {
+      "en": "Eevee ex",
+      "es": "Eevee ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-084",
+    "name": {
+      "en": "Snorlax ex",
+      "es": "Snorlax ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-085",
+    "name": {
+      "en": "Hau",
+      "es": "Tilo"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3b-086",
+    "name": {
+      "en": "Penny",
+      "es": "Noa"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3b-087",
+    "name": {
+      "en": "Flareon ex",
+      "es": "Flareon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-088",
+    "name": {
+      "en": "Primarina ex",
+      "es": "Primarina ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-089",
+    "name": {
+      "en": "Sylveon ex",
+      "es": "Sylveon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-090",
+    "name": {
+      "en": "Dragonite ex",
+      "es": "Dragonite ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A3b-091",
+    "name": {
+      "en": "Snorlax ex",
+      "es": "Snorlax ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-092",
+    "name": {
+      "en": "Eevee ex",
+      "es": "Eevee ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-093",
+    "name": {
+      "en": "Pinsir",
+      "es": "Pinsir"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3b-094",
+    "name": {
+      "en": "Lapras",
+      "es": "Lapras"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-095",
+    "name": {
+      "en": "Voltorb",
+      "es": "Voltorb"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3b-096",
+    "name": {
+      "en": "Electrode",
+      "es": "Electrode"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3b-097",
+    "name": {
+      "en": "Ralts",
+      "es": "Ralts"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-098",
+    "name": {
+      "en": "Kirlia",
+      "es": "Kirlia"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-099",
+    "name": {
+      "en": "Gardevoir",
+      "es": "Gardevoir"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3b-100",
+    "name": {
+      "en": "Ekans",
+      "es": "Ekans"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3b-101",
+    "name": {
+      "en": "Arbok",
+      "es": "Arbok"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3b-102",
+    "name": {
+      "en": "Farfetch'd",
+      "es": "Farfetch'd"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3b-103",
+    "name": {
+      "en": "Moltres ex",
+      "es": "Moltres ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3b-104",
+    "name": {
+      "en": "Articuno ex",
+      "es": "Articuno ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3b-105",
+    "name": {
+      "en": "Zapdos ex",
+      "es": "Zapdos ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3b-106",
+    "name": {
+      "en": "Gallade ex",
+      "es": "Gallade ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3b-107",
+    "name": {
+      "en": "Eevee Bag",
+      "es": "Mochila de Eevee"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Eevee"
+    ],
+    "type": "Trainer",
+    "baby": false
+  }
+]

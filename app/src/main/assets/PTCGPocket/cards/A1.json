@@ -1,0 +1,3812 @@
+[
+  {
+    "id": "A1-001",
+    "name": {
+      "en": "Bulbasaur",
+      "es": "Bulbasaur"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-002",
+    "name": {
+      "en": "Ivysaur",
+      "es": "Ivysaur"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-003",
+    "name": {
+      "en": "Venusaur",
+      "es": "Venusaur"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-004",
+    "name": {
+      "en": "Venusaur ex",
+      "es": "Venusaur ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-005",
+    "name": {
+      "en": "Caterpie",
+      "es": "Caterpie"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-006",
+    "name": {
+      "en": "Metapod",
+      "es": "Metapod"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-007",
+    "name": {
+      "en": "Butterfree",
+      "es": "Butterfree"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-008",
+    "name": {
+      "en": "Weedle",
+      "es": "Weedle"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-009",
+    "name": {
+      "en": "Kakuna",
+      "es": "Kakuna"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-010",
+    "name": {
+      "en": "Beedrill",
+      "es": "Beedrill"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-011",
+    "name": {
+      "en": "Oddish",
+      "es": "Oddish"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-012",
+    "name": {
+      "en": "Gloom",
+      "es": "Gloom"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-013",
+    "name": {
+      "en": "Vileplume",
+      "es": "Vileplume"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-014",
+    "name": {
+      "en": "Paras",
+      "es": "Paras"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-015",
+    "name": {
+      "en": "Parasect",
+      "es": "Parasect"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-016",
+    "name": {
+      "en": "Venonat",
+      "es": "Venonat"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-017",
+    "name": {
+      "en": "Venomoth",
+      "es": "Venomoth"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-018",
+    "name": {
+      "en": "Bellsprout",
+      "es": "Bellsprout"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-019",
+    "name": {
+      "en": "Weepinbell",
+      "es": "Weepinbell"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-020",
+    "name": {
+      "en": "Victreebel",
+      "es": "Victreebel"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-021",
+    "name": {
+      "en": "Exeggcute",
+      "es": "Exeggcute"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-022",
+    "name": {
+      "en": "Exeggutor",
+      "es": "Exeggutor"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-023",
+    "name": {
+      "en": "Exeggutor ex",
+      "es": "Exeggutor ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-024",
+    "name": {
+      "en": "Tangela",
+      "es": "Tangela"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-025",
+    "name": {
+      "en": "Scyther",
+      "es": "Scyther"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-026",
+    "name": {
+      "en": "Pinsir",
+      "es": "Pinsir"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-027",
+    "name": {
+      "en": "Cottonee",
+      "es": "Cottonee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-028",
+    "name": {
+      "en": "Whimsicott",
+      "es": "Whimsicott"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-029",
+    "name": {
+      "en": "Petilil",
+      "es": "Petilil"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-030",
+    "name": {
+      "en": "Lilligant",
+      "es": "Lilligant"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-031",
+    "name": {
+      "en": "Skiddo",
+      "es": "Skiddo"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-032",
+    "name": {
+      "en": "Gogoat",
+      "es": "Gogoat"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-033",
+    "name": {
+      "en": "Charmander",
+      "es": "Charmander"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-034",
+    "name": {
+      "en": "Charmeleon",
+      "es": "Charmeleon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-035",
+    "name": {
+      "en": "Charizard",
+      "es": "Charizard"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-036",
+    "name": {
+      "en": "Charizard ex",
+      "es": "Charizard ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-037",
+    "name": {
+      "en": "Vulpix",
+      "es": "Vulpix"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-038",
+    "name": {
+      "en": "Ninetales",
+      "es": "Ninetales"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-039",
+    "name": {
+      "en": "Growlithe",
+      "es": "Growlithe"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-040",
+    "name": {
+      "en": "Arcanine",
+      "es": "Arcanine"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-041",
+    "name": {
+      "en": "Arcanine ex",
+      "es": "Arcanine ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-042",
+    "name": {
+      "en": "Ponyta",
+      "es": "Ponyta"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-043",
+    "name": {
+      "en": "Rapidash",
+      "es": "Rapidash"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-044",
+    "name": {
+      "en": "Magmar",
+      "es": "Magmar"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-045",
+    "name": {
+      "en": "Flareon",
+      "es": "Flareon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-046",
+    "name": {
+      "en": "Moltres",
+      "es": "Moltres"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-047",
+    "name": {
+      "en": "Moltres ex",
+      "es": "Moltres ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-048",
+    "name": {
+      "en": "Heatmor",
+      "es": "Heatmor"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-049",
+    "name": {
+      "en": "Salandit",
+      "es": "Salandit"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-050",
+    "name": {
+      "en": "Salazzle",
+      "es": "Salazzle"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-051",
+    "name": {
+      "en": "Sizzlipede",
+      "es": "Sizzlipede"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-052",
+    "name": {
+      "en": "Centiskorch",
+      "es": "Centiskorch"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-053",
+    "name": {
+      "en": "Squirtle",
+      "es": "Squirtle"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-054",
+    "name": {
+      "en": "Wartortle",
+      "es": "Wartortle"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-055",
+    "name": {
+      "en": "Blastoise",
+      "es": "Blastoise"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-056",
+    "name": {
+      "en": "Blastoise ex",
+      "es": "Blastoise ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-057",
+    "name": {
+      "en": "Psyduck",
+      "es": "Psyduck"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-058",
+    "name": {
+      "en": "Golduck",
+      "es": "Golduck"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-059",
+    "name": {
+      "en": "Poliwag",
+      "es": "Poliwag"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-060",
+    "name": {
+      "en": "Poliwhirl",
+      "es": "Poliwhirl"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-061",
+    "name": {
+      "en": "Poliwrath",
+      "es": "Poliwrath"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-062",
+    "name": {
+      "en": "Tentacool",
+      "es": "Tentacool"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-063",
+    "name": {
+      "en": "Tentacruel",
+      "es": "Tentacruel"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-064",
+    "name": {
+      "en": "Seel",
+      "es": "Seel"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-065",
+    "name": {
+      "en": "Dewgong",
+      "es": "Dewgong"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-066",
+    "name": {
+      "en": "Shellder",
+      "es": "Shellder"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-067",
+    "name": {
+      "en": "Cloyster",
+      "es": "Cloyster"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-068",
+    "name": {
+      "en": "Krabby",
+      "es": "Krabby"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-069",
+    "name": {
+      "en": "Kingler",
+      "es": "Kingler"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-070",
+    "name": {
+      "en": "Horsea",
+      "es": "Horsea"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-071",
+    "name": {
+      "en": "Seadra",
+      "es": "Seadra"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-072",
+    "name": {
+      "en": "Goldeen",
+      "es": "Goldeen"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-073",
+    "name": {
+      "en": "Seaking",
+      "es": "Seaking"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-074",
+    "name": {
+      "en": "Staryu",
+      "es": "Staryu"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-075",
+    "name": {
+      "en": "Starmie",
+      "es": "Starmie"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-076",
+    "name": {
+      "en": "Starmie ex",
+      "es": "Starmie ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-077",
+    "name": {
+      "en": "Magikarp",
+      "es": "Magikarp"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-078",
+    "name": {
+      "en": "Gyarados",
+      "es": "Gyarados"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-079",
+    "name": {
+      "en": "Lapras",
+      "es": "Lapras"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-080",
+    "name": {
+      "en": "Vaporeon",
+      "es": "Vaporeon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-081",
+    "name": {
+      "en": "Omanyte",
+      "es": "Omanyte"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-082",
+    "name": {
+      "en": "Omastar",
+      "es": "Omastar"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-083",
+    "name": {
+      "en": "Articuno",
+      "es": "Articuno"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-084",
+    "name": {
+      "en": "Articuno ex",
+      "es": "Articuno ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-085",
+    "name": {
+      "en": "Ducklett",
+      "es": "Ducklett"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-086",
+    "name": {
+      "en": "Swanna",
+      "es": "Swanna"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-087",
+    "name": {
+      "en": "Froakie",
+      "es": "Froakie"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-088",
+    "name": {
+      "en": "Frogadier",
+      "es": "Frogadier"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-089",
+    "name": {
+      "en": "Greninja",
+      "es": "Greninja"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-090",
+    "name": {
+      "en": "Pyukumuku",
+      "es": "Pyukumuku"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-091",
+    "name": {
+      "en": "Bruxish",
+      "es": "Bruxish"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-092",
+    "name": {
+      "en": "Snom",
+      "es": "Snom"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-093",
+    "name": {
+      "en": "Frosmoth",
+      "es": "Frosmoth"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-094",
+    "name": {
+      "en": "Pikachu",
+      "es": "Pikachu"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-095",
+    "name": {
+      "en": "Raichu",
+      "es": "Raichu"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-096",
+    "name": {
+      "en": "Pikachu ex",
+      "es": "Pikachu ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-097",
+    "name": {
+      "en": "Magnemite",
+      "es": "Magnemite"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-098",
+    "name": {
+      "en": "Magneton",
+      "es": "Magneton"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-099",
+    "name": {
+      "en": "Voltorb",
+      "es": "Voltorb"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-100",
+    "name": {
+      "en": "Electrode",
+      "es": "Electrode"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-101",
+    "name": {
+      "en": "Electabuzz",
+      "es": "Electabuzz"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-102",
+    "name": {
+      "en": "Jolteon",
+      "es": "Jolteon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-103",
+    "name": {
+      "en": "Zapdos",
+      "es": "Zapdos"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-104",
+    "name": {
+      "en": "Zapdos ex",
+      "es": "Zapdos ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-105",
+    "name": {
+      "en": "Blitzle",
+      "es": "Blitzle"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-106",
+    "name": {
+      "en": "Zebstrika",
+      "es": "Zebstrika"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-107",
+    "name": {
+      "en": "Tynamo",
+      "es": "Tynamo"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-108",
+    "name": {
+      "en": "Eelektrik",
+      "es": "Eelektrik"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-109",
+    "name": {
+      "en": "Eelektross",
+      "es": "Eelektross"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-110",
+    "name": {
+      "en": "Helioptile",
+      "es": "Helioptile"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-111",
+    "name": {
+      "en": "Heliolisk",
+      "es": "Heliolisk"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-112",
+    "name": {
+      "en": "Pincurchin",
+      "es": "Pincurchin"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-113",
+    "name": {
+      "en": "Clefairy",
+      "es": "Clefairy"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-114",
+    "name": {
+      "en": "Clefable",
+      "es": "Clefable"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-115",
+    "name": {
+      "en": "Abra",
+      "es": "Abra"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-116",
+    "name": {
+      "en": "Kadabra",
+      "es": "Kadabra"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-117",
+    "name": {
+      "en": "Alakazam",
+      "es": "Alakazam"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-118",
+    "name": {
+      "en": "Slowpoke",
+      "es": "Slowpoke"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-119",
+    "name": {
+      "en": "Slowbro",
+      "es": "Slowbro"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-120",
+    "name": {
+      "en": "Gastly",
+      "es": "Gastly"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-121",
+    "name": {
+      "en": "Haunter",
+      "es": "Haunter"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-122",
+    "name": {
+      "en": "Gengar",
+      "es": "Gengar"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-123",
+    "name": {
+      "en": "Gengar ex",
+      "es": "Gengar ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-124",
+    "name": {
+      "en": "Drowzee",
+      "es": "Drowzee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-125",
+    "name": {
+      "en": "Hypno",
+      "es": "Hypno"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-126",
+    "name": {
+      "en": "Mr. Mime",
+      "es": "Mr. Mime"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-127",
+    "name": {
+      "en": "Jynx",
+      "es": "Jynx"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-128",
+    "name": {
+      "en": "Mewtwo",
+      "es": "Mewtwo"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-129",
+    "name": {
+      "en": "Mewtwo ex",
+      "es": "Mewtwo ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-130",
+    "name": {
+      "en": "Ralts",
+      "es": "Ralts"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-131",
+    "name": {
+      "en": "Kirlia",
+      "es": "Kirlia"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-132",
+    "name": {
+      "en": "Gardevoir",
+      "es": "Gardevoir"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-133",
+    "name": {
+      "en": "Woobat",
+      "es": "Woobat"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-134",
+    "name": {
+      "en": "Swoobat",
+      "es": "Swoobat"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-135",
+    "name": {
+      "en": "Golett",
+      "es": "Golett"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-136",
+    "name": {
+      "en": "Golurk",
+      "es": "Golurk"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-137",
+    "name": {
+      "en": "Sandshrew",
+      "es": "Sandshrew"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-138",
+    "name": {
+      "en": "Sandslash",
+      "es": "Sandslash"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-139",
+    "name": {
+      "en": "Diglett",
+      "es": "Diglett"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-140",
+    "name": {
+      "en": "Dugtrio",
+      "es": "Dugtrio"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-141",
+    "name": {
+      "en": "Mankey",
+      "es": "Mankey"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-142",
+    "name": {
+      "en": "Primeape",
+      "es": "Primeape"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-143",
+    "name": {
+      "en": "Machop",
+      "es": "Machop"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-144",
+    "name": {
+      "en": "Machoke",
+      "es": "Machoke"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-145",
+    "name": {
+      "en": "Machamp",
+      "es": "Machamp"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-146",
+    "name": {
+      "en": "Machamp ex",
+      "es": "Machamp ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-147",
+    "name": {
+      "en": "Geodude",
+      "es": "Geodude"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-148",
+    "name": {
+      "en": "Graveler",
+      "es": "Graveler"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-149",
+    "name": {
+      "en": "Golem",
+      "es": "Golem"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-150",
+    "name": {
+      "en": "Onix",
+      "es": "Onix"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-151",
+    "name": {
+      "en": "Cubone",
+      "es": "Cubone"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-152",
+    "name": {
+      "en": "Marowak",
+      "es": "Marowak"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-153",
+    "name": {
+      "en": "Marowak ex",
+      "es": "Marowak ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-154",
+    "name": {
+      "en": "Hitmonlee",
+      "es": "Hitmonlee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-155",
+    "name": {
+      "en": "Hitmonchan",
+      "es": "Hitmonchan"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-156",
+    "name": {
+      "en": "Rhyhorn",
+      "es": "Rhyhorn"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-157",
+    "name": {
+      "en": "Rhydon",
+      "es": "Rhydon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-158",
+    "name": {
+      "en": "Kabuto",
+      "es": "Kabuto"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-159",
+    "name": {
+      "en": "Kabutops",
+      "es": "Kabutops"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-160",
+    "name": {
+      "en": "Mienfoo",
+      "es": "Mienfoo"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-161",
+    "name": {
+      "en": "Mienshao",
+      "es": "Mienshao"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-162",
+    "name": {
+      "en": "Clobbopus",
+      "es": "Clobbopus"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-163",
+    "name": {
+      "en": "Grapploct",
+      "es": "Grapploct"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-164",
+    "name": {
+      "en": "Ekans",
+      "es": "Ekans"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-165",
+    "name": {
+      "en": "Arbok",
+      "es": "Arbok"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-166",
+    "name": {
+      "en": "Nidoran♀",
+      "es": "Nidoran♀"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-167",
+    "name": {
+      "en": "Nidorina",
+      "es": "Nidorina"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-168",
+    "name": {
+      "en": "Nidoqueen",
+      "es": "Nidoqueen"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-169",
+    "name": {
+      "en": "Nidoran♂",
+      "es": "Nidoran♂"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-170",
+    "name": {
+      "en": "Nidorino",
+      "es": "Nidorino"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-171",
+    "name": {
+      "en": "Nidoking",
+      "es": "Nidoking"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-172",
+    "name": {
+      "en": "Zubat",
+      "es": "Zubat"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-173",
+    "name": {
+      "en": "Golbat",
+      "es": "Golbat"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-174",
+    "name": {
+      "en": "Grimer",
+      "es": "Grimer"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-175",
+    "name": {
+      "en": "Muk",
+      "es": "Muk"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-176",
+    "name": {
+      "en": "Koffing",
+      "es": "Koffing"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-177",
+    "name": {
+      "en": "Weezing",
+      "es": "Weezing"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-178",
+    "name": {
+      "en": "Mawile",
+      "es": "Mawile"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A1-179",
+    "name": {
+      "en": "Pawniard",
+      "es": "Pawniard"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A1-180",
+    "name": {
+      "en": "Bisharp",
+      "es": "Bisharp"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A1-181",
+    "name": {
+      "en": "Meltan",
+      "es": "Meltan"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A1-182",
+    "name": {
+      "en": "Melmetal",
+      "es": "Melmetal"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A1-183",
+    "name": {
+      "en": "Dratini",
+      "es": "Dratini"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A1-184",
+    "name": {
+      "en": "Dragonair",
+      "es": "Dragonair"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A1-185",
+    "name": {
+      "en": "Dragonite",
+      "es": "Dragonite"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A1-186",
+    "name": {
+      "en": "Pidgey",
+      "es": "Pidgey"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-187",
+    "name": {
+      "en": "Pidgeotto",
+      "es": "Pidgeotto"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-188",
+    "name": {
+      "en": "Pidgeot",
+      "es": "Pidgeot"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-189",
+    "name": {
+      "en": "Rattata",
+      "es": "Rattata"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-190",
+    "name": {
+      "en": "Raticate",
+      "es": "Raticate"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-191",
+    "name": {
+      "en": "Spearow",
+      "es": "Spearow"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-192",
+    "name": {
+      "en": "Fearow",
+      "es": "Fearow"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-193",
+    "name": {
+      "en": "Jigglypuff",
+      "es": "Jigglypuff"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-194",
+    "name": {
+      "en": "Wigglytuff",
+      "es": "Wigglytuff"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-195",
+    "name": {
+      "en": "Wigglytuff ex",
+      "es": "Wigglytuff ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-196",
+    "name": {
+      "en": "Meowth",
+      "es": "Meowth"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-197",
+    "name": {
+      "en": "Persian",
+      "es": "Persian"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-198",
+    "name": {
+      "en": "Farfetch\u0027d",
+      "es": "Farfetch\u0027d"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-199",
+    "name": {
+      "en": "Doduo",
+      "es": "Doduo"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-200",
+    "name": {
+      "en": "Dodrio",
+      "es": "Dodrio"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-201",
+    "name": {
+      "en": "Lickitung",
+      "es": "Lickitung"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-202",
+    "name": {
+      "en": "Chansey",
+      "es": "Chansey"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-203",
+    "name": {
+      "en": "Kangaskhan",
+      "es": "Kangaskhan"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-204",
+    "name": {
+      "en": "Tauros",
+      "es": "Tauros"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-205",
+    "name": {
+      "en": "Ditto",
+      "es": "Ditto"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-206",
+    "name": {
+      "en": "Eevee",
+      "es": "Eevee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-207",
+    "name": {
+      "en": "Eevee",
+      "es": "Eevee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-208",
+    "name": {
+      "en": "Eevee",
+      "es": "Eevee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-209",
+    "name": {
+      "en": "Porygon",
+      "es": "Porygon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-210",
+    "name": {
+      "en": "Aerodactyl",
+      "es": "Aerodactyl"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-211",
+    "name": {
+      "en": "Snorlax",
+      "es": "Snorlax"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-212",
+    "name": {
+      "en": "Minccino",
+      "es": "Minccino"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-213",
+    "name": {
+      "en": "Cinccino",
+      "es": "Cinccino"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-214",
+    "name": {
+      "en": "Wooloo",
+      "es": "Wooloo"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-215",
+    "name": {
+      "en": "Dubwool",
+      "es": "Dubwool"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-216",
+    "name": {
+      "en": "Helix Fossil",
+      "es": "Fósil Hélix"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-217",
+    "name": {
+      "en": "Dome Fossil",
+      "es": "Fósil Domo"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-218",
+    "name": {
+      "en": "Old Amber",
+      "es": "Ámbar Viejo"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-219",
+    "name": {
+      "en": "Erika",
+      "es": "Erika"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-220",
+    "name": {
+      "en": "Misty",
+      "es": "Misty"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-221",
+    "name": {
+      "en": "Blaine",
+      "es": "Blaine"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-222",
+    "name": {
+      "en": "Koga",
+      "es": "Koga"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-223",
+    "name": {
+      "en": "Giovanni",
+      "es": "Giovanni"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-224",
+    "name": {
+      "en": "Brock",
+      "es": "Brock"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-225",
+    "name": {
+      "en": "Sabrina",
+      "es": "Sabrina"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-226",
+    "name": {
+      "en": "Lt. Surge",
+      "es": "Teniente Surge"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-227",
+    "name": {
+      "en": "Bulbasaur",
+      "es": "Bulbasaur"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-228",
+    "name": {
+      "en": "Gloom",
+      "es": "Gloom"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-229",
+    "name": {
+      "en": "Pinsir",
+      "es": "Pinsir"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-230",
+    "name": {
+      "en": "Charmander",
+      "es": "Charmander"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-231",
+    "name": {
+      "en": "Rapidash",
+      "es": "Rapidash"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-232",
+    "name": {
+      "en": "Squirtle",
+      "es": "Squirtle"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-233",
+    "name": {
+      "en": "Gyarados",
+      "es": "Gyarados"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-234",
+    "name": {
+      "en": "Lapras",
+      "es": "Lapras"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-235",
+    "name": {
+      "en": "Electrode",
+      "es": "Electrode"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-236",
+    "name": {
+      "en": "Alakazam",
+      "es": "Alakazam"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-237",
+    "name": {
+      "en": "Slowpoke",
+      "es": "Slowpoke"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-238",
+    "name": {
+      "en": "Diglett",
+      "es": "Diglett"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-239",
+    "name": {
+      "en": "Cubone",
+      "es": "Cubone"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-240",
+    "name": {
+      "en": "Nidoqueen",
+      "es": "Nidoqueen"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-241",
+    "name": {
+      "en": "Nidoking",
+      "es": "Nidoking"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-242",
+    "name": {
+      "en": "Golbat",
+      "es": "Golbat"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-243",
+    "name": {
+      "en": "Weezing",
+      "es": "Weezing"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1-244",
+    "name": {
+      "en": "Dragonite",
+      "es": "Dragonite"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A1-245",
+    "name": {
+      "en": "Pidgeot",
+      "es": "Pidgeot"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-246",
+    "name": {
+      "en": "Meowth",
+      "es": "Meowth"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-247",
+    "name": {
+      "en": "Ditto",
+      "es": "Ditto"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-248",
+    "name": {
+      "en": "Eevee",
+      "es": "Eevee"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-249",
+    "name": {
+      "en": "Porygon",
+      "es": "Porygon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-250",
+    "name": {
+      "en": "Snorlax",
+      "es": "Snorlax"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-251",
+    "name": {
+      "en": "Venusaur ex",
+      "es": "Venusaur ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-252",
+    "name": {
+      "en": "Exeggutor ex",
+      "es": "Exeggutor ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1-253",
+    "name": {
+      "en": "Charizard ex",
+      "es": "Charizard ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-254",
+    "name": {
+      "en": "Arcanine ex",
+      "es": "Arcanine ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-255",
+    "name": {
+      "en": "Moltres ex",
+      "es": "Moltres ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-256",
+    "name": {
+      "en": "Blastoise ex",
+      "es": "Blastoise ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-257",
+    "name": {
+      "en": "Starmie ex",
+      "es": "Starmie ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-258",
+    "name": {
+      "en": "Articuno ex",
+      "es": "Articuno ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-259",
+    "name": {
+      "en": "Pikachu ex",
+      "es": "Pikachu ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-260",
+    "name": {
+      "en": "Zapdos ex",
+      "es": "Zapdos ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-261",
+    "name": {
+      "en": "Gengar ex",
+      "es": "Gengar ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-262",
+    "name": {
+      "en": "Mewtwo ex",
+      "es": "Mewtwo ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-263",
+    "name": {
+      "en": "Machamp ex",
+      "es": "Machamp ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-264",
+    "name": {
+      "en": "Marowak ex",
+      "es": "Marowak ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-265",
+    "name": {
+      "en": "Wigglytuff ex",
+      "es": "Wigglytuff ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-266",
+    "name": {
+      "en": "Erika",
+      "es": "Erika"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-267",
+    "name": {
+      "en": "Misty",
+      "es": "Misty"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-268",
+    "name": {
+      "en": "Blaine",
+      "es": "Blaine"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-269",
+    "name": {
+      "en": "Koga",
+      "es": "Koga"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-270",
+    "name": {
+      "en": "Giovanni",
+      "es": "Giovanni"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-271",
+    "name": {
+      "en": "Brock",
+      "es": "Brock"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-272",
+    "name": {
+      "en": "Sabrina",
+      "es": "Sabrina"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-273",
+    "name": {
+      "en": "Lt. Surge",
+      "es": "Teniente Surge"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1-274",
+    "name": {
+      "en": "Moltres ex",
+      "es": "Moltres ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-275",
+    "name": {
+      "en": "Articuno ex",
+      "es": "Articuno ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1-276",
+    "name": {
+      "en": "Zapdos ex",
+      "es": "Zapdos ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-277",
+    "name": {
+      "en": "Gengar ex",
+      "es": "Gengar ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-278",
+    "name": {
+      "en": "Machamp ex",
+      "es": "Machamp ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1-279",
+    "name": {
+      "en": "Wigglytuff ex",
+      "es": "Wigglytuff ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1-280",
+    "name": {
+      "en": "Charizard ex",
+      "es": "Charizard ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-281",
+    "name": {
+      "en": "Pikachu ex",
+      "es": "Pikachu ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-282",
+    "name": {
+      "en": "Mewtwo ex",
+      "es": "Mewtwo ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Mewtwo"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-283",
+    "name": {
+      "en": "Mew",
+      "es": "Mew"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "None"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1-284",
+    "name": {
+      "en": "Charizard ex",
+      "es": "Charizard ex"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1-285",
+    "name": {
+      "en": "Pikachu ex",
+      "es": "Pikachu ex"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1-286",
+    "name": {
+      "en": "Mewtwo ex",
+      "es": "Mewtwo ex"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Mewtwo",
+      "Charizard",
+      "Pikachu"
+    ],
+    "type": "Psychic",
+    "baby": false
+  }
+]

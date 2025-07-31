@@ -1,0 +1,1341 @@
+[
+  {
+    "id": "A3a-001",
+    "name": {
+      "en": "Petilil",
+      "es": "Petilil"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-002",
+    "name": {
+      "en": "Lilligant",
+      "es": "Lilligant"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-003",
+    "name": {
+      "en": "Rowlet",
+      "es": "Rowlet"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-004",
+    "name": {
+      "en": "Dartrix",
+      "es": "Dartrix"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-005",
+    "name": {
+      "en": "Decidueye",
+      "es": "Decidueye"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-006",
+    "name": {
+      "en": "Buzzwole ex",
+      "es": "Buzzwole ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-007",
+    "name": {
+      "en": "Pheromosa",
+      "es": "Pheromosa"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-008",
+    "name": {
+      "en": "Kartana",
+      "es": "Kartana"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-009",
+    "name": {
+      "en": "Blacephalon",
+      "es": "Blacephalon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3a-010",
+    "name": {
+      "en": "Mantine",
+      "es": "Mantine"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3a-011",
+    "name": {
+      "en": "Carvanha",
+      "es": "Carvanha"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3a-012",
+    "name": {
+      "en": "Sharpedo",
+      "es": "Sharpedo"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3a-013",
+    "name": {
+      "en": "Shinx",
+      "es": "Shinx"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3a-014",
+    "name": {
+      "en": "Luxio",
+      "es": "Luxio"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3a-015",
+    "name": {
+      "en": "Luxray",
+      "es": "Luxray"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3a-016",
+    "name": {
+      "en": "Blitzle",
+      "es": "Blitzle"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3a-017",
+    "name": {
+      "en": "Zebstrika",
+      "es": "Zebstrika"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3a-018",
+    "name": {
+      "en": "Emolga",
+      "es": "Emolga"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3a-019",
+    "name": {
+      "en": "Tapu Koko ex",
+      "es": "Tapu Koko ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3a-020",
+    "name": {
+      "en": "Xurkitree",
+      "es": "Xurkitree"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3a-021",
+    "name": {
+      "en": "Zeraora",
+      "es": "Zeraora"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3a-022",
+    "name": {
+      "en": "Clefairy",
+      "es": "Clefairy"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3a-023",
+    "name": {
+      "en": "Clefable",
+      "es": "Clefable"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3a-024",
+    "name": {
+      "en": "Phantump",
+      "es": "Phantump"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3a-025",
+    "name": {
+      "en": "Trevenant",
+      "es": "Trevenant"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3a-026",
+    "name": {
+      "en": "Morelull",
+      "es": "Morelull"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3a-027",
+    "name": {
+      "en": "Shiinotic",
+      "es": "Shiinotic"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3a-028",
+    "name": {
+      "en": "Meditite",
+      "es": "Meditite"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-029",
+    "name": {
+      "en": "Medicham",
+      "es": "Medicham"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-030",
+    "name": {
+      "en": "Baltoy",
+      "es": "Baltoy"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-031",
+    "name": {
+      "en": "Claydol",
+      "es": "Claydol"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-032",
+    "name": {
+      "en": "Rockruff",
+      "es": "Rockruff"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-033",
+    "name": {
+      "en": "Lycanroc ex",
+      "es": "Lycanroc ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-034",
+    "name": {
+      "en": "Passimian",
+      "es": "Passimian"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-035",
+    "name": {
+      "en": "Sandygast",
+      "es": "Sandygast"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-036",
+    "name": {
+      "en": "Palossand",
+      "es": "Palossand"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-037",
+    "name": {
+      "en": "Alolan Meowth",
+      "es": "Meowth de Alola"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-038",
+    "name": {
+      "en": "Alolan Persian",
+      "es": "Persian de Alola"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-039",
+    "name": {
+      "en": "Sandile",
+      "es": "Sandile"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-040",
+    "name": {
+      "en": "Krokorok",
+      "es": "Krokorok"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-041",
+    "name": {
+      "en": "Krookodile",
+      "es": "Krookodile"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-042",
+    "name": {
+      "en": "Nihilego",
+      "es": "Nihilego"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-043",
+    "name": {
+      "en": "Guzzlord ex",
+      "es": "Guzzlord ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-044",
+    "name": {
+      "en": "Poipole",
+      "es": "Poipole"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-045",
+    "name": {
+      "en": "Naganadel",
+      "es": "Naganadel"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-046",
+    "name": {
+      "en": "Alolan Diglett",
+      "es": "Diglett de Alola"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3a-047",
+    "name": {
+      "en": "Alolan Dugtrio ex",
+      "es": "Dugtrio de Alola ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3a-048",
+    "name": {
+      "en": "Aron",
+      "es": "Aron"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3a-049",
+    "name": {
+      "en": "Lairon",
+      "es": "Lairon"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3a-050",
+    "name": {
+      "en": "Aggron",
+      "es": "Aggron"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3a-051",
+    "name": {
+      "en": "Ferroseed",
+      "es": "Ferroseed"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3a-052",
+    "name": {
+      "en": "Ferrothorn",
+      "es": "Ferrothorn"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3a-053",
+    "name": {
+      "en": "Stakataka",
+      "es": "Stakataka"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3a-054",
+    "name": {
+      "en": "Lillipup",
+      "es": "Lillipup"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-055",
+    "name": {
+      "en": "Herdier",
+      "es": "Herdier"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-056",
+    "name": {
+      "en": "Stoutland",
+      "es": "Stoutland"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-057",
+    "name": {
+      "en": "Stufful",
+      "es": "Stufful"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-058",
+    "name": {
+      "en": "Bewear",
+      "es": "Bewear"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-059",
+    "name": {
+      "en": "Oranguru",
+      "es": "Oranguru"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-060",
+    "name": {
+      "en": "Type: Null",
+      "es": "Código Cero"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-061",
+    "name": {
+      "en": "Silvally",
+      "es": "Silvally"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-062",
+    "name": {
+      "en": "Celesteela",
+      "es": "Celesteela"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-063",
+    "name": {
+      "en": "Beast Wall",
+      "es": "Muro Ente"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3a-064",
+    "name": {
+      "en": "Repel",
+      "es": "Repelente"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3a-065",
+    "name": {
+      "en": "Electrical Cord",
+      "es": "Cable Eléctrico"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3a-066",
+    "name": {
+      "en": "Beastite",
+      "es": "Entita"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3a-067",
+    "name": {
+      "en": "Gladion",
+      "es": "Gladio"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3a-068",
+    "name": {
+      "en": "Looker",
+      "es": "Handsome"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3a-069",
+    "name": {
+      "en": "Lusamine",
+      "es": "Samina"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3a-070",
+    "name": {
+      "en": "Rowlet",
+      "es": "Rowlet"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-071",
+    "name": {
+      "en": "Pheromosa",
+      "es": "Pheromosa"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-072",
+    "name": {
+      "en": "Blacephalon",
+      "es": "Blacephalon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3a-073",
+    "name": {
+      "en": "Alolan Meowth",
+      "es": "Meowth de Alola"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-074",
+    "name": {
+      "en": "Silvally",
+      "es": "Silvally"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-075",
+    "name": {
+      "en": "Celesteela",
+      "es": "Celesteela"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-076",
+    "name": {
+      "en": "Buzzwole ex",
+      "es": "Buzzwole ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-077",
+    "name": {
+      "en": "Tapu Koko ex",
+      "es": "Tapu Koko ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3a-078",
+    "name": {
+      "en": "Lycanroc ex",
+      "es": "Lycanroc ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-079",
+    "name": {
+      "en": "Guzzlord ex",
+      "es": "Guzzlord ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-080",
+    "name": {
+      "en": "Alolan Dugtrio ex",
+      "es": "Dugtrio de Alola ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3a-081",
+    "name": {
+      "en": "Gladion",
+      "es": "Gladio"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3a-082",
+    "name": {
+      "en": "Looker",
+      "es": "Handsome"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3a-083",
+    "name": {
+      "en": "Lusamine",
+      "es": "Samina"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A3a-084",
+    "name": {
+      "en": "Tapu Koko ex",
+      "es": "Tapu Koko ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A3a-085",
+    "name": {
+      "en": "Lycanroc ex",
+      "es": "Lycanroc ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-086",
+    "name": {
+      "en": "Guzzlord ex",
+      "es": "Guzzlord ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A3a-087",
+    "name": {
+      "en": "Alolan Dugtrio ex",
+      "es": "Dugtrio de Alola ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A3a-088",
+    "name": {
+      "en": "Buzzwole ex",
+      "es": "Buzzwole ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-089",
+    "name": {
+      "en": "Growlithe",
+      "es": "Growlithe"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3a-090",
+    "name": {
+      "en": "Arcanine",
+      "es": "Arcanine"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3a-091",
+    "name": {
+      "en": "Froakie",
+      "es": "Froakie"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3a-092",
+    "name": {
+      "en": "Frogadier",
+      "es": "Frogadier"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3a-093",
+    "name": {
+      "en": "Greninja",
+      "es": "Greninja"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A3a-094",
+    "name": {
+      "en": "Jynx",
+      "es": "Jynx"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A3a-095",
+    "name": {
+      "en": "Pidgey",
+      "es": "Pidgey"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-096",
+    "name": {
+      "en": "Pidgeotto",
+      "es": "Pudgeotto"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-097",
+    "name": {
+      "en": "Pidgeot",
+      "es": "Pidgeot"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-098",
+    "name": {
+      "en": "Aerodactyl",
+      "es": "Aerodactyl"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-099",
+    "name": {
+      "en": "Celebi ex",
+      "es": "Celebi ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A3a-100",
+    "name": {
+      "en": "Arcanine ex",
+      "es": "Arcanine ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A3a-101",
+    "name": {
+      "en": "Aerodactyl ex",
+      "es": "Aerodactyl ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A3a-102",
+    "name": {
+      "en": "Pidgeot ex",
+      "es": "Pidgeot ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A3a-103",
+    "name": {
+      "en": "Nihilego",
+      "es": "Nihilego"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Buzzwole"
+    ],
+    "type": "Darkness",
+    "baby": false
+  }
+]

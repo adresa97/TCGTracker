@@ -2,12 +2,27 @@ package com.example.tcgtracker.models
 
 data class Card(
     val id: String,
-    val name: String,
+    val name: CardName,
     val type: String,
-    val booster: List<Booster>,
+    val boosters: List<Booster>,
     val rarity: Rarity,
     val image: String?,
-    var owned: Boolean = false
+    var owned: Boolean = false,
+    val baby: Boolean = false
+)
+
+data class InnerJsonCard(
+    val id: String,
+    val name: CardName,
+    val type: String,
+    val boosters: List<String>,
+    val rarity: String,
+    val baby: Boolean = false
+)
+
+data class CardName(
+    val en: String,
+    val es: String
 )
 
 enum class Booster(val prettyName: String) {
@@ -24,7 +39,9 @@ enum class Booster(val prettyName: String) {
     SOLGALEO("Solgaleo"),
     LUNALA("Lunala"),
     BUZZWOLE("Buzzwole"),
-    EEVEE("Eevee");
+    EEVEE("Eevee"),
+    LUGIA("Lugia"),
+    HO_OH("Ho-Oh");
 
     // Custom functions
     companion object {

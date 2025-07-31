@@ -21,6 +21,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -42,21 +43,24 @@ import com.example.tcgtracker.utils.greyScale
 @Composable
 fun CardsScreen(
     cardList: List<Card>,
+    isListMode: Boolean,
     onCardTap: (cardIndex: Int) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
-    CardGridView(
-        cardList = cardList,
-        onCardTap = onCardTap,
-        modifier = modifier
-    )
-    /*
-    CardListView(
-        cardList = cardList,
-        onCardTap = onCardTap,
-        modifier = modifier
-    )
-    */
+    if (isListMode) {
+        CardListView(
+            cardList = cardList,
+            onCardTap = onCardTap,
+            modifier = modifier
+        )
+    } else {
+        CardGridView(
+            cardList = cardList,
+            onCardTap = onCardTap,
+            modifier = modifier
+        )
+    }
+
 }
 
 @Composable
@@ -67,9 +71,9 @@ fun CardGridView(
 ) {
     LazyVerticalGrid(
         modifier = modifier.padding(horizontal = 20.dp),
-        columns = GridCells.Fixed(3),
-        horizontalArrangement = Arrangement.spacedBy(5.dp),
-        verticalArrangement = Arrangement.spacedBy(5.dp)
+        columns = GridCells.Adaptive(100.dp),
+        horizontalArrangement = Arrangement.spacedBy(20.dp),
+        verticalArrangement = Arrangement.spacedBy((-10).dp)
     ) {
         items(cardList.count()) { index ->
             var cardOwnership: Boolean by rememberSaveable {
@@ -103,20 +107,25 @@ fun CardListView(
             var cardOwnership: Boolean by rememberSaveable {
                 mutableStateOf(cardList[index].owned)
             }
-            val boosters = cardList[index].booster
-            val booster = if (boosters.count() > 1) {
-                "Todos"
-            } else if (boosters[0] == Booster.ERROR) {
-                "Desbloqueable"
-            } else {
-                boosters[0].prettyName
+            val boosters = cardList[index].boosters
+            val booster = when (boosters.count()) {
+                0 -> ""
+                1 -> {
+                    if (boosters[0] == Booster.ERROR) {
+                        "Desbloqueable"
+                    } else {
+                        boosters[0].prettyName
+                    }
+                }
+                else -> "Todos"
             }
+            val rarity = cardList.getOrNull(index)?.rarity?.symbol ?: ""
 
             CardBullet(
                 id = cardList[index].id,
-                name = cardList[index].name,
+                name = cardList[index].name.es,
                 booster = booster,
-                rarity = cardList[index].rarity.symbol,
+                rarity = rarity,
                 isOwned = cardOwnership,
                 onCardTap = {
                     onCardTap(index)
@@ -145,6 +154,7 @@ fun CardImage(
         AsyncImage(
             modifier = if (isOwned) Modifier else Modifier.greyScale().alpha(0.5f),
             model = image,
+            error = painterResource(R.drawable.card_back),
             placeholder = painterResource(R.drawable.card_back),
             contentDescription = null,
             contentScale = ContentScale.Fit

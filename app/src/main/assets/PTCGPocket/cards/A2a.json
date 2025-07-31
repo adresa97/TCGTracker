@@ -1,0 +1,1250 @@
+[
+  {
+    "id": "A2a-001",
+    "name": {
+      "en": "Heracross",
+      "es": "Heracross"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-002",
+    "name": {
+      "en": "Burmy",
+      "es": "Burmy"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-003",
+    "name": {
+      "en": "Mothim",
+      "es": "Mothim"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-004",
+    "name": {
+      "en": "Combee",
+      "es": "Combee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-005",
+    "name": {
+      "en": "Vespiquen",
+      "es": "Vespiquen"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-006",
+    "name": {
+      "en": "Cherubi",
+      "es": "Cherubi"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-007",
+    "name": {
+      "en": "Cherrim",
+      "es": "Cherrim"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-008",
+    "name": {
+      "en": "Cherrim",
+      "es": "Cherrim"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-009",
+    "name": {
+      "en": "Carnivine",
+      "es": "Carnivine"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-010",
+    "name": {
+      "en": "Leafeon ex",
+      "es": "Leafeon ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-011",
+    "name": {
+      "en": "Houndour",
+      "es": "Houndour"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2a-012",
+    "name": {
+      "en": "Houndoom",
+      "es": "Houndoom"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2a-013",
+    "name": {
+      "en": "Heatran",
+      "es": "Heatran"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2a-014",
+    "name": {
+      "en": "Marill",
+      "es": "Marill"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-015",
+    "name": {
+      "en": "Azumarill",
+      "es": "Azumarill"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-016",
+    "name": {
+      "en": "Barboach",
+      "es": "Barboach"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-017",
+    "name": {
+      "en": "Whiscash",
+      "es": "Whiscash"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-018",
+    "name": {
+      "en": "Snorunt",
+      "es": "Snorunt"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-019",
+    "name": {
+      "en": "Froslass",
+      "es": "Froslass"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-020",
+    "name": {
+      "en": "Snover",
+      "es": "Snover"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-021",
+    "name": {
+      "en": "Abomasnow",
+      "es": "Abomasnow"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-022",
+    "name": {
+      "en": "Glaceon ex",
+      "es": "Glaceon ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-023",
+    "name": {
+      "en": "Origin Forme Palkia",
+      "es": "Palkia Origen"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-024",
+    "name": {
+      "en": "Phione",
+      "es": "Phione"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-025",
+    "name": {
+      "en": "Pikachu",
+      "es": "Pikachu"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2a-026",
+    "name": {
+      "en": "Raichu",
+      "es": "Raichu"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2a-027",
+    "name": {
+      "en": "Electrike",
+      "es": "Electrike"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2a-028",
+    "name": {
+      "en": "Manectric",
+      "es": "Manectric"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2a-029",
+    "name": {
+      "en": "Clefairy",
+      "es": "Clefairy"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2a-030",
+    "name": {
+      "en": "Clefable",
+      "es": "Clefable"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2a-031",
+    "name": {
+      "en": "Gastly",
+      "es": "Gastly"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2a-032",
+    "name": {
+      "en": "Haunter",
+      "es": "Haunter"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2a-033",
+    "name": {
+      "en": "Gengar",
+      "es": "Gengar"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2a-034",
+    "name": {
+      "en": "Unown",
+      "es": "Unown"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2a-035",
+    "name": {
+      "en": "Rotom",
+      "es": "Rotom"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2a-036",
+    "name": {
+      "en": "Sudowoodo",
+      "es": "Sudowoodo"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-037",
+    "name": {
+      "en": "Phanpy",
+      "es": "Phanpy"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-038",
+    "name": {
+      "en": "Donphan",
+      "es": "Donphan"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-039",
+    "name": {
+      "en": "Larvitar",
+      "es": "Larvitar"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-040",
+    "name": {
+      "en": "Pupitar",
+      "es": "Pupitar"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-041",
+    "name": {
+      "en": "Tyranitar",
+      "es": "Tyranitar"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-042",
+    "name": {
+      "en": "Nosepass",
+      "es": "Nosepass"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-043",
+    "name": {
+      "en": "Meditite",
+      "es": "Meditite"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-044",
+    "name": {
+      "en": "Medicham",
+      "es": "Medicham"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-045",
+    "name": {
+      "en": "Gible",
+      "es": "Gible"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-046",
+    "name": {
+      "en": "Gabite",
+      "es": "Gabite"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-047",
+    "name": {
+      "en": "Garchomp ex",
+      "es": "Garchomp ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-048",
+    "name": {
+      "en": "Zubat",
+      "es": "Zubat"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2a-049",
+    "name": {
+      "en": "Golbat",
+      "es": "Golbat"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2a-050",
+    "name": {
+      "en": "Crobat",
+      "es": "Crobat"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2a-051",
+    "name": {
+      "en": "Croagunk",
+      "es": "Croagunk"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2a-052",
+    "name": {
+      "en": "Toxicroak",
+      "es": "Toxicroak"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2a-053",
+    "name": {
+      "en": "Magnemite",
+      "es": "Magnemite"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2a-054",
+    "name": {
+      "en": "Magneton",
+      "es": "Magneton"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2a-055",
+    "name": {
+      "en": "Magnezone",
+      "es": "Magnezone"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2a-056",
+    "name": {
+      "en": "Mawile",
+      "es": "Mawile"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2a-057",
+    "name": {
+      "en": "Probopass ex",
+      "es": "Probopass ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2a-058",
+    "name": {
+      "en": "Bronzor",
+      "es": "Bronzor"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2a-059",
+    "name": {
+      "en": "Bronzong",
+      "es": "Bronzong"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2a-060",
+    "name": {
+      "en": "Origin Forme Dialga",
+      "es": "Dialga Origen"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2a-061",
+    "name": {
+      "en": "Giratina",
+      "es": "Giratina"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A2a-062",
+    "name": {
+      "en": "Eevee",
+      "es": "Eevee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-063",
+    "name": {
+      "en": "Snorlax",
+      "es": "Snorlax"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-064",
+    "name": {
+      "en": "Hoothoot",
+      "es": "Hoothoot"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-065",
+    "name": {
+      "en": "Noctowl",
+      "es": "Noctowl"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-066",
+    "name": {
+      "en": "Starly",
+      "es": "Starly"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-067",
+    "name": {
+      "en": "Staravia",
+      "es": "Staravia"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-068",
+    "name": {
+      "en": "Staraptor",
+      "es": "Staraptor"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-069",
+    "name": {
+      "en": "Shaymin",
+      "es": "Shaymin"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-070",
+    "name": {
+      "en": "Arceus",
+      "es": "Arceus"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-071",
+    "name": {
+      "en": "Arceus ex",
+      "es": "Arceus ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-072",
+    "name": {
+      "en": "Irida",
+      "es": "Nákara"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2a-073",
+    "name": {
+      "en": "Celestic Town Elder",
+      "es": "Anciana de Pueblo Caelestis"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2a-074",
+    "name": {
+      "en": "Barry",
+      "es": "Israel"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2a-075",
+    "name": {
+      "en": "Adaman",
+      "es": "Adamas"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2a-076",
+    "name": {
+      "en": "Houndoom",
+      "es": "Houndoom"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2a-077",
+    "name": {
+      "en": "Marill",
+      "es": "Marill"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-078",
+    "name": {
+      "en": "Unown",
+      "es": "Unown"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2a-079",
+    "name": {
+      "en": "Sudowoodo",
+      "es": "Sudowoodo"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-080",
+    "name": {
+      "en": "Magnemite",
+      "es": "Magnemite"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2a-081",
+    "name": {
+      "en": "Shaymin",
+      "es": "Shaymin"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-082",
+    "name": {
+      "en": "Leafeon ex",
+      "es": "Leafeon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-083",
+    "name": {
+      "en": "Glaceon ex",
+      "es": "Glaceon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-084",
+    "name": {
+      "en": "Garchomp ex",
+      "es": "Garchomp ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-085",
+    "name": {
+      "en": "Probopass ex",
+      "es": "Probopass ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2a-086",
+    "name": {
+      "en": "Arceus ex",
+      "es": "Arceus ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-087",
+    "name": {
+      "en": "Irida",
+      "es": "Nákara"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2a-088",
+    "name": {
+      "en": "Celestic Town Elder",
+      "es": "Anciana de Pueblo Caelestis"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2a-089",
+    "name": {
+      "en": "Barry",
+      "es": "Israel"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2a-090",
+    "name": {
+      "en": "Adaman",
+      "es": "Adamas"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2a-091",
+    "name": {
+      "en": "Leafeon ex",
+      "es": "Leafeon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2a-092",
+    "name": {
+      "en": "Glaceon ex",
+      "es": "Glaceon ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2a-093",
+    "name": {
+      "en": "Garchomp ex",
+      "es": "Garchomp ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2a-094",
+    "name": {
+      "en": "Probopass ex",
+      "es": "Probopass ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2a-095",
+    "name": {
+      "en": "Arceus ex",
+      "es": "Arceus ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2a-096",
+    "name": {
+      "en": "Arceus ex",
+      "es": "Arceus ex"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Arceus"
+    ],
+    "type": "Colorless",
+    "baby": false
+  }
+]

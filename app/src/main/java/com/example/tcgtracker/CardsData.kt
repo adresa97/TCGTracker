@@ -1,7 +1,11 @@
 package com.example.tcgtracker
 
 import android.content.Context
+import com.example.tcgtracker.models.Booster
 import com.example.tcgtracker.models.Card
+import com.example.tcgtracker.models.InnerJsonCard
+import com.example.tcgtracker.models.Rarity
+import com.example.tcgtracker.utils.ReadJSONFromAssets
 import com.example.tcgtracker.utils.ReadJSONFromFile
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -9,6 +13,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 
+const val ASSETS_CARDS_DATA_FOLDER_PATH = "PTCGPocket/cards"
 const val USER_CARDS_DATA_FOLDER_PATH = "PTCGPocket/owned/cards"
 
 class CardsData(private val service: TCGDexService = TCGDexService("en")) {
@@ -16,55 +21,71 @@ class CardsData(private val service: TCGDexService = TCGDexService("en")) {
     private var userFolder: File? = null
     private var modified: MutableMap<String, Boolean> = mutableMapOf()
 
-    fun loadJSONSData(applicationContext: Context): Map<String, List<Card>> {
-        if(userFolder == null) {
-            val extStorageDir = applicationContext.getExternalFilesDir(null)
-            userFolder = File(extStorageDir, USER_CARDS_DATA_FOLDER_PATH)
-            userFolder!!.mkdirs()
+    // Return a set's list of cards
+    fun getCardList(applicationContext: Context, set: String): List<Card> {
+        if (cardMap.contains(set)) return cardMap[set]!!.toList()
+
+        val cardList = loadAssetsJSONData(applicationContext, set).toMutableList()
+        if (cardList.isEmpty()) return listOf()
+
+        val ownedList = loadUserJSONData(applicationContext, set)
+        if (ownedList.isEmpty()) {
+            cardMap.put(set, cardList)
+            return cardList.toList()
         }
 
-        val dirFiles = userFolder?.list()?.asList() ?: listOf()
-        if (dirFiles.isEmpty()) return cardMap
-
-        dirFiles.forEach { set->
-            val setCode = set.substringAfterLast('/').substringBeforeLast('.')
-            if (!cardMap.contains(setCode)) {
-                // Retrieve this set owned card list
-                val cardList = loadCardList(setCode)
-
-                // Store in class map if card is not empty
-                if (cardList.isNotEmpty()) cardMap.put(setCode, cardList)
-            }
+        for (i in 0 until cardList.count()) {
+            cardList[i].owned = ownedList.getOrNull(i) ?: false
         }
-
-        return cardMap
+        cardMap.put(set, cardList)
+        return cardList.toList()
     }
 
-    fun loadJSONData(applicationContext: Context, set: String): List<Card> {
-        if (cardMap.contains(set)) return cardMap[set] ?: listOf()
-
+    // Load user individual JSON data
+    fun loadUserJSONData(applicationContext: Context, set: String): List<Boolean> {
         if (userFolder == null) {
             val extStorageDir = applicationContext.getExternalFilesDir(null)
             userFolder = File(extStorageDir, USER_CARDS_DATA_FOLDER_PATH)
             userFolder!!.mkdirs()
         }
 
-        try {
-            // Retrieve owned card list
-            val cardList = loadCardList(set)
+        val file = File(userFolder, "${set}.json")
+        if (!file.exists()) return listOf()
 
-            // Store card list in class map and return if card is not empty
-            if (cardList.isNotEmpty()) {
-                cardMap.put(set, cardList)
-                return cardList
-            }
-        } catch(e: IOException) {
-            e.printStackTrace()
-        }
-
-        return listOf()
+        val jsonString = ReadJSONFromFile(file.inputStream())
+        return Gson().fromJson(jsonString, Array<Boolean>::class.java).toList()
     }
 
+    // Load assets individual JSON data
+    fun loadAssetsJSONData(applicationContext: Context, set: String): List<Card> {
+        val jsonString = ReadJSONFromAssets(applicationContext, "${ASSETS_CARDS_DATA_FOLDER_PATH}/${set}.json")
+        return Gson().fromJson(jsonString, Array<InnerJsonCard>::class.java).toList()
+            .map{ card ->
+                val boosters = mutableListOf<Booster>()
+                card.boosters.forEach { pack ->
+                    boosters.add(Booster.fromPrettyName(pack))
+                }
+                Card(
+                    id = card.id,
+                    name = card.name,
+                    type = card.type,
+                    boosters = boosters,
+                    rarity = Rarity.fromPrettyName(card.rarity),
+                    image = getImageUrl(card.id),
+                    owned = false,
+                    baby = card.baby
+                )
+            }
+    }
+
+    private fun getImageUrl(cardID: String): String {
+        var set = cardID.substringBeforeLast('-')
+        var number = cardID.substringAfterLast('-').toInt().toString()
+
+        return "https://cdn.pockettrade.app/images/webp/es/${set}_${number}_SPA.webp"
+    }
+
+    /*
     private fun loadCardList(set: String): MutableList<Card> {
         // Get this set list of cards from service
         val cardList = service.getCardsList(set).toMutableList()
@@ -93,16 +114,17 @@ class CardsData(private val service: TCGDexService = TCGDexService("en")) {
 
         return cardList
     }
+     */
 
-    fun updateJSONSData() {
+    fun updateUserJSONSData() {
         if (cardMap.isEmpty() || userFolder == null) return
 
         cardMap.forEach { set->
-            updateJSONData(set.key, set.value)
+            updateUserJSONData(set.key, set.value)
         }
     }
 
-    private fun updateJSONData(set: String, cardList: List<Card>) {
+    private fun updateUserJSONData(set: String, cardList: List<Card>) {
         if (!(modified[set] ?: false)) return
 
         val ownedValues: MutableList<Boolean> = mutableListOf()
@@ -120,14 +142,6 @@ class CardsData(private val service: TCGDexService = TCGDexService("en")) {
         } catch (e: IOException) {
             e.printStackTrace()
         }
-    }
-
-    fun getOwnedCardsMap(applicationContext: Context): Map<String, List<Card>> {
-        return loadJSONSData(applicationContext)
-    }
-
-    fun getCardList(applicationContext: Context, set: String): List<Card> {
-        return loadJSONData(applicationContext, set)
     }
 
     fun changeCardState(set: String, cardIndex: Int) {

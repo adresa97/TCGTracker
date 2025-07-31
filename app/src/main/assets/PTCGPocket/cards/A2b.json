@@ -1,0 +1,1445 @@
+[
+  {
+    "id": "A2b-001",
+    "name": {
+      "en": "Weedle",
+      "es": "Weedle"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-002",
+    "name": {
+      "en": "Kakuna",
+      "es": "Kakuna"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-003",
+    "name": {
+      "en": "Beedrill ex",
+      "es": "Beedrill ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-004",
+    "name": {
+      "en": "Pinsir",
+      "es": "Pinsir"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-005",
+    "name": {
+      "en": "Sprigatito",
+      "es": "Sprigatito"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-006",
+    "name": {
+      "en": "Floragato",
+      "es": "Floragato"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-007",
+    "name": {
+      "en": "Meowscarada",
+      "es": "Meowscarada"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-008",
+    "name": {
+      "en": "Charmander",
+      "es": "Charmander"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2b-009",
+    "name": {
+      "en": "Charmeleon",
+      "es": "Charmeleon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2b-010",
+    "name": {
+      "en": "Charizard ex",
+      "es": "Charizard ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2b-011",
+    "name": {
+      "en": "Magmar",
+      "es": "Magmar"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2b-012",
+    "name": {
+      "en": "Magmortar",
+      "es": "Magmortar"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2b-013",
+    "name": {
+      "en": "Paldean Tauros",
+      "es": "Tauros de Paldea"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2b-014",
+    "name": {
+      "en": "Tentacool",
+      "es": "Tentacool"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-015",
+    "name": {
+      "en": "Tentacruel",
+      "es": "Tentacruel"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-016",
+    "name": {
+      "en": "Buizel",
+      "es": "Buizel"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-017",
+    "name": {
+      "en": "Floatzel",
+      "es": "Floatzel"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-018",
+    "name": {
+      "en": "Wiglett",
+      "es": "Wiglett"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-019",
+    "name": {
+      "en": "Wugtrio ex",
+      "es": "Wugtrio ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-020",
+    "name": {
+      "en": "Dondozo",
+      "es": "Dondozo"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-021",
+    "name": {
+      "en": "Tatsugiri",
+      "es": "Tatsugiri"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-022",
+    "name": {
+      "en": "Pikachu ex",
+      "es": "Pikachu ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2b-023",
+    "name": {
+      "en": "Voltorb",
+      "es": "Voltorb"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2b-024",
+    "name": {
+      "en": "Electrode",
+      "es": "Electrode"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2b-025",
+    "name": {
+      "en": "Pachirisu",
+      "es": "Pachirisu"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2b-026",
+    "name": {
+      "en": "Pawmi",
+      "es": "Pawmi"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2b-027",
+    "name": {
+      "en": "Pawmo",
+      "es": "Pawmo"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2b-028",
+    "name": {
+      "en": "Pawmot",
+      "es": "Pawmot"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2b-029",
+    "name": {
+      "en": "Abra",
+      "es": "Abra"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2b-030",
+    "name": {
+      "en": "Kadabra",
+      "es": "Kadabra"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2b-031",
+    "name": {
+      "en": "Alakazam",
+      "es": "Alakazam"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2b-032",
+    "name": {
+      "en": "Mr. Mime",
+      "es": "Mr. Mime"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2b-033",
+    "name": {
+      "en": "Drifloon",
+      "es": "Drifloon"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2b-034",
+    "name": {
+      "en": "Drifblim",
+      "es": "Drifblim"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2b-035",
+    "name": {
+      "en": "Giratina ex",
+      "es": "Giratina ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2b-036",
+    "name": {
+      "en": "Gimmighoul",
+      "es": "Gimmighoul"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2b-037",
+    "name": {
+      "en": "Machop",
+      "es": "Machop"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2b-038",
+    "name": {
+      "en": "Machoke",
+      "es": "Machoke"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2b-039",
+    "name": {
+      "en": "Machamp",
+      "es": "Machamp"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2b-040",
+    "name": {
+      "en": "Hitmonlee",
+      "es": "Hitmonlee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2b-041",
+    "name": {
+      "en": "Hitmonchan",
+      "es": "Hitmonchan"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2b-042",
+    "name": {
+      "en": "Riolu",
+      "es": "Riolu"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2b-043",
+    "name": {
+      "en": "Lucario ex",
+      "es": "Lucario ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2b-044",
+    "name": {
+      "en": "Flamigo",
+      "es": "Flamigo"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2b-045",
+    "name": {
+      "en": "Ekans",
+      "es": "Ekans"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2b-046",
+    "name": {
+      "en": "Arbok",
+      "es": "Arbok"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2b-047",
+    "name": {
+      "en": "Paldean Wooper",
+      "es": "Wooper de Paldea"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2b-048",
+    "name": {
+      "en": "Paldean Clodsire ex",
+      "es": "Clodsire de Paldea ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2b-049",
+    "name": {
+      "en": "Spiritomb",
+      "es": "Spiritomb"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2b-050",
+    "name": {
+      "en": "Shroodle",
+      "es": "Shroodle"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2b-051",
+    "name": {
+      "en": "Grafaiai",
+      "es": "Grafaiai"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2b-052",
+    "name": {
+      "en": "Tinkatink",
+      "es": "Tinkatink"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2b-053",
+    "name": {
+      "en": "Tinkatuff",
+      "es": "Tinkatuff"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2b-054",
+    "name": {
+      "en": "Tinkaton ex",
+      "es": "Tinkaton ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2b-055",
+    "name": {
+      "en": "Varoom",
+      "es": "Varoom"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2b-056",
+    "name": {
+      "en": "Revavroom",
+      "es": "Revavroom"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2b-057",
+    "name": {
+      "en": "Gholdengo",
+      "es": "Gholdengo"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2b-058",
+    "name": {
+      "en": "Rattata",
+      "es": "Rattata"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-059",
+    "name": {
+      "en": "Raticate",
+      "es": "Raticate"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-060",
+    "name": {
+      "en": "Jigglypuff",
+      "es": "Jigglypuff"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-061",
+    "name": {
+      "en": "Wigglytuff",
+      "es": "Wigglytuff"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-062",
+    "name": {
+      "en": "Lickitung",
+      "es": "Lickitung"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-063",
+    "name": {
+      "en": "Lickilicky",
+      "es": "Lickilicky"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-064",
+    "name": {
+      "en": "Bidoof",
+      "es": "Bidoof"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-065",
+    "name": {
+      "en": "Bibarel ex",
+      "es": "Bibarel ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-066",
+    "name": {
+      "en": "Buneary",
+      "es": "Buneary"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-067",
+    "name": {
+      "en": "Lopunny",
+      "es": "Lopunny"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-068",
+    "name": {
+      "en": "Cyclizar",
+      "es": "Cyclizar"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-069",
+    "name": {
+      "en": "Iono",
+      "es": "e-Nigma"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2b-070",
+    "name": {
+      "en": "Pokémon Center Lady",
+      "es": "Chica del Centro Pokémon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2b-071",
+    "name": {
+      "en": "Red",
+      "es": "Rojo"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2b-072",
+    "name": {
+      "en": "Team Rocket Grunt",
+      "es": "Recluta del Team Rocket"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2b-073",
+    "name": {
+      "en": "Meowscarada",
+      "es": "Meowscarada"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-074",
+    "name": {
+      "en": "Buizel",
+      "es": "Buizel"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-075",
+    "name": {
+      "en": "Tatsugiri",
+      "es": "Tatsugiri"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-076",
+    "name": {
+      "en": "Grafaiai",
+      "es": "Grafaiai"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2b-077",
+    "name": {
+      "en": "Gholdengo",
+      "es": "Gholdengo"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2b-078",
+    "name": {
+      "en": "Wigglytuff",
+      "es": "Wigglytuff"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-079",
+    "name": {
+      "en": "Beedrill ex",
+      "es": "Beedrill ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-080",
+    "name": {
+      "en": "Charizard ex",
+      "es": "Charizard ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2b-081",
+    "name": {
+      "en": "Wugtrio ex",
+      "es": "Wugtrio ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-082",
+    "name": {
+      "en": "Pikachu ex",
+      "es": "Pikachu ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2b-083",
+    "name": {
+      "en": "Giratina ex",
+      "es": "Giratina ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2b-084",
+    "name": {
+      "en": "Lucario ex",
+      "es": "Lucario ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2b-085",
+    "name": {
+      "en": "Paldean Clodsire ex",
+      "es": "Clodsire de Paldea ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2b-086",
+    "name": {
+      "en": "Tinkaton ex",
+      "es": "Tinkaton ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2b-087",
+    "name": {
+      "en": "Bibarel ex",
+      "es": "Bibarel ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-088",
+    "name": {
+      "en": "Iono",
+      "es": "e-Nigma"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2b-089",
+    "name": {
+      "en": "Pokémon Center Lady",
+      "es": "Chica del Centro Pokémon"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2b-090",
+    "name": {
+      "en": "Red",
+      "es": "Rojo"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2b-091",
+    "name": {
+      "en": "Team Rocket Grunt",
+      "es": "Recluta del Team Rocket"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2b-092",
+    "name": {
+      "en": "Pikachu ex",
+      "es": "Pikachu ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2b-093",
+    "name": {
+      "en": "Paldean Clodsire ex",
+      "es": "Clodsire de Paldea ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2b-094",
+    "name": {
+      "en": "Tinkaton ex",
+      "es": "Tinkaton ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2b-095",
+    "name": {
+      "en": "Bibarel ex",
+      "es": "Bibarel ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2b-096",
+    "name": {
+      "en": "Giratina ex",
+      "es": "Giratina ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2b-097",
+    "name": {
+      "en": "Weedle",
+      "es": "Weedle"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-098",
+    "name": {
+      "en": "Kakuna",
+      "es": "Kakuna"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-099",
+    "name": {
+      "en": "Charmander",
+      "es": "Charmander"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2b-100",
+    "name": {
+      "en": "Charmeleon",
+      "es": "Charmeleon"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2b-101",
+    "name": {
+      "en": "Wiglett",
+      "es": "Wiglett"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-102",
+    "name": {
+      "en": "Dondozo",
+      "es": "Dondozo"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-103",
+    "name": {
+      "en": "Pachirisu",
+      "es": "Pachirisu"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2b-104",
+    "name": {
+      "en": "Riolu",
+      "es": "Riolu"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2b-105",
+    "name": {
+      "en": "Varoom",
+      "es": "Varoom"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2b-106",
+    "name": {
+      "en": "Revavroom",
+      "es": "Revavroom"
+    },
+    "rarity": "One Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2b-107",
+    "name": {
+      "en": "Beedrill ex",
+      "es": "Beedrill ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2b-108",
+    "name": {
+      "en": "Charizard ex",
+      "es": "Charizard ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2b-109",
+    "name": {
+      "en": "Wugtrio ex",
+      "es": "Wugtrio ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2b-110",
+    "name": {
+      "en": "Lucario ex",
+      "es": "Lucario ex"
+    },
+    "rarity": "Two Shiny",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2b-111",
+    "name": {
+      "en": "Poké Ball",
+      "es": "Poké Ball"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Shiny Charizard"
+    ],
+    "type": "Trainer",
+    "baby": false
+  }
+]

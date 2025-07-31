@@ -1,0 +1,1120 @@
+[
+  {
+    "id": "A1a-001",
+    "name": {
+      "en": "Exeggcute",
+      "es": "Exeggcute"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-002",
+    "name": {
+      "en": "Exeggutor",
+      "es": "Exeggutor"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-003",
+    "name": {
+      "en": "Celebi ex",
+      "es": "Celebi ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-004",
+    "name": {
+      "en": "Snivy",
+      "es": "Snivy"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-005",
+    "name": {
+      "en": "Servine",
+      "es": "Servine"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-006",
+    "name": {
+      "en": "Serperior",
+      "es": "Serperior"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-007",
+    "name": {
+      "en": "Morelull",
+      "es": "Morelull"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-008",
+    "name": {
+      "en": "Shiinotic",
+      "es": "Shiinotic"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-009",
+    "name": {
+      "en": "Dhelmise",
+      "es": "Dhelmise"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-010",
+    "name": {
+      "en": "Ponyta",
+      "es": "Ponyta"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1a-011",
+    "name": {
+      "en": "Rapidash",
+      "es": "Rapidash"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1a-012",
+    "name": {
+      "en": "Magmar",
+      "es": "Magmar"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1a-013",
+    "name": {
+      "en": "Larvesta",
+      "es": "Larvesta"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1a-014",
+    "name": {
+      "en": "Volcarona",
+      "es": "Volcarona"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1a-015",
+    "name": {
+      "en": "Salandit",
+      "es": "Salandit"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1a-016",
+    "name": {
+      "en": "Salazzle",
+      "es": "Salazzle"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1a-017",
+    "name": {
+      "en": "Magikarp",
+      "es": "Magikarp"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1a-018",
+    "name": {
+      "en": "Gyarados ex",
+      "es": "Gyarados ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1a-019",
+    "name": {
+      "en": "Vaporeon",
+      "es": "Vaporeon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1a-020",
+    "name": {
+      "en": "Finneon",
+      "es": "Finneon"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1a-021",
+    "name": {
+      "en": "Lumineon",
+      "es": "Lumineon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1a-022",
+    "name": {
+      "en": "Chewtle",
+      "es": "Chewtle"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1a-023",
+    "name": {
+      "en": "Drednaw",
+      "es": "Drednaw"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1a-024",
+    "name": {
+      "en": "Cramorant",
+      "es": "Cramorant"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1a-025",
+    "name": {
+      "en": "Pikachu",
+      "es": "Pikachu"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1a-026",
+    "name": {
+      "en": "Raichu",
+      "es": "Raichu"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1a-027",
+    "name": {
+      "en": "Electabuzz",
+      "es": "Electabuzz"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1a-028",
+    "name": {
+      "en": "Joltik",
+      "es": "Joltik"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1a-029",
+    "name": {
+      "en": "Galvantula",
+      "es": "Galvantula"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1a-030",
+    "name": {
+      "en": "Dedenne",
+      "es": "Dedenne"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1a-031",
+    "name": {
+      "en": "Mew",
+      "es": "Mew"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-032",
+    "name": {
+      "en": "Mew ex",
+      "es": "Mew ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-033",
+    "name": {
+      "en": "Sigilyph",
+      "es": "Sigilyph"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-034",
+    "name": {
+      "en": "Elgyem",
+      "es": "Elgyem"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-035",
+    "name": {
+      "en": "Beheeyem",
+      "es": "Beheeyem"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-036",
+    "name": {
+      "en": "Flabébé",
+      "es": "Flabébé"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-037",
+    "name": {
+      "en": "Floette",
+      "es": "Floette"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-038",
+    "name": {
+      "en": "Florges",
+      "es": "Florges"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-039",
+    "name": {
+      "en": "Swirlix",
+      "es": "Swirlix"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-040",
+    "name": {
+      "en": "Slurpuff",
+      "es": "Slurpuff"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-041",
+    "name": {
+      "en": "Mankey",
+      "es": "Mankey"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1a-042",
+    "name": {
+      "en": "Primeape",
+      "es": "Primeape"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1a-043",
+    "name": {
+      "en": "Geodude",
+      "es": "Geodude"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1a-044",
+    "name": {
+      "en": "Graveler",
+      "es": "Graveler"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1a-045",
+    "name": {
+      "en": "Golem",
+      "es": "Golem"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1a-046",
+    "name": {
+      "en": "Aerodactyl ex",
+      "es": "Aerodactyl ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1a-047",
+    "name": {
+      "en": "Marshadow",
+      "es": "Marshadow"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1a-048",
+    "name": {
+      "en": "Stonjourner",
+      "es": "Stonjourner"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1a-049",
+    "name": {
+      "en": "Koffing",
+      "es": "Koffing"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1a-050",
+    "name": {
+      "en": "Weezing",
+      "es": "Weezing"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1a-051",
+    "name": {
+      "en": "Purrloin",
+      "es": "Purrloin"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1a-052",
+    "name": {
+      "en": "Liepard",
+      "es": "Liepard"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1a-053",
+    "name": {
+      "en": "Venipede",
+      "es": "Venipede"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1a-054",
+    "name": {
+      "en": "Whirlipede",
+      "es": "Whirlipede"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1a-055",
+    "name": {
+      "en": "Scolipede",
+      "es": "Scolipede"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A1a-056",
+    "name": {
+      "en": "Druddigon",
+      "es": "Druddigon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A1a-057",
+    "name": {
+      "en": "Pidgey",
+      "es": "Pidgey"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1a-058",
+    "name": {
+      "en": "Pidgeotto",
+      "es": "Pidgeotto"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1a-059",
+    "name": {
+      "en": "Pidgeot ex",
+      "es": "Pidgeot ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1a-060",
+    "name": {
+      "en": "Tauros",
+      "es": "Tauros"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1a-061",
+    "name": {
+      "en": "Eevee",
+      "es": "Eevee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1a-062",
+    "name": {
+      "en": "Chatot",
+      "es": "Chatot"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1a-063",
+    "name": {
+      "en": "Old Amber",
+      "es": "Ámbar Viejo"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1a-064",
+    "name": {
+      "en": "Pokémon Flute",
+      "es": "Pokéflauta"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1a-065",
+    "name": {
+      "en": "Mythical Slab",
+      "es": "Losa Singular"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1a-066",
+    "name": {
+      "en": "Budding Expeditioner",
+      "es": "Explorador Novel"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1a-067",
+    "name": {
+      "en": "Blue",
+      "es": "Azul"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1a-068",
+    "name": {
+      "en": "Leaf",
+      "es": "Hoja"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1a-069",
+    "name": {
+      "en": "Exeggutor",
+      "es": "Exeggutor"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-070",
+    "name": {
+      "en": "Serperior",
+      "es": "Serperior"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-071",
+    "name": {
+      "en": "Salandit",
+      "es": "Salandit"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A1a-072",
+    "name": {
+      "en": "Vaporeon",
+      "es": "Vaporeon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1a-073",
+    "name": {
+      "en": "Dedenne",
+      "es": "Dedenne"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A1a-074",
+    "name": {
+      "en": "Marshadow",
+      "es": "Marshadow"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1a-075",
+    "name": {
+      "en": "Celebi ex",
+      "es": "Celebi ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-076",
+    "name": {
+      "en": "Gyarados ex",
+      "es": "Gyarados ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A1a-077",
+    "name": {
+      "en": "Mew ex",
+      "es": "Mew ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-078",
+    "name": {
+      "en": "Aerodactyl ex",
+      "es": "Aerodactyl ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1a-079",
+    "name": {
+      "en": "Pidgeot ex",
+      "es": "Pidgeot ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A1a-080",
+    "name": {
+      "en": "Budding Expeditioner",
+      "es": "Explorador Novel"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1a-081",
+    "name": {
+      "en": "Blue",
+      "es": "Azul"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1a-082",
+    "name": {
+      "en": "Leaf",
+      "es": "Hoja"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A1a-083",
+    "name": {
+      "en": "Mew ex",
+      "es": "Mew ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A1a-084",
+    "name": {
+      "en": "Aerodactyl ex",
+      "es": "Aerodactyl ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A1a-085",
+    "name": {
+      "en": "Celebi ex",
+      "es": "Celebi ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A1a-086",
+    "name": {
+      "en": "Mew ex",
+      "es": "Mew ex"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Mew"
+    ],
+    "type": "Psychic",
+    "baby": false
+  }
+]

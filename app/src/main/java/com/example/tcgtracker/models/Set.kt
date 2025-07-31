@@ -52,7 +52,8 @@ enum class CoverImage(val id: Int) {
     A2b(R.drawable.a2b_shining_revelry_en),
     A3(R.drawable.a3_celestial_guardians_en),
     A3a(R.drawable.a3a_extradimensional_crisis_en),
-    A3b(R.drawable.a3b_eevee_grove_en);
+    A3b(R.drawable.a3b_eevee_grove_en),
+    A4(R.drawable.a4_wisdomofseaandsky_en);
 
     // Custom functions
     companion object {

@@ -111,6 +111,10 @@ fun TCGTrackerApp(
     val trackerUIState by trackerViewModel.uiState.collectAsState()
     LocalLifecycleOwner.current.lifecycle.addObserver(trackerViewModel)
 
+    var isListMode: Boolean by rememberSaveable {
+        mutableStateOf(trackerUIState.isListMode)
+    }
+
     Surface(
         modifier = Modifier.background(MaterialTheme.colorScheme.surface)
     ) {
@@ -122,7 +126,12 @@ fun TCGTrackerApp(
                     canNavigateBack = navController.previousBackStackEntry != null,
                     navigateUp = { navController.navigateUp() },
                     canNavigateToOptions = currentScreen != Screen.Options,
-                    navigateToOptions = { navController.navigate(Screen.Options.name) }
+                    navigateToOptions = { navController.navigate(Screen.Options.name) },
+                    canChangeViewMode = currentScreen != Screen.Options,
+                    changeViewMode = {
+                        trackerViewModel.changeViewMode()
+                        isListMode = !isListMode
+                    }
                 )
             },
             bottomBar = {
@@ -153,6 +162,7 @@ fun TCGTrackerApp(
                 composable(Screen.SetSelector.name) {
                     SetScreen(
                         series = trackerUIState.setsData.getSeriesMap(),
+                        isListView = isListMode,
                         onSetTap = {
                             trackerViewModel.setCurrentSet(it)
                             navController.navigate(Screen.CardViewer.name)
@@ -164,6 +174,7 @@ fun TCGTrackerApp(
                     val cardList = trackerViewModel.getCardsList(context)
                     CardsScreen(
                         cardList = cardList,
+                        isListMode = isListMode,
                         onCardTap = { cardIndex ->
                             trackerViewModel.changeOwnedCardState(
                                 context,
@@ -191,6 +202,8 @@ fun TCGTrackerTopBar(
     navigateUp: () -> Unit = {},
     canNavigateToOptions: Boolean,
     navigateToOptions: () -> Unit = {},
+    canChangeViewMode: Boolean,
+    changeViewMode: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val title: String
@@ -198,7 +211,7 @@ fun TCGTrackerTopBar(
         Screen.SetSelector -> title = "Pokémon TCG Pocket Tracker"
         Screen.CardViewer -> title = uiState.setsData.getSetName(uiState.selectedSet)
         Screen.Options -> title = "Opciones"
-        else -> title = ""
+        //else -> title = ""
     }
 
     val currentSet = uiState.selectedSet.substringBefore('-')
@@ -225,14 +238,16 @@ fun TCGTrackerTopBar(
             }
         },
         actions = {
-            if (canNavigateToOptions) {
-                IconButton(onClick = {}) {
+            if (canChangeViewMode) {
+                IconButton(onClick = changeViewMode) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.List,
                         tint = MaterialTheme.colorScheme.onSurface,
                         contentDescription = null
                     )
                 }
+            }
+            if (canNavigateToOptions) {
                 IconButton(onClick = navigateToOptions) {
                     Icon(
                         imageVector = Icons.Default.MoreVert,

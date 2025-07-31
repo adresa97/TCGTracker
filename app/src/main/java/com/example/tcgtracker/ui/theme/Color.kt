@@ -20,7 +20,7 @@ data class ContainerContentColors(
 
 // Set color
 val setColors = mapOf<String, Color>(
-    Pair("P", Color(0xFF2f6eff)),
+    Pair("P-A", Color(0xFF2f6eff)),
     Pair("A1", Color(0xFF9445f4)),
     Pair("A1a", Color(0xFF129e6f)),
     Pair("A2", Color(0xFF7a8594)),
@@ -34,8 +34,8 @@ val setColors = mapOf<String, Color>(
 
 // Booster color
 val boosterColors = mapOf<String, Color>(
-    Pair("All", Color(0xFFefefef)),
-    Pair("Unlockable", Color(0xFFCCCCCC)),
+    Pair("Todos", Color(0xFFefefef)),
+    Pair("Desbloqueable", Color(0xFFCCCCCC)),
     Pair("Mewtwo", Color(0xFFd9d2e9)),
     Pair("Charizard", Color(0xFFf4cccc)),
     Pair("Pikachu", Color(0xFFfff2cc)),
@@ -48,6 +48,6 @@ val boosterColors = mapOf<String, Color>(
     Pair("Lunala", Color(0xFFb9b7e0)),
     Pair("Buzzwole", Color(0xFFff9d7f)),
     Pair("Eevee", Color(0xFFf9bd93)),
-    Pair("Ho-oh", Color(0xFFedd27f)),
+    Pair("Ho-Oh", Color(0xFFedd27f)),
     Pair("Lugia", Color(0xFFa7c0c6)),
 )

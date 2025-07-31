@@ -1,0 +1,2738 @@
+[
+  {
+    "id": "A2-001",
+    "name": {
+      "en": "Oddish",
+      "es": "Oddish"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-002",
+    "name": {
+      "en": "Gloom",
+      "es": "Gloom"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-003",
+    "name": {
+      "en": "Bellossom",
+      "es": "Bellossom"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-004",
+    "name": {
+      "en": "Tangela",
+      "es": "Tangela"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-005",
+    "name": {
+      "en": "Tangrowth",
+      "es": "Tangrowth"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-006",
+    "name": {
+      "en": "Yanma",
+      "es": "Yanma"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-007",
+    "name": {
+      "en": "Yanmega ex",
+      "es": "Yanmega ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-008",
+    "name": {
+      "en": "Roselia",
+      "es": "Roselia"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-009",
+    "name": {
+      "en": "Roserade",
+      "es": "Roserade"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-010",
+    "name": {
+      "en": "Turtwig",
+      "es": "Turtwig"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-011",
+    "name": {
+      "en": "Grotle",
+      "es": "Grotle"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-012",
+    "name": {
+      "en": "Torterra",
+      "es": "Torterra"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-013",
+    "name": {
+      "en": "Kricketot",
+      "es": "Kricketot"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-014",
+    "name": {
+      "en": "Kricketune",
+      "es": "Kricketune"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-015",
+    "name": {
+      "en": "Burmy",
+      "es": "Burmy"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-016",
+    "name": {
+      "en": "Wormadam",
+      "es": "Wormadam"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-017",
+    "name": {
+      "en": "Combee",
+      "es": "Combee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-018",
+    "name": {
+      "en": "Vespiquen",
+      "es": "Vespiquen"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-019",
+    "name": {
+      "en": "Carnivine",
+      "es": "Carnivine"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-020",
+    "name": {
+      "en": "Leafeon",
+      "es": "Leafeon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-021",
+    "name": {
+      "en": "Mow Rotom",
+      "es": "Rotom Corte"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-022",
+    "name": {
+      "en": "Shaymin",
+      "es": "Shaymin"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-023",
+    "name": {
+      "en": "Magmar",
+      "es": "Magmar"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2-024",
+    "name": {
+      "en": "Magmortar",
+      "es": "Magmortar"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2-025",
+    "name": {
+      "en": "Slugma",
+      "es": "Slugma"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2-026",
+    "name": {
+      "en": "Magcargo",
+      "es": "Magcargo"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2-027",
+    "name": {
+      "en": "Chimchar",
+      "es": "Chimchar"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2-028",
+    "name": {
+      "en": "Monferno",
+      "es": "Monferno"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2-029",
+    "name": {
+      "en": "Infernape ex",
+      "es": "Infernape ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2-030",
+    "name": {
+      "en": "Heat Rotom",
+      "es": "Rotom Calor"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2-031",
+    "name": {
+      "en": "Swinub",
+      "es": "Swinub"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-032",
+    "name": {
+      "en": "Piloswine",
+      "es": "Piloswine"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-033",
+    "name": {
+      "en": "Mamoswine",
+      "es": "Mamoswine"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-034",
+    "name": {
+      "en": "Regice",
+      "es": "Regice"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-035",
+    "name": {
+      "en": "Piplup",
+      "es": "Piplup"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-036",
+    "name": {
+      "en": "Prinplup",
+      "es": "Prinplup"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-037",
+    "name": {
+      "en": "Empoleon",
+      "es": "Empoleon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-038",
+    "name": {
+      "en": "Buizel",
+      "es": "Buizel"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-039",
+    "name": {
+      "en": "Floatzel",
+      "es": "Floatzel"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-040",
+    "name": {
+      "en": "Shellos",
+      "es": "Shellos"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-041",
+    "name": {
+      "en": "Gastrodon",
+      "es": "Gastrodon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-042",
+    "name": {
+      "en": "Finneon",
+      "es": "Finneon"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-043",
+    "name": {
+      "en": "Lumineon",
+      "es": "Lumineon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-044",
+    "name": {
+      "en": "Snover",
+      "es": "Snover"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-045",
+    "name": {
+      "en": "Abomasnow",
+      "es": "Abomasnow"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-046",
+    "name": {
+      "en": "Glaceon",
+      "es": "Glaceon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-047",
+    "name": {
+      "en": "Wash Rotom",
+      "es": "Rotom Lavado"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-048",
+    "name": {
+      "en": "Frost Rotom",
+      "es": "Rotom Frío"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-049",
+    "name": {
+      "en": "Palkia ex",
+      "es": "Palkia ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-050",
+    "name": {
+      "en": "Manaphy",
+      "es": "Manaphy"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-051",
+    "name": {
+      "en": "Magnemite",
+      "es": "Magnemite"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-052",
+    "name": {
+      "en": "Magneton",
+      "es": "Magneton"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-053",
+    "name": {
+      "en": "Magnezone",
+      "es": "Magnezone"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-054",
+    "name": {
+      "en": "Voltorb",
+      "es": "Voltorb"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-055",
+    "name": {
+      "en": "Electrode",
+      "es": "Electrode"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-056",
+    "name": {
+      "en": "Electabuzz",
+      "es": "Electabuzz"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-057",
+    "name": {
+      "en": "Electivire",
+      "es": "Electivire"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-058",
+    "name": {
+      "en": "Shinx",
+      "es": "Shinx"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-059",
+    "name": {
+      "en": "Luxio",
+      "es": "Luxio"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-060",
+    "name": {
+      "en": "Luxray",
+      "es": "Luxray"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-061",
+    "name": {
+      "en": "Pachirisu ex",
+      "es": "Pachirisu ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-062",
+    "name": {
+      "en": "Rotom",
+      "es": "Rotom"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-063",
+    "name": {
+      "en": "Togepi",
+      "es": "Togepi"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-064",
+    "name": {
+      "en": "Togetic",
+      "es": "Togetic"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-065",
+    "name": {
+      "en": "Togekiss",
+      "es": "Togekiss"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-066",
+    "name": {
+      "en": "Misdreavus",
+      "es": "Misdreavus"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-067",
+    "name": {
+      "en": "Mismagius ex",
+      "es": "Mismagius ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-068",
+    "name": {
+      "en": "Ralts",
+      "es": "Ralts"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-069",
+    "name": {
+      "en": "Kirlia",
+      "es": "Kirlia"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-070",
+    "name": {
+      "en": "Duskull",
+      "es": "Duskull"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-071",
+    "name": {
+      "en": "Dusclops",
+      "es": "Dusclops"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-072",
+    "name": {
+      "en": "Dusknoir",
+      "es": "Dusknoir"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-073",
+    "name": {
+      "en": "Drifloon",
+      "es": "Drifloon"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-074",
+    "name": {
+      "en": "Drifblim",
+      "es": "Drifblim"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-075",
+    "name": {
+      "en": "Uxie",
+      "es": "Uxie"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-076",
+    "name": {
+      "en": "Mesprit",
+      "es": "Mesprit"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-077",
+    "name": {
+      "en": "Azelf",
+      "es": "Azelf"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-078",
+    "name": {
+      "en": "Giratina",
+      "es": "Giratina"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-079",
+    "name": {
+      "en": "Cresselia",
+      "es": "Cresselia"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-080",
+    "name": {
+      "en": "Rhyhorn",
+      "es": "Rhyhorn"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-081",
+    "name": {
+      "en": "Rhydon",
+      "es": "Rhydon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-082",
+    "name": {
+      "en": "Rhyperior",
+      "es": "Rhyperior"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-083",
+    "name": {
+      "en": "Gligar",
+      "es": "Gligar"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-084",
+    "name": {
+      "en": "Gliscor",
+      "es": "Gliscor"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-085",
+    "name": {
+      "en": "Hitmontop",
+      "es": "Hitmontop"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-086",
+    "name": {
+      "en": "Nosepass",
+      "es": "Nosepass"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-087",
+    "name": {
+      "en": "Regirock",
+      "es": "Regirock"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-088",
+    "name": {
+      "en": "Cranidos",
+      "es": "Cranidos"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-089",
+    "name": {
+      "en": "Rampardos",
+      "es": "Rampardos"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-090",
+    "name": {
+      "en": "Wormadam",
+      "es": "Wormadam"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-091",
+    "name": {
+      "en": "Riolu",
+      "es": "Riolu"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-092",
+    "name": {
+      "en": "Lucario",
+      "es": "Lucario"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-093",
+    "name": {
+      "en": "Hippopotas",
+      "es": "Hippopotas"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-094",
+    "name": {
+      "en": "Hippowdon",
+      "es": "Hippowdon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-095",
+    "name": {
+      "en": "Gallade ex",
+      "es": "Gallade ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-096",
+    "name": {
+      "en": "Murkrow",
+      "es": "Murkrow"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-097",
+    "name": {
+      "en": "Honchkrow",
+      "es": "Honchkrow"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-098",
+    "name": {
+      "en": "Sneasel",
+      "es": "Sneasel"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-099",
+    "name": {
+      "en": "Weavile ex",
+      "es": "Weavile ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-100",
+    "name": {
+      "en": "Poochyena",
+      "es": "Poochyena"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-101",
+    "name": {
+      "en": "Mightyena",
+      "es": "Mightyena"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-102",
+    "name": {
+      "en": "Stunky",
+      "es": "Stunky"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-103",
+    "name": {
+      "en": "Skuntank",
+      "es": "Skuntank"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-104",
+    "name": {
+      "en": "Spiritomb",
+      "es": "Spiritomb"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-105",
+    "name": {
+      "en": "Skorupi",
+      "es": "Skorupi"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-106",
+    "name": {
+      "en": "Drapion",
+      "es": "Drapion"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-107",
+    "name": {
+      "en": "Croagunk",
+      "es": "Croagunk"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-108",
+    "name": {
+      "en": "Toxicroak",
+      "es": "Toxicroak"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-109",
+    "name": {
+      "en": "Darkrai",
+      "es": "Darkrai"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-110",
+    "name": {
+      "en": "Darkrai ex",
+      "es": "Darkrai ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-111",
+    "name": {
+      "en": "Skarmory",
+      "es": "Skarmory"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-112",
+    "name": {
+      "en": "Registeel",
+      "es": "Registeel"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-113",
+    "name": {
+      "en": "Shieldon",
+      "es": "Shieldon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-114",
+    "name": {
+      "en": "Bastiodon",
+      "es": "Bastiodon"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-115",
+    "name": {
+      "en": "Wormadam",
+      "es": "Wormadam"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-116",
+    "name": {
+      "en": "Bronzor",
+      "es": "Bronzor"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-117",
+    "name": {
+      "en": "Bronzong",
+      "es": "Bronzong"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-118",
+    "name": {
+      "en": "Probopass",
+      "es": "Probopass"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-119",
+    "name": {
+      "en": "Dialga ex",
+      "es": "Dialga ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-120",
+    "name": {
+      "en": "Heatran",
+      "es": "Heatran"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-121",
+    "name": {
+      "en": "Gible",
+      "es": "Gible"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A2-122",
+    "name": {
+      "en": "Gabite",
+      "es": "Gabite"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A2-123",
+    "name": {
+      "en": "Garchomp",
+      "es": "Garchomp"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A2-124",
+    "name": {
+      "en": "Lickitung",
+      "es": "Lickitung"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-125",
+    "name": {
+      "en": "Lickilicky ex",
+      "es": "Lickilicky ex"
+    },
+    "rarity": "Four Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-126",
+    "name": {
+      "en": "Eevee",
+      "es": "Eevee"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-127",
+    "name": {
+      "en": "Porygon",
+      "es": "Porygon"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-128",
+    "name": {
+      "en": "Porygon2",
+      "es": "Porygon2"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-129",
+    "name": {
+      "en": "Porygon-Z",
+      "es": "Porygon-Z"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-130",
+    "name": {
+      "en": "Aipom",
+      "es": "Aipom"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-131",
+    "name": {
+      "en": "Ambipom",
+      "es": "Ambipom"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-132",
+    "name": {
+      "en": "Starly",
+      "es": "Starly"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-133",
+    "name": {
+      "en": "Staravia",
+      "es": "Staravia"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-134",
+    "name": {
+      "en": "Staraptor",
+      "es": "Staraptor"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-135",
+    "name": {
+      "en": "Bidoof",
+      "es": "Bidoof"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-136",
+    "name": {
+      "en": "Bibarel",
+      "es": "Bibarel"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-137",
+    "name": {
+      "en": "Buneary",
+      "es": "Buneary"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-138",
+    "name": {
+      "en": "Lopunny",
+      "es": "Lopunny"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-139",
+    "name": {
+      "en": "Glameow",
+      "es": "Glameow"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-140",
+    "name": {
+      "en": "Purugly",
+      "es": "Purugly"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-141",
+    "name": {
+      "en": "Chatot",
+      "es": "Chatot"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-142",
+    "name": {
+      "en": "Fan Rotom",
+      "es": "Rotom Ventilador"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-143",
+    "name": {
+      "en": "Regigigas",
+      "es": "Regigigas"
+    },
+    "rarity": "Three Diamond",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-144",
+    "name": {
+      "en": "Skull Fossil",
+      "es": "Fósil Cráneo"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-145",
+    "name": {
+      "en": "Armor Fossil",
+      "es": "Fósil Coraza"
+    },
+    "rarity": "One Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-146",
+    "name": {
+      "en": "Pokémon Communication",
+      "es": "Comunicación Pokémon"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-147",
+    "name": {
+      "en": "Giant Cape",
+      "es": "Capa Gigante"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-148",
+    "name": {
+      "en": "Rocky Helmet",
+      "es": "Casco Dentado"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-149",
+    "name": {
+      "en": "Lum Berry",
+      "es": "Baya Ziuela"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-150",
+    "name": {
+      "en": "Cyrus",
+      "es": "Helio"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-151",
+    "name": {
+      "en": "Team Galactic Grunt",
+      "es": "Recluta del Equipo Galaxia"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-152",
+    "name": {
+      "en": "Cynthia",
+      "es": "Cintia"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-153",
+    "name": {
+      "en": "Volkner",
+      "es": "Lectro"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-154",
+    "name": {
+      "en": "Dawn",
+      "es": "Maya"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-155",
+    "name": {
+      "en": "Mars",
+      "es": "Venus"
+    },
+    "rarity": "Two Diamond",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-156",
+    "name": {
+      "en": "Tangrowth",
+      "es": "Tangrowth"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-157",
+    "name": {
+      "en": "Combee",
+      "es": "Combee"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-158",
+    "name": {
+      "en": "Carnivine",
+      "es": "Carnivine"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-159",
+    "name": {
+      "en": "Shaymin",
+      "es": "Shaymin"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-160",
+    "name": {
+      "en": "Mamoswine",
+      "es": "Mamoswine"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-161",
+    "name": {
+      "en": "Gastrodon",
+      "es": "Gastrodon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-162",
+    "name": {
+      "en": "Manaphy",
+      "es": "Manaphy"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-163",
+    "name": {
+      "en": "Shinx",
+      "es": "Shinx"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-164",
+    "name": {
+      "en": "Rotom",
+      "es": "Rotom"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-165",
+    "name": {
+      "en": "Drifloon",
+      "es": "Drifloon"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-166",
+    "name": {
+      "en": "Mesprit",
+      "es": "Mesprit"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-167",
+    "name": {
+      "en": "Giratina",
+      "es": "Giratina"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-168",
+    "name": {
+      "en": "Cresselia",
+      "es": "Cresselia"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-169",
+    "name": {
+      "en": "Rhyperior",
+      "es": "Rhyperior"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-170",
+    "name": {
+      "en": "Lucario",
+      "es": "Lucario"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-171",
+    "name": {
+      "en": "Hippopotas",
+      "es": "Hippopotas"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-172",
+    "name": {
+      "en": "Spiritomb",
+      "es": "Spiritomb"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-173",
+    "name": {
+      "en": "Croagunk",
+      "es": "Croagunk"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-174",
+    "name": {
+      "en": "Heatran",
+      "es": "Heatran"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-175",
+    "name": {
+      "en": "Garchomp",
+      "es": "Garchomp"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Dragon",
+    "baby": false
+  },
+  {
+    "id": "A2-176",
+    "name": {
+      "en": "Staraptor",
+      "es": "Staraptor"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-177",
+    "name": {
+      "en": "Bidoof",
+      "es": "Bidoof"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-178",
+    "name": {
+      "en": "Glameow",
+      "es": "Glameow"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-179",
+    "name": {
+      "en": "Regigigas",
+      "es": "Regigigas"
+    },
+    "rarity": "One Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-180",
+    "name": {
+      "en": "Yanmega ex",
+      "es": "Yanmega ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-181",
+    "name": {
+      "en": "Infernape ex",
+      "es": "Infernape ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2-182",
+    "name": {
+      "en": "Palkia ex",
+      "es": "Palkia ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-183",
+    "name": {
+      "en": "Pachirisu ex",
+      "es": "Pachirisu ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-184",
+    "name": {
+      "en": "Mismagius ex",
+      "es": "Mismagius ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-185",
+    "name": {
+      "en": "Gallade ex",
+      "es": "Gallade ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-186",
+    "name": {
+      "en": "Weavile ex",
+      "es": "Weavile ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-187",
+    "name": {
+      "en": "Darkrai ex",
+      "es": "Darkrai ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-188",
+    "name": {
+      "en": "Dialga ex",
+      "es": "Dialga ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-189",
+    "name": {
+      "en": "Lickilicky ex",
+      "es": "Lickilicky ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-190",
+    "name": {
+      "en": "Cyrus",
+      "es": "Helio"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-191",
+    "name": {
+      "en": "Team Galactic Grunt",
+      "es": "Recluta del Equipo Galaxia"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-192",
+    "name": {
+      "en": "Cynthia",
+      "es": "Cintia"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-193",
+    "name": {
+      "en": "Volkner",
+      "es": "Lectro"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-194",
+    "name": {
+      "en": "Dawn",
+      "es": "Maya"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-195",
+    "name": {
+      "en": "Mars",
+      "es": "Venus"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Trainer",
+    "baby": false
+  },
+  {
+    "id": "A2-196",
+    "name": {
+      "en": "Yanmega ex",
+      "es": "Yanmega ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Grass",
+    "baby": false
+  },
+  {
+    "id": "A2-197",
+    "name": {
+      "en": "Infernape ex",
+      "es": "Infernape ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Fire",
+    "baby": false
+  },
+  {
+    "id": "A2-198",
+    "name": {
+      "en": "Pachirisu ex",
+      "es": "Pachirisu ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Lightning",
+    "baby": false
+  },
+  {
+    "id": "A2-199",
+    "name": {
+      "en": "Mismagius ex",
+      "es": "Mismagius ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Psychic",
+    "baby": false
+  },
+  {
+    "id": "A2-200",
+    "name": {
+      "en": "Gallade ex",
+      "es": "Gallade ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Fighting",
+    "baby": false
+  },
+  {
+    "id": "A2-201",
+    "name": {
+      "en": "Weavile ex",
+      "es": "Weavile ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-202",
+    "name": {
+      "en": "Darkrai ex",
+      "es": "Darkrai ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Darkness",
+    "baby": false
+  },
+  {
+    "id": "A2-203",
+    "name": {
+      "en": "Lickilicky ex",
+      "es": "Lickilicky ex"
+    },
+    "rarity": "Two Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Colorless",
+    "baby": false
+  },
+  {
+    "id": "A2-204",
+    "name": {
+      "en": "Palkia ex",
+      "es": "Palkia ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-205",
+    "name": {
+      "en": "Dialga ex",
+      "es": "Dialga ex"
+    },
+    "rarity": "Three Star",
+    "boosters": [
+      "Dialga"
+    ],
+    "type": "Metal",
+    "baby": false
+  },
+  {
+    "id": "A2-206",
+    "name": {
+      "en": "Palkia ex",
+      "es": "Palkia ex"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Water",
+    "baby": false
+  },
+  {
+    "id": "A2-207",
+    "name": {
+      "en": "Dialga ex",
+      "es": "Dialga ex"
+    },
+    "rarity": "Crown",
+    "boosters": [
+      "Dialga",
+      "Palkia"
+    ],
+    "type": "Metal",
+    "baby": false
+  }
+]
