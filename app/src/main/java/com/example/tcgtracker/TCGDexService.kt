@@ -1,10 +1,8 @@
 package com.example.tcgtracker
 
-import com.example.tcgtracker.models.Booster
 import com.example.tcgtracker.models.Card
 import com.example.tcgtracker.models.CardName
 import com.example.tcgtracker.models.InnerJsonSet
-import com.example.tcgtracker.models.Rarity
 import com.example.tcgtracker.utils.TCGDexGraphQLUtils
 import com.google.gson.Gson
 import net.tcgdex.sdk.Extension
@@ -12,7 +10,7 @@ import net.tcgdex.sdk.Quality
 import net.tcgdex.sdk.TCGdex
 import net.tcgdex.sdk.models.SetResume
 
-//TODO: Fix Promo Cards Origins
+/* TO FIX IN ORDER TO USE
 
 class TCGDexService(language: String) {
     val sdk: TCGdex = TCGdex(language)
@@ -38,7 +36,7 @@ class TCGDexService(language: String) {
         return TCGDexGraphQLUtils.fetchWithBody(sdk, "${sdk.URI}/graphql", Gson().toJson(QLRequest), cls)!!
             .data.cards.map({ cardData ->
                 val set = cardData.id.substringBefore('-')
-                val boosterList = mutableListOf<Booster>()
+                val boosterList = mutableListOf<String>()
                 cardData.boosters?.forEach{ booster ->
                     val boosterEnum = Booster.fromPrettyName(booster.name)
                     if (!boosterList.contains(boosterEnum)) boosterList.add(boosterEnum)
@@ -126,3 +124,5 @@ data class TCGDexBooster (
     val name: String
 )
 //endregion
+
+ */

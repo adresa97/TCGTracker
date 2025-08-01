@@ -6,6 +6,8 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModel
 import com.example.tcgtracker.SetsData
 import com.example.tcgtracker.CardsData
+import com.example.tcgtracker.Concepts
+import com.example.tcgtracker.OriginsData
 import com.example.tcgtracker.models.Card
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -15,6 +17,7 @@ import kotlinx.coroutines.flow.update
 data class TrackerUIState(
     val setsData: SetsData = SetsData(),
     val cardsData: CardsData = CardsData(),
+    val originsData: OriginsData = OriginsData(),
     val selectedSet: String = "",
     val isListMode: Boolean = false
 )
@@ -23,9 +26,11 @@ class TrackerViewModel() : ViewModel(), DefaultLifecycleObserver {
     private val _uiState = MutableStateFlow(TrackerUIState())
     val uiState: StateFlow<TrackerUIState> = _uiState.asStateFlow()
 
-    fun loadCollectionsJSON(applicationContext: Context) {
+    fun loadData(context: Context) {
+        Concepts.loadJSONData(context)
+        _uiState.value.originsData.loadJSONData(context)
         _uiState.value.setsData.loadJSONData(
-            applicationContext = applicationContext,
+            applicationContext = context,
             cardsData = _uiState.value.cardsData
         )
     }
@@ -46,7 +51,20 @@ class TrackerViewModel() : ViewModel(), DefaultLifecycleObserver {
         return _uiState.value.cardsData.getCardList(
             applicationContext = context,
             set = _uiState.value.selectedSet
-        )
+        ).map{ card ->
+            Card(
+                id = card.id,
+                name = card.name,
+                type = Concepts.getTypeUrl(card.type),
+                origins = card.origins.map { origin ->
+                    _uiState.value.originsData.getOriginName(origin)
+                },
+                rarity = Concepts.getPrettyRarity(card.rarity),
+                image = card.image,
+                owned = card.owned,
+                baby = card.baby
+            )
+        }
     }
 
     fun changeOwnedCardState(context: Context, set: String, cardIndex: Int) {

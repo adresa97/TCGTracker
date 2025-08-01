@@ -1,5 +1,6 @@
 package com.example.tcgtracker.models
 
+import androidx.compose.ui.graphics.Color
 import com.example.tcgtracker.R
 
 data class InnerJsonSet(
@@ -7,7 +8,9 @@ data class InnerJsonSet(
     val expansion: String,
     val set: String,
     val name: String,
-    val boosters: List<String>
+    val color: List<Float>,
+    val cardCount: Int,
+    val origins: List<String>
 )
 
 data class ExternalJsonSet (
@@ -20,17 +23,13 @@ data class Set(
     val set: String,
     val name: String,
     val cover: CoverImage,
-    val boosters: List<Booster>,
+    val color: Color,
+    val cardCount: Int,
+    val origins: List<String>,
     var numbers: OwnedSetData
 )
 
 data class OwnedSetData(
-    val all: OwnedData,
-    val byBooster: Map<Booster, OwnedData>,
-    val byRarity: Map<Rarity, OwnedData>
-)
-
-data class UserJsonOwnedSetData(
     val all: OwnedData,
     val byBooster: Map<String, OwnedData>,
     val byRarity: Map<String, OwnedData>

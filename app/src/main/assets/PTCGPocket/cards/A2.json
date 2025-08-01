@@ -5,12 +5,12 @@
       "en": "Oddish",
       "es": "Oddish"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -19,12 +19,12 @@
       "en": "Gloom",
       "es": "Gloom"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -33,12 +33,12 @@
       "en": "Bellossom",
       "es": "Bellossom"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -47,11 +47,11 @@
       "en": "Tangela",
       "es": "Tangela"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -60,11 +60,11 @@
       "en": "Tangrowth",
       "es": "Tangrowth"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -73,11 +73,11 @@
       "en": "Yanma",
       "es": "Yanma"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -86,11 +86,11 @@
       "en": "Yanmega ex",
       "es": "Yanmega ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -99,12 +99,12 @@
       "en": "Roselia",
       "es": "Roselia"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -113,12 +113,12 @@
       "en": "Roserade",
       "es": "Roserade"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -127,11 +127,11 @@
       "en": "Turtwig",
       "es": "Turtwig"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -140,11 +140,11 @@
       "en": "Grotle",
       "es": "Grotle"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -153,11 +153,11 @@
       "en": "Torterra",
       "es": "Torterra"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -166,11 +166,11 @@
       "en": "Kricketot",
       "es": "Kricketot"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -179,11 +179,11 @@
       "en": "Kricketune",
       "es": "Kricketune"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -192,12 +192,12 @@
       "en": "Burmy",
       "es": "Burmy"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -206,12 +206,12 @@
       "en": "Wormadam",
       "es": "Wormadam"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -220,11 +220,11 @@
       "en": "Combee",
       "es": "Combee"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -233,11 +233,11 @@
       "en": "Vespiquen",
       "es": "Vespiquen"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -246,11 +246,11 @@
       "en": "Carnivine",
       "es": "Carnivine"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -259,11 +259,11 @@
       "en": "Leafeon",
       "es": "Leafeon"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -272,12 +272,12 @@
       "en": "Mow Rotom",
       "es": "Rotom Corte"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -286,11 +286,11 @@
       "en": "Shaymin",
       "es": "Shaymin"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -299,11 +299,11 @@
       "en": "Magmar",
       "es": "Magmar"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -312,11 +312,11 @@
       "en": "Magmortar",
       "es": "Magmortar"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -325,12 +325,12 @@
       "en": "Slugma",
       "es": "Slugma"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -339,12 +339,12 @@
       "en": "Magcargo",
       "es": "Magcargo"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -353,11 +353,11 @@
       "en": "Chimchar",
       "es": "Chimchar"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -366,11 +366,11 @@
       "en": "Monferno",
       "es": "Monferno"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -379,11 +379,11 @@
       "en": "Infernape ex",
       "es": "Infernape ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -392,12 +392,12 @@
       "en": "Heat Rotom",
       "es": "Rotom Calor"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -406,11 +406,11 @@
       "en": "Swinub",
       "es": "Swinub"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -419,11 +419,11 @@
       "en": "Piloswine",
       "es": "Piloswine"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -432,11 +432,11 @@
       "en": "Mamoswine",
       "es": "Mamoswine"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -445,11 +445,11 @@
       "en": "Regice",
       "es": "Regice"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -458,11 +458,11 @@
       "en": "Piplup",
       "es": "Piplup"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -471,11 +471,11 @@
       "en": "Prinplup",
       "es": "Prinplup"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -484,11 +484,11 @@
       "en": "Empoleon",
       "es": "Empoleon"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -497,12 +497,12 @@
       "en": "Buizel",
       "es": "Buizel"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -511,12 +511,12 @@
       "en": "Floatzel",
       "es": "Floatzel"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -525,11 +525,11 @@
       "en": "Shellos",
       "es": "Shellos"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -538,11 +538,11 @@
       "en": "Gastrodon",
       "es": "Gastrodon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -551,12 +551,12 @@
       "en": "Finneon",
       "es": "Finneon"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -565,12 +565,12 @@
       "en": "Lumineon",
       "es": "Lumineon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -579,12 +579,12 @@
       "en": "Snover",
       "es": "Snover"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -593,12 +593,12 @@
       "en": "Abomasnow",
       "es": "Abomasnow"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -607,11 +607,11 @@
       "en": "Glaceon",
       "es": "Glaceon"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -620,12 +620,12 @@
       "en": "Wash Rotom",
       "es": "Rotom Lavado"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -634,12 +634,12 @@
       "en": "Frost Rotom",
       "es": "Rotom Frío"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -648,11 +648,11 @@
       "en": "Palkia ex",
       "es": "Palkia ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -661,11 +661,11 @@
       "en": "Manaphy",
       "es": "Manaphy"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -674,12 +674,12 @@
       "en": "Magnemite",
       "es": "Magnemite"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -688,12 +688,12 @@
       "en": "Magneton",
       "es": "Magneton"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -702,12 +702,12 @@
       "en": "Magnezone",
       "es": "Magnezone"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -716,12 +716,12 @@
       "en": "Voltorb",
       "es": "Voltorb"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -730,12 +730,12 @@
       "en": "Electrode",
       "es": "Electrode"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -744,11 +744,11 @@
       "en": "Electabuzz",
       "es": "Electabuzz"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -757,11 +757,11 @@
       "en": "Electivire",
       "es": "Electivire"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -770,11 +770,11 @@
       "en": "Shinx",
       "es": "Shinx"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -783,11 +783,11 @@
       "en": "Luxio",
       "es": "Luxio"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -796,11 +796,11 @@
       "en": "Luxray",
       "es": "Luxray"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -809,11 +809,11 @@
       "en": "Pachirisu ex",
       "es": "Pachirisu ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -822,11 +822,11 @@
       "en": "Rotom",
       "es": "Rotom"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -835,12 +835,12 @@
       "en": "Togepi",
       "es": "Togepi"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -849,12 +849,12 @@
       "en": "Togetic",
       "es": "Togetic"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -863,12 +863,12 @@
       "en": "Togekiss",
       "es": "Togekiss"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -877,11 +877,11 @@
       "en": "Misdreavus",
       "es": "Misdreavus"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -890,11 +890,11 @@
       "en": "Mismagius ex",
       "es": "Mismagius ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -903,11 +903,11 @@
       "en": "Ralts",
       "es": "Ralts"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -916,11 +916,11 @@
       "en": "Kirlia",
       "es": "Kirlia"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -929,11 +929,11 @@
       "en": "Duskull",
       "es": "Duskull"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -942,11 +942,11 @@
       "en": "Dusclops",
       "es": "Dusclops"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -955,11 +955,11 @@
       "en": "Dusknoir",
       "es": "Dusknoir"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -968,11 +968,11 @@
       "en": "Drifloon",
       "es": "Drifloon"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -981,11 +981,11 @@
       "en": "Drifblim",
       "es": "Drifblim"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -994,12 +994,12 @@
       "en": "Uxie",
       "es": "Uxie"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1008,12 +1008,12 @@
       "en": "Mesprit",
       "es": "Mesprit"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1022,12 +1022,12 @@
       "en": "Azelf",
       "es": "Azelf"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1036,11 +1036,11 @@
       "en": "Giratina",
       "es": "Giratina"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1049,11 +1049,11 @@
       "en": "Cresselia",
       "es": "Cresselia"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1062,11 +1062,11 @@
       "en": "Rhyhorn",
       "es": "Rhyhorn"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1075,11 +1075,11 @@
       "en": "Rhydon",
       "es": "Rhydon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1088,11 +1088,11 @@
       "en": "Rhyperior",
       "es": "Rhyperior"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1101,11 +1101,11 @@
       "en": "Gligar",
       "es": "Gligar"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1114,11 +1114,11 @@
       "en": "Gliscor",
       "es": "Gliscor"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1127,11 +1127,11 @@
       "en": "Hitmontop",
       "es": "Hitmontop"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1140,12 +1140,12 @@
       "en": "Nosepass",
       "es": "Nosepass"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1154,12 +1154,12 @@
       "en": "Regirock",
       "es": "Regirock"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1168,11 +1168,11 @@
       "en": "Cranidos",
       "es": "Cranidos"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1181,11 +1181,11 @@
       "en": "Rampardos",
       "es": "Rampardos"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1194,11 +1194,11 @@
       "en": "Wormadam",
       "es": "Wormadam"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1207,11 +1207,11 @@
       "en": "Riolu",
       "es": "Riolu"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1220,11 +1220,11 @@
       "en": "Lucario",
       "es": "Lucario"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1233,11 +1233,11 @@
       "en": "Hippopotas",
       "es": "Hippopotas"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1246,11 +1246,11 @@
       "en": "Hippowdon",
       "es": "Hippowdon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1259,11 +1259,11 @@
       "en": "Gallade ex",
       "es": "Gallade ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1272,11 +1272,11 @@
       "en": "Murkrow",
       "es": "Murkrow"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1285,11 +1285,11 @@
       "en": "Honchkrow",
       "es": "Honchkrow"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1298,11 +1298,11 @@
       "en": "Sneasel",
       "es": "Sneasel"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1311,11 +1311,11 @@
       "en": "Weavile ex",
       "es": "Weavile ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1324,12 +1324,12 @@
       "en": "Poochyena",
       "es": "Poochyena"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1338,12 +1338,12 @@
       "en": "Mightyena",
       "es": "Mightyena"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1352,11 +1352,11 @@
       "en": "Stunky",
       "es": "Stunky"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1365,11 +1365,11 @@
       "en": "Skuntank",
       "es": "Skuntank"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1378,11 +1378,11 @@
       "en": "Spiritomb",
       "es": "Spiritomb"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1391,12 +1391,12 @@
       "en": "Skorupi",
       "es": "Skorupi"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1405,12 +1405,12 @@
       "en": "Drapion",
       "es": "Drapion"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1419,11 +1419,11 @@
       "en": "Croagunk",
       "es": "Croagunk"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1432,11 +1432,11 @@
       "en": "Toxicroak",
       "es": "Toxicroak"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1445,11 +1445,11 @@
       "en": "Darkrai",
       "es": "Darkrai"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1458,11 +1458,11 @@
       "en": "Darkrai ex",
       "es": "Darkrai ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1471,12 +1471,12 @@
       "en": "Skarmory",
       "es": "Skarmory"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1485,11 +1485,11 @@
       "en": "Registeel",
       "es": "Registeel"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1498,11 +1498,11 @@
       "en": "Shieldon",
       "es": "Shieldon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1511,11 +1511,11 @@
       "en": "Bastiodon",
       "es": "Bastiodon"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1524,11 +1524,11 @@
       "en": "Wormadam",
       "es": "Wormadam"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1537,11 +1537,11 @@
       "en": "Bronzor",
       "es": "Bronzor"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1550,11 +1550,11 @@
       "en": "Bronzong",
       "es": "Bronzong"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1563,12 +1563,12 @@
       "en": "Probopass",
       "es": "Probopass"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1577,11 +1577,11 @@
       "en": "Dialga ex",
       "es": "Dialga ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1590,11 +1590,11 @@
       "en": "Heatran",
       "es": "Heatran"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1603,11 +1603,11 @@
       "en": "Gible",
       "es": "Gible"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -1616,11 +1616,11 @@
       "en": "Gabite",
       "es": "Gabite"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -1629,11 +1629,11 @@
       "en": "Garchomp",
       "es": "Garchomp"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -1642,11 +1642,11 @@
       "en": "Lickitung",
       "es": "Lickitung"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1655,11 +1655,11 @@
       "en": "Lickilicky ex",
       "es": "Lickilicky ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1668,12 +1668,12 @@
       "en": "Eevee",
       "es": "Eevee"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1682,11 +1682,11 @@
       "en": "Porygon",
       "es": "Porygon"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1695,11 +1695,11 @@
       "en": "Porygon2",
       "es": "Porygon2"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1708,11 +1708,11 @@
       "en": "Porygon-Z",
       "es": "Porygon-Z"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1721,12 +1721,12 @@
       "en": "Aipom",
       "es": "Aipom"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1735,12 +1735,12 @@
       "en": "Ambipom",
       "es": "Ambipom"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1749,11 +1749,11 @@
       "en": "Starly",
       "es": "Starly"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1762,11 +1762,11 @@
       "en": "Staravia",
       "es": "Staravia"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1775,11 +1775,11 @@
       "en": "Staraptor",
       "es": "Staraptor"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1788,11 +1788,11 @@
       "en": "Bidoof",
       "es": "Bidoof"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1801,11 +1801,11 @@
       "en": "Bibarel",
       "es": "Bibarel"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1814,11 +1814,11 @@
       "en": "Buneary",
       "es": "Buneary"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1827,11 +1827,11 @@
       "en": "Lopunny",
       "es": "Lopunny"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1840,11 +1840,11 @@
       "en": "Glameow",
       "es": "Glameow"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1853,11 +1853,11 @@
       "en": "Purugly",
       "es": "Purugly"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1866,11 +1866,11 @@
       "en": "Chatot",
       "es": "Chatot"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1879,12 +1879,12 @@
       "en": "Fan Rotom",
       "es": "Rotom Ventilador"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1893,12 +1893,12 @@
       "en": "Regigigas",
       "es": "Regigigas"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1907,11 +1907,11 @@
       "en": "Skull Fossil",
       "es": "Fósil Cráneo"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1920,11 +1920,11 @@
       "en": "Armor Fossil",
       "es": "Fósil Coraza"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1933,11 +1933,11 @@
       "en": "Pokémon Communication",
       "es": "Comunicación Pokémon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1946,11 +1946,11 @@
       "en": "Giant Cape",
       "es": "Capa Gigante"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1959,11 +1959,11 @@
       "en": "Rocky Helmet",
       "es": "Casco Dentado"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1972,11 +1972,11 @@
       "en": "Lum Berry",
       "es": "Baya Ziuela"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1985,11 +1985,11 @@
       "en": "Cyrus",
       "es": "Helio"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1998,11 +1998,11 @@
       "en": "Team Galactic Grunt",
       "es": "Recluta del Equipo Galaxia"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2011,11 +2011,11 @@
       "en": "Cynthia",
       "es": "Cintia"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2024,11 +2024,11 @@
       "en": "Volkner",
       "es": "Lectro"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2037,11 +2037,11 @@
       "en": "Dawn",
       "es": "Maya"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2050,11 +2050,11 @@
       "en": "Mars",
       "es": "Venus"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2063,11 +2063,11 @@
       "en": "Tangrowth",
       "es": "Tangrowth"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2076,11 +2076,11 @@
       "en": "Combee",
       "es": "Combee"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2089,11 +2089,11 @@
       "en": "Carnivine",
       "es": "Carnivine"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2102,11 +2102,11 @@
       "en": "Shaymin",
       "es": "Shaymin"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2115,11 +2115,11 @@
       "en": "Mamoswine",
       "es": "Mamoswine"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2128,11 +2128,11 @@
       "en": "Gastrodon",
       "es": "Gastrodon"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2141,11 +2141,11 @@
       "en": "Manaphy",
       "es": "Manaphy"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2154,11 +2154,11 @@
       "en": "Shinx",
       "es": "Shinx"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -2167,11 +2167,11 @@
       "en": "Rotom",
       "es": "Rotom"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -2180,11 +2180,11 @@
       "en": "Drifloon",
       "es": "Drifloon"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2193,11 +2193,11 @@
       "en": "Mesprit",
       "es": "Mesprit"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2206,11 +2206,11 @@
       "en": "Giratina",
       "es": "Giratina"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2219,11 +2219,11 @@
       "en": "Cresselia",
       "es": "Cresselia"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2232,11 +2232,11 @@
       "en": "Rhyperior",
       "es": "Rhyperior"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2245,11 +2245,11 @@
       "en": "Lucario",
       "es": "Lucario"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2258,11 +2258,11 @@
       "en": "Hippopotas",
       "es": "Hippopotas"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2271,11 +2271,11 @@
       "en": "Spiritomb",
       "es": "Spiritomb"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2284,11 +2284,11 @@
       "en": "Croagunk",
       "es": "Croagunk"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2297,11 +2297,11 @@
       "en": "Heatran",
       "es": "Heatran"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -2310,11 +2310,11 @@
       "en": "Garchomp",
       "es": "Garchomp"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -2323,11 +2323,11 @@
       "en": "Staraptor",
       "es": "Staraptor"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2336,11 +2336,11 @@
       "en": "Bidoof",
       "es": "Bidoof"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2349,11 +2349,11 @@
       "en": "Glameow",
       "es": "Glameow"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2362,11 +2362,11 @@
       "en": "Regigigas",
       "es": "Regigigas"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2375,11 +2375,11 @@
       "en": "Yanmega ex",
       "es": "Yanmega ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2388,11 +2388,11 @@
       "en": "Infernape ex",
       "es": "Infernape ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -2401,11 +2401,11 @@
       "en": "Palkia ex",
       "es": "Palkia ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2414,11 +2414,11 @@
       "en": "Pachirisu ex",
       "es": "Pachirisu ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -2427,11 +2427,11 @@
       "en": "Mismagius ex",
       "es": "Mismagius ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2440,11 +2440,11 @@
       "en": "Gallade ex",
       "es": "Gallade ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2453,11 +2453,11 @@
       "en": "Weavile ex",
       "es": "Weavile ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2466,11 +2466,11 @@
       "en": "Darkrai ex",
       "es": "Darkrai ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2479,11 +2479,11 @@
       "en": "Dialga ex",
       "es": "Dialga ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -2492,11 +2492,11 @@
       "en": "Lickilicky ex",
       "es": "Lickilicky ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2505,11 +2505,11 @@
       "en": "Cyrus",
       "es": "Helio"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2518,11 +2518,11 @@
       "en": "Team Galactic Grunt",
       "es": "Recluta del Equipo Galaxia"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2531,11 +2531,11 @@
       "en": "Cynthia",
       "es": "Cintia"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2544,11 +2544,11 @@
       "en": "Volkner",
       "es": "Lectro"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2557,11 +2557,11 @@
       "en": "Dawn",
       "es": "Maya"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2570,11 +2570,11 @@
       "en": "Mars",
       "es": "Venus"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2583,11 +2583,11 @@
       "en": "Yanmega ex",
       "es": "Yanmega ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2596,11 +2596,11 @@
       "en": "Infernape ex",
       "es": "Infernape ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -2609,11 +2609,11 @@
       "en": "Pachirisu ex",
       "es": "Pachirisu ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -2622,11 +2622,11 @@
       "en": "Mismagius ex",
       "es": "Mismagius ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2635,11 +2635,11 @@
       "en": "Gallade ex",
       "es": "Gallade ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2648,11 +2648,11 @@
       "en": "Weavile ex",
       "es": "Weavile ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2661,11 +2661,11 @@
       "en": "Darkrai ex",
       "es": "Darkrai ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2674,11 +2674,11 @@
       "en": "Lickilicky ex",
       "es": "Lickilicky ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2687,11 +2687,11 @@
       "en": "Palkia ex",
       "es": "Palkia ex"
     },
-    "rarity": "Three Star",
-    "boosters": [
-      "Palkia"
+    "rarity": "THREE_STAR",
+    "origins": [
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2700,11 +2700,11 @@
       "en": "Dialga ex",
       "es": "Dialga ex"
     },
-    "rarity": "Three Star",
-    "boosters": [
-      "Dialga"
+    "rarity": "THREE_STAR",
+    "origins": [
+      "DIALGA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -2713,12 +2713,12 @@
       "en": "Palkia ex",
       "es": "Palkia ex"
     },
-    "rarity": "Crown",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "CROWN",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2727,12 +2727,12 @@
       "en": "Dialga ex",
       "es": "Dialga ex"
     },
-    "rarity": "Crown",
-    "boosters": [
-      "Dialga",
-      "Palkia"
+    "rarity": "CROWN",
+    "origins": [
+      "DIALGA",
+      "PALKIA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   }
 ]

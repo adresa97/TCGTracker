@@ -1,0 +1,27 @@
+{
+    "types": {
+        "TRAINER": "https://static.dotgg.gg/pokepocket/icons/nocolor.webp",
+        "GRASS": "https://static.dotgg.gg/pokemon/icons/grass.png",
+        "FIRE": "https://static.dotgg.gg/pokemon/icons/fire.png",
+        "WATER": "https://static.dotgg.gg/pokemon/icons/water.png",
+        "LIGHTNING": "https://static.dotgg.gg/pokemon/icons/lightning.png",
+        "FIGHTING": "https://static.dotgg.gg/pokemon/icons/fighting.png",
+        "PSYCHIC": "https://static.dotgg.gg/pokemon/icons/psychic.png",
+        "DARKNESS": "https://static.dotgg.gg/pokemon/icons/darkness.png",
+        "METAL": "https://static.dotgg.gg/pokemon/icons/metal.png",
+        "DRAGON": "https://static.dotgg.gg/pokemon/icons/dragon.png",
+        "COLORLESS": "https://static.dotgg.gg/pokemon/icons/colorless.png"
+    },
+    "rarities": {
+        "ONE_DIAMOND": "♢",
+        "TWO_DIAMOND": "♢♢",
+        "THREE_DIAMOND": "♢♢♢",
+        "FOUR_DIAMOND": "♢♢♢♢",
+        "ONE_STAR": "☆",
+        "TWO_STAR": "☆☆",
+        "THREE_STAR": "☆☆☆",
+        "ONE_SHINY": "⛭",
+        "TWO_SHINY": "⛭⛭",
+        "CROWN": "♛"
+    }
+}

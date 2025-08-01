@@ -1,15 +1,13 @@
 package com.example.tcgtracker
 
 import android.content.Context
-import com.example.tcgtracker.models.Booster
+import androidx.compose.ui.graphics.Color
 import com.example.tcgtracker.models.Card
 import com.example.tcgtracker.models.CoverImage
 import com.example.tcgtracker.models.InnerJsonSet
 import com.example.tcgtracker.models.OwnedData
 import com.example.tcgtracker.models.OwnedSetData
-import com.example.tcgtracker.models.Rarity
 import com.example.tcgtracker.models.Set
-import com.example.tcgtracker.models.UserJsonOwnedSetData
 import com.example.tcgtracker.utils.ReadJSONFromAssets
 import com.example.tcgtracker.utils.ReadJSONFromFile
 import com.google.gson.Gson
@@ -59,11 +57,8 @@ class SetsData() {
             // Get cover enum from set code
             val cover = CoverImage.from(set.set)
 
-            // Get boosters enum list
-            val boosters = mutableListOf<Booster>()
-            set.boosters.forEach { booster ->
-                boosters.add(Booster.fromPrettyName(booster))
-            }
+            // Turn set color string to Color object
+            val color = Color(set.color[0]/255, set.color[1]/255, set.color[2]/255)
 
             // Add this set entry to collections.
             // If calculated numbers aren't stored in user data, calculate them from cards data
@@ -73,7 +68,9 @@ class SetsData() {
                 set = set.set,
                 name = set.name,
                 cover = cover,
-                boosters = boosters,
+                color = color,
+                cardCount = set.cardCount,
+                origins = set.origins,
                 numbers = userJsonData[set.set] ?: calculateNumbers(
                     cardList = cardsData.getCardList(applicationContext, set.set)
                 )
@@ -112,17 +109,17 @@ class SetsData() {
             ownedCards = cardList.stream().filter{ card -> card.owned }.count().toInt()
         )
 
-        val boosters = mutableListOf<Booster>()
+        val boosters = mutableListOf<String>()
         cardList.forEach { card ->
-            val cardBoosters = card.boosters
-            if (!cardBoosters.isEmpty()) {
-                val mainBooster = cardBoosters[0]
-                if (!boosters.contains(mainBooster)) boosters.add(mainBooster)
+            val cardOrigins = card.origins
+            if (!cardOrigins.isEmpty()) {
+                val mainOrigin = cardOrigins[0]
+                if (!boosters.contains(mainOrigin)) boosters.add(mainOrigin)
             }
         }
-        val byBooster = mutableMapOf<Booster, OwnedData>()
+        val byBooster = mutableMapOf<String, OwnedData>()
         boosters.forEach { booster ->
-            val boosterCards = cardList.stream().filter{ card -> card.boosters.contains(booster) }.toArray().asList() as List<Card>
+            val boosterCards = cardList.stream().filter{ card -> card.origins.contains(booster) }.toArray().asList() as List<Card>
             val data = OwnedData(
                 totalCards = boosterCards.count(),
                 ownedCards = boosterCards.stream().filter{ card -> card.owned }.count().toInt()
@@ -130,8 +127,8 @@ class SetsData() {
             byBooster.put(booster, data)
         }
 
-        val byRarity = mutableMapOf<Rarity, OwnedData>()
-        Rarity.entries.forEach { rarity ->
+        val byRarity = mutableMapOf<String, OwnedData>()
+        Concepts.getRarities().forEach { rarity ->
             val rarityCards = cardList.stream().filter{ card -> card.rarity == rarity }.toArray().asList() as List<Card>
             val data = OwnedData(
                 totalCards = rarityCards.count(),
@@ -158,5 +155,21 @@ class SetsData() {
     // Get set name from its code
     fun getSetName(code: String): String {
         return setList.firstOrNull{ set -> set.set == code }?.name ?: code
+    }
+
+    // Get map of set color assign to set ids
+    fun getSetColors(): Map<String, Color> {
+        val outputMap = mutableMapOf<String, Color>()
+        setList.forEach { set ->
+            outputMap.put(set.set, set.color)
+        }
+        return outputMap
+    }
+
+    // Get set color form its code
+    fun getSetColor(value: String): Color? {
+        var set = setList.firstOrNull{ set -> set.name == value }
+        if (set == null) set = setList.firstOrNull{ set -> set.set == value }
+        return set?.color
     }
 }

@@ -21,28 +21,25 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import com.example.tcgtracker.R
-import com.example.tcgtracker.models.Booster
 import com.example.tcgtracker.models.Card
-import com.example.tcgtracker.models.Rarity
 import com.example.tcgtracker.ui.theme.PocketBlack
-import com.example.tcgtracker.ui.theme.boosterColors
 import com.example.tcgtracker.utils.greyScale
 
 @Composable
 fun CardsScreen(
     cardList: List<Card>,
+    colors: Map<String, Color>,
     isListMode: Boolean,
     onCardTap: (cardIndex: Int) -> Unit = {},
     modifier: Modifier = Modifier
@@ -50,6 +47,7 @@ fun CardsScreen(
     if (isListMode) {
         CardListView(
             cardList = cardList,
+            colors = colors,
             onCardTap = onCardTap,
             modifier = modifier
         )
@@ -95,6 +93,7 @@ fun CardGridView(
 @Composable
 fun CardListView(
     cardList: List<Card>,
+    colors: Map<String, Color>,
     onCardTap: (cardIndex: Int) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
@@ -107,25 +106,31 @@ fun CardListView(
             var cardOwnership: Boolean by rememberSaveable {
                 mutableStateOf(cardList[index].owned)
             }
-            val boosters = cardList[index].boosters
+            val boosters = cardList[index].origins
             val booster = when (boosters.count()) {
                 0 -> ""
                 1 -> {
-                    if (boosters[0] == Booster.ERROR) {
+                    if (boosters[0] == "") {
                         "Desbloqueable"
                     } else {
-                        boosters[0].prettyName
+                        boosters[0]
                     }
                 }
                 else -> "Todos"
             }
-            val rarity = cardList.getOrNull(index)?.rarity?.symbol ?: ""
+            val color = when (booster) {
+                "" -> MaterialTheme.colorScheme.primaryContainer
+                "Desbloqueable" -> Color(0xFFCCCCCC)
+                "Todos" -> Color(0xFFefefef)
+                else -> colors[booster] ?: MaterialTheme.colorScheme.primaryContainer
+            }
 
             CardBullet(
                 id = cardList[index].id,
                 name = cardList[index].name.es,
                 booster = booster,
-                rarity = rarity,
+                rarity = cardList[index].rarity,
+                color = color,
                 isOwned = cardOwnership,
                 onCardTap = {
                     onCardTap(index)
@@ -152,7 +157,7 @@ fun CardImage(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         AsyncImage(
-            modifier = if (isOwned) Modifier else Modifier.greyScale().alpha(0.5f),
+            modifier = if (isOwned) Modifier else Modifier.greyScale(0.1f).alpha(0.5f),
             model = image,
             error = painterResource(R.drawable.card_back),
             placeholder = painterResource(R.drawable.card_back),
@@ -172,16 +177,17 @@ fun CardBullet(
     name: String,
     booster: String,
     rarity: String,
+    color: Color,
     isOwned: Boolean,
     onCardTap: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
-    val boosterColor = boosterColors[booster] ?: MaterialTheme.colorScheme.primaryContainer
     val bulletColor = PocketBlack
     val fontColor = PocketBlack
     Box(
-        modifier = modifier.background(boosterColor)
+        modifier = modifier.background(color)
             .height(50.dp)
+            .alpha(0.5f)
     ) {
         Row(
             modifier = Modifier.padding(horizontal = 10.dp),
@@ -243,17 +249,4 @@ fun CardBullet(
             }
         }
     }
-}
-
-@Preview(showSystemUi = true)
-@Composable
-fun Preview() {
-    CardBullet(
-        id = "A1-001",
-        name = "Bulbasaur",
-        booster = "Mewtwo",
-        rarity = Rarity.ONE_DIAMOND.prettyName,
-        isOwned = true,
-        modifier = Modifier.fillMaxWidth()
-    )
 }

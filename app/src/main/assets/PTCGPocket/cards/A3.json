@@ -5,11 +5,11 @@
       "en": "Exeggcute",
       "es": "Exeggcute"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -18,11 +18,11 @@
       "en": "Alolan Exeggutor",
       "es": "Exeggutor de Alola"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -31,12 +31,12 @@
       "en": "Surskit",
       "es": "Surskit"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -45,12 +45,12 @@
       "en": "Masquerain",
       "es": "Masquerain"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -59,11 +59,11 @@
       "en": "Maractus",
       "es": "Maractus"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -72,12 +72,12 @@
       "en": "Karrablast",
       "es": "Karrablast"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -86,11 +86,11 @@
       "en": "Phantump",
       "es": "Phantump"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -99,11 +99,11 @@
       "en": "Trevenant",
       "es": "Trevenant"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -112,11 +112,11 @@
       "en": "Rowlet",
       "es": "Rowlet"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -125,11 +125,11 @@
       "en": "Rowlet",
       "es": "Rowlet"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -138,11 +138,11 @@
       "en": "Dartrix",
       "es": "Dartrix"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -151,11 +151,11 @@
       "en": "Decidueye ex",
       "es": "Decidueye ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -164,11 +164,11 @@
       "en": "Grubbin",
       "es": "Grubbin"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -177,12 +177,12 @@
       "en": "Fomantis",
       "es": "Fomantis"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -191,12 +191,12 @@
       "en": "Lurantis",
       "es": "Lurantis"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -205,11 +205,11 @@
       "en": "Morelull",
       "es": "Morelull"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -218,11 +218,11 @@
       "en": "Shiinotic",
       "es": "Shiinotic"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -231,11 +231,11 @@
       "en": "Bounsweet",
       "es": "Bounsweet"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -244,11 +244,11 @@
       "en": "Steenee",
       "es": "Steenee"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -257,11 +257,11 @@
       "en": "Tsareena",
       "es": "Tsareena"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -270,11 +270,11 @@
       "en": "Wimpod",
       "es": "Wimpod"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -283,11 +283,11 @@
       "en": "Golisopod",
       "es": "Golisopod"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -296,11 +296,11 @@
       "en": "Dhelmise ex",
       "es": "Dhelmise ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -309,11 +309,11 @@
       "en": "Tapu Bulu",
       "es": "Tapu Bulu"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -322,12 +322,12 @@
       "en": "Growlithe",
       "es": "Growlithe"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -336,12 +336,12 @@
       "en": "Arcanine",
       "es": "Arcanine"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -350,11 +350,11 @@
       "en": "Alolan Marowak",
       "es": "Marowak de Alola"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -363,11 +363,11 @@
       "en": "Fletchinder",
       "es": "Fletchinder"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -376,11 +376,11 @@
       "en": "Talonflame",
       "es": "Talonflame"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -389,11 +389,11 @@
       "en": "Litten",
       "es": "Litten"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -402,11 +402,11 @@
       "en": "Litten",
       "es": "Litten"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -415,11 +415,11 @@
       "en": "Torracat",
       "es": "Torracat"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -428,11 +428,11 @@
       "en": "Incineroar ex",
       "es": "Incineroar ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -441,11 +441,11 @@
       "en": "Oricorio",
       "es": "Oricorio"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -454,12 +454,12 @@
       "en": "Salandit",
       "es": "Salandit"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -468,12 +468,12 @@
       "en": "Salazzle",
       "es": "Salazzle"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -482,11 +482,11 @@
       "en": "Turtonator",
       "es": "Turtonator"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -495,12 +495,12 @@
       "en": "Alolan Sandshrew",
       "es": "Sandshrew de Alola"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -509,12 +509,12 @@
       "en": "Alolan Sandslash",
       "es": "Sandslash de Alola"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -523,11 +523,11 @@
       "en": "Alolan Vulpix",
       "es": "Vulpix de Alola"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -536,11 +536,11 @@
       "en": "Alolan Ninetales",
       "es": "Ninetales de Alola"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -549,11 +549,11 @@
       "en": "Shellder",
       "es": "Shellder"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -562,11 +562,11 @@
       "en": "Cloyster",
       "es": "Cloyster"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -575,12 +575,12 @@
       "en": "Lapras",
       "es": "Lapras"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -589,11 +589,11 @@
       "en": "Popplio",
       "es": "Popplio"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -602,11 +602,11 @@
       "en": "Popplio",
       "es": "Popplio"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -615,11 +615,11 @@
       "en": "Brionne",
       "es": "Brionne"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -628,11 +628,11 @@
       "en": "Primarina",
       "es": "Primarina"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -641,11 +641,11 @@
       "en": "Crabominable ex",
       "es": "Crabominable ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -654,11 +654,11 @@
       "en": "Wishiwashi",
       "es": "Wishiwashi"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -667,11 +667,11 @@
       "en": "Wishiwashi ex",
       "es": "Wishiwashi ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -680,11 +680,11 @@
       "en": "Dewpider",
       "es": "Dewpider"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -693,11 +693,11 @@
       "en": "Araquanid",
       "es": "Araquanid"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -706,11 +706,11 @@
       "en": "Pyukumuku",
       "es": "Pyukumuku"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -719,12 +719,12 @@
       "en": "Bruxish",
       "es": "Bruxish"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -733,11 +733,11 @@
       "en": "Tapu Fini",
       "es": "Tapu Fini"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -746,11 +746,11 @@
       "en": "Pikachu",
       "es": "Pikachu"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -759,11 +759,11 @@
       "en": "Alolan Raichu ex",
       "es": "Raichu de Alola ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -772,11 +772,11 @@
       "en": "Alolan Geodude",
       "es": "Geodude de Alola"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -785,11 +785,11 @@
       "en": "Alolan Graveler",
       "es": "Graveler de Alola"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -798,11 +798,11 @@
       "en": "Alolan Golem",
       "es": "Golem de Alola"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -811,12 +811,12 @@
       "en": "Helioptile",
       "es": "Helioptile"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -825,12 +825,12 @@
       "en": "Heliolisk",
       "es": "Heliolisk"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -839,11 +839,11 @@
       "en": "Charjabug",
       "es": "Charjabug"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -852,11 +852,11 @@
       "en": "Vikavolt",
       "es": "Vikavolt"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -865,11 +865,11 @@
       "en": "Oricorio",
       "es": "Oricorio"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -878,11 +878,11 @@
       "en": "Togedemaru",
       "es": "Togedemaru"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -891,11 +891,11 @@
       "en": "Tapu Koko",
       "es": "Tapu Koko"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -904,11 +904,11 @@
       "en": "Mr. Mime",
       "es": "Mr. Mime"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -917,12 +917,12 @@
       "en": "Sableye",
       "es": "Sableye"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -931,12 +931,12 @@
       "en": "Spoink",
       "es": "Spoink"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -945,12 +945,12 @@
       "en": "Grumpig",
       "es": "Grumpig"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -959,11 +959,11 @@
       "en": "Lunatone",
       "es": "Lunatone"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -972,12 +972,12 @@
       "en": "Shuppet",
       "es": "Shuppet"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -986,12 +986,12 @@
       "en": "Banette",
       "es": "Banette"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1000,11 +1000,11 @@
       "en": "Oricorio",
       "es": "Oricorio"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1013,11 +1013,11 @@
       "en": "Oricorio",
       "es": "Oricorio"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1026,11 +1026,11 @@
       "en": "Cutiefly",
       "es": "Cutiefly"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1039,11 +1039,11 @@
       "en": "Ribombee",
       "es": "Ribombee"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1052,11 +1052,11 @@
       "en": "Comfey",
       "es": "Comfey"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1065,11 +1065,11 @@
       "en": "Sandygast",
       "es": "Sandygast"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1078,11 +1078,11 @@
       "en": "Palossand",
       "es": "Palossand"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1091,11 +1091,11 @@
       "en": "Mimikyu",
       "es": "Mimikyu"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1104,11 +1104,11 @@
       "en": "Tapu Lele",
       "es": "Tapu Lele"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1117,12 +1117,12 @@
       "en": "Cosmog",
       "es": "Cosmog"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1131,12 +1131,12 @@
       "en": "Cosmoem",
       "es": "Cosmoem"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1145,11 +1145,11 @@
       "en": "Lunala ex",
       "es": "Lunala ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1158,11 +1158,11 @@
       "en": "Necrozma",
       "es": "Necrozma"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1171,11 +1171,11 @@
       "en": "Cubone",
       "es": "Cubone"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1184,12 +1184,12 @@
       "en": "Makuhita",
       "es": "Makuhita"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1198,12 +1198,12 @@
       "en": "Hariyama",
       "es": "Hariyama"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1212,11 +1212,11 @@
       "en": "Solrock",
       "es": "Solrock"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1225,12 +1225,12 @@
       "en": "Drilbur",
       "es": "Drilbur"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1239,11 +1239,11 @@
       "en": "Timburr",
       "es": "Timburr"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1252,11 +1252,11 @@
       "en": "Gurdurr",
       "es": "Gurdurr"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1265,11 +1265,11 @@
       "en": "Conkeldurr",
       "es": "Conkeldurr"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1278,11 +1278,11 @@
       "en": "Crabrawler",
       "es": "Crabrawler"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1291,11 +1291,11 @@
       "en": "Rockruff",
       "es": "Rockruff"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1304,11 +1304,11 @@
       "en": "Rockruff",
       "es": "Rockruff"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1317,11 +1317,11 @@
       "en": "Lycanroc",
       "es": "Lycanroc"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1330,11 +1330,11 @@
       "en": "Lycanroc",
       "es": "Lycanroc"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1343,11 +1343,11 @@
       "en": "Mudbray",
       "es": "Mudbray"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1356,11 +1356,11 @@
       "en": "Mudsdale",
       "es": "Mudsdale"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1369,11 +1369,11 @@
       "en": "Passimian ex",
       "es": "Passimian ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1382,11 +1382,11 @@
       "en": "Minior",
       "es": "Minior"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1395,11 +1395,11 @@
       "en": "Alolan Rattata",
       "es": "Rattata de Alola"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1408,11 +1408,11 @@
       "en": "Alolan Raticate",
       "es": "Raticate de Alola"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1421,11 +1421,11 @@
       "en": "Alolan Meowth",
       "es": "Meowth de Alola"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1434,11 +1434,11 @@
       "en": "Alolan Persian",
       "es": "Persian de Alola"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1447,11 +1447,11 @@
       "en": "Alolan Grimer",
       "es": "Grimer de Alola"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1460,11 +1460,11 @@
       "en": "Alolan Muk ex",
       "es": "Muk de Alola ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1473,11 +1473,11 @@
       "en": "Absol",
       "es": "Absol"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1486,12 +1486,12 @@
       "en": "Trubbish",
       "es": "Trubbish"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1500,12 +1500,12 @@
       "en": "Garbodor",
       "es": "Garbodor"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1514,11 +1514,11 @@
       "en": "Mareanie",
       "es": "Mareanie"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1527,11 +1527,11 @@
       "en": "Toxapex",
       "es": "Toxapex"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1540,12 +1540,12 @@
       "en": "Alolan Diglett",
       "es": "Diglett de Alola"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1554,12 +1554,12 @@
       "en": "Alolan Dugtrio",
       "es": "Dugtrio de Alola"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1568,12 +1568,12 @@
       "en": "Excadrill",
       "es": "Excadrill"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1582,12 +1582,12 @@
       "en": "Escavalier",
       "es": "Escavalier"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1596,11 +1596,11 @@
       "en": "Klefki",
       "es": "Klefki"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1609,11 +1609,11 @@
       "en": "Solgaleo ex",
       "es": "Solgaleo ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1622,11 +1622,11 @@
       "en": "Magearna",
       "es": "Magearna"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1635,11 +1635,11 @@
       "en": "Drampa",
       "es": "Drampa"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -1648,11 +1648,11 @@
       "en": "Jangmo-o",
       "es": "Jangmo-o"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -1661,11 +1661,11 @@
       "en": "Hakamo-o",
       "es": "Hakamo-o"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -1674,11 +1674,11 @@
       "en": "Kommo-o",
       "es": "Kommo-o"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -1687,12 +1687,12 @@
       "en": "Tauros",
       "es": "Tauros"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1701,12 +1701,12 @@
       "en": "Skitty",
       "es": "Skitty"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1715,12 +1715,12 @@
       "en": "Delcatty",
       "es": "Delcatty"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1729,11 +1729,11 @@
       "en": "Fletchling",
       "es": "Fletchling"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1742,11 +1742,11 @@
       "en": "Hawlucha",
       "es": "Hawlucha"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1755,12 +1755,12 @@
       "en": "Pikipek",
       "es": "Pikipek"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1769,12 +1769,12 @@
       "en": "Trumbeak",
       "es": "Trumbeak"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1783,12 +1783,12 @@
       "en": "Toucannon",
       "es": "Toucannon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1797,11 +1797,11 @@
       "en": "Yungoos",
       "es": "Yungoos"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1810,11 +1810,11 @@
       "en": "Gumshoos",
       "es": "Gumshoos"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1823,11 +1823,11 @@
       "en": "Stufful",
       "es": "Stufful"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1836,11 +1836,11 @@
       "en": "Bewear",
       "es": "Bewear"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1849,11 +1849,11 @@
       "en": "Oranguru",
       "es": "Oranguru"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1862,11 +1862,11 @@
       "en": "Komala",
       "es": "Komala"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1875,12 +1875,12 @@
       "en": "Big Malasada",
       "es": "Malasada Maxi"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1889,11 +1889,11 @@
       "en": "Fishing Net",
       "es": "Red de Pesca"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1902,12 +1902,12 @@
       "en": "Rare Candy",
       "es": "Caramelo Raro"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1916,11 +1916,11 @@
       "en": "Rotom Dex",
       "es": "RotomDex"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1929,11 +1929,11 @@
       "en": "Poison Barb",
       "es": "Flecha Venenosa"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1942,11 +1942,11 @@
       "en": "Leaf Cape",
       "es": "Capa Hoja"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1955,11 +1955,11 @@
       "en": "Acerola",
       "es": "Zarala"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1968,11 +1968,11 @@
       "en": "Ilima",
       "es": "Liam"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1981,11 +1981,11 @@
       "en": "Kiawe",
       "es": "Kiawe"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1994,11 +1994,11 @@
       "en": "Guzma",
       "es": "Guzmán"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2007,11 +2007,11 @@
       "en": "Lana",
       "es": "Capitana Nereida"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2020,11 +2020,11 @@
       "en": "Sophocles",
       "es": "Chris"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2033,11 +2033,11 @@
       "en": "Mallow",
       "es": "Lulú"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2046,11 +2046,11 @@
       "en": "Lillie",
       "es": "Lylia"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2059,11 +2059,11 @@
       "en": "Alolan Exeggutor",
       "es": "Exeggutor de Alola"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2072,11 +2072,11 @@
       "en": "Morelull",
       "es": "Morelull"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2085,11 +2085,11 @@
       "en": "Tsareena",
       "es": "Tsareena"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2098,11 +2098,11 @@
       "en": "Tapu Bulu",
       "es": "Tapu Bulu"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2111,11 +2111,11 @@
       "en": "Alolan Marowak",
       "es": "Marowak de Alola"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -2124,11 +2124,11 @@
       "en": "Turtonator",
       "es": "Turtonator"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -2137,11 +2137,11 @@
       "en": "Alolan Vulpix",
       "es": "Vulpix de Alola"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2150,11 +2150,11 @@
       "en": "Pyukumuku",
       "es": "Pyukumuku"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2163,11 +2163,11 @@
       "en": "Tapu Fini",
       "es": "Tapu Fini"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2176,11 +2176,11 @@
       "en": "Oricorio",
       "es": "Oricorio"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -2189,11 +2189,11 @@
       "en": "Tapu Koko",
       "es": "Tapu Koko"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -2202,11 +2202,11 @@
       "en": "Cutiefly",
       "es": "Cutiefly"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2215,11 +2215,11 @@
       "en": "Comfey",
       "es": "Comfey"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2228,11 +2228,11 @@
       "en": "Sandygast",
       "es": "Sandygast"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2241,11 +2241,11 @@
       "en": "Tapu Lele",
       "es": "Tapu Lele"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2254,11 +2254,11 @@
       "en": "Cosmog",
       "es": "Cosmog"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2267,11 +2267,11 @@
       "en": "Rockruff",
       "es": "Rockruff"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2280,11 +2280,11 @@
       "en": "Mudsdale",
       "es": "Mudsdale"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2293,11 +2293,11 @@
       "en": "Minior",
       "es": "Minior"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2306,11 +2306,11 @@
       "en": "Magearna",
       "es": "Magearna"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -2319,11 +2319,11 @@
       "en": "Drampa",
       "es": "Drampa"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -2332,11 +2332,11 @@
       "en": "Pikipek",
       "es": "Pikipek"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2345,11 +2345,11 @@
       "en": "Bewear",
       "es": "Bewear"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2358,11 +2358,11 @@
       "en": "Komala",
       "es": "Komala"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2371,11 +2371,11 @@
       "en": "Decidueye ex",
       "es": "Decidueye ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2384,11 +2384,11 @@
       "en": "Dhelmise ex",
       "es": "Dhelmise ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2397,11 +2397,11 @@
       "en": "Incineroar ex",
       "es": "Incineroar ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -2410,11 +2410,11 @@
       "en": "Crabominable ex",
       "es": "Crabominable ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2423,11 +2423,11 @@
       "en": "Wishiwashi ex",
       "es": "Wishiwashi ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2436,11 +2436,11 @@
       "en": "Alolan Raichu ex",
       "es": "Raichu de Alola ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -2449,11 +2449,11 @@
       "en": "Lunala ex",
       "es": "Lunala ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2462,11 +2462,11 @@
       "en": "Passimian ex",
       "es": "Passimian ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2475,11 +2475,11 @@
       "en": "Alolan Muk ex",
       "es": "Muk de Alola ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2488,11 +2488,11 @@
       "en": "Solgaleo ex",
       "es": "Solgaleo ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -2501,11 +2501,11 @@
       "en": "Acerola",
       "es": "Zarala"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2514,11 +2514,11 @@
       "en": "Ilima",
       "es": "Liam"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2527,11 +2527,11 @@
       "en": "Kiawe",
       "es": "Kiawe"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2540,11 +2540,11 @@
       "en": "Guzma",
       "es": "Guzmán"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2553,11 +2553,11 @@
       "en": "Lana",
       "es": "Capitana Nereida"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2566,11 +2566,11 @@
       "en": "Sophocles",
       "es": "Chris"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2579,11 +2579,11 @@
       "en": "Mallow",
       "es": "Lulú"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2592,11 +2592,11 @@
       "en": "Lillie",
       "es": "Lylia"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2605,11 +2605,11 @@
       "en": "Decidueye ex",
       "es": "Decidueye ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2618,11 +2618,11 @@
       "en": "Dhelmise ex",
       "es": "Dhelmise ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2631,11 +2631,11 @@
       "en": "Incineroar ex",
       "es": "Incineroar ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -2644,11 +2644,11 @@
       "en": "Crabominable ex",
       "es": "Crabominable ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2657,11 +2657,11 @@
       "en": "Wishiwashi ex",
       "es": "Wishiwashi ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2670,11 +2670,11 @@
       "en": "Alolan Raichu ex",
       "es": "Raichu de Alola ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -2683,11 +2683,11 @@
       "en": "Lunala ex",
       "es": "Lunala ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2696,11 +2696,11 @@
       "en": "Passimian ex",
       "es": "Passimian ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2709,11 +2709,11 @@
       "en": "Alolan Muk ex",
       "es": "Muk de Alola ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2722,11 +2722,11 @@
       "en": "Solgaleo ex",
       "es": "Solgaleo ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -2735,11 +2735,11 @@
       "en": "Guzma",
       "es": "Guzmán"
     },
-    "rarity": "Three Star",
-    "boosters": [
-      "Lunala"
+    "rarity": "THREE_STAR",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2748,11 +2748,11 @@
       "en": "Lillie",
       "es": "Lylia"
     },
-    "rarity": "Three Star",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "THREE_STAR",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2761,11 +2761,11 @@
       "en": "Bulbasaur",
       "es": "Bulbasaur"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2774,11 +2774,11 @@
       "en": "Ivysaur",
       "es": "Ivysaur"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2787,11 +2787,11 @@
       "en": "Venusaur",
       "es": "Venusaur"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2800,11 +2800,11 @@
       "en": "Exeggcute",
       "es": "Exeggcute"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2813,11 +2813,11 @@
       "en": "Exeggutor",
       "es": "Exeggutor"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -2826,11 +2826,11 @@
       "en": "Squirtle",
       "es": "Squirtle"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2839,11 +2839,11 @@
       "en": "Wartortle",
       "es": "Wartortle"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2852,11 +2852,11 @@
       "en": "Blastoise",
       "es": "Blastoise"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2865,11 +2865,11 @@
       "en": "Staryu",
       "es": "Staryu"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2878,11 +2878,11 @@
       "en": "Starmie",
       "es": "Starmie"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -2891,11 +2891,11 @@
       "en": "Gastly",
       "es": "Gastly"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2904,11 +2904,11 @@
       "en": "Haunter",
       "es": "Haunter"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2917,11 +2917,11 @@
       "en": "Gengar",
       "es": "Gengar"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -2930,11 +2930,11 @@
       "en": "Machop",
       "es": "Machop"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2943,11 +2943,11 @@
       "en": "Machoke",
       "es": "Machoke"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2956,11 +2956,11 @@
       "en": "Machamp",
       "es": "Machamp"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2969,11 +2969,11 @@
       "en": "Cubone",
       "es": "Cubone"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2982,11 +2982,11 @@
       "en": "Marowak",
       "es": "Marowak"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2995,11 +2995,11 @@
       "en": "Jigglypuff",
       "es": "Jigglypuff"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -3008,11 +3008,11 @@
       "en": "Wigglytuff",
       "es": "Wigglytuff"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -3021,11 +3021,11 @@
       "en": "Venusaur ex",
       "es": "Venusaur ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -3034,11 +3034,11 @@
       "en": "Exeggutor ex",
       "es": "Exeggutor ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -3047,11 +3047,11 @@
       "en": "Blastoise ex",
       "es": "Blastoise ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -3060,11 +3060,11 @@
       "en": "Starmie ex",
       "es": "Starmie ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -3073,11 +3073,11 @@
       "en": "Gengar ex",
       "es": "Gengar ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -3086,11 +3086,11 @@
       "en": "Machamp ex",
       "es": "Machamp ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -3099,11 +3099,11 @@
       "en": "Marowak ex",
       "es": "Marowak ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Lunala"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "LUNALA"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -3112,11 +3112,11 @@
       "en": "Wigglytuff ex",
       "es": "Wigglytuff ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Solgaleo"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "SOLGALEO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -3125,12 +3125,12 @@
       "en": "Lunala ex",
       "es": "Lunala ex"
     },
-    "rarity": "Crown",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "CROWN",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -3139,12 +3139,12 @@
       "en": "Solgaleo ex",
       "es": "Solgaleo ex"
     },
-    "rarity": "Crown",
-    "boosters": [
-      "Solgaleo",
-      "Lunala"
+    "rarity": "CROWN",
+    "origins": [
+      "SOLGALEO",
+      "LUNALA"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   }
 ]

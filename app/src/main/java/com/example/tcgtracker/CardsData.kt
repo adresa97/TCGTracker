@@ -1,10 +1,8 @@
 package com.example.tcgtracker
 
 import android.content.Context
-import com.example.tcgtracker.models.Booster
 import com.example.tcgtracker.models.Card
 import com.example.tcgtracker.models.InnerJsonCard
-import com.example.tcgtracker.models.Rarity
 import com.example.tcgtracker.utils.ReadJSONFromAssets
 import com.example.tcgtracker.utils.ReadJSONFromFile
 import com.google.gson.Gson
@@ -16,7 +14,7 @@ import java.io.IOException
 const val ASSETS_CARDS_DATA_FOLDER_PATH = "PTCGPocket/cards"
 const val USER_CARDS_DATA_FOLDER_PATH = "PTCGPocket/owned/cards"
 
-class CardsData(private val service: TCGDexService = TCGDexService("en")) {
+class CardsData() {
     private val cardMap: MutableMap<String, MutableList<Card>> = mutableMapOf()
     private var userFolder: File? = null
     private var modified: MutableMap<String, Boolean> = mutableMapOf()
@@ -61,16 +59,12 @@ class CardsData(private val service: TCGDexService = TCGDexService("en")) {
         val jsonString = ReadJSONFromAssets(applicationContext, "${ASSETS_CARDS_DATA_FOLDER_PATH}/${set}.json")
         return Gson().fromJson(jsonString, Array<InnerJsonCard>::class.java).toList()
             .map{ card ->
-                val boosters = mutableListOf<Booster>()
-                card.boosters.forEach { pack ->
-                    boosters.add(Booster.fromPrettyName(pack))
-                }
                 Card(
                     id = card.id,
                     name = card.name,
                     type = card.type,
-                    boosters = boosters,
-                    rarity = Rarity.fromPrettyName(card.rarity),
+                    origins = card.origins,
+                    rarity = card.rarity,
                     image = getImageUrl(card.id),
                     owned = false,
                     baby = card.baby

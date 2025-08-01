@@ -5,11 +5,11 @@
       "en": "Weedle",
       "es": "Weedle"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -18,11 +18,11 @@
       "en": "Kakuna",
       "es": "Kakuna"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -31,11 +31,11 @@
       "en": "Beedrill ex",
       "es": "Beedrill ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -44,11 +44,11 @@
       "en": "Pinsir",
       "es": "Pinsir"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -57,11 +57,11 @@
       "en": "Sprigatito",
       "es": "Sprigatito"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -70,11 +70,11 @@
       "en": "Floragato",
       "es": "Floragato"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -83,11 +83,11 @@
       "en": "Meowscarada",
       "es": "Meowscarada"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -96,11 +96,11 @@
       "en": "Charmander",
       "es": "Charmander"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -109,11 +109,11 @@
       "en": "Charmeleon",
       "es": "Charmeleon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -122,11 +122,11 @@
       "en": "Charizard ex",
       "es": "Charizard ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -135,11 +135,11 @@
       "en": "Magmar",
       "es": "Magmar"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -148,11 +148,11 @@
       "en": "Magmortar",
       "es": "Magmortar"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -161,11 +161,11 @@
       "en": "Paldean Tauros",
       "es": "Tauros de Paldea"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -174,11 +174,11 @@
       "en": "Tentacool",
       "es": "Tentacool"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -187,11 +187,11 @@
       "en": "Tentacruel",
       "es": "Tentacruel"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -200,11 +200,11 @@
       "en": "Buizel",
       "es": "Buizel"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -213,11 +213,11 @@
       "en": "Floatzel",
       "es": "Floatzel"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -226,11 +226,11 @@
       "en": "Wiglett",
       "es": "Wiglett"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -239,11 +239,11 @@
       "en": "Wugtrio ex",
       "es": "Wugtrio ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -252,11 +252,11 @@
       "en": "Dondozo",
       "es": "Dondozo"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -265,11 +265,11 @@
       "en": "Tatsugiri",
       "es": "Tatsugiri"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -278,11 +278,11 @@
       "en": "Pikachu ex",
       "es": "Pikachu ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -291,11 +291,11 @@
       "en": "Voltorb",
       "es": "Voltorb"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -304,11 +304,11 @@
       "en": "Electrode",
       "es": "Electrode"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -317,11 +317,11 @@
       "en": "Pachirisu",
       "es": "Pachirisu"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -330,11 +330,11 @@
       "en": "Pawmi",
       "es": "Pawmi"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -343,11 +343,11 @@
       "en": "Pawmo",
       "es": "Pawmo"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -356,11 +356,11 @@
       "en": "Pawmot",
       "es": "Pawmot"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -369,11 +369,11 @@
       "en": "Abra",
       "es": "Abra"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -382,11 +382,11 @@
       "en": "Kadabra",
       "es": "Kadabra"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -395,11 +395,11 @@
       "en": "Alakazam",
       "es": "Alakazam"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -408,11 +408,11 @@
       "en": "Mr. Mime",
       "es": "Mr. Mime"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -421,11 +421,11 @@
       "en": "Drifloon",
       "es": "Drifloon"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -434,11 +434,11 @@
       "en": "Drifblim",
       "es": "Drifblim"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -447,11 +447,11 @@
       "en": "Giratina ex",
       "es": "Giratina ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -460,11 +460,11 @@
       "en": "Gimmighoul",
       "es": "Gimmighoul"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -473,11 +473,11 @@
       "en": "Machop",
       "es": "Machop"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -486,11 +486,11 @@
       "en": "Machoke",
       "es": "Machoke"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -499,11 +499,11 @@
       "en": "Machamp",
       "es": "Machamp"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -512,11 +512,11 @@
       "en": "Hitmonlee",
       "es": "Hitmonlee"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -525,11 +525,11 @@
       "en": "Hitmonchan",
       "es": "Hitmonchan"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -538,11 +538,11 @@
       "en": "Riolu",
       "es": "Riolu"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -551,11 +551,11 @@
       "en": "Lucario ex",
       "es": "Lucario ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -564,11 +564,11 @@
       "en": "Flamigo",
       "es": "Flamigo"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -577,11 +577,11 @@
       "en": "Ekans",
       "es": "Ekans"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -590,11 +590,11 @@
       "en": "Arbok",
       "es": "Arbok"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -603,11 +603,11 @@
       "en": "Paldean Wooper",
       "es": "Wooper de Paldea"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -616,11 +616,11 @@
       "en": "Paldean Clodsire ex",
       "es": "Clodsire de Paldea ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -629,11 +629,11 @@
       "en": "Spiritomb",
       "es": "Spiritomb"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -642,11 +642,11 @@
       "en": "Shroodle",
       "es": "Shroodle"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -655,11 +655,11 @@
       "en": "Grafaiai",
       "es": "Grafaiai"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -668,11 +668,11 @@
       "en": "Tinkatink",
       "es": "Tinkatink"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -681,11 +681,11 @@
       "en": "Tinkatuff",
       "es": "Tinkatuff"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -694,11 +694,11 @@
       "en": "Tinkaton ex",
       "es": "Tinkaton ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -707,11 +707,11 @@
       "en": "Varoom",
       "es": "Varoom"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -720,11 +720,11 @@
       "en": "Revavroom",
       "es": "Revavroom"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -733,11 +733,11 @@
       "en": "Gholdengo",
       "es": "Gholdengo"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -746,11 +746,11 @@
       "en": "Rattata",
       "es": "Rattata"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -759,11 +759,11 @@
       "en": "Raticate",
       "es": "Raticate"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -772,11 +772,11 @@
       "en": "Jigglypuff",
       "es": "Jigglypuff"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -785,11 +785,11 @@
       "en": "Wigglytuff",
       "es": "Wigglytuff"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -798,11 +798,11 @@
       "en": "Lickitung",
       "es": "Lickitung"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -811,11 +811,11 @@
       "en": "Lickilicky",
       "es": "Lickilicky"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -824,11 +824,11 @@
       "en": "Bidoof",
       "es": "Bidoof"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -837,11 +837,11 @@
       "en": "Bibarel ex",
       "es": "Bibarel ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -850,11 +850,11 @@
       "en": "Buneary",
       "es": "Buneary"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -863,11 +863,11 @@
       "en": "Lopunny",
       "es": "Lopunny"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -876,11 +876,11 @@
       "en": "Cyclizar",
       "es": "Cyclizar"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -889,11 +889,11 @@
       "en": "Iono",
       "es": "e-Nigma"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -902,11 +902,11 @@
       "en": "Pokémon Center Lady",
       "es": "Chica del Centro Pokémon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -915,11 +915,11 @@
       "en": "Red",
       "es": "Rojo"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -928,11 +928,11 @@
       "en": "Team Rocket Grunt",
       "es": "Recluta del Team Rocket"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -941,11 +941,11 @@
       "en": "Meowscarada",
       "es": "Meowscarada"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -954,11 +954,11 @@
       "en": "Buizel",
       "es": "Buizel"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -967,11 +967,11 @@
       "en": "Tatsugiri",
       "es": "Tatsugiri"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -980,11 +980,11 @@
       "en": "Grafaiai",
       "es": "Grafaiai"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -993,11 +993,11 @@
       "en": "Gholdengo",
       "es": "Gholdengo"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1006,11 +1006,11 @@
       "en": "Wigglytuff",
       "es": "Wigglytuff"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1019,11 +1019,11 @@
       "en": "Beedrill ex",
       "es": "Beedrill ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -1032,11 +1032,11 @@
       "en": "Charizard ex",
       "es": "Charizard ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -1045,11 +1045,11 @@
       "en": "Wugtrio ex",
       "es": "Wugtrio ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1058,11 +1058,11 @@
       "en": "Pikachu ex",
       "es": "Pikachu ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1071,11 +1071,11 @@
       "en": "Giratina ex",
       "es": "Giratina ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1084,11 +1084,11 @@
       "en": "Lucario ex",
       "es": "Lucario ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1097,11 +1097,11 @@
       "en": "Paldean Clodsire ex",
       "es": "Clodsire de Paldea ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1110,11 +1110,11 @@
       "en": "Tinkaton ex",
       "es": "Tinkaton ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1123,11 +1123,11 @@
       "en": "Bibarel ex",
       "es": "Bibarel ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1136,11 +1136,11 @@
       "en": "Iono",
       "es": "e-Nigma"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1149,11 +1149,11 @@
       "en": "Pokémon Center Lady",
       "es": "Chica del Centro Pokémon"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1162,11 +1162,11 @@
       "en": "Red",
       "es": "Rojo"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1175,11 +1175,11 @@
       "en": "Team Rocket Grunt",
       "es": "Recluta del Team Rocket"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1188,11 +1188,11 @@
       "en": "Pikachu ex",
       "es": "Pikachu ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1201,11 +1201,11 @@
       "en": "Paldean Clodsire ex",
       "es": "Clodsire de Paldea ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1214,11 +1214,11 @@
       "en": "Tinkaton ex",
       "es": "Tinkaton ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1227,11 +1227,11 @@
       "en": "Bibarel ex",
       "es": "Bibarel ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1240,11 +1240,11 @@
       "en": "Giratina ex",
       "es": "Giratina ex"
     },
-    "rarity": "Three Star",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "THREE_STAR",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1253,11 +1253,11 @@
       "en": "Weedle",
       "es": "Weedle"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -1266,11 +1266,11 @@
       "en": "Kakuna",
       "es": "Kakuna"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -1279,11 +1279,11 @@
       "en": "Charmander",
       "es": "Charmander"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -1292,11 +1292,11 @@
       "en": "Charmeleon",
       "es": "Charmeleon"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -1305,11 +1305,11 @@
       "en": "Wiglett",
       "es": "Wiglett"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1318,11 +1318,11 @@
       "en": "Dondozo",
       "es": "Dondozo"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1331,11 +1331,11 @@
       "en": "Pachirisu",
       "es": "Pachirisu"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1344,11 +1344,11 @@
       "en": "Riolu",
       "es": "Riolu"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1357,11 +1357,11 @@
       "en": "Varoom",
       "es": "Varoom"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1370,11 +1370,11 @@
       "en": "Revavroom",
       "es": "Revavroom"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1383,11 +1383,11 @@
       "en": "Beedrill ex",
       "es": "Beedrill ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -1396,11 +1396,11 @@
       "en": "Charizard ex",
       "es": "Charizard ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -1409,11 +1409,11 @@
       "en": "Wugtrio ex",
       "es": "Wugtrio ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1422,11 +1422,11 @@
       "en": "Lucario ex",
       "es": "Lucario ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1435,11 +1435,11 @@
       "en": "Poké Ball",
       "es": "Poké Ball"
     },
-    "rarity": "Crown",
-    "boosters": [
-      "Shiny Charizard"
+    "rarity": "CROWN",
+    "origins": [
+      "SHINY_CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   }
 ]

@@ -5,11 +5,11 @@
       "en": "Potion",
       "es": "Poción"
     },
-    "rarity": "None",
-    "boosters": [
-      "Shop"
+    "rarity": "NONE",
+    "origins": [
+      "SHOP"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -18,11 +18,11 @@
       "en": "X Speed",
       "es": "Velocidad X"
     },
-    "rarity": "None",
-    "boosters": [
-      "Shop"
+    "rarity": "NONE",
+    "origins": [
+      "SHOP"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -31,11 +31,11 @@
       "en": "Hand Scope",
       "es": "Periscopio"
     },
-    "rarity": "None",
-    "boosters": [
-      "Shop"
+    "rarity": "NONE",
+    "origins": [
+      "SHOP"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -44,11 +44,11 @@
       "en": "Pokédex",
       "es": "Pokédex"
     },
-    "rarity": "None",
-    "boosters": [
-      "Shop"
+    "rarity": "NONE",
+    "origins": [
+      "SHOP"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -57,11 +57,11 @@
       "en": "Poké Ball",
       "es": "Poké Ball"
     },
-    "rarity": "None",
-    "boosters": [
-      "Shop"
+    "rarity": "NONE",
+    "origins": [
+      "SHOP"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -70,11 +70,11 @@
       "en": "Red Card",
       "es": "Tarjeta Roja"
     },
-    "rarity": "None",
-    "boosters": [
-      "Shop"
+    "rarity": "NONE",
+    "origins": [
+      "SHOP"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -83,11 +83,11 @@
       "en": "Professor\u0027s Research",
       "es": "Investigación de Profesores"
     },
-    "rarity": "None",
-    "boosters": [
-      "Shop"
+    "rarity": "NONE",
+    "origins": [
+      "SHOP"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -96,11 +96,11 @@
       "en": "Pokédex",
       "es": "Pokédex"
     },
-    "rarity": "None",
-    "boosters": [
-      "Gift"
+    "rarity": "NONE",
+    "origins": [
+      "GIFT"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -109,11 +109,11 @@
       "en": "Pikachu",
       "es": "Pikachu"
     },
-    "rarity": "None",
-    "boosters": [
-      "Premium"
+    "rarity": "NONE",
+    "origins": [
+      "PREMIUM"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -122,11 +122,11 @@
       "en": "Mewtwo",
       "es": "Mewtwo"
     },
-    "rarity": "None",
-    "boosters": [
-      "Premium"
+    "rarity": "NONE",
+    "origins": [
+      "PREMIUM"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -135,11 +135,11 @@
       "en": "Chansey",
       "es": "Chansey"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -148,11 +148,11 @@
       "en": "Meowth",
       "es": "Meowth"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -161,11 +161,11 @@
       "en": "Butterfree",
       "es": "Butterfree"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -174,11 +174,11 @@
       "en": "Lapras ex",
       "es": "Lapras ex"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -187,11 +187,11 @@
       "en": "Pikachu",
       "es": "Pikachu"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -200,11 +200,11 @@
       "en": "Clefairy",
       "es": "Clefairy"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -213,11 +213,11 @@
       "en": "Mankey",
       "es": "Mankey"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -226,11 +226,11 @@
       "en": "Venusaur",
       "es": "Venusaur"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -239,11 +239,11 @@
       "en": "Greninja",
       "es": "Greninja"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -252,11 +252,11 @@
       "en": "Haunter",
       "es": "Haunter"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -265,11 +265,11 @@
       "en": "Onix",
       "es": "Onix"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -278,11 +278,11 @@
       "en": "Jigglypuff",
       "es": "Jigglypuff"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -291,11 +291,11 @@
       "en": "Bulbasaur",
       "es": "Bulbasaur"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -304,11 +304,11 @@
       "en": "Magnemite",
       "es": "Magnemite"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -317,11 +317,11 @@
       "en": "Moltres ex",
       "es": "Moltres ex"
     },
-    "rarity": "None",
-    "boosters": [
-      "Premium"
+    "rarity": "NONE",
+    "origins": [
+      "PREMIUM"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -330,11 +330,11 @@
       "en": "Pikachu",
       "es": "Pikachu"
     },
-    "rarity": "None",
-    "boosters": [
-      "Mision Event"
+    "rarity": "NONE",
+    "origins": [
+      "MISION_EVENT"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -343,11 +343,11 @@
       "en": "Snivy",
       "es": "Snivy"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -356,11 +356,11 @@
       "en": "Volcarona",
       "es": "Volcarona"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -369,11 +369,11 @@
       "en": "Blastoise",
       "es": "Blastoise"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -382,11 +382,11 @@
       "en": "Eevee",
       "es": "Eevee"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -395,11 +395,11 @@
       "en": "Cinccino",
       "es": "Cinccino"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -408,11 +408,11 @@
       "en": "Charmander",
       "es": "Charmander"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -421,11 +421,11 @@
       "en": "Squirtle",
       "es": "Squirtle"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -434,11 +434,11 @@
       "en": "Piplup",
       "es": "Piplup"
     },
-    "rarity": "None",
-    "boosters": [
-      "Premium"
+    "rarity": "NONE",
+    "origins": [
+      "PREMIUM"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -447,11 +447,11 @@
       "en": "Turtwig",
       "es": "Turtwig"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -460,11 +460,11 @@
       "en": "Electivire",
       "es": "Electivire"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -473,11 +473,11 @@
       "en": "Cresselia ex",
       "es": "Cresselia ex"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -486,11 +486,11 @@
       "en": "Misdreavus",
       "es": "Misdreavus"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -499,11 +499,11 @@
       "en": "Skarmory",
       "es": "Skarmory"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -512,11 +512,11 @@
       "en": "Chimchar",
       "es": "Chimchar"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -525,11 +525,11 @@
       "en": "Togepi",
       "es": "Togepi"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -538,11 +538,11 @@
       "en": "Darkrai ex",
       "es": "Darkrai ex"
     },
-    "rarity": "None",
-    "boosters": [
-      "Premium"
+    "rarity": "NONE",
+    "origins": [
+      "PREMIUM"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -551,11 +551,11 @@
       "en": "Cherrim",
       "es": "Cherrim"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -564,11 +564,11 @@
       "en": "Raichu",
       "es": "Raichu"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -577,11 +577,11 @@
       "en": "Nosepass",
       "es": "Nosepass"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -590,11 +590,11 @@
       "en": "Gible",
       "es": "Gible"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -603,11 +603,11 @@
       "en": "Staraptor",
       "es": "Staraptor"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -616,11 +616,11 @@
       "en": "Manaphy",
       "es": "Manaphy"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -629,11 +629,11 @@
       "en": "Snorlax",
       "es": "Snorlax"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -642,11 +642,11 @@
       "en": "Mewtwo ex",
       "es": "Mewtwo ex"
     },
-    "rarity": "None",
-    "boosters": [
-      "Ingot Pack"
+    "rarity": "NONE",
+    "origins": [
+      "INGOTS"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -655,11 +655,11 @@
       "en": "Cyclizar",
       "es": "Cyclizar"
     },
-    "rarity": "None",
-    "boosters": [
-      "Mision Event"
+    "rarity": "NONE",
+    "origins": [
+      "MISION_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -668,11 +668,11 @@
       "en": "Sprigatito",
       "es": "Sprigatito"
     },
-    "rarity": "None",
-    "boosters": [
-      "Premium"
+    "rarity": "NONE",
+    "origins": [
+      "PREMIUM"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -681,11 +681,11 @@
       "en": "Floatzel",
       "es": "Floatzel"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -694,11 +694,11 @@
       "en": "Pawmot",
       "es": "Pawmot"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -707,11 +707,11 @@
       "en": "Machamp",
       "es": "Machamp"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -720,11 +720,11 @@
       "en": "Ekans",
       "es": "Ekans"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -733,11 +733,11 @@
       "en": "Bidoof",
       "es": "Bidoof"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -746,11 +746,11 @@
       "en": "Pachirisu",
       "es": "Pachirisu"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -759,11 +759,11 @@
       "en": "Riolu",
       "es": "Riolu"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -772,11 +772,11 @@
       "en": "Exeggcute",
       "es": "Exeggcute"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -785,11 +785,11 @@
       "en": "Froakie",
       "es": "Froakie"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -798,11 +798,11 @@
       "en": "Farfetch\u0027d",
       "es": "Farfetch\u0027d"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -811,11 +811,11 @@
       "en": "Rayquaza",
       "es": "Rayquaza"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -824,11 +824,11 @@
       "en": "Rayquaza ex",
       "es": "Rayquaza ex"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -837,11 +837,11 @@
       "en": "Rayquaza ex",
       "es": "Rayquaza ex"
     },
-    "rarity": "None",
-    "boosters": [
-      "Mision Event"
+    "rarity": "NONE",
+    "origins": [
+      "MISION_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -850,11 +850,11 @@
       "en": "Mimikyu",
       "es": "Mimikyu"
     },
-    "rarity": "None",
-    "boosters": [
-      "Premium"
+    "rarity": "NONE",
+    "origins": [
+      "PREMIUM"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -863,11 +863,11 @@
       "en": "Cosmog",
       "es": "Cosmog"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -876,37 +876,37 @@
       "en": "Lycanroc",
       "es": "Lycanroc"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
     "id": "P-A-069",
     "name": {
       "en": "Alolan Exeggutor",
-      "es": "Exeggutorde Alola"
+      "es": "Exeggutor de Alola"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
     "id": "P-A-070",
     "name": {
       "en": "Alolan Ninetales",
-      "es": "Ninetalesde Alola"
+      "es": "Ninetales de Alola"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -915,24 +915,24 @@
       "en": "Crabrawler",
       "es": "Crabrawler"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
     "id": "P-A-072",
     "name": {
       "en": "Alolan Grimer",
-      "es": "Grimerde Alola"
+      "es": "Grimer de Alola"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -941,11 +941,11 @@
       "en": "Toucannon",
       "es": "Toucannon"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -954,11 +954,11 @@
       "en": "Zeraora",
       "es": "Zeraora"
     },
-    "rarity": "None",
-    "boosters": [
-      "Premium"
+    "rarity": "NONE",
+    "origins": [
+      "PREMIUM"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -967,11 +967,11 @@
       "en": "Kartana",
       "es": "Kartana"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -980,11 +980,11 @@
       "en": "Blacephalon",
       "es": "Blacephalon"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -993,11 +993,11 @@
       "en": "Xurkitree",
       "es": "Xurkitree"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1006,11 +1006,11 @@
       "en": "Dawn Wings Necrozma",
       "es": "Necrozma Alas del Alba"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1019,11 +1019,11 @@
       "en": "Dusk Mane Necrozma",
       "es": "Necrozma Melena Crepuscular"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1032,11 +1032,11 @@
       "en": "Stakataka",
       "es": "Stakataka"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1045,11 +1045,11 @@
       "en": "Ultra Necrozma ex",
       "es": "Ultra-Necrozma ex"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -1058,11 +1058,11 @@
       "en": "Poipole",
       "es": "Poipole"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1071,11 +1071,11 @@
       "en": "Stufful",
       "es": "Stufful"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1084,11 +1084,11 @@
       "en": "Tapu Koko ex",
       "es": "Tapu Koko ex"
     },
-    "rarity": "None",
-    "boosters": [
-      "Premmium"
+    "rarity": "NONE",
+    "origins": [
+      "PREMIUM"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1097,11 +1097,11 @@
       "en": "Vanillite",
       "es": "Vanillite"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1110,11 +1110,11 @@
       "en": "Jolteon",
       "es": "Jolteon"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1123,11 +1123,11 @@
       "en": "Alcremie",
       "es": "Alcremie"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1136,11 +1136,11 @@
       "en": "Dragonair",
       "es": "Dragonair"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -1149,11 +1149,11 @@
       "en": "Audino",
       "es": "Audino"
     },
-    "rarity": "None",
-    "boosters": [
-      "Drop Event"
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1162,11 +1162,11 @@
       "en": "Togedemaru",
       "es": "Togedemaru"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1175,11 +1175,11 @@
       "en": "Greedent",
       "es": "Greedent"
     },
-    "rarity": "None",
-    "boosters": [
-      "Wonder Event"
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1188,11 +1188,115 @@
       "en": "Eevee",
       "es": "Eevee"
     },
-    "rarity": "None",
-    "boosters": [
-      "Mision Event"
+    "rarity": "NONE",
+    "origins": [
+      "MISION_EVENT"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
+    "baby": false
+  },
+  {
+    "id": "P-A-093",
+    "name": {
+      "en": "Cleffa",
+      "es": "Cleffa"
+    },
+    "rarity": "NONE",
+    "origins": [
+      "PREMIUM"
+    ],
+    "type": "PSYCHIC",
+    "baby": false
+  },
+  {
+    "id": "P-A-094",
+    "name": {
+      "en": "Horsea",
+      "es": "Horsea"
+    },
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
+    ],
+    "type": "WATER",
+    "baby": false
+  },
+  {
+    "id": "P-A-095",
+    "name": {
+      "en": "Chinchou",
+      "es": "Chinchou"
+    },
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
+    ],
+    "type": "LIGHTNING",
+    "baby": false
+  },
+  {
+    "id": "P-A-096",
+    "name": {
+      "en": "Houndoom",
+      "es": "Houndoom"
+    },
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
+    ],
+    "type": "DARKNESS",
+    "baby": false
+  },
+  {
+    "id": "P-A-097",
+    "name": {
+      "en": "Kangaskhan",
+      "es": "Kangaskhan"
+    },
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
+    ],
+    "type": "COLORLESS",
+    "baby": false
+  },
+  {
+    "id": "P-A-098",
+    "name": {
+      "en": "Blissey ex",
+      "es": "Blissey ex"
+    },
+    "rarity": "NONE",
+    "origins": [
+      "DROP_EVENT"
+    ],
+    "type": "COLORLESS",
+    "baby": false
+  },
+  {
+    "id": "P-A-099",
+    "name": {
+      "en": "Marill",
+      "es": "Marill"
+    },
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
+    ],
+    "type": "WATER",
+    "baby": false
+  },
+  {
+    "id": "P-A-100",
+    "name": {
+      "en": "Weavile",
+      "es": "Weavile"
+    },
+    "rarity": "NONE",
+    "origins": [
+      "WONDER_EVENT"
+    ],
+    "type": "DARKNESS",
     "baby": false
   }
 ]

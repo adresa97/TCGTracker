@@ -7,7 +7,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -28,9 +27,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.currentRecomposeScope
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -39,7 +36,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -54,21 +50,6 @@ import com.example.tcgtracker.ui.SetScreen
 import com.example.tcgtracker.ui.TrackerUIState
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.TCGTrackerTheme
-import com.example.tcgtracker.ui.theme.setColors
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.flow.flowOn
-import kotlinx.coroutines.flow.single
-import kotlinx.coroutines.flow.singleOrNull
-import kotlinx.coroutines.job
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import kotlin.coroutines.CoroutineContext
-import kotlin.coroutines.EmptyCoroutineContext
-import kotlin.coroutines.coroutineContext
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,7 +88,7 @@ fun TCGTrackerApp(
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
 
-    trackerViewModel.loadCollectionsJSON(context)
+    trackerViewModel.loadData(context)
     val trackerUIState by trackerViewModel.uiState.collectAsState()
     LocalLifecycleOwner.current.lifecycle.addObserver(trackerViewModel)
 
@@ -157,12 +138,12 @@ fun TCGTrackerApp(
                 navController = navController,
                 startDestination = Screen.SetSelector.name,
                 modifier = Modifier.padding(innerPadding)
-            )
-            {
+            ) {
                 composable(Screen.SetSelector.name) {
                     SetScreen(
                         series = trackerUIState.setsData.getSeriesMap(),
                         isListView = isListMode,
+                        colors = trackerUIState.setsData.getSetColors(),
                         onSetTap = {
                             trackerViewModel.setCurrentSet(it)
                             navController.navigate(Screen.CardViewer.name)
@@ -175,6 +156,7 @@ fun TCGTrackerApp(
                     CardsScreen(
                         cardList = cardList,
                         isListMode = isListMode,
+                        colors = trackerUIState.originsData.getOriginsNameColorMap(),
                         onCardTap = { cardIndex ->
                             trackerViewModel.changeOwnedCardState(
                                 context,
@@ -215,9 +197,7 @@ fun TCGTrackerTopBar(
     }
 
     val currentSet = uiState.selectedSet.substringBefore('-')
-    val color = if (currentScreen == Screen.CardViewer) {
-        setColors[currentSet] ?: MaterialTheme.colorScheme.primaryContainer
-    } else MaterialTheme.colorScheme.primaryContainer
+    val color = uiState.setsData.getSetColor(currentSet) ?: MaterialTheme.colorScheme.primaryContainer
 
     TopAppBar(
         colors = topAppBarColors(
@@ -267,9 +247,7 @@ fun TCGTrackerBottomBar(
     uiState: TrackerUIState
 ) {
     val currentSet = uiState.selectedSet.substringBefore('-')
-    val color = if (currentScreen == Screen.CardViewer) {
-        setColors[currentSet] ?: MaterialTheme.colorScheme.primaryContainer
-    } else MaterialTheme.colorScheme.primaryContainer
+    val color = uiState.setsData.getSetColor(currentSet) ?: MaterialTheme.colorScheme.primaryContainer
 
     BottomAppBar(
         containerColor = color,
@@ -280,46 +258,5 @@ fun TCGTrackerBottomBar(
             textAlign = TextAlign.Center,
             text = ""
         )
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Preview(showSystemUi = true)
-@Composable
-fun TCGTrackerPreview() {
-    val collections = SetsData()
-    val service = TCGDexService("en")
-
-    TCGTrackerTheme {
-        Scaffold(
-            topBar = {
-                TopAppBar(
-                    colors = topAppBarColors(
-                        containerColor = MaterialTheme.colorScheme.primaryContainer,
-                        titleContentColor = MaterialTheme.colorScheme.primary,
-                    ),
-                    title = {
-                        Text("TCGTracker")
-                    }
-                )
-            },
-            bottomBar = {
-                BottomAppBar(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    contentColor = MaterialTheme.colorScheme.primary
-                ) {
-                    Text(
-                        modifier = Modifier.fillMaxWidth(),
-                        textAlign = TextAlign.Center,
-                        text = "Bottom bar"
-                    )
-                }
-            }
-        ) { innerPadding ->
-            Box(modifier = Modifier.padding(innerPadding))
-            {
-                //SetSelectorList(collections.getSeriesMap())
-            }
-        }
     }
 }

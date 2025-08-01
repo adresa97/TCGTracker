@@ -17,24 +17,25 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tcgtracker.models.Set
 import com.example.tcgtracker.ui.theme.PocketBlack
-import com.example.tcgtracker.ui.theme.setColors
 
 @Composable
 fun SetScreen(
     series: Map<String, List<Set>>,
+    colors: Map<String, Color>,
     isListView: Boolean,
     onSetTap: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     series.forEach { element ->
         val expansionsMap = getExpansionsMap(series, element.key)
-        SeriesGroup(element.key, expansionsMap, isListView, onSetTap)
+        SeriesGroup(element.key, expansionsMap, colors, isListView, onSetTap)
     }
 }
 
@@ -49,6 +50,7 @@ fun getExpansionsMap(
 fun SeriesGroup(
     series: String,
     expansions: Map<String, List<Set>>,
+    colors: Map<String, Color>,
     isListView: Boolean,
     onSetTap: (String) -> Unit,
     modifier: Modifier = Modifier
@@ -82,6 +84,7 @@ fun SeriesGroup(
                     if (isListView) {
                         CollectionList(
                             expansion.value,
+                            colors,
                             onSetTap,
                             Modifier.padding(horizontal = 20.dp)
                         )
@@ -101,24 +104,26 @@ fun SeriesGroup(
 @Composable
 fun CollectionList(
     sets: List<Set>,
+    colors: Map<String, Color>,
     onSetTap: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     sets.forEach { set ->
-        CollectionCell(set, onSetTap)
+        val color: Color = colors[set.set] ?: MaterialTheme.colorScheme.primaryContainer
+        CollectionCell(set, color, onSetTap)
     }
 }
 
 @Composable
 fun CollectionCell(
     set: Set,
+    color: Color,
     onSetTap: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val setColor = setColors[set.set] ?: MaterialTheme.colorScheme.primaryContainer
     val fontColor = PocketBlack
     Box(
-        modifier = modifier.background(setColor)
+        modifier = modifier.background(color)
             .height(50.dp)
             .clickable{ onSetTap(set.set) }
     ) {

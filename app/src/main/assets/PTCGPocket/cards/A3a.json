@@ -5,11 +5,11 @@
       "en": "Petilil",
       "es": "Petilil"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -18,11 +18,11 @@
       "en": "Lilligant",
       "es": "Lilligant"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -31,11 +31,11 @@
       "en": "Rowlet",
       "es": "Rowlet"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -44,11 +44,11 @@
       "en": "Dartrix",
       "es": "Dartrix"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -57,11 +57,11 @@
       "en": "Decidueye",
       "es": "Decidueye"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -70,11 +70,11 @@
       "en": "Buzzwole ex",
       "es": "Buzzwole ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -83,11 +83,11 @@
       "en": "Pheromosa",
       "es": "Pheromosa"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -96,11 +96,11 @@
       "en": "Kartana",
       "es": "Kartana"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -109,11 +109,11 @@
       "en": "Blacephalon",
       "es": "Blacephalon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -122,11 +122,11 @@
       "en": "Mantine",
       "es": "Mantine"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -135,11 +135,11 @@
       "en": "Carvanha",
       "es": "Carvanha"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -148,11 +148,11 @@
       "en": "Sharpedo",
       "es": "Sharpedo"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -161,11 +161,11 @@
       "en": "Shinx",
       "es": "Shinx"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -174,11 +174,11 @@
       "en": "Luxio",
       "es": "Luxio"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -187,11 +187,11 @@
       "en": "Luxray",
       "es": "Luxray"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -200,11 +200,11 @@
       "en": "Blitzle",
       "es": "Blitzle"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -213,11 +213,11 @@
       "en": "Zebstrika",
       "es": "Zebstrika"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -226,11 +226,11 @@
       "en": "Emolga",
       "es": "Emolga"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -239,11 +239,11 @@
       "en": "Tapu Koko ex",
       "es": "Tapu Koko ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -252,11 +252,11 @@
       "en": "Xurkitree",
       "es": "Xurkitree"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -265,11 +265,11 @@
       "en": "Zeraora",
       "es": "Zeraora"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -278,11 +278,11 @@
       "en": "Clefairy",
       "es": "Clefairy"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -291,11 +291,11 @@
       "en": "Clefable",
       "es": "Clefable"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -304,11 +304,11 @@
       "en": "Phantump",
       "es": "Phantump"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -317,11 +317,11 @@
       "en": "Trevenant",
       "es": "Trevenant"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -330,11 +330,11 @@
       "en": "Morelull",
       "es": "Morelull"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -343,11 +343,11 @@
       "en": "Shiinotic",
       "es": "Shiinotic"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -356,11 +356,11 @@
       "en": "Meditite",
       "es": "Meditite"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -369,11 +369,11 @@
       "en": "Medicham",
       "es": "Medicham"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -382,11 +382,11 @@
       "en": "Baltoy",
       "es": "Baltoy"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -395,11 +395,11 @@
       "en": "Claydol",
       "es": "Claydol"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -408,11 +408,11 @@
       "en": "Rockruff",
       "es": "Rockruff"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -421,11 +421,11 @@
       "en": "Lycanroc ex",
       "es": "Lycanroc ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -434,11 +434,11 @@
       "en": "Passimian",
       "es": "Passimian"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -447,11 +447,11 @@
       "en": "Sandygast",
       "es": "Sandygast"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -460,11 +460,11 @@
       "en": "Palossand",
       "es": "Palossand"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -473,11 +473,11 @@
       "en": "Alolan Meowth",
       "es": "Meowth de Alola"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -486,11 +486,11 @@
       "en": "Alolan Persian",
       "es": "Persian de Alola"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -499,11 +499,11 @@
       "en": "Sandile",
       "es": "Sandile"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -512,11 +512,11 @@
       "en": "Krokorok",
       "es": "Krokorok"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -525,11 +525,11 @@
       "en": "Krookodile",
       "es": "Krookodile"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -538,11 +538,11 @@
       "en": "Nihilego",
       "es": "Nihilego"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -551,11 +551,11 @@
       "en": "Guzzlord ex",
       "es": "Guzzlord ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -564,11 +564,11 @@
       "en": "Poipole",
       "es": "Poipole"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -577,11 +577,11 @@
       "en": "Naganadel",
       "es": "Naganadel"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -590,11 +590,11 @@
       "en": "Alolan Diglett",
       "es": "Diglett de Alola"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -603,11 +603,11 @@
       "en": "Alolan Dugtrio ex",
       "es": "Dugtrio de Alola ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -616,11 +616,11 @@
       "en": "Aron",
       "es": "Aron"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -629,11 +629,11 @@
       "en": "Lairon",
       "es": "Lairon"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -642,11 +642,11 @@
       "en": "Aggron",
       "es": "Aggron"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -655,11 +655,11 @@
       "en": "Ferroseed",
       "es": "Ferroseed"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -668,11 +668,11 @@
       "en": "Ferrothorn",
       "es": "Ferrothorn"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -681,11 +681,11 @@
       "en": "Stakataka",
       "es": "Stakataka"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -694,11 +694,11 @@
       "en": "Lillipup",
       "es": "Lillipup"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -707,11 +707,11 @@
       "en": "Herdier",
       "es": "Herdier"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -720,11 +720,11 @@
       "en": "Stoutland",
       "es": "Stoutland"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -733,11 +733,11 @@
       "en": "Stufful",
       "es": "Stufful"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -746,11 +746,11 @@
       "en": "Bewear",
       "es": "Bewear"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -759,11 +759,11 @@
       "en": "Oranguru",
       "es": "Oranguru"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -772,11 +772,11 @@
       "en": "Type: Null",
       "es": "Código Cero"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -785,11 +785,11 @@
       "en": "Silvally",
       "es": "Silvally"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -798,11 +798,11 @@
       "en": "Celesteela",
       "es": "Celesteela"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -811,11 +811,11 @@
       "en": "Beast Wall",
       "es": "Muro Ente"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -824,11 +824,11 @@
       "en": "Repel",
       "es": "Repelente"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -837,11 +837,11 @@
       "en": "Electrical Cord",
       "es": "Cable Eléctrico"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -850,11 +850,11 @@
       "en": "Beastite",
       "es": "Entita"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -863,11 +863,11 @@
       "en": "Gladion",
       "es": "Gladio"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -876,11 +876,11 @@
       "en": "Looker",
       "es": "Handsome"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -889,11 +889,11 @@
       "en": "Lusamine",
       "es": "Samina"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -902,11 +902,11 @@
       "en": "Rowlet",
       "es": "Rowlet"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -915,11 +915,11 @@
       "en": "Pheromosa",
       "es": "Pheromosa"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -928,11 +928,11 @@
       "en": "Blacephalon",
       "es": "Blacephalon"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -941,11 +941,11 @@
       "en": "Alolan Meowth",
       "es": "Meowth de Alola"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -954,11 +954,11 @@
       "en": "Silvally",
       "es": "Silvally"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -967,11 +967,11 @@
       "en": "Celesteela",
       "es": "Celesteela"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -980,11 +980,11 @@
       "en": "Buzzwole ex",
       "es": "Buzzwole ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -993,11 +993,11 @@
       "en": "Tapu Koko ex",
       "es": "Tapu Koko ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1006,11 +1006,11 @@
       "en": "Lycanroc ex",
       "es": "Lycanroc ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1019,11 +1019,11 @@
       "en": "Guzzlord ex",
       "es": "Guzzlord ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1032,11 +1032,11 @@
       "en": "Alolan Dugtrio ex",
       "es": "Dugtrio de Alola ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1045,11 +1045,11 @@
       "en": "Gladion",
       "es": "Gladio"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1058,11 +1058,11 @@
       "en": "Looker",
       "es": "Handsome"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1071,11 +1071,11 @@
       "en": "Lusamine",
       "es": "Samina"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -1084,11 +1084,11 @@
       "en": "Tapu Koko ex",
       "es": "Tapu Koko ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1097,11 +1097,11 @@
       "en": "Lycanroc ex",
       "es": "Lycanroc ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1110,11 +1110,11 @@
       "en": "Guzzlord ex",
       "es": "Guzzlord ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -1123,11 +1123,11 @@
       "en": "Alolan Dugtrio ex",
       "es": "Dugtrio de Alola ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -1136,11 +1136,11 @@
       "en": "Buzzwole ex",
       "es": "Buzzwole ex"
     },
-    "rarity": "Three Star",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "THREE_STAR",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -1149,11 +1149,11 @@
       "en": "Growlithe",
       "es": "Growlithe"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -1162,11 +1162,11 @@
       "en": "Arcanine",
       "es": "Arcanine"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -1175,11 +1175,11 @@
       "en": "Froakie",
       "es": "Froakie"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1188,11 +1188,11 @@
       "en": "Frogadier",
       "es": "Frogadier"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1201,11 +1201,11 @@
       "en": "Greninja",
       "es": "Greninja"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1214,11 +1214,11 @@
       "en": "Jynx",
       "es": "Jynx"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1227,11 +1227,11 @@
       "en": "Pidgey",
       "es": "Pidgey"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1240,11 +1240,11 @@
       "en": "Pidgeotto",
       "es": "Pudgeotto"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1253,11 +1253,11 @@
       "en": "Pidgeot",
       "es": "Pidgeot"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1266,11 +1266,11 @@
       "en": "Aerodactyl",
       "es": "Aerodactyl"
     },
-    "rarity": "One Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "ONE_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1279,11 +1279,11 @@
       "en": "Celebi ex",
       "es": "Celebi ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -1292,11 +1292,11 @@
       "en": "Arcanine ex",
       "es": "Arcanine ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -1305,11 +1305,11 @@
       "en": "Aerodactyl ex",
       "es": "Aerodactyl ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1318,11 +1318,11 @@
       "en": "Pidgeot ex",
       "es": "Pidgeot ex"
     },
-    "rarity": "Two Shiny",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "TWO_SHINY",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -1331,11 +1331,11 @@
       "en": "Nihilego",
       "es": "Nihilego"
     },
-    "rarity": "Crown",
-    "boosters": [
-      "Buzzwole"
+    "rarity": "CROWN",
+    "origins": [
+      "BUZZWOLE"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   }
 ]

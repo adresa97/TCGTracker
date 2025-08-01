@@ -5,11 +5,11 @@
       "en": "Bulbasaur",
       "es": "Bulbasaur"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -18,11 +18,11 @@
       "en": "Ivysaur",
       "es": "Ivysaur"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -31,11 +31,11 @@
       "en": "Venusaur",
       "es": "Venusaur"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -44,11 +44,11 @@
       "en": "Venusaur ex",
       "es": "Venusaur ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -57,11 +57,11 @@
       "en": "Caterpie",
       "es": "Caterpie"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -70,11 +70,11 @@
       "en": "Metapod",
       "es": "Metapod"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -83,11 +83,11 @@
       "en": "Butterfree",
       "es": "Butterfree"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -96,11 +96,11 @@
       "en": "Weedle",
       "es": "Weedle"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -109,11 +109,11 @@
       "en": "Kakuna",
       "es": "Kakuna"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -122,11 +122,11 @@
       "en": "Beedrill",
       "es": "Beedrill"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -135,11 +135,11 @@
       "en": "Oddish",
       "es": "Oddish"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -148,11 +148,11 @@
       "en": "Gloom",
       "es": "Gloom"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -161,11 +161,11 @@
       "en": "Vileplume",
       "es": "Vileplume"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -174,11 +174,11 @@
       "en": "Paras",
       "es": "Paras"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -187,11 +187,11 @@
       "en": "Parasect",
       "es": "Parasect"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -200,11 +200,11 @@
       "en": "Venonat",
       "es": "Venonat"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -213,11 +213,11 @@
       "en": "Venomoth",
       "es": "Venomoth"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -226,11 +226,11 @@
       "en": "Bellsprout",
       "es": "Bellsprout"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -239,11 +239,11 @@
       "en": "Weepinbell",
       "es": "Weepinbell"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -252,11 +252,11 @@
       "en": "Victreebel",
       "es": "Victreebel"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -265,11 +265,11 @@
       "en": "Exeggcute",
       "es": "Exeggcute"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -278,11 +278,11 @@
       "en": "Exeggutor",
       "es": "Exeggutor"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -291,11 +291,11 @@
       "en": "Exeggutor ex",
       "es": "Exeggutor ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -304,11 +304,11 @@
       "en": "Tangela",
       "es": "Tangela"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -317,11 +317,11 @@
       "en": "Scyther",
       "es": "Scyther"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -330,13 +330,13 @@
       "en": "Pinsir",
       "es": "Pinsir"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -345,13 +345,13 @@
       "en": "Cottonee",
       "es": "Cottonee"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -360,13 +360,13 @@
       "en": "Whimsicott",
       "es": "Whimsicott"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -375,13 +375,13 @@
       "en": "Petilil",
       "es": "Petilil"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -390,13 +390,13 @@
       "en": "Lilligant",
       "es": "Lilligant"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -405,11 +405,11 @@
       "en": "Skiddo",
       "es": "Skiddo"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -418,11 +418,11 @@
       "en": "Gogoat",
       "es": "Gogoat"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -431,11 +431,11 @@
       "en": "Charmander",
       "es": "Charmander"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -444,11 +444,11 @@
       "en": "Charmeleon",
       "es": "Charmeleon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -457,11 +457,11 @@
       "en": "Charizard",
       "es": "Charizard"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -470,11 +470,11 @@
       "en": "Charizard ex",
       "es": "Charizard ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -483,11 +483,11 @@
       "en": "Vulpix",
       "es": "Vulpix"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -496,11 +496,11 @@
       "en": "Ninetales",
       "es": "Ninetales"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -509,11 +509,11 @@
       "en": "Growlithe",
       "es": "Growlithe"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -522,11 +522,11 @@
       "en": "Arcanine",
       "es": "Arcanine"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -535,11 +535,11 @@
       "en": "Arcanine ex",
       "es": "Arcanine ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -548,13 +548,13 @@
       "en": "Ponyta",
       "es": "Ponyta"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -563,13 +563,13 @@
       "en": "Rapidash",
       "es": "Rapidash"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -578,11 +578,11 @@
       "en": "Magmar",
       "es": "Magmar"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -591,11 +591,11 @@
       "en": "Flareon",
       "es": "Flareon"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -604,11 +604,11 @@
       "en": "Moltres",
       "es": "Moltres"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -617,11 +617,11 @@
       "en": "Moltres ex",
       "es": "Moltres ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -630,13 +630,13 @@
       "en": "Heatmor",
       "es": "Heatmor"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -645,11 +645,11 @@
       "en": "Salandit",
       "es": "Salandit"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -658,11 +658,11 @@
       "en": "Salazzle",
       "es": "Salazzle"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -671,13 +671,13 @@
       "en": "Sizzlipede",
       "es": "Sizzlipede"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -686,13 +686,13 @@
       "en": "Centiskorch",
       "es": "Centiskorch"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -701,11 +701,11 @@
       "en": "Squirtle",
       "es": "Squirtle"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -714,11 +714,11 @@
       "en": "Wartortle",
       "es": "Wartortle"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -727,11 +727,11 @@
       "en": "Blastoise",
       "es": "Blastoise"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -740,11 +740,11 @@
       "en": "Blastoise ex",
       "es": "Blastoise ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -753,13 +753,13 @@
       "en": "Psyduck",
       "es": "Psyduck"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -768,13 +768,13 @@
       "en": "Golduck",
       "es": "Golduck"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -783,11 +783,11 @@
       "en": "Poliwag",
       "es": "Poliwag"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -796,11 +796,11 @@
       "en": "Poliwhirl",
       "es": "Poliwhirl"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -809,11 +809,11 @@
       "en": "Poliwrath",
       "es": "Poliwrath"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -822,11 +822,11 @@
       "en": "Tentacool",
       "es": "Tentacool"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -835,11 +835,11 @@
       "en": "Tentacruel",
       "es": "Tentacruel"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -848,11 +848,11 @@
       "en": "Seel",
       "es": "Seel"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -861,11 +861,11 @@
       "en": "Dewgong",
       "es": "Dewgong"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -874,11 +874,11 @@
       "en": "Shellder",
       "es": "Shellder"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -887,11 +887,11 @@
       "en": "Cloyster",
       "es": "Cloyster"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -900,11 +900,11 @@
       "en": "Krabby",
       "es": "Krabby"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -913,11 +913,11 @@
       "en": "Kingler",
       "es": "Kingler"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -926,11 +926,11 @@
       "en": "Horsea",
       "es": "Horsea"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -939,11 +939,11 @@
       "en": "Seadra",
       "es": "Seadra"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -952,11 +952,11 @@
       "en": "Goldeen",
       "es": "Goldeen"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -965,11 +965,11 @@
       "en": "Seaking",
       "es": "Seaking"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -978,11 +978,11 @@
       "en": "Staryu",
       "es": "Staryu"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -991,11 +991,11 @@
       "en": "Starmie",
       "es": "Starmie"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1004,11 +1004,11 @@
       "en": "Starmie ex",
       "es": "Starmie ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1017,11 +1017,11 @@
       "en": "Magikarp",
       "es": "Magikarp"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1030,11 +1030,11 @@
       "en": "Gyarados",
       "es": "Gyarados"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1043,11 +1043,11 @@
       "en": "Lapras",
       "es": "Lapras"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1056,11 +1056,11 @@
       "en": "Vaporeon",
       "es": "Vaporeon"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1069,11 +1069,11 @@
       "en": "Omanyte",
       "es": "Omanyte"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1082,11 +1082,11 @@
       "en": "Omastar",
       "es": "Omastar"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1095,11 +1095,11 @@
       "en": "Articuno",
       "es": "Articuno"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1108,11 +1108,11 @@
       "en": "Articuno ex",
       "es": "Articuno ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1121,11 +1121,11 @@
       "en": "Ducklett",
       "es": "Ducklett"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1134,11 +1134,11 @@
       "en": "Swanna",
       "es": "Swanna"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1147,11 +1147,11 @@
       "en": "Froakie",
       "es": "Froakie"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1160,11 +1160,11 @@
       "en": "Frogadier",
       "es": "Frogadier"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1173,11 +1173,11 @@
       "en": "Greninja",
       "es": "Greninja"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1186,11 +1186,11 @@
       "en": "Pyukumuku",
       "es": "Pyukumuku"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1199,13 +1199,13 @@
       "en": "Bruxish",
       "es": "Bruxish"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1214,13 +1214,13 @@
       "en": "Snom",
       "es": "Snom"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1229,13 +1229,13 @@
       "en": "Frosmoth",
       "es": "Frosmoth"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -1244,11 +1244,11 @@
       "en": "Pikachu",
       "es": "Pikachu"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1257,11 +1257,11 @@
       "en": "Raichu",
       "es": "Raichu"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1270,11 +1270,11 @@
       "en": "Pikachu ex",
       "es": "Pikachu ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1283,11 +1283,11 @@
       "en": "Magnemite",
       "es": "Magnemite"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1296,11 +1296,11 @@
       "en": "Magneton",
       "es": "Magneton"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1309,11 +1309,11 @@
       "en": "Voltorb",
       "es": "Voltorb"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1322,11 +1322,11 @@
       "en": "Electrode",
       "es": "Electrode"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1335,11 +1335,11 @@
       "en": "Electabuzz",
       "es": "Electabuzz"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1348,11 +1348,11 @@
       "en": "Jolteon",
       "es": "Jolteon"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1361,11 +1361,11 @@
       "en": "Zapdos",
       "es": "Zapdos"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1374,11 +1374,11 @@
       "en": "Zapdos ex",
       "es": "Zapdos ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1387,13 +1387,13 @@
       "en": "Blitzle",
       "es": "Blitzle"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1402,13 +1402,13 @@
       "en": "Zebstrika",
       "es": "Zebstrika"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1417,11 +1417,11 @@
       "en": "Tynamo",
       "es": "Tynamo"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1430,11 +1430,11 @@
       "en": "Eelektrik",
       "es": "Eelektrik"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1443,11 +1443,11 @@
       "en": "Eelektross",
       "es": "Eelektross"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1456,13 +1456,13 @@
       "en": "Helioptile",
       "es": "Helioptile"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1471,13 +1471,13 @@
       "en": "Heliolisk",
       "es": "Heliolisk"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1486,13 +1486,13 @@
       "en": "Pincurchin",
       "es": "Pincurchin"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -1501,11 +1501,11 @@
       "en": "Clefairy",
       "es": "Clefairy"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1514,11 +1514,11 @@
       "en": "Clefable",
       "es": "Clefable"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1527,11 +1527,11 @@
       "en": "Abra",
       "es": "Abra"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1540,11 +1540,11 @@
       "en": "Kadabra",
       "es": "Kadabra"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1553,11 +1553,11 @@
       "en": "Alakazam",
       "es": "Alakazam"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1566,13 +1566,13 @@
       "en": "Slowpoke",
       "es": "Slowpoke"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1581,13 +1581,13 @@
       "en": "Slowbro",
       "es": "Slowbro"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1596,11 +1596,11 @@
       "en": "Gastly",
       "es": "Gastly"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1609,11 +1609,11 @@
       "en": "Haunter",
       "es": "Haunter"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1622,11 +1622,11 @@
       "en": "Gengar",
       "es": "Gengar"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1635,11 +1635,11 @@
       "en": "Gengar ex",
       "es": "Gengar ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1648,11 +1648,11 @@
       "en": "Drowzee",
       "es": "Drowzee"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1661,11 +1661,11 @@
       "en": "Hypno",
       "es": "Hypno"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1674,11 +1674,11 @@
       "en": "Mr. Mime",
       "es": "Mr. Mime"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1687,11 +1687,11 @@
       "en": "Jynx",
       "es": "Jynx"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1700,11 +1700,11 @@
       "en": "Mewtwo",
       "es": "Mewtwo"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1713,11 +1713,11 @@
       "en": "Mewtwo ex",
       "es": "Mewtwo ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1726,11 +1726,11 @@
       "en": "Ralts",
       "es": "Ralts"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1739,11 +1739,11 @@
       "en": "Kirlia",
       "es": "Kirlia"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1752,11 +1752,11 @@
       "en": "Gardevoir",
       "es": "Gardevoir"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1765,13 +1765,13 @@
       "en": "Woobat",
       "es": "Woobat"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1780,13 +1780,13 @@
       "en": "Swoobat",
       "es": "Swoobat"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1795,13 +1795,13 @@
       "en": "Golett",
       "es": "Golett"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1810,13 +1810,13 @@
       "en": "Golurk",
       "es": "Golurk"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -1825,13 +1825,13 @@
       "en": "Sandshrew",
       "es": "Sandshrew"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1840,13 +1840,13 @@
       "en": "Sandslash",
       "es": "Sandslash"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1855,11 +1855,11 @@
       "en": "Diglett",
       "es": "Diglett"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1868,11 +1868,11 @@
       "en": "Dugtrio",
       "es": "Dugtrio"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1881,11 +1881,11 @@
       "en": "Mankey",
       "es": "Mankey"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1894,11 +1894,11 @@
       "en": "Primeape",
       "es": "Primeape"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1907,11 +1907,11 @@
       "en": "Machop",
       "es": "Machop"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1920,11 +1920,11 @@
       "en": "Machoke",
       "es": "Machoke"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1933,11 +1933,11 @@
       "en": "Machamp",
       "es": "Machamp"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1946,11 +1946,11 @@
       "en": "Machamp ex",
       "es": "Machamp ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1959,11 +1959,11 @@
       "en": "Geodude",
       "es": "Geodude"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1972,11 +1972,11 @@
       "en": "Graveler",
       "es": "Graveler"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1985,11 +1985,11 @@
       "en": "Golem",
       "es": "Golem"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -1998,11 +1998,11 @@
       "en": "Onix",
       "es": "Onix"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2011,11 +2011,11 @@
       "en": "Cubone",
       "es": "Cubone"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2024,11 +2024,11 @@
       "en": "Marowak",
       "es": "Marowak"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2037,11 +2037,11 @@
       "en": "Marowak ex",
       "es": "Marowak ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2050,11 +2050,11 @@
       "en": "Hitmonlee",
       "es": "Hitmonlee"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2063,11 +2063,11 @@
       "en": "Hitmonchan",
       "es": "Hitmonchan"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2076,11 +2076,11 @@
       "en": "Rhyhorn",
       "es": "Rhyhorn"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2089,11 +2089,11 @@
       "en": "Rhydon",
       "es": "Rhydon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2102,11 +2102,11 @@
       "en": "Kabuto",
       "es": "Kabuto"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2115,11 +2115,11 @@
       "en": "Kabutops",
       "es": "Kabutops"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2128,11 +2128,11 @@
       "en": "Mienfoo",
       "es": "Mienfoo"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2141,11 +2141,11 @@
       "en": "Mienshao",
       "es": "Mienshao"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2154,13 +2154,13 @@
       "en": "Clobbopus",
       "es": "Clobbopus"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2169,13 +2169,13 @@
       "en": "Grapploct",
       "es": "Grapploct"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -2184,13 +2184,13 @@
       "en": "Ekans",
       "es": "Ekans"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2199,13 +2199,13 @@
       "en": "Arbok",
       "es": "Arbok"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2214,11 +2214,11 @@
       "en": "Nidoran♀",
       "es": "Nidoran♀"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2227,11 +2227,11 @@
       "en": "Nidorina",
       "es": "Nidorina"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2240,11 +2240,11 @@
       "en": "Nidoqueen",
       "es": "Nidoqueen"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2253,11 +2253,11 @@
       "en": "Nidoran♂",
       "es": "Nidoran♂"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2266,11 +2266,11 @@
       "en": "Nidorino",
       "es": "Nidorino"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2279,11 +2279,11 @@
       "en": "Nidoking",
       "es": "Nidoking"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2292,11 +2292,11 @@
       "en": "Zubat",
       "es": "Zubat"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2305,11 +2305,11 @@
       "en": "Golbat",
       "es": "Golbat"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2318,11 +2318,11 @@
       "en": "Grimer",
       "es": "Grimer"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2331,11 +2331,11 @@
       "en": "Muk",
       "es": "Muk"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2344,11 +2344,11 @@
       "en": "Koffing",
       "es": "Koffing"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2357,11 +2357,11 @@
       "en": "Weezing",
       "es": "Weezing"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -2370,11 +2370,11 @@
       "en": "Mawile",
       "es": "Mawile"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -2383,13 +2383,13 @@
       "en": "Pawniard",
       "es": "Pawniard"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -2398,13 +2398,13 @@
       "en": "Bisharp",
       "es": "Bisharp"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -2413,11 +2413,11 @@
       "en": "Meltan",
       "es": "Meltan"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -2426,11 +2426,11 @@
       "en": "Melmetal",
       "es": "Melmetal"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Metal",
+    "type": "METAL",
     "baby": false
   },
   {
@@ -2439,11 +2439,11 @@
       "en": "Dratini",
       "es": "Dratini"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -2452,11 +2452,11 @@
       "en": "Dragonair",
       "es": "Dragonair"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -2465,11 +2465,11 @@
       "en": "Dragonite",
       "es": "Dragonite"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -2478,11 +2478,11 @@
       "en": "Pidgey",
       "es": "Pidgey"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2491,11 +2491,11 @@
       "en": "Pidgeotto",
       "es": "Pidgeotto"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2504,11 +2504,11 @@
       "en": "Pidgeot",
       "es": "Pidgeot"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2517,13 +2517,13 @@
       "en": "Rattata",
       "es": "Rattata"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2532,13 +2532,13 @@
       "en": "Raticate",
       "es": "Raticate"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2547,11 +2547,11 @@
       "en": "Spearow",
       "es": "Spearow"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2560,11 +2560,11 @@
       "en": "Fearow",
       "es": "Fearow"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2573,11 +2573,11 @@
       "en": "Jigglypuff",
       "es": "Jigglypuff"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2586,11 +2586,11 @@
       "en": "Wigglytuff",
       "es": "Wigglytuff"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2599,11 +2599,11 @@
       "en": "Wigglytuff ex",
       "es": "Wigglytuff ex"
     },
-    "rarity": "Four Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "FOUR_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2612,11 +2612,11 @@
       "en": "Meowth",
       "es": "Meowth"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2625,11 +2625,11 @@
       "en": "Persian",
       "es": "Persian"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2638,13 +2638,13 @@
       "en": "Farfetch\u0027d",
       "es": "Farfetch\u0027d"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2653,13 +2653,13 @@
       "en": "Doduo",
       "es": "Doduo"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2668,13 +2668,13 @@
       "en": "Dodrio",
       "es": "Dodrio"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2683,11 +2683,11 @@
       "en": "Lickitung",
       "es": "Lickitung"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2696,11 +2696,11 @@
       "en": "Chansey",
       "es": "Chansey"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2709,11 +2709,11 @@
       "en": "Kangaskhan",
       "es": "Kangaskhan"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2722,11 +2722,11 @@
       "en": "Tauros",
       "es": "Tauros"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2735,11 +2735,11 @@
       "en": "Ditto",
       "es": "Ditto"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2748,11 +2748,11 @@
       "en": "Eevee",
       "es": "Eevee"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2761,11 +2761,11 @@
       "en": "Eevee",
       "es": "Eevee"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2774,11 +2774,11 @@
       "en": "Eevee",
       "es": "Eevee"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2787,11 +2787,11 @@
       "en": "Porygon",
       "es": "Porygon"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2800,11 +2800,11 @@
       "en": "Aerodactyl",
       "es": "Aerodactyl"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2813,11 +2813,11 @@
       "en": "Snorlax",
       "es": "Snorlax"
     },
-    "rarity": "Three Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2826,13 +2826,13 @@
       "en": "Minccino",
       "es": "Minccino"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2841,13 +2841,13 @@
       "en": "Cinccino",
       "es": "Cinccino"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2856,13 +2856,13 @@
       "en": "Wooloo",
       "es": "Wooloo"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2871,13 +2871,13 @@
       "en": "Dubwool",
       "es": "Dubwool"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -2886,11 +2886,11 @@
       "en": "Helix Fossil",
       "es": "Fósil Hélix"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2899,11 +2899,11 @@
       "en": "Dome Fossil",
       "es": "Fósil Domo"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2912,11 +2912,11 @@
       "en": "Old Amber",
       "es": "Ámbar Viejo"
     },
-    "rarity": "One Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2925,11 +2925,11 @@
       "en": "Erika",
       "es": "Erika"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2938,11 +2938,11 @@
       "en": "Misty",
       "es": "Misty"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2951,11 +2951,11 @@
       "en": "Blaine",
       "es": "Blaine"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2964,11 +2964,11 @@
       "en": "Koga",
       "es": "Koga"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2977,11 +2977,11 @@
       "en": "Giovanni",
       "es": "Giovanni"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -2990,11 +2990,11 @@
       "en": "Brock",
       "es": "Brock"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -3003,11 +3003,11 @@
       "en": "Sabrina",
       "es": "Sabrina"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -3016,11 +3016,11 @@
       "en": "Lt. Surge",
       "es": "Teniente Surge"
     },
-    "rarity": "Two Diamond",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_DIAMOND",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -3029,11 +3029,11 @@
       "en": "Bulbasaur",
       "es": "Bulbasaur"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -3042,11 +3042,11 @@
       "en": "Gloom",
       "es": "Gloom"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -3055,11 +3055,11 @@
       "en": "Pinsir",
       "es": "Pinsir"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -3068,11 +3068,11 @@
       "en": "Charmander",
       "es": "Charmander"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -3081,11 +3081,11 @@
       "en": "Rapidash",
       "es": "Rapidash"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -3094,11 +3094,11 @@
       "en": "Squirtle",
       "es": "Squirtle"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -3107,11 +3107,11 @@
       "en": "Gyarados",
       "es": "Gyarados"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -3120,11 +3120,11 @@
       "en": "Lapras",
       "es": "Lapras"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -3133,11 +3133,11 @@
       "en": "Electrode",
       "es": "Electrode"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -3146,11 +3146,11 @@
       "en": "Alakazam",
       "es": "Alakazam"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -3159,11 +3159,11 @@
       "en": "Slowpoke",
       "es": "Slowpoke"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -3172,11 +3172,11 @@
       "en": "Diglett",
       "es": "Diglett"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -3185,11 +3185,11 @@
       "en": "Cubone",
       "es": "Cubone"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -3198,11 +3198,11 @@
       "en": "Nidoqueen",
       "es": "Nidoqueen"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -3211,11 +3211,11 @@
       "en": "Nidoking",
       "es": "Nidoking"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -3224,11 +3224,11 @@
       "en": "Golbat",
       "es": "Golbat"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -3237,11 +3237,11 @@
       "en": "Weezing",
       "es": "Weezing"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Darkness",
+    "type": "DARKNESS",
     "baby": false
   },
   {
@@ -3250,11 +3250,11 @@
       "en": "Dragonite",
       "es": "Dragonite"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Dragon",
+    "type": "DRAGON",
     "baby": false
   },
   {
@@ -3263,11 +3263,11 @@
       "en": "Pidgeot",
       "es": "Pidgeot"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -3276,11 +3276,11 @@
       "en": "Meowth",
       "es": "Meowth"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -3289,11 +3289,11 @@
       "en": "Ditto",
       "es": "Ditto"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -3302,11 +3302,11 @@
       "en": "Eevee",
       "es": "Eevee"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -3315,11 +3315,11 @@
       "en": "Porygon",
       "es": "Porygon"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -3328,11 +3328,11 @@
       "en": "Snorlax",
       "es": "Snorlax"
     },
-    "rarity": "One Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "ONE_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -3341,11 +3341,11 @@
       "en": "Venusaur ex",
       "es": "Venusaur ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -3354,11 +3354,11 @@
       "en": "Exeggutor ex",
       "es": "Exeggutor ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Grass",
+    "type": "GRASS",
     "baby": false
   },
   {
@@ -3367,11 +3367,11 @@
       "en": "Charizard ex",
       "es": "Charizard ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -3380,11 +3380,11 @@
       "en": "Arcanine ex",
       "es": "Arcanine ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -3393,11 +3393,11 @@
       "en": "Moltres ex",
       "es": "Moltres ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -3406,11 +3406,11 @@
       "en": "Blastoise ex",
       "es": "Blastoise ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -3419,11 +3419,11 @@
       "en": "Starmie ex",
       "es": "Starmie ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -3432,11 +3432,11 @@
       "en": "Articuno ex",
       "es": "Articuno ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -3445,11 +3445,11 @@
       "en": "Pikachu ex",
       "es": "Pikachu ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -3458,11 +3458,11 @@
       "en": "Zapdos ex",
       "es": "Zapdos ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -3471,11 +3471,11 @@
       "en": "Gengar ex",
       "es": "Gengar ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -3484,11 +3484,11 @@
       "en": "Mewtwo ex",
       "es": "Mewtwo ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -3497,11 +3497,11 @@
       "en": "Machamp ex",
       "es": "Machamp ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -3510,11 +3510,11 @@
       "en": "Marowak ex",
       "es": "Marowak ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -3523,11 +3523,11 @@
       "en": "Wigglytuff ex",
       "es": "Wigglytuff ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -3536,11 +3536,11 @@
       "en": "Erika",
       "es": "Erika"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -3549,11 +3549,11 @@
       "en": "Misty",
       "es": "Misty"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -3562,11 +3562,11 @@
       "en": "Blaine",
       "es": "Blaine"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -3575,11 +3575,11 @@
       "en": "Koga",
       "es": "Koga"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -3588,11 +3588,11 @@
       "en": "Giovanni",
       "es": "Giovanni"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -3601,11 +3601,11 @@
       "en": "Brock",
       "es": "Brock"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -3614,11 +3614,11 @@
       "en": "Sabrina",
       "es": "Sabrina"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -3627,11 +3627,11 @@
       "en": "Lt. Surge",
       "es": "Teniente Surge"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Trainer",
+    "type": "TRAINER",
     "baby": false
   },
   {
@@ -3640,11 +3640,11 @@
       "en": "Moltres ex",
       "es": "Moltres ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -3653,11 +3653,11 @@
       "en": "Articuno ex",
       "es": "Articuno ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Water",
+    "type": "WATER",
     "baby": false
   },
   {
@@ -3666,11 +3666,11 @@
       "en": "Zapdos ex",
       "es": "Zapdos ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -3679,11 +3679,11 @@
       "en": "Gengar ex",
       "es": "Gengar ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -3692,11 +3692,11 @@
       "en": "Machamp ex",
       "es": "Machamp ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fighting",
+    "type": "FIGHTING",
     "baby": false
   },
   {
@@ -3705,11 +3705,11 @@
       "en": "Wigglytuff ex",
       "es": "Wigglytuff ex"
     },
-    "rarity": "Two Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "TWO_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Colorless",
+    "type": "COLORLESS",
     "baby": false
   },
   {
@@ -3718,11 +3718,11 @@
       "en": "Charizard ex",
       "es": "Charizard ex"
     },
-    "rarity": "Three Star",
-    "boosters": [
-      "Charizard"
+    "rarity": "THREE_STAR",
+    "origins": [
+      "CHARIZARD"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -3731,11 +3731,11 @@
       "en": "Pikachu ex",
       "es": "Pikachu ex"
     },
-    "rarity": "Three Star",
-    "boosters": [
-      "Pikachu"
+    "rarity": "THREE_STAR",
+    "origins": [
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -3744,11 +3744,11 @@
       "en": "Mewtwo ex",
       "es": "Mewtwo ex"
     },
-    "rarity": "Three Star",
-    "boosters": [
-      "Mewtwo"
+    "rarity": "THREE_STAR",
+    "origins": [
+      "MEWTWO"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -3757,11 +3757,11 @@
       "en": "Mew",
       "es": "Mew"
     },
-    "rarity": "Three Star",
-    "boosters": [
-      "None"
+    "rarity": "THREE_STAR",
+    "origins": [
+      "NONE"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   },
   {
@@ -3770,13 +3770,13 @@
       "en": "Charizard ex",
       "es": "Charizard ex"
     },
-    "rarity": "Crown",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "CROWN",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Fire",
+    "type": "FIRE",
     "baby": false
   },
   {
@@ -3785,13 +3785,13 @@
       "en": "Pikachu ex",
       "es": "Pikachu ex"
     },
-    "rarity": "Crown",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "CROWN",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Lightning",
+    "type": "LIGHTNING",
     "baby": false
   },
   {
@@ -3800,13 +3800,13 @@
       "en": "Mewtwo ex",
       "es": "Mewtwo ex"
     },
-    "rarity": "Crown",
-    "boosters": [
-      "Mewtwo",
-      "Charizard",
-      "Pikachu"
+    "rarity": "CROWN",
+    "origins": [
+      "MEWTWO",
+      "CHARIZARD",
+      "PIKACHU"
     ],
-    "type": "Psychic",
+    "type": "PSYCHIC",
     "baby": false
   }
 ]

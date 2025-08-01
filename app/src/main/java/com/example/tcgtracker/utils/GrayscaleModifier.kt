@@ -10,10 +10,11 @@ import androidx.compose.ui.graphics.asComposeColorFilter
 import androidx.compose.ui.graphics.drawscope.ContentDrawScope
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 
-class GreyScaleModifier : DrawModifier {
+class GreyScaleModifier(val strength: Float) : DrawModifier {
+    val fixedStrength = if (strength > 1.0f) 1.0f else if (strength < 0.0f) 0.0f else strength
     override fun ContentDrawScope.draw() {
         val saturationMatrix = ColorMatrix().apply {
-            setSaturation(0.1f)
+            setSaturation(fixedStrength)
         }
         val saturationFilter = ColorMatrixColorFilter(saturationMatrix)
         val paint = Paint().apply {
@@ -27,4 +28,4 @@ class GreyScaleModifier : DrawModifier {
     }
 }
 
-fun Modifier.greyScale(): Modifier = this then GreyScaleModifier()
+fun Modifier.greyScale(strength: Float): Modifier = this then GreyScaleModifier(strength)
