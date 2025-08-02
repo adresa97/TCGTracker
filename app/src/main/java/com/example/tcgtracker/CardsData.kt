@@ -72,6 +72,20 @@ class CardsData() {
             }
     }
 
+    // Reload user JSONS data and update card map
+    fun reloadUserJSONSData(applicationContext: Context, sets: List<String>) {
+        sets.forEach{ set ->
+            if (cardMap.containsKey(set)) {
+                val userData = loadUserJSONData(applicationContext, set)
+                if (userData.isNotEmpty()) {
+                    for (i in 0 until userData.count()) {
+                        cardMap[set]!![i].owned = userData[i]
+                    }
+                }
+            }
+        }
+    }
+
     private fun getImageUrl(cardID: String): String {
         val set = cardID.substringBeforeLast('-')
         val number = cardID.substringAfterLast('-').toInt().toString()

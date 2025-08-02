@@ -1,5 +1,7 @@
 package com.example.tcgtracker.ui
 
+import android.R.attr.alpha
+import android.graphics.Color.alpha
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -7,33 +9,53 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.absolutePadding
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.selection.toggleable
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material3.Checkbox
+import androidx.compose.material3.CheckboxColors
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonColors
+import androidx.compose.material3.SegmentedButtonDefaults.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import com.example.tcgtracker.Concepts
 import com.example.tcgtracker.R
 import com.example.tcgtracker.models.Card
 import com.example.tcgtracker.ui.theme.PocketBlack
+import com.example.tcgtracker.ui.theme.PocketWhite
+import com.example.tcgtracker.ui.theme.ptcgFontFamily
 import com.example.tcgtracker.utils.greyScale
 
 @Composable
@@ -130,16 +152,19 @@ fun CardListView(
                 name = cardList[index].name.es,
                 booster = booster,
                 rarity = cardList[index].rarity,
+                type = cardList[index].type,
                 color = color,
                 isOwned = cardOwnership,
                 onCardTap = {
                     onCardTap(index)
                     cardOwnership = !cardOwnership
                 },
-                modifier.absolutePadding(
-                    top = if (index == 0) 20.dp else 0.dp,
-                    bottom = if (index == cardList.count() - 1) 20.dp else 0.dp
-                )
+                modifier
+                    .absolutePadding (
+                        top = if (index == 0) 20.dp else 0.dp,
+                        bottom = if (index == cardList.count() - 1) 20.dp else 0.dp
+                    )
+                    .alpha(0.75f)
             )
         }
     }
@@ -177,76 +202,112 @@ fun CardBullet(
     name: String,
     booster: String,
     rarity: String,
+    type: String,
     color: Color,
     isOwned: Boolean,
-    onCardTap: () -> Unit = {},
+    onCardTap: (Boolean) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
-    val bulletColor = PocketBlack
+    val numeral = id.substringAfterLast('-')
     val fontColor = PocketBlack
+    val checkColor = CheckboxColors(
+        checkedCheckmarkColor = color,
+        uncheckedCheckmarkColor = color,
+        checkedBoxColor = PocketBlack,
+        uncheckedBoxColor = color,
+        disabledCheckedBoxColor = color,
+        disabledUncheckedBoxColor = color,
+        disabledIndeterminateBoxColor = color,
+        checkedBorderColor = PocketBlack,
+        uncheckedBorderColor = PocketBlack,
+        disabledBorderColor = color,
+        disabledUncheckedBorderColor = color,
+        disabledIndeterminateBorderColor = color
+    )
     Box(
-        modifier = modifier.background(color)
+        modifier = modifier
+            .background(color, RoundedCornerShape(10))
             .height(50.dp)
-            .alpha(0.5f)
     ) {
         Row(
-            modifier = Modifier.padding(horizontal = 10.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
+            modifier = Modifier
+                .padding(horizontal = 10.dp)
+                .alpha(1.0f),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            RadioButton(
-                modifier = Modifier,
-                selected = isOwned,
-                colors = RadioButtonColors(
-                    selectedColor = bulletColor,
-                    unselectedColor = bulletColor,
-                    disabledSelectedColor = bulletColor,
-                    disabledUnselectedColor = bulletColor,
-                ),
-                onClick = onCardTap
+            Checkbox(
+                modifier = Modifier.scale(1.5f).offset(x = (-5).dp),
+                checked = isOwned,
+                colors = checkColor,
+                onCheckedChange = onCardTap
             )
+            Box(
+                modifier = Modifier.fillMaxWidth().fillMaxHeight(0.6f)
+                    .absolutePadding(right = 5.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                // Top left
+                Text(
+                    modifier = Modifier.align(Alignment.TopStart).offset(y = (-5).dp),
+                    text = name,
+                    textAlign = TextAlign.Left,
+                    fontSize = MaterialTheme.typography.bodyLarge.fontSize,
+                    fontWeight = MaterialTheme.typography.bodyLarge.fontWeight,
+                    fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
+                    color = fontColor
+                )
+                // Top right
+                Text(
+                    modifier = Modifier.align(Alignment.TopEnd).offset(y = (-5).dp),
+                    text = type,
+                    textAlign = TextAlign.Left,
+                    fontSize = MaterialTheme.typography.bodyLarge.fontSize,
+                    fontWeight = MaterialTheme.typography.bodyLarge.fontWeight,
+                    fontFamily = ptcgFontFamily,
+                    color = fontColor
+                )
+                // Bottom left
+                Text(
+                    modifier = Modifier.align(Alignment.BottomStart).offset(y = 6.dp),
+                    text = "${numeral} ${rarity}",
+                    fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                    fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
+                    fontFamily = MaterialTheme.typography.bodySmall.fontFamily,
+                    color = fontColor
+                )
+                // Bottom right
+                Text(
+                    modifier = Modifier.align(Alignment.BottomEnd).offset(y = 6.dp),
+                    text = booster,
+                    fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                    fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
+                    fontFamily = MaterialTheme.typography.bodySmall.fontFamily,
+                    color = fontColor
+                )
+            }
+            /*
             Column(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.fillMaxWidth().fillMaxHeight(0.6f),
                 verticalArrangement = Arrangement.Center
             ) {
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween
+                    modifier = Modifier.fillMaxWidth().fillMaxHeight(0.6f)
+                        .background(PocketWhite),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.Top
                 ) {
-                    Text(
-                        text = id,
-                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
-                        fontWeight = MaterialTheme.typography.bodyLarge.fontWeight,
-                        fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
-                        color = fontColor
-                    )
-                    Text(
-                        text = name,
-                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
-                        fontWeight = MaterialTheme.typography.bodyLarge.fontWeight,
-                        fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
-                        color = fontColor
-                    )
+
+
                 }
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text(
-                        text = rarity,
-                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
-                        fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
-                        fontFamily = MaterialTheme.typography.bodySmall.fontFamily,
-                        color = fontColor
-                    )
-                    Text(
-                        text = booster,
-                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
-                        fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
-                        fontFamily = MaterialTheme.typography.bodySmall.fontFamily,
-                        color = fontColor
-                    )
+
                 }
             }
+        */
         }
     }
 }

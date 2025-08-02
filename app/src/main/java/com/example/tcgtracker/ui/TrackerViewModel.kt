@@ -83,6 +83,14 @@ class TrackerViewModel() : ViewModel(), DefaultLifecycleObserver {
         _uiState.value.setsData.recalculateSetData(cardList, set)
     }
 
+    fun reloadOwnedCardState(context: Context, sets: List<String>) {
+        _uiState.value.cardsData.reloadUserJSONSData(context, sets)
+        val cardList = getPrettyCardsList(context)
+        sets.forEach{ set ->
+            _uiState.value.setsData.recalculateSetData(cardList, set)
+        }
+    }
+
     override fun onPause(owner: LifecycleOwner) {
         updateJSONSData()
     }

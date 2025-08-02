@@ -32,6 +32,7 @@ import kotlinx.coroutines.launch
 fun OptionsScreen(
     context: Context,
     scope: CoroutineScope = rememberCoroutineScope(),
+    onCardsImported: (List<String>) -> Unit = {},
     snackbarHostState: SnackbarHostState = remember { SnackbarHostState() },
     modifier: Modifier = Modifier
 ) {
@@ -39,8 +40,9 @@ fun OptionsScreen(
         contract = GetCustomContents(isMultiple = false),
         onResult = { uris ->
             val message = OwnedCardsImporterExporter.importFromJSON(context, uris[0])
+            if (!message.second.isNullOrEmpty()) onCardsImported(message.second!!)
             scope.launch {
-                snackbarHostState.showSnackbar(message)
+                snackbarHostState.showSnackbar(message.first)
             }
         }
     )

@@ -7,11 +7,15 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.absolutePadding
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,10 +24,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tcgtracker.models.Set
 import com.example.tcgtracker.ui.theme.PocketBlack
+import com.example.tcgtracker.ui.theme.PocketWhite
 
 @Composable
 fun SetScreen(
@@ -123,56 +129,58 @@ fun CollectionCell(
 ) {
     val fontColor = PocketBlack
     Box(
-        modifier = modifier.background(color)
+        modifier = modifier.background(color, RoundedCornerShape(10))
             .height(50.dp)
             .clickable{ onSetTap(set.set) }
     ) {
         Row(
-            modifier = Modifier.padding(horizontal = 10.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
+            modifier = Modifier.fillMaxSize().padding(horizontal = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            Column(
-                modifier = Modifier.fillMaxSize(),
-                verticalArrangement = Arrangement.Center
+            Box(
+                modifier = Modifier.fillMaxWidth().fillMaxHeight(0.6f),
+                contentAlignment = Alignment.Center
             ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Text(
-                        text = set.name,
-                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
-                        fontWeight = MaterialTheme.typography.bodyLarge.fontWeight,
-                        fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
-                        color = fontColor
-                    )
-                    Text(
-                        text = "${set.numbers.all.ownedCards} / ${set.numbers.all.totalCards}",
-                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
-                        fontWeight = MaterialTheme.typography.bodyLarge.fontWeight,
-                        fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
-                        color = fontColor
-                    )
-                }
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Text(
-                        text = set.set,
-                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
-                        fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
-                        fontFamily = MaterialTheme.typography.bodySmall.fontFamily,
-                        color = fontColor
-                    )
-                    Text(
-                        text = "${set.numbers.all.ownedCards/set.numbers.all.totalCards*100} %",
-                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
-                        fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
-                        fontFamily = MaterialTheme.typography.bodySmall.fontFamily,
-                        color = fontColor
-                    )
-                }
+                // Top left
+                Text(
+                    modifier = Modifier.align(Alignment.TopStart).offset(y = (-5).dp),
+                    text = set.name,
+                    textAlign = TextAlign.Left,
+                    fontSize = MaterialTheme.typography.bodyLarge.fontSize,
+                    fontWeight = MaterialTheme.typography.bodyLarge.fontWeight,
+                    fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
+                    color = fontColor
+                )
+                // Top right
+                Text(
+                    modifier = Modifier.align(Alignment.TopEnd).offset(y = (-5).dp),
+                    text = "${set.numbers.all.ownedCards} / ${set.numbers.all.totalCards}",
+                    textAlign = TextAlign.Right,
+                    fontSize = MaterialTheme.typography.bodyLarge.fontSize,
+                    fontWeight = MaterialTheme.typography.bodyLarge.fontWeight,
+                    fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
+                    color = fontColor
+                )
+                // Bottom left
+                Text(
+                    modifier = Modifier.align(Alignment.BottomStart).offset(y = 6.dp),
+                    text = set.set,
+                    textAlign = TextAlign.Left,
+                    fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                    fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
+                    fontFamily = MaterialTheme.typography.bodySmall.fontFamily,
+                    color = fontColor
+                )
+                // Bottom right
+                Text(
+                    modifier = Modifier.align(Alignment.BottomEnd).offset(y = 6.dp),
+                    text = "${set.numbers.all.ownedCards / set.numbers.all.totalCards * 100} %",
+                    textAlign = TextAlign.Right,
+                    fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                    fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
+                    fontFamily = MaterialTheme.typography.bodySmall.fontFamily,
+                    color = fontColor
+                )
             }
         }
     }
