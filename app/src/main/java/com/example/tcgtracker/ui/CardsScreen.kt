@@ -58,7 +58,6 @@ fun CardsScreen(
             modifier = modifier
         )
     }
-
 }
 
 @Composable
@@ -83,7 +82,7 @@ fun CardGridView(
                 image = cardList[index].image,
                 modifier = Modifier.clickable {
                     onCardTap(index)
-                    cardOwnership = cardList[index].owned
+                    cardOwnership = !cardOwnership
                 }
             )
         }
@@ -106,6 +105,7 @@ fun CardListView(
             var cardOwnership: Boolean by rememberSaveable {
                 mutableStateOf(cardList[index].owned)
             }
+
             val boosters = cardList[index].origins
             val booster = when (boosters.count()) {
                 0 -> ""
@@ -134,7 +134,7 @@ fun CardListView(
                 isOwned = cardOwnership,
                 onCardTap = {
                     onCardTap(index)
-                    cardOwnership = cardList[index].owned
+                    cardOwnership = !cardOwnership
                 },
                 modifier.absolutePadding(
                     top = if (index == 0) 20.dp else 0.dp,

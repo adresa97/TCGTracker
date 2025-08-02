@@ -4,15 +4,18 @@ import android.content.Context
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.tcgtracker.SetsData
 import com.example.tcgtracker.CardsData
 import com.example.tcgtracker.Concepts
 import com.example.tcgtracker.OriginsData
 import com.example.tcgtracker.models.Card
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 data class TrackerUIState(
     val setsData: SetsData = SetsData(),

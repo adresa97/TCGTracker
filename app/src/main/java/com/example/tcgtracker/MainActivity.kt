@@ -1,24 +1,41 @@
 package com.example.tcgtracker
 
 import android.content.Context
+import android.graphics.Color.alpha
+import android.graphics.Paint
+import android.graphics.drawable.ShapeDrawable
 import android.os.Bundle
 import android.os.StrictMode
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.List
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Shapes
 import androidx.compose.material3.Snackbar
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -34,7 +51,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.LocalLifecycleOwner
@@ -49,6 +70,8 @@ import com.example.tcgtracker.ui.OptionsScreen
 import com.example.tcgtracker.ui.SetScreen
 import com.example.tcgtracker.ui.TrackerUIState
 import com.example.tcgtracker.ui.TrackerViewModel
+import com.example.tcgtracker.ui.theme.PocketBlack
+import com.example.tcgtracker.ui.theme.PocketWhite
 import com.example.tcgtracker.ui.theme.TCGTrackerTheme
 
 class MainActivity : ComponentActivity() {
@@ -188,23 +211,27 @@ fun TCGTrackerTopBar(
     changeViewMode: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
-    val title: String
-    when (currentScreen) {
-        Screen.SetSelector -> title = "Pokémon TCG Pocket Tracker"
-        Screen.CardViewer -> title = uiState.setsData.getSetName(uiState.selectedSet)
-        Screen.Options -> title = "Opciones"
+    val title = when (currentScreen) {
+        Screen.SetSelector -> "Pokémon TCG Pocket Tracker"
+        Screen.CardViewer -> uiState.setsData.getSetName(uiState.selectedSet)
+        Screen.Options -> "Opciones"
         //else -> title = ""
     }
 
-    val currentSet = uiState.selectedSet.substringBefore('-')
-    val color = uiState.setsData.getSetColor(currentSet) ?: MaterialTheme.colorScheme.primaryContainer
+    val uiColor = when (currentScreen) {
+        Screen.CardViewer -> {
+            uiState.setsData.getSetColor(uiState.selectedSet)
+                ?: MaterialTheme.colorScheme.primaryContainer
+        }
+        else -> MaterialTheme.colorScheme.primaryContainer
+    }
 
     TopAppBar(
         colors = topAppBarColors(
-            containerColor = color,
+            containerColor = uiColor,
             titleContentColor = MaterialTheme.colorScheme.onSurface
         ),
-        title = { Text(title)},
+        title = { Text( title ) },
         modifier = modifier,
         navigationIcon = {
             if (canNavigateBack) {
@@ -221,7 +248,7 @@ fun TCGTrackerTopBar(
             if (canChangeViewMode) {
                 IconButton(onClick = changeViewMode) {
                     Icon(
-                        imageVector = Icons.AutoMirrored.Filled.List,
+                        imageVector = Icons.Default.Info,
                         tint = MaterialTheme.colorScheme.onSurface,
                         contentDescription = null
                     )
@@ -230,7 +257,7 @@ fun TCGTrackerTopBar(
             if (canNavigateToOptions) {
                 IconButton(onClick = navigateToOptions) {
                     Icon(
-                        imageVector = Icons.Default.MoreVert,
+                        imageVector = Icons.Default.Settings,
                         tint = MaterialTheme.colorScheme.onSurface,
                         contentDescription = null
                     )
@@ -246,17 +273,51 @@ fun TCGTrackerBottomBar(
     currentScreen: Screen,
     uiState: TrackerUIState
 ) {
-    val currentSet = uiState.selectedSet.substringBefore('-')
-    val color = uiState.setsData.getSetColor(currentSet) ?: MaterialTheme.colorScheme.primaryContainer
+    val uiColor = when (currentScreen) {
+        Screen.CardViewer -> {
+            uiState.setsData.getSetColor(uiState.selectedSet)
+                ?: MaterialTheme.colorScheme.primaryContainer
+        }
+        else -> MaterialTheme.colorScheme.primaryContainer
+    }
+
+    val setColor = uiState.setsData.getSetColor("A3b")
+        ?: MaterialTheme.colorScheme.surface
 
     BottomAppBar(
-        containerColor = color,
+        containerColor = uiColor,
         contentColor = MaterialTheme.colorScheme.onSurface
     ) {
-        Text(
+        Row(
             modifier = Modifier.fillMaxWidth(),
-            textAlign = TextAlign.Center,
-            text = ""
-        )
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
+            Icon(
+                imageVector = Icons.Default.ArrowDropDown,
+                tint = MaterialTheme.colorScheme.onSurface,
+                contentDescription = null
+            )
+            Text(
+                modifier = Modifier.fillMaxHeight(0.6f).fillMaxWidth(0.75f)
+                    .background(setColor, RoundedCornerShape(percent = 50))
+                    .shadow(
+                        elevation = 3.dp,
+                        shape = RoundedCornerShape(percent = 50),
+                        clip = true,
+                        ambientColor = Color(0.0f, 0.0f, 0.0f, 0.0f),
+                        spotColor = PocketWhite.apply{ alpha(100) }
+                    )
+                    .border(2.dp, PocketBlack.apply{ alpha(50) }, RoundedCornerShape(percent = 50))
+                    .wrapContentHeight(align = Alignment.CenterVertically),
+                text = "Eevee",
+                textAlign = TextAlign.Center
+            )
+            Icon(
+                imageVector = Icons.Filled.Warning,
+                tint = MaterialTheme.colorScheme.onSurface,
+                contentDescription = null
+            )
+        }
     }
 }
