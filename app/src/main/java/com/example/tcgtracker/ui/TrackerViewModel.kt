@@ -50,7 +50,7 @@ class TrackerViewModel() : ViewModel(), DefaultLifecycleObserver {
         }
     }
 
-    fun getCardsList(context: Context): List<Card> {
+    fun getPrettyCardsList(context: Context): List<Card> {
         return _uiState.value.cardsData.getCardList(
             applicationContext = context,
             set = _uiState.value.selectedSet
@@ -70,9 +70,16 @@ class TrackerViewModel() : ViewModel(), DefaultLifecycleObserver {
         }
     }
 
+    fun getRawCardList(context: Context): List<Card> {
+        return _uiState.value.cardsData.getCardList(
+            applicationContext = context,
+            set = _uiState.value.selectedSet
+        )
+    }
+
     fun changeOwnedCardState(context: Context, set: String, cardIndex: Int) {
         _uiState.value.cardsData.changeCardState(set, cardIndex)
-        val cardList = getCardsList(context)
+        val cardList = getPrettyCardsList(context)
         _uiState.value.setsData.recalculateSetData(cardList, set)
     }
 

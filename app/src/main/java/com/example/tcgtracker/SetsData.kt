@@ -5,6 +5,7 @@ import androidx.compose.ui.graphics.Color
 import com.example.tcgtracker.models.Card
 import com.example.tcgtracker.models.CoverImage
 import com.example.tcgtracker.models.InnerJsonSet
+import com.example.tcgtracker.models.Origin
 import com.example.tcgtracker.models.OwnedData
 import com.example.tcgtracker.models.OwnedSetData
 import com.example.tcgtracker.models.Set
@@ -16,6 +17,7 @@ import com.google.gson.reflect.TypeToken
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
+import kotlin.math.pow
 
 const val ASSETS_SETS_DATA_FILE_PATH = "PTCGPocket/sets.json"
 const val USER_SETS_DATA_FILE_PATH = "PTCGPocket/owned/sets.json"
@@ -109,24 +111,6 @@ class SetsData() {
             ownedCards = cardList.stream().filter{ card -> card.owned }.count().toInt()
         )
 
-        val boosters = mutableListOf<String>()
-        cardList.forEach { card ->
-            val cardOrigins = card.origins
-            if (!cardOrigins.isEmpty()) {
-                val mainOrigin = cardOrigins[0]
-                if (!boosters.contains(mainOrigin)) boosters.add(mainOrigin)
-            }
-        }
-        val byBooster = mutableMapOf<String, OwnedData>()
-        boosters.forEach { booster ->
-            val boosterCards = cardList.stream().filter{ card -> card.origins.contains(booster) }.toArray().asList() as List<Card>
-            val data = OwnedData(
-                totalCards = boosterCards.count(),
-                ownedCards = boosterCards.stream().filter{ card -> card.owned }.count().toInt()
-            )
-            byBooster.put(booster, data)
-        }
-
         val byRarity = mutableMapOf<String, OwnedData>()
         Concepts.getRarities().forEach { rarity ->
             val rarityCards = cardList.stream().filter{ card -> card.rarity == rarity }.toArray().asList() as List<Card>
@@ -135,6 +119,28 @@ class SetsData() {
                 ownedCards = rarityCards.stream().filter{ card -> card.owned }.count().toInt()
             )
             byRarity.put(rarity, data)
+        }
+
+        val boosters = mutableListOf<String>()
+        cardList.forEach { card ->
+            val cardOrigins = card.origins
+            if (!cardOrigins.isEmpty()) {
+                val mainOrigin = cardOrigins[0]
+                if (!boosters.contains(mainOrigin)) boosters.add(mainOrigin)
+            }
+        }
+        val byBooster = mutableMapOf<String, Map<String, OwnedData>>()
+        boosters.forEach { booster ->
+            val boosterCards = cardList.stream().filter{ card -> card.origins.contains(booster) }.toArray().asList() as List<Card>
+            Concepts.getRarities().forEach { rarity ->
+                val rarityCards = boosterCards.stream().filter{ card -> card.rarity == rarity }.toArray().asList() as List<Card>
+                val data = OwnedData(
+                    totalCards = rarityCards.count(),
+                    ownedCards = rarityCards.stream().filter{ card -> card.owned }.count().toInt()
+                )
+                val byRarity = mutableMapOf<String, OwnedData>(Pair(rarity, data))
+                byBooster.put(booster, byRarity)
+            }
         }
 
         return OwnedSetData(all = all, byBooster = byBooster, byRarity = byRarity)
@@ -171,5 +177,95 @@ class SetsData() {
         var set = setList.firstOrNull{ set -> set.name == value }
         if (set == null) set = setList.firstOrNull{ set -> set.set == value }
         return set?.color
+    }
+
+    // Get most probable set
+    fun getMostProbableSet(
+        originsData: OriginsData,
+        rarities: List<String> = listOf()
+    ): Pair<Set, Origin>? {
+        if (setList.isEmpty()) return null
+
+        var probableSet: Set? = null
+        var probableBooster: Origin? = null
+        var probableOdd = 0.0f
+        setList.forEach{ set ->
+            val setOrigin = getMostProbableBooster(set.set, originsData, rarities)
+            if (setOrigin != null) {
+                if (setOrigin.second >= probableOdd) {
+                    probableOdd = setOrigin.second
+                    probableBooster = setOrigin.first
+                    probableSet = set
+                }
+            }
+        }
+
+        if (probableSet == null || probableBooster == null) return null
+        return Pair(probableSet, probableBooster)
+    }
+
+    // Get most probable booster from one set
+    fun getMostProbableBooster(
+        setID: String,
+        originsData: OriginsData,
+        rarities: List<String> = listOf()
+    ): Pair<Origin, Float>? {
+        val set = setList.find{ set -> set.set == setID }
+        if (set == null) return null
+
+        val setOrigins = set.origins.filter{ origin -> originsData.getOriginType(origin) == "BOOSTER" }
+        if (setOrigins.isEmpty())  return null
+
+        var probableOrigin: Origin? = null
+        var probableOdd = 0.0f
+        setOrigins.forEach{ origin ->
+            val originObject = originsData.getOriginByID(origin)
+            if (originObject != null) {
+                val probabilities = getBoosterRemainingOdds(setID, originObject, rarities)
+                var totalProbability = 1 - ((1 - probabilities[0]).pow(3) * (1 - probabilities[1]) * (1 - probabilities[2]))
+                if (totalProbability > 100.0f) totalProbability = 100.0f
+                else if (totalProbability < 0.0f) totalProbability = 0.0f
+                if (totalProbability >= probableOdd) {
+                    probableOdd = totalProbability
+                    probableOrigin = originObject
+                }
+            }
+        }
+
+        if (probableOrigin == null) return null
+        return Pair(probableOrigin, probableOdd)
+    }
+
+    // Get a booster remaining cards odds
+    fun getBoosterRemainingOdds(
+        setID: String,
+        origin: Origin,
+        rarities: List<String> = listOf()
+    ): List<Float> {
+        val probabilities = mutableListOf(0.0f, 0.0f, 0.0f)
+
+        if (origin.type != "BOOSTER" || origin.odds == null) return probabilities
+
+        val set = setList.find{ set -> set.set == setID }
+        if (set == null) return probabilities
+        if (!set.origins.contains(origin.id)) return probabilities
+
+        val numbers = set.numbers.byBooster[origin.id]
+        if (numbers == null) return probabilities
+
+        val fixedRarities = rarities.ifEmpty { origin.odds.keys.toList() }
+
+        origin.odds.forEach{ rarity ->
+            if (numbers.containsKey(rarity.key) && fixedRarities.contains(rarity.key)) {
+                val remainingCards = numbers[rarity.key]!!.totalCards - numbers[rarity.key]!!.ownedCards
+                for (i in 0 until 3) {
+                    probabilities[i] += remainingCards * rarity.value[i]
+                    if (probabilities[i] > 100.0f) probabilities[i] = 100.0f
+                    else if (probabilities[i] < 0.0f) probabilities[i] = 0.0f
+                }
+            }
+        }
+
+        return probabilities
     }
 }

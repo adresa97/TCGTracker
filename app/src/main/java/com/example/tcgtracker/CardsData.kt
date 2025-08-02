@@ -73,8 +73,8 @@ class CardsData() {
     }
 
     private fun getImageUrl(cardID: String): String {
-        var set = cardID.substringBeforeLast('-')
-        var number = cardID.substringAfterLast('-').toInt().toString()
+        val set = cardID.substringBeforeLast('-')
+        val number = cardID.substringAfterLast('-').toInt().toString()
 
         return "https://cdn.pockettrade.app/images/webp/es/${set}_${number}_SPA.webp"
     }

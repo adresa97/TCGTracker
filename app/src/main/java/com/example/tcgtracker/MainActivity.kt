@@ -1,5 +1,6 @@
 package com.example.tcgtracker
 
+import android.R.attr.textSize
 import android.content.Context
 import android.graphics.Color.alpha
 import android.graphics.Paint
@@ -20,6 +21,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -34,6 +36,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Shapes
 import androidx.compose.material3.Snackbar
@@ -55,9 +58,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PaintingStyle.Companion.Stroke
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.asComposePaint
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
@@ -175,7 +186,7 @@ fun TCGTrackerApp(
                 }
 
                 composable(Screen.CardViewer.name) {
-                    val cardList = trackerViewModel.getCardsList(context)
+                    val cardList = trackerViewModel.getPrettyCardsList(context)
                     CardsScreen(
                         cardList = cardList,
                         isListMode = isListMode,
@@ -281,8 +292,8 @@ fun TCGTrackerBottomBar(
         else -> MaterialTheme.colorScheme.primaryContainer
     }
 
-    val setColor = uiState.setsData.getSetColor("A3b")
-        ?: MaterialTheme.colorScheme.surface
+    val setBooster = uiState.setsData.getMostProbableSet(uiState.originsData)
+    val setColor = setBooster?.first?.color ?: MaterialTheme.colorScheme.surface
 
     BottomAppBar(
         containerColor = uiColor,
@@ -298,7 +309,7 @@ fun TCGTrackerBottomBar(
                 tint = MaterialTheme.colorScheme.onSurface,
                 contentDescription = null
             )
-            Text(
+            Box(
                 modifier = Modifier.fillMaxHeight(0.6f).fillMaxWidth(0.75f)
                     .background(setColor, RoundedCornerShape(percent = 50))
                     .shadow(
@@ -308,11 +319,24 @@ fun TCGTrackerBottomBar(
                         ambientColor = Color(0.0f, 0.0f, 0.0f, 0.0f),
                         spotColor = PocketWhite.apply{ alpha(100) }
                     )
-                    .border(2.dp, PocketBlack.apply{ alpha(50) }, RoundedCornerShape(percent = 50))
-                    .wrapContentHeight(align = Alignment.CenterVertically),
-                text = "Eevee",
-                textAlign = TextAlign.Center
-            )
+                    .border(2.dp, uiColor.apply{ alpha(50) }, RoundedCornerShape(percent = 50))
+                    .wrapContentHeight(align = Alignment.CenterVertically)
+                    .wrapContentWidth(align = Alignment.CenterHorizontally),
+            ) {
+                Text(
+                    text = setBooster?.second?.name ?: "",
+                    textAlign = TextAlign.Center,
+                    style = TextStyle.Default.copy(
+                        fontSize = 26.sp,
+                        color = PocketWhite,
+                        shadow = Shadow(
+                            color = PocketBlack,
+                            blurRadius = 10.0f
+                        )
+                    )
+                )
+            }
+
             Icon(
                 imageVector = Icons.Filled.Warning,
                 tint = MaterialTheme.colorScheme.onSurface,

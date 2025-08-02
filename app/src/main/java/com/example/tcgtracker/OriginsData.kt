@@ -86,4 +86,14 @@ class OriginsData {
         if (origin.type != "BOOSTER") return mapOf()
         return origin.odds ?: mapOf()
     }
+
+    fun getOriginType(value: String): String {
+        val byName = originsData.find{ origin -> origin.name == value }?.type ?: ""
+        if (byName.isNotEmpty()) return byName
+        return originsData.find{ origin -> origin.id == value }?.type ?: ""
+    }
+
+    fun getOriginByID(id: String): Origin? {
+        return originsData.find{ origin -> origin.id == id }
+    }
 }
