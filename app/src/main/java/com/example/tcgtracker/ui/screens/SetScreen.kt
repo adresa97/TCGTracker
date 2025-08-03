@@ -1,4 +1,4 @@
-package com.example.tcgtracker.ui
+package com.example.tcgtracker.ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.absolutePadding
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -29,7 +28,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tcgtracker.models.Set
 import com.example.tcgtracker.ui.theme.PocketBlack
-import com.example.tcgtracker.ui.theme.PocketWhite
 
 @Composable
 fun SetScreen(

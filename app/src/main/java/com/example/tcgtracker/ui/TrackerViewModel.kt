@@ -1,6 +1,7 @@
 package com.example.tcgtracker.ui
 
 import android.content.Context
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModel
@@ -11,6 +12,7 @@ import com.example.tcgtracker.Concepts
 import com.example.tcgtracker.OriginsData
 import com.example.tcgtracker.models.Card
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -86,7 +88,7 @@ class TrackerViewModel() : ViewModel(), DefaultLifecycleObserver {
     fun reloadOwnedCardState(context: Context, sets: List<String>) {
         _uiState.value.cardsData.reloadUserJSONSData(context, sets)
         val cardList = getPrettyCardsList(context)
-        sets.forEach{ set ->
+        sets.forEach { set ->
             _uiState.value.setsData.recalculateSetData(cardList, set)
         }
     }

@@ -1,16 +1,16 @@
-package com.example.tcgtracker.ui
+package com.example.tcgtracker.ui.screens
 
 import android.content.Context
 import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonColors
-import androidx.compose.material3.ButtonElevation
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,11 +18,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.tcgtracker.OwnedCardsImporterExporter
+import com.example.tcgtracker.R
+import com.example.tcgtracker.ui.theme.PocketBlack
 import com.example.tcgtracker.utils.GetCustomContents
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -59,11 +63,20 @@ fun OptionsScreen(
     ) {
         OptionButton (
             onTap = { jsonPicker.launch("application/json") },
-            text = "Importar JSON"
+            icon = R.drawable.download,
+            text = "Importar datos"
+        )
+        HorizontalDivider(
+            modifier = Modifier
+                .fillMaxWidth(0.95f)
+                .alpha(0.5f),
+            thickness = 2.dp,
+            color = PocketBlack
         )
         OptionButton (
             onTap = {},
-            text = "Exportar JSON"
+            icon = R.drawable.upload,
+            text = "Exportar datos"
         )
     }
 }
@@ -71,22 +84,26 @@ fun OptionsScreen(
 @Composable
 fun OptionButton(
     onTap: () -> Unit = {},
-    text: String = ""
+    icon: Int,
+    text: String = "",
+    modifier: Modifier = Modifier
 ) {
-    Button(
-        onClick = onTap,
-        modifier = Modifier.fillMaxWidth(0.9f),
-        shape = RectangleShape,
-        colors = ButtonColors(
-            containerColor = MaterialTheme.colorScheme.secondaryContainer,
-            contentColor = MaterialTheme.colorScheme.secondary,
-            disabledContainerColor = MaterialTheme.colorScheme.errorContainer,
-            disabledContentColor = MaterialTheme.colorScheme.error
-        ),
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary)
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(50.dp)
+            .padding(horizontal = 10.dp, vertical = 5.dp)
+            .clickable(onClick = onTap),
+        verticalAlignment = Alignment.CenterVertically
     ) {
+        Icon(
+            modifier = Modifier.padding(horizontal = 5.dp),
+            painter = painterResource(icon),
+            contentDescription = null
+        )
         Text(
-            text = text
+            text = text,
+            fontSize = 24.sp
         )
     }
 }

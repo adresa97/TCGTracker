@@ -18,12 +18,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -50,6 +44,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -61,9 +56,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.tcgtracker.ui.CardsScreen
-import com.example.tcgtracker.ui.OptionsScreen
-import com.example.tcgtracker.ui.SetScreen
+import com.example.tcgtracker.ui.screens.CardsScreen
+import com.example.tcgtracker.ui.screens.OptionsScreen
+import com.example.tcgtracker.ui.screens.SetScreen
 import com.example.tcgtracker.ui.TrackerUIState
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
@@ -124,9 +119,13 @@ fun TCGTrackerApp(
                     currentScreen = currentScreen,
                     uiState = trackerUIState,
                     canNavigateBack = navController.previousBackStackEntry != null,
-                    navigateUp = { navController.navigateUp() },
+                    navigateUp = {
+                        navController.navigateUp()
+                    },
                     canNavigateToOptions = currentScreen != Screen.Options,
-                    navigateToOptions = { navController.navigate(Screen.Options.name) },
+                    navigateToOptions = {
+                        navController.navigate(Screen.Options.name)
+                    },
                     canChangeViewMode = currentScreen != Screen.Options,
                     changeViewMode = {
                         trackerViewModel.changeViewMode()
@@ -240,7 +239,7 @@ fun TCGTrackerTopBar(
             if (canNavigateBack) {
                 IconButton(onClick = navigateUp) {
                     Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        painter = painterResource(R.drawable.arrow_back),
                         tint = MaterialTheme.colorScheme.onSurface,
                         contentDescription = null
                     )
@@ -251,7 +250,7 @@ fun TCGTrackerTopBar(
             if (canChangeViewMode) {
                 IconButton(onClick = changeViewMode) {
                     Icon(
-                        imageVector = Icons.Default.Info,
+                        painter = painterResource(R.drawable.view_array),
                         tint = MaterialTheme.colorScheme.onSurface,
                         contentDescription = null
                     )
@@ -260,7 +259,7 @@ fun TCGTrackerTopBar(
             if (canNavigateToOptions) {
                 IconButton(onClick = navigateToOptions) {
                     Icon(
-                        imageVector = Icons.Default.Settings,
+                        painter = painterResource(R.drawable.settings),
                         tint = MaterialTheme.colorScheme.onSurface,
                         contentDescription = null
                     )
@@ -297,7 +296,7 @@ fun TCGTrackerBottomBar(
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             Icon(
-                imageVector = Icons.Default.ArrowDropDown,
+                painter = painterResource(R.drawable.info),
                 tint = MaterialTheme.colorScheme.onSurface,
                 contentDescription = null
             )
@@ -330,7 +329,7 @@ fun TCGTrackerBottomBar(
             }
 
             Icon(
-                imageVector = Icons.Filled.Warning,
+                painter = painterResource(R.drawable.filter_alt),
                 tint = MaterialTheme.colorScheme.onSurface,
                 contentDescription = null
             )

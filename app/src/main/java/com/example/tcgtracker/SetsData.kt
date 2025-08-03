@@ -113,10 +113,10 @@ class SetsData() {
 
         val byRarity = mutableMapOf<String, OwnedData>()
         Concepts.getRarities().forEach { rarity ->
-            val rarityCards = cardList.stream().filter{ card -> card.rarity == rarity }.toArray().asList() as List<Card>
+            val rarityCards = cardList.stream().filter{ card -> card.rarity == rarity }.toArray({ size -> arrayOfNulls<Card>(size) }).asList()
             val data = OwnedData(
                 totalCards = rarityCards.count(),
-                ownedCards = rarityCards.stream().filter{ card -> card.owned }.count().toInt()
+                ownedCards = rarityCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
             )
             byRarity.put(rarity, data)
         }
@@ -131,12 +131,12 @@ class SetsData() {
         }
         val byBooster = mutableMapOf<String, Map<String, OwnedData>>()
         boosters.forEach { booster ->
-            val boosterCards = cardList.stream().filter{ card -> card.origins.contains(booster) }.toArray().asList() as List<Card>
+            val boosterCards = cardList.stream().filter{ card -> card.origins.contains(booster) }.toArray({ size -> arrayOfNulls<Card>(size) }).asList()
             Concepts.getRarities().forEach { rarity ->
-                val rarityCards = boosterCards.stream().filter{ card -> card.rarity == rarity }.toArray().asList() as List<Card>
+                val rarityCards = boosterCards.stream().filter{ card -> card?.rarity == rarity }.toArray({ size -> arrayOfNulls<Card>(size) }).asList()
                 val data = OwnedData(
                     totalCards = rarityCards.count(),
-                    ownedCards = rarityCards.stream().filter{ card -> card.owned }.count().toInt()
+                    ownedCards = rarityCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
                 )
                 val byRarity = mutableMapOf<String, OwnedData>(Pair(rarity, data))
                 byBooster.put(booster, byRarity)
