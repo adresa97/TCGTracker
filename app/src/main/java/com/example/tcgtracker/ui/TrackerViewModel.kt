@@ -23,7 +23,6 @@ data class TrackerUIState(
     val setsData: SetsData = SetsData(),
     val cardsData: CardsData = CardsData(),
     val originsData: OriginsData = OriginsData(),
-    val selectedSet: String = "",
     val isListMode: Boolean = false
 )
 
@@ -40,22 +39,16 @@ class TrackerViewModel() : ViewModel(), DefaultLifecycleObserver {
         )
     }
 
-    fun setCurrentSet(currentSet: String) {
-        _uiState.update { currentState ->
-            currentState.copy(selectedSet = currentSet)
-        }
-    }
-
     fun changeViewMode() {
         _uiState.update { currentState ->
             currentState.copy(isListMode = !uiState.value.isListMode)
         }
     }
 
-    fun getPrettyCardsList(context: Context): List<Card> {
+    fun getPrettyCardsList(context: Context, set: String): List<Card> {
         return _uiState.value.cardsData.getCardList(
             applicationContext = context,
-            set = _uiState.value.selectedSet
+            set = set
         ).map{ card ->
             Card(
                 id = card.id,
@@ -72,23 +65,23 @@ class TrackerViewModel() : ViewModel(), DefaultLifecycleObserver {
         }
     }
 
-    fun getRawCardList(context: Context): List<Card> {
+    fun getRawCardList(context: Context, set: String): List<Card> {
         return _uiState.value.cardsData.getCardList(
             applicationContext = context,
-            set = _uiState.value.selectedSet
+            set = set
         )
     }
 
     fun changeOwnedCardState(context: Context, set: String, cardIndex: Int) {
         _uiState.value.cardsData.changeCardState(set, cardIndex)
-        val cardList = getPrettyCardsList(context)
+        val cardList = getPrettyCardsList(context, set)
         _uiState.value.setsData.recalculateSetData(cardList, set)
     }
 
     fun reloadOwnedCardState(context: Context, sets: List<String>) {
         _uiState.value.cardsData.reloadUserJSONSData(context, sets)
-        val cardList = getPrettyCardsList(context)
         sets.forEach { set ->
+            val cardList = getPrettyCardsList(context, set)
             _uiState.value.setsData.recalculateSetData(cardList, set)
         }
     }

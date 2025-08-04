@@ -1,6 +1,8 @@
 package com.example.tcgtracker.ui.screens
 
+import android.content.Context
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -8,19 +10,31 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.absolutePadding
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxColors
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -29,39 +43,224 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation3.runtime.NavKey
 import coil3.compose.AsyncImage
 import com.example.tcgtracker.R
 import com.example.tcgtracker.models.Card
+import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
+import com.example.tcgtracker.ui.theme.PocketWhite
 import com.example.tcgtracker.ui.theme.ptcgFontFamily
 import com.example.tcgtracker.utils.greyScale
+import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV
+import com.smarttoolfactory.extendedcolors.util.HSVUtil.hsvToColorInt
+import kotlinx.serialization.Serializable
 
+@Serializable
+data class CardsScreen(val currentSet: String): NavKey
+
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CardsScreen(
-    cardList: List<Card>,
-    colors: Map<String, Color>,
-    isListMode: Boolean,
-    onCardTap: (cardIndex: Int) -> Unit = {},
-    modifier: Modifier = Modifier
+    context: Context,
+    currentSet: String,
+    onBackTap: () -> Unit,
+    onOptionsTap: () -> Unit,
+    trackerViewModel: TrackerViewModel = viewModel()
 ) {
-    if (isListMode) {
-        CardListView(
-            cardList = cardList,
-            colors = colors,
-            onCardTap = onCardTap,
-            modifier = modifier
-        )
-    } else {
-        CardGridView(
-            cardList = cardList,
-            onCardTap = onCardTap,
-            modifier = modifier
-        )
+    // Collect uiState
+    val trackerUIState by trackerViewModel.uiState.collectAsState()
+
+    // Get isListMode from current state
+    var isListMode: Boolean by rememberSaveable {
+        mutableStateOf(trackerUIState.isListMode)
+    }
+
+    Surface(
+        modifier = Modifier.background(MaterialTheme.colorScheme.surface)
+    ) {
+        Scaffold(
+            // Top bar
+            topBar = {
+                // Title text
+                val title = trackerUIState.setsData.getSetName(currentSet)
+
+                // UI color
+                var uiColor = trackerUIState.setsData.getSetColor(currentSet)
+                if (uiColor == null) uiColor = MaterialTheme.colorScheme.primaryContainer
+                else {
+                    val hsv = colorToHSV(uiColor)
+                    hsv[2] = 0.5f
+                    uiColor = Color(hsvToColorInt(hsv))
+                }
+
+                TopAppBar(
+                    colors = topAppBarColors(
+                        containerColor = uiColor,
+                        titleContentColor = MaterialTheme.colorScheme.onSurface
+                    ),
+                    title = { Text(title) },
+                    modifier = Modifier,
+                    navigationIcon = {
+                        IconButton(
+                            onClick = {
+                                onBackTap()
+                            }
+                        ) {
+                            Icon(
+                                painter = painterResource(R.drawable.arrow_back),
+                                tint = MaterialTheme.colorScheme.onSurface,
+                                contentDescription = null
+                            )
+                        }
+                    },
+                    actions = {
+                        IconButton(
+                            onClick = {
+                                trackerViewModel.changeViewMode()
+                                isListMode = !isListMode
+                            }
+                        ) {
+                            Icon(
+                                painter = painterResource(R.drawable.view_array),
+                                tint = MaterialTheme.colorScheme.onSurface,
+                                contentDescription = null
+                            )
+                        }
+                        IconButton(
+                            onClick = {
+                                onOptionsTap()
+                            }
+                        ) {
+                            Icon(
+                                painter = painterResource(R.drawable.settings),
+                                tint = MaterialTheme.colorScheme.onSurface,
+                                contentDescription = null
+                            )
+                        }
+                    }
+                )
+            },
+            // Bottom bar
+            bottomBar = {
+                // UI color
+                var uiColor = trackerUIState.setsData.getSetColor(currentSet)
+                if (uiColor == null) uiColor = MaterialTheme.colorScheme.primaryContainer
+                else {
+                    val hsv = colorToHSV(uiColor)
+                    hsv[2] = 0.5f
+                    uiColor = Color(hsvToColorInt(hsv))
+                }
+
+                // Get most probable booster out of current set and its color
+                val booster = trackerUIState.setsData.getMostProbableBooster(currentSet, trackerUIState.originsData)
+                var boosterColor = booster?.first?.color
+                if (boosterColor == null) boosterColor = MaterialTheme.colorScheme.surface
+                else {
+                    val hsv = colorToHSV(boosterColor)
+                    hsv[2] = 0.8f
+                    boosterColor = Color(hsvToColorInt(hsv))
+                }
+
+                BottomAppBar(
+                    containerColor = uiColor,
+                    contentColor = MaterialTheme.colorScheme.onSurface
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceEvenly
+                    ) {
+                        Icon(
+                            painter = painterResource(R.drawable.info),
+                            tint = MaterialTheme.colorScheme.onSurface,
+                            contentDescription = null
+                        )
+                        Box(
+                            modifier = Modifier.fillMaxHeight(0.6f).fillMaxWidth(0.75f)
+                                .background(boosterColor, RoundedCornerShape(percent = 50))
+                                .shadow(
+                                    elevation = 3.dp,
+                                    shape = RoundedCornerShape(percent = 50),
+                                    clip = true,
+                                    ambientColor = Color(0.0f, 0.0f, 0.0f, 0.0f),
+                                    spotColor = PocketWhite.apply { android.graphics.Color.alpha(100) }
+                                )
+                                .border(
+                                    2.dp,
+                                    uiColor.apply { android.graphics.Color.alpha(50) },
+                                    RoundedCornerShape(percent = 50)
+                                )
+                                .wrapContentHeight(align = Alignment.CenterVertically)
+                                .wrapContentWidth(align = Alignment.CenterHorizontally),
+                        ) {
+                            Text(
+                                text = booster?.first?.name ?: "",
+                                textAlign = TextAlign.Center,
+                                style = TextStyle.Default.copy(
+                                    fontSize = 26.sp,
+                                    color = PocketWhite,
+                                    shadow = Shadow(
+                                        color = PocketBlack,
+                                        blurRadius = 10.0f
+                                    )
+                                )
+                            )
+                        }
+                        Icon(
+                            painter = painterResource(R.drawable.filter_alt),
+                            tint = MaterialTheme.colorScheme.onSurface,
+                            contentDescription = null
+                        )
+                    }
+                }
+            }
+            // Content
+        ) { innerPadding ->
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(innerPadding)
+            ) {
+                val cardList = trackerViewModel.getPrettyCardsList(context, currentSet)
+                val colors = trackerUIState.originsData.getOriginsNameColorMap()
+
+                if (isListMode) {
+                    CardListView(
+                        cardList = cardList,
+                        colors = colors,
+                        onCardTap = { index ->
+                            trackerViewModel.changeOwnedCardState(
+                                context = context,
+                                set = currentSet,
+                                cardIndex = index
+                            )
+                        }
+                    )
+                } else {
+                    CardGridView(
+                        cardList = cardList,
+                        onCardTap = { index ->
+                            trackerViewModel.changeOwnedCardState(
+                                context = context,
+                                set = currentSet,
+                                cardIndex = index
+                            )
+                        }
+                    )
+                }
+            }
+        }
     }
 }
 
@@ -173,7 +372,7 @@ fun CardImage(
             contentScale = ContentScale.Fit
         )
         Text(
-            text = id,
+            text = id.substringAfterLast('-'),
             modifier = Modifier.padding(bottom = 0.dp)
         )
     }
@@ -269,28 +468,6 @@ fun CardBullet(
                     color = fontColor
                 )
             }
-            /*
-            Column(
-                modifier = Modifier.fillMaxWidth().fillMaxHeight(0.6f),
-                verticalArrangement = Arrangement.Center
-            ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth().fillMaxHeight(0.6f)
-                        .background(PocketWhite),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.Top
-                ) {
-
-
-                }
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-
-                }
-            }
-        */
         }
     }
 }
