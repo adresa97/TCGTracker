@@ -25,8 +25,6 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
@@ -37,11 +35,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavKey
-import com.example.tcgtracker.OwnedCardsImporterExporter
+import com.example.tcgtracker.CardsData
+import com.example.tcgtracker.CardsImporterExporter
 import com.example.tcgtracker.R
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
 import com.example.tcgtracker.utils.GetCustomContents
+import com.example.tcgtracker.utils.SetCustomContent
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
 
@@ -113,7 +113,7 @@ fun OptionsScreen(
                 val jsonPicker = rememberLauncherForActivityResult(
                     contract = GetCustomContents(isMultiple = false),
                     onResult = { uris ->
-                        val message = OwnedCardsImporterExporter.importFromJSON(context, uris[0])
+                        val message = CardsImporterExporter.importFromJSON(context, uris[0])
                         if (!message.second.isNullOrEmpty()) {
                             trackerViewModel.reloadOwnedCardState(context, message.second!!)
                         }
@@ -123,11 +123,15 @@ fun OptionsScreen(
                     }
                 )
 
-                /*
                 val storePicker = rememberLauncherForActivityResult(
-
+                    contract = SetCustomContent(),
+                    onResult = { uris ->
+                        val message = CardsImporterExporter.exportToJSON(context, uris[0])
+                        scope.launch {
+                            snackbarHostState.showSnackbar(message)
+                        }
+                    }
                 )
-                */
 
                 Column(
                     modifier = Modifier
@@ -148,7 +152,7 @@ fun OptionsScreen(
                         color = PocketBlack
                     )
                     OptionButton (
-                        onTap = {},
+                        onTap = { storePicker.launch("application/json") },
                         icon = R.drawable.upload,
                         text = "Exportar datos"
                     )

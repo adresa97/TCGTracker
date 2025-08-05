@@ -11,7 +11,7 @@ import kotlinx.serialization.builtins.serializer
 
 const val ASSETS_ORIGINS_DATA_FILE_PATH = "PTCGPocket/origins.json"
 
-class OriginsData {
+object OriginsData {
     private val originsData = mutableListOf<Origin>()
 
     fun loadJSONData(context: Context) {

@@ -10,28 +10,32 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi
 import androidx.compose.material3.adaptive.navigation3.ListDetailSceneStrategy
-import androidx.compose.material3.adaptive.navigation3.rememberListDetailSceneStrategy
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
 import androidx.navigation3.runtime.entry
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSavedStateNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import androidx.navigation3.ui.rememberSceneSetupNavEntryDecorator
+import com.example.tcgtracker.Concepts
+import com.example.tcgtracker.OriginsData
+import com.example.tcgtracker.SetsData
 import com.example.tcgtracker.ui.TrackerViewModel
+import kotlin.enums.enumEntries
 
 @OptIn(ExperimentalMaterial3AdaptiveApi::class)
 @Composable
 fun Navigation (
-    context: Context,
-    trackerViewModel: TrackerViewModel = viewModel()
+    context: Context
 ) {
-    // Load view model data and set onPause observer
-    trackerViewModel.loadData(context)
-    LocalLifecycleOwner.current.lifecycle.addObserver(trackerViewModel)
+    // Load singleton objects data
+    Concepts.loadJSONData(context)
+    OriginsData.loadJSONData(context)
+    SetsData.loadJSONData(context)
 
     // Create navigation backstack
     val backStack = rememberNavBackStack(SetScreen)
@@ -45,7 +49,7 @@ fun Navigation (
             entryDecorators = listOf(
                 rememberSceneSetupNavEntryDecorator(),
                 rememberSavedStateNavEntryDecorator(),
-                //rememberViewModelStoreNavEntryDecorator()
+                rememberViewModelStoreNavEntryDecorator()
             ),
             transitionSpec = {
                 ContentTransform(

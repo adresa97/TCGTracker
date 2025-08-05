@@ -55,7 +55,9 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavKey
 import coil3.compose.AsyncImage
+import com.example.tcgtracker.OriginsData
 import com.example.tcgtracker.R
+import com.example.tcgtracker.SetsData
 import com.example.tcgtracker.models.Card
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
@@ -93,10 +95,10 @@ fun CardsScreen(
             // Top bar
             topBar = {
                 // Title text
-                val title = trackerUIState.setsData.getSetName(currentSet)
+                val title = trackerViewModel.getSetNameFromID(currentSet)
 
                 // UI color
-                var uiColor = trackerUIState.setsData.getSetColor(currentSet)
+                var uiColor = trackerViewModel.getSetColorFromID(currentSet)
                 if (uiColor == null) uiColor = MaterialTheme.colorScheme.primaryContainer
                 else {
                     val hsv = colorToHSV(uiColor)
@@ -154,7 +156,7 @@ fun CardsScreen(
             // Bottom bar
             bottomBar = {
                 // UI color
-                var uiColor = trackerUIState.setsData.getSetColor(currentSet)
+                var uiColor = trackerViewModel.getSetColorFromID(currentSet)
                 if (uiColor == null) uiColor = MaterialTheme.colorScheme.primaryContainer
                 else {
                     val hsv = colorToHSV(uiColor)
@@ -163,7 +165,7 @@ fun CardsScreen(
                 }
 
                 // Get most probable booster out of current set and its color
-                val booster = trackerUIState.setsData.getMostProbableBooster(currentSet, trackerUIState.originsData)
+                val booster = trackerViewModel.getMostProbableBoosterFromSet(currentSet)
                 var boosterColor = booster?.first?.color
                 if (boosterColor == null) boosterColor = MaterialTheme.colorScheme.surface
                 else {
@@ -233,7 +235,7 @@ fun CardsScreen(
                     .padding(innerPadding)
             ) {
                 val cardList = trackerViewModel.getPrettyCardsList(context, currentSet)
-                val colors = trackerUIState.originsData.getOriginsNameColorMap()
+                val colors = trackerViewModel.getOriginsColorMap()
 
                 if (isListMode) {
                     CardListView(

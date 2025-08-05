@@ -3,16 +3,18 @@ package com.example.tcgtracker
 import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
+import android.os.ParcelFileDescriptor
 import com.example.tcgtracker.models.ExternalJsonSet
 import com.example.tcgtracker.utils.ReadJSONFromFile
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
+import okio.Path.Companion.toPath
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 
-object OwnedCardsImporterExporter {
+object CardsImporterExporter {
     fun importFromJSON(context: Context, jsonUri: Uri): Pair<String, List<String>?> {
         var jsonString = ""
         if (ContentResolver.SCHEME_CONTENT == jsonUri.scheme) {
@@ -49,25 +51,25 @@ object OwnedCardsImporterExporter {
         return Pair("Archivo importado con éxito", setsList)
     }
 
-    fun exportToJSON(context: Context, ownedCards: Map<String, List<Boolean>>, targetFolder: File, filename: String): String {
+    fun exportToJSON(context: Context, targetFile: Uri): String {
         val jsonData: MutableMap<String, ExternalJsonSet> = mutableMapOf()
+        val ownedCards = CardsData.getOwnedCardsMap(context)
         ownedCards.forEach { set->
             jsonData.put(set.key, ExternalJsonSet(set.value))
         }
 
-        val file = File(targetFolder, "${filename}.json")
         val jsonString = GsonBuilder().setPrettyPrinting().create().toJson(jsonData)
 
         try {
-            val output = FileOutputStream(file)
-            output.write(jsonString.toByteArray())
-            output.close()
+            context.contentResolver.openOutputStream(targetFile).use{ stream ->
+                stream?.write(jsonString.toByteArray())
+            }
         } catch (e: IOException) {
             e.printStackTrace()
             return "ERROR: Error al crear el archivo"
         }
 
-        return "Archivo exportado con éxito en: ${targetFolder.absolutePath}"
+        return "Archivo exportado con éxito en: ${targetFile.path}"
     }
 }
 

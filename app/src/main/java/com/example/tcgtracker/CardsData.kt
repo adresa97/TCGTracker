@@ -14,7 +14,7 @@ import java.io.IOException
 const val ASSETS_CARDS_DATA_FOLDER_PATH = "PTCGPocket/cards"
 const val USER_CARDS_DATA_FOLDER_PATH = "PTCGPocket/owned/cards"
 
-class CardsData() {
+object CardsData {
     private val cardMap: MutableMap<String, MutableList<Card>> = mutableMapOf()
     private var userFolder: File? = null
     private var modified: MutableMap<String, Boolean> = mutableMapOf()
@@ -72,6 +72,24 @@ class CardsData() {
             }
     }
 
+    // Load all user data JSONS and then outputs a full map of owned cards values by set
+    fun getOwnedCardsMap(context: Context): Map<String, List<Boolean>> {
+        val output = mutableMapOf<String, List<Boolean>>()
+
+        // Loop through every possible set's lists of cards
+        val setList = SetsData.getSetIDs()
+        setList.forEach { set ->
+            val cardList = getCardList(context, set)
+            val ownedCards = mutableListOf<Boolean>()
+            cardList.forEach{ card ->
+                ownedCards.add(card.owned)
+            }
+            output.put(set, ownedCards)
+        }
+
+        return output
+    }
+
     // Reload user JSONS data and update card map
     fun reloadUserJSONSData(applicationContext: Context, sets: List<String>) {
         sets.forEach{ set ->
@@ -92,37 +110,6 @@ class CardsData() {
 
         return "https://cdn.pockettrade.app/images/webp/es/${set}_${number}_SPA.webp"
     }
-
-    /*
-    private fun loadCardList(set: String): MutableList<Card> {
-        // Get this set list of cards from service
-        val cardList = service.getCardsList(set).toMutableList()
-
-        // Try to get this set owned card user json
-        var jsonData: List<Boolean> = mutableListOf()
-        try {
-            // Get json
-            val file = File(userFolder, "${set}.json")
-            val jsonString = ReadJSONFromFile(file.inputStream())
-            if (jsonString == "") return mutableListOf()
-
-            // Parse json string to data
-            jsonData = Gson().fromJson(jsonString, Array<Boolean>::class.java).asList()
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-
-        // If json doesn't exist or is empty
-        if (jsonData.isEmpty()) return cardList
-
-        // Update cards owned value according to json data
-        for (i in 0 until cardList.count()) {
-            cardList[i].owned = if (i < jsonData.count()) jsonData[i] else false
-        }
-
-        return cardList
-    }
-     */
 
     fun updateUserJSONSData() {
         if (cardMap.isEmpty() || userFolder == null) return

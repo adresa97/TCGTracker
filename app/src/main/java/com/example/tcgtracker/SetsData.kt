@@ -22,23 +22,23 @@ import kotlin.math.pow
 const val ASSETS_SETS_DATA_FILE_PATH = "PTCGPocket/sets.json"
 const val USER_SETS_DATA_FILE_PATH = "PTCGPocket/owned/sets.json"
 
-class SetsData() {
+object SetsData {
     private val setList = mutableListOf<Set>()
     private var userFile: File? = null
     private var modified: Boolean = false
 
     // Populate collections list
-    fun loadJSONData(applicationContext: Context, cardsData: CardsData) {
+    fun loadJSONData(context: Context) {
         // If data already stored end function
         if (!setList.isEmpty()) return
 
         // Get inner data (objective data of every set)
-        val innerJsonString = ReadJSONFromAssets(applicationContext, ASSETS_SETS_DATA_FILE_PATH)
+        val innerJsonString = ReadJSONFromAssets(context, ASSETS_SETS_DATA_FILE_PATH)
         val innerJsonData = Gson().fromJson(innerJsonString, Array<InnerJsonSet>::class.java).asList()
 
         // If user data file not located, find it
         if(userFile == null) {
-            val extStorageDir = applicationContext.getExternalFilesDir(null)
+            val extStorageDir = context.getExternalFilesDir(null)
             userFile = File(extStorageDir, USER_SETS_DATA_FILE_PATH)
             userFile!!.parentFile!!.mkdirs()
         }
@@ -74,7 +74,7 @@ class SetsData() {
                 cardCount = set.cardCount,
                 origins = set.origins,
                 numbers = userJsonData[set.set] ?: calculateNumbers(
-                    cardList = cardsData.getCardList(applicationContext, set.set)
+                    cardList = CardsData.getCardList(context, set.set)
                 )
             ))
         }
@@ -158,6 +158,15 @@ class SetsData() {
         return setList.groupBy({ set -> set.series })
     }
 
+    // Get all sets IDs
+    fun getSetIDs(): List<String> {
+        val ids = mutableListOf<String>()
+        setList.forEach{ set ->
+            ids.add(set.set)
+        }
+        return ids
+    }
+
     // Get set name from its code
     fun getSetName(code: String): String {
         return setList.firstOrNull{ set -> set.set == code }?.name ?: code
@@ -181,7 +190,6 @@ class SetsData() {
 
     // Get most probable set
     fun getMostProbableSet(
-        originsData: OriginsData,
         rarities: List<String> = listOf()
     ): Pair<Set, Origin>? {
         if (setList.isEmpty()) return null
@@ -190,7 +198,7 @@ class SetsData() {
         var probableBooster: Origin? = null
         var probableOdd = 0.0f
         setList.forEach{ set ->
-            val setOrigin = getMostProbableBooster(set.set, originsData, rarities)
+            val setOrigin = getMostProbableBooster(set.set, rarities)
             if (setOrigin != null) {
                 if (setOrigin.second >= probableOdd) {
                     probableOdd = setOrigin.second
@@ -207,19 +215,18 @@ class SetsData() {
     // Get most probable booster from one set
     fun getMostProbableBooster(
         setID: String,
-        originsData: OriginsData,
         rarities: List<String> = listOf()
     ): Pair<Origin, Float>? {
         val set = setList.find{ set -> set.set == setID }
         if (set == null) return null
 
-        val setOrigins = set.origins.filter{ origin -> originsData.getOriginType(origin) == "BOOSTER" }
+        val setOrigins = set.origins.filter{ origin -> OriginsData.getOriginType(origin) == "BOOSTER" }
         if (setOrigins.isEmpty())  return null
 
         var probableOrigin: Origin? = null
         var probableOdd = 0.0f
         setOrigins.forEach{ origin ->
-            val originObject = originsData.getOriginByID(origin)
+            val originObject = OriginsData.getOriginByID(origin)
             if (originObject != null) {
                 val probabilities = getBoosterRemainingOdds(setID, originObject, rarities)
                 var totalProbability = 1 - ((1 - probabilities[0]).pow(3) * (1 - probabilities[1]) * (1 - probabilities[2]))

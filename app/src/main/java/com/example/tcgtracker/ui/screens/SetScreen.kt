@@ -51,6 +51,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavKey
 import com.example.tcgtracker.R
+import com.example.tcgtracker.SetsData
 import com.example.tcgtracker.models.Set
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
@@ -123,7 +124,7 @@ fun SetScreen(
                 val uiColor = MaterialTheme.colorScheme.primaryContainer
 
                 // Get most probable set and its associated color
-                val setBooster = trackerUIState.setsData.getMostProbableSet(trackerUIState.originsData)
+                val setBooster = trackerViewModel.getMostProbableSet()
                 val setColor = setBooster?.first?.color ?: MaterialTheme.colorScheme.surface
 
                 BottomAppBar(
@@ -182,8 +183,8 @@ fun SetScreen(
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
-                val series = trackerUIState.setsData.getSeriesMap()
-                val colors = trackerUIState.setsData.getSetColors()
+                val series = trackerViewModel.getSeriesMap()
+                val colors = trackerViewModel.getSetColors()
 
                 series.forEach { element ->
                     val expansionsMap = getExpansionsMap(series, element.key)
