@@ -41,4 +41,34 @@ object Concepts {
     fun getPrettyRarity(rarity: String): String {
         return rarities[rarity] ?: ""
     }
+
+    fun getDiamondRarities(): List<String> {
+        val output = mutableListOf<String>()
+        rarities.forEach{ rarity ->
+            if (rarity.key.contains("DIAMOND")) {
+                output.add(rarity.key)
+            }
+        }
+        return output
+    }
+
+    fun getStarCrownRarities(): List<String> {
+        val output = mutableListOf<String>()
+        rarities.forEach{ rarity ->
+            if (rarity.key.contains("STAR") || rarity.key.contains("CROWN")) {
+                output.add(rarity.key)
+            }
+        }
+        return output
+    }
+
+    fun getShinyRarities(): List<String> {
+        val output = mutableListOf<String>()
+        rarities.forEach{ rarity ->
+            if (rarity.key.contains("SHINY")) {
+                output.add(rarity.key)
+            }
+        }
+        return output
+    }
 }
