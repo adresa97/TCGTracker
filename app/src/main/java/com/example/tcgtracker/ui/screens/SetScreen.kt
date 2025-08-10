@@ -5,21 +5,29 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.clipScrollableContainer
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.ScrollableState
 import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.absolutePadding
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.BottomSheetScaffold
 import androidx.compose.material3.Checkbox
@@ -42,6 +50,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
@@ -55,6 +64,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavKey
+import com.example.tcgtracker.BottomSheet
 import com.example.tcgtracker.Concepts
 import com.example.tcgtracker.FiltersManager
 import com.example.tcgtracker.R
@@ -100,7 +110,7 @@ fun SetScreen(
     var isFiltersSheet: Boolean by rememberSaveable { mutableStateOf(false) }
 
     val bottomBarHeight = 75.dp
-    val safeArea = 50.dp
+    val safeArea = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
 
     Surface(
         modifier = Modifier.background(MaterialTheme.colorScheme.surface)
@@ -154,161 +164,45 @@ fun SetScreen(
                 )
             },
             // Bottom sheet
-            sheetShape = RectangleShape,
             sheetDragHandle = {},
             sheetSwipeEnabled = false,
             sheetPeekHeight = bottomBarHeight + safeArea,
             sheetContainerColor = uiColor,
             sheetContentColor = uiColor,
+            sheetTonalElevation = 10.dp,
+            sheetShadowElevation = 10.dp,
             sheetContent = {
                 // Get most probable set and its associated color
                 val setBooster = trackerViewModel.getMostProbableSet(currentFilters)
                 val setColor = setBooster?.first?.color ?: MaterialTheme.colorScheme.surface
 
-                Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    // Peek area
-                    Row(
-                        modifier = Modifier.fillMaxWidth().height(bottomBarHeight),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceEvenly
-                    ) {
-                        IconButton(
-                            onClick = {
-                                scaffoldScope.launch {
-                                    isFiltersSheet = false
-                                    if (!isSheetExpanded) {
-                                        scaffoldState.bottomSheetState.expand()
-                                        isSheetExpanded = true
-                                    }
+                BottomSheet(
+                    title = setBooster?.second?.name ?: "",
+                    uiColor = uiColor,
+                    trackerColor = setColor,
+                    peekArea = bottomBarHeight,
+                    safeArea = safeArea,
+                    isFiltersSheet = isFiltersSheet,
+                    onIconClick = { isFilters ->
+                        scaffoldScope.launch {
+                            if (!isSheetExpanded) {
+                                isFiltersSheet = isFilters
+                                isSheetExpanded = true
+                                scaffoldState.bottomSheetState.expand()
+                            } else {
+                                if (isFiltersSheet == isFilters) {
+                                    scaffoldState.bottomSheetState.partialExpand()
+                                    isSheetExpanded = false
+                                } else {
+                                    isFiltersSheet = isFilters
                                 }
                             }
-                        ) {
-                            Icon(
-                                painter = painterResource(R.drawable.info),
-                                tint = MaterialTheme.colorScheme.onSurface,
-                                contentDescription = null
-                            )
                         }
-                        Box(
-                            modifier = Modifier.fillMaxHeight(0.6f).fillMaxWidth(0.75f)
-                                .background(setColor, RoundedCornerShape(percent = 50))
-                                .shadow(
-                                    elevation = 3.dp,
-                                    shape = RoundedCornerShape(percent = 50),
-                                    clip = true,
-                                    ambientColor = Color(0.0f, 0.0f, 0.0f, 0.0f),
-                                    spotColor = PocketWhite.apply{ alpha(100) }
-                                )
-                                .border(2.dp, uiColor.apply{ alpha(50) }, RoundedCornerShape(percent = 50))
-                                .wrapContentHeight(align = Alignment.CenterVertically)
-                                .wrapContentWidth(align = Alignment.CenterHorizontally),
-                        ) {
-                            Text(
-                                text = setBooster?.second?.name ?: "",
-                                textAlign = TextAlign.Center,
-                                style = TextStyle.Default.copy(
-                                    fontSize = 26.sp,
-                                    color = PocketWhite,
-                                    shadow = Shadow(
-                                        color = PocketBlack,
-                                        blurRadius = 10.0f
-                                    )
-                                )
-                            )
-                        }
-                        IconButton(
-                            onClick = {
-                                scaffoldScope.launch {
-                                    isFiltersSheet = true
-                                    if (!isSheetExpanded) {
-                                        scaffoldState.bottomSheetState.expand()
-                                        isSheetExpanded = true
-                                    }
-                                }
-                            }
-                        ) {
-                            Icon(
-                                painter = painterResource(R.drawable.filter_alt),
-                                tint = MaterialTheme.colorScheme.onSurface,
-                                contentDescription = null
-                            )
-                        }
+                    },
+                    onFiltersChanged = {
+                        currentFilters = FiltersManager.getActiveFilters()
                     }
-
-                    // Divider
-                    val hsv = colorToHSV(uiColor)
-                    hsv[2] = 0.5f
-                    val dividerColor = Color(hsvToColorInt(hsv))
-
-                    HorizontalDivider(
-                        thickness = 2.dp,
-                        color = dividerColor
-                    )
-
-                    // Extendable sheet content
-                    Box(
-                        modifier = Modifier.fillMaxWidth()
-                            .absolutePadding(
-                                left = safeArea,
-                                right = safeArea,
-                                top = safeArea,
-                                bottom = safeArea * 2
-                            )
-                            .background(
-                                color = MaterialTheme.colorScheme.surface,
-                                shape = RoundedCornerShape(10.dp)
-                            ),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        if (isFiltersSheet) {
-                            val filters = FiltersManager.getFilters()
-                            Row(
-                                modifier = Modifier.fillMaxWidth()
-                                    .padding(all = 10.dp),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.Top
-                            ) {
-                                // Diamonds Column
-                                RaritiesFilterColumn(
-                                    filtersState = filters,
-                                    rarities = Concepts.getDiamondRarities(),
-                                    onCheckChange = {
-                                        currentFilters = FiltersManager.getActiveFilters()
-                                    },
-                                    modifier = Modifier.weight(1f)
-                                )
-
-                                // Star and crown column
-                                RaritiesFilterColumn(
-                                    filtersState = filters,
-                                    rarities = Concepts.getStarCrownRarities(),
-                                    onCheckChange = {
-                                        currentFilters = FiltersManager.getActiveFilters()
-                                    },
-                                    modifier = Modifier.weight(1f)
-                                )
-
-                                // Shiny column
-                                RaritiesFilterColumn(
-                                    filtersState = filters,
-                                    rarities = Concepts.getShinyRarities(),
-                                    onCheckChange = {
-                                        currentFilters = FiltersManager.getActiveFilters()
-                                    },
-                                    modifier = Modifier.weight(1f)
-                                )
-                            }
-                        } else {
-                            Text(
-                                text = "Pues aquí irían los calculos",
-                                color = PocketWhite
-                            )
-                        }
-                    }
-                }
+                )
             }
             // Content
         ) { innerPadding ->
@@ -326,54 +220,19 @@ fun SetScreen(
                         series = element.key,
                         expansions = expansionsMap,
                         colors = colors,
+                        isSheetExpanded = isSheetExpanded,
                         isListView = isListMode,
-                        onSetTap = onSetTap
+                        onSetTap = { set -> onSetTap(set) }
                     )
                 }
             }
-        }
-    }
-}
 
-@Composable
-fun RaritiesFilterColumn(
-    filtersState: Map<String, Boolean>,
-    rarities: List<String>,
-    onCheckChange: () -> Unit = {},
-    modifier: Modifier = Modifier
-)
-{
-    Column(
-        modifier = modifier,
-        verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.Start
-    ) {
-        rarities.forEach { rarity ->
-            Row(
-                modifier = Modifier
-                    .height(40.dp)
-                    .fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                var isFilterActive: Boolean by rememberSaveable {
-                    mutableStateOf(filtersState[rarity]!!)
-                }
-                Checkbox(
-                    modifier = Modifier,
-                    checked = isFilterActive,
-                    onCheckedChange = { isActive ->
-                        if (isActive) {
-                            FiltersManager.addFilter(rarity)
-                        } else {
-                            FiltersManager.removeFilter(rarity)
-                        }
-                        onCheckChange()
-                        isFilterActive = isActive
-                    }
-                )
-                Text(
-                    text = Concepts.getPrettyRarity(rarity),
-                    color = MaterialTheme.colorScheme.onSurface
+            if (isSheetExpanded) {
+                Box(
+                    modifier = Modifier.fillMaxSize()
+                        .padding(innerPadding)
+                        .alpha(0.6f)
+                        .background(PocketBlack)
                 )
             }
         }
@@ -392,12 +251,14 @@ fun SeriesGroup(
     series: String,
     expansions: Map<String, List<Set>>,
     colors: Map<String, Color>,
+    isSheetExpanded: Boolean,
     isListView: Boolean,
     onSetTap: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(
-        modifier = modifier.fillMaxSize()
+        modifier = modifier.fillMaxSize(),
+        userScrollEnabled = !isSheetExpanded
     ) {
         stickyHeader {
             Row(
@@ -426,12 +287,14 @@ fun SeriesGroup(
                         CollectionList(
                             expansion.value,
                             colors,
+                            !isSheetExpanded,
                             onSetTap,
                             Modifier.padding(horizontal = 20.dp)
                         )
                     } else {
                         CollectionRow(
                             expansion.value,
+                            !isSheetExpanded,
                             onSetTap,
                             Modifier.padding(horizontal = 20.dp)
                         )
@@ -446,12 +309,13 @@ fun SeriesGroup(
 fun CollectionList(
     sets: List<Set>,
     colors: Map<String, Color>,
+    isEnabled: Boolean,
     onSetTap: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     sets.forEach { set ->
         val color: Color = colors[set.set] ?: MaterialTheme.colorScheme.primaryContainer
-        CollectionCell(set, color, onSetTap)
+        CollectionCell(set, color, isEnabled, onSetTap)
     }
 }
 
@@ -459,14 +323,23 @@ fun CollectionList(
 fun CollectionCell(
     set: Set,
     color: Color,
+    isEnabled: Boolean,
     onSetTap: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val fontColor = PocketBlack
+
+    var backColor = set.color
+    val hsv = colorToHSV(color)
+    if (hsv[1] < 0.4f) hsv[1] = 0.4f
+    else if (hsv[1] > 0.6f) hsv[1] = 0.6f
+    hsv[2] = 0.9f
+    backColor = Color(hsvToColorInt(hsv))
+
     Box(
-        modifier = modifier.background(color, RoundedCornerShape(10))
+        modifier = modifier.background(backColor, RoundedCornerShape(10))
             .height(50.dp)
-            .clickable{ onSetTap(set.set) }
+            .clickable(enabled = isEnabled) { onSetTap(set.set) }
     ) {
         Row(
             modifier = Modifier.fillMaxSize().padding(horizontal = 12.dp),
@@ -524,6 +397,7 @@ fun CollectionCell(
 @Composable
 fun CollectionRow(
     sets: List<Set>,
+    isEnabled: Boolean,
     onSetTap: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -538,7 +412,7 @@ fun CollectionRow(
                 collection = set.set,
                 resourceID = set.cover.id,
                 modifier = Modifier.weight(1f)
-                    .clickable { onSetTap(set.set) }
+                    .clickable(enabled = isEnabled) { onSetTap(set.set) }
             )
 
             i++

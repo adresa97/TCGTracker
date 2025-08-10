@@ -95,14 +95,14 @@ class TrackerViewModel() : ViewModel() {
     // Functions to change data from objects outside viewModel
     fun changeOwnedCardState(context: Context, set: String, cardIndex: Int) {
         CardsData.changeCardState(set, cardIndex)
-        val cardList = getPrettyCardsList(context, set)
+        val cardList = getRawCardList(context, set)
         SetsData.recalculateSetData(cardList, set)
     }
 
     fun reloadOwnedCardState(context: Context, sets: List<String>) {
         CardsData.reloadUserJSONSData(context, sets)
         sets.forEach { set ->
-            val cardList = getPrettyCardsList(context, set)
+            val cardList = getRawCardList(context, set)
             SetsData.recalculateSetData(cardList, set)
         }
     }

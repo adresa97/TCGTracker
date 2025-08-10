@@ -31,8 +31,13 @@ data class Set(
 
 data class OwnedSetData(
     val all: OwnedData,
-    val byBooster: Map<String, Map<String, OwnedData>>,
-    val byRarity: Map<String, OwnedData>
+    val byBooster: Map<String, OwnedBoosterData>,
+    val byRarity: Map<String, OwnedData>?
+)
+
+data class OwnedBoosterData(
+    val all: OwnedData,
+    val byRarity: Map<String, OwnedData>?
 )
 
 data class OwnedData(

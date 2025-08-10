@@ -16,7 +16,7 @@ object OriginsData {
 
     fun loadJSONData(context: Context) {
         val jsonString = ReadJSONFromAssets(context, ASSETS_ORIGINS_DATA_FILE_PATH)
-        val jsonData = Gson().fromJson(jsonString, Array<JsonOrigin>::class.java).toList()
+        val jsonData = Gson().fromJson(jsonString, Array<JsonOrigin>::class.java).asList()
             .map{ origin ->
                 val color = Color(origin.color[0]/255, origin.color[1]/255, origin.color[2]/255)
                 Origin(
@@ -95,5 +95,9 @@ object OriginsData {
 
     fun getOriginByID(id: String): Origin? {
         return originsData.find{ origin -> origin.id == id }
+    }
+
+    fun isOriginPromo(id: String): Boolean {
+        return originsData.find{ origin -> origin.id == id }?.type == "PROMO"
     }
 }
