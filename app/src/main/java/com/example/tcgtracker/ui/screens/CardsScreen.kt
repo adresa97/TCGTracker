@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
@@ -70,6 +71,8 @@ import com.example.tcgtracker.OriginsData
 import com.example.tcgtracker.R
 import com.example.tcgtracker.SetsData
 import com.example.tcgtracker.models.Card
+import com.example.tcgtracker.models.Origin
+import com.example.tcgtracker.models.Set
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
 import com.example.tcgtracker.ui.theme.PocketWhite
@@ -79,6 +82,8 @@ import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV
 import com.smarttoolfactory.extendedcolors.util.HSVUtil.hsvToColorInt
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
+import kotlin.math.pow
+import kotlin.text.contains
 
 @Serializable
 data class CardsScreen(val currentSet: String): NavKey
@@ -219,6 +224,20 @@ fun CardsScreen(
                     },
                     onFiltersChanged = {
                         currentFilters = FiltersManager.getActiveFilters()
+                    },
+                    infoScreen = {
+                        val boostersIDs = SetsData.getSetFromID(currentSet)?.origins
+                        val boosters = mutableListOf<Origin>()
+                        boostersIDs?.forEach{ id ->
+                            val origin = OriginsData.getOriginByID(id)
+                            if (origin != null) boosters.add(origin)
+                        }
+
+                        InfoBoosterSheet(
+                            setID = currentSet,
+                            boosters = boosters.toList(),
+                            rarities = currentFilters
+                        )
                     }
                 )
             }
@@ -334,11 +353,18 @@ fun CardListView(
                 }
                 else -> "Todos"
             }
-            val color = when (booster) {
+            var color = when (booster) {
                 "" -> MaterialTheme.colorScheme.primaryContainer
                 "Desbloqueable" -> Color(0xFFCCCCCC)
                 "Todos" -> Color(0xFFefefef)
-                else -> colors[booster] ?: MaterialTheme.colorScheme.primaryContainer
+                else -> {
+                    val rawColor = colors[booster] ?: MaterialTheme.colorScheme.primaryContainer
+                    val hsv = colorToHSV(rawColor)
+                    if (hsv[1] < 0.4f) hsv[1] = 0.4f
+                    else if (hsv[1] > 0.6f) hsv[1] = 0.6f
+                    hsv[2] = 0.9f
+                    Color(hsvToColorInt(hsv))
+                }
             }
 
             CardBullet(
@@ -411,14 +437,14 @@ fun CardBullet(
         uncheckedCheckmarkColor = color,
         checkedBoxColor = PocketBlack,
         uncheckedBoxColor = color,
-        disabledCheckedBoxColor = color,
+        disabledCheckedBoxColor = PocketBlack,
         disabledUncheckedBoxColor = color,
         disabledIndeterminateBoxColor = color,
         checkedBorderColor = PocketBlack,
         uncheckedBorderColor = PocketBlack,
-        disabledBorderColor = color,
-        disabledUncheckedBorderColor = color,
-        disabledIndeterminateBorderColor = color
+        disabledBorderColor = PocketBlack,
+        disabledUncheckedBorderColor = PocketBlack,
+        disabledIndeterminateBorderColor = PocketBlack
     )
     Box(
         modifier = modifier
@@ -483,6 +509,143 @@ fun CardBullet(
                     color = fontColor
                 )
             }
+        }
+    }
+}
+
+@Composable
+fun InfoBoosterSheet(
+    setID: String,
+    boosters: List<Origin>,
+    rarities: List<String>,
+    modifier: Modifier = Modifier
+) {
+    LazyColumn(
+        modifier = modifier
+            .fillMaxWidth()
+            .heightIn(0.dp, 300.dp)
+            .padding(all = 10.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(5.dp)
+    ) {
+        if (!setID.contains("P-")) {
+            if (boosters.isNotEmpty()) {
+                items(count = boosters.size) { index ->
+                    InfoBoosterElement(
+                        set = setID,
+                        booster = boosters[index],
+                        rarities = rarities
+                    )
+                }
+            } else {
+                item {
+                    Text(
+                        text = "No se encontraron sobres en ${setID}",
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                }
+            }
+        } else {
+            item {
+                Text(
+                    text = "${setID} es una colección promocional",
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+            }
+        }
+    }
+}
+
+@Composable
+fun InfoBoosterElement(
+    set: String,
+    booster: Origin,
+    rarities: List<String>,
+    modifier: Modifier = Modifier
+) {
+    var boosterColor = booster.color
+    val hsv = colorToHSV(boosterColor)
+    if (hsv[1] < 0.4f) hsv[1] = 0.4f
+    else if (hsv[1] > 0.6f) hsv[1] = 0.6f
+    hsv[2] = 0.9f
+    boosterColor = Color(hsvToColorInt(hsv))
+
+    val fontColor = MaterialTheme.colorScheme.surface
+
+    val probabilities = SetsData.getBoosterRemainingOdds(set, booster, rarities)
+    val firstOdd = "%.1f".format(
+        probabilities[0] * 100.0f
+    )
+    val fourthOdd = "%.1f".format(
+        probabilities[1] * 100.0f
+    )
+    val fifthOdd = "%.1f".format(
+        probabilities[2] * 100.0f
+    )
+    val totalOdd = "%.3f".format(
+        (1 - ((1 - probabilities[0]).pow(3)) * (1 - probabilities[1]) * (1 - probabilities[2])) * 100.0f
+    )
+
+    Column(
+        modifier = modifier.fillMaxWidth()
+            .background(boosterColor, RoundedCornerShape(5.dp))
+            .padding(horizontal = 8.dp),
+        verticalArrangement = Arrangement.spacedBy(5.dp)
+    ) {
+        Box(
+            modifier = Modifier.fillMaxWidth()
+                .offset(y = 4.dp)
+        ) {
+            Text(
+                text = "${booster.name}",
+                fontSize = 18.sp,
+                color = fontColor
+            )
+        }
+
+        Box(
+            modifier = Modifier.fillMaxWidth()
+                .offset(y = (-4).dp)
+        ) {
+            // Each card odds
+            Row(
+                modifier = Modifier.align(Alignment.CenterStart)
+                    .absolutePadding(left = 15.dp)
+                    .fillMaxWidth(0.7f),
+                verticalAlignment = Alignment.Bottom
+            ) {
+                Text(
+                    modifier = Modifier.weight(1.0f),
+                    text = "3: ${firstOdd}%",
+                    textAlign = TextAlign.Left,
+                    fontSize = 14.sp,
+                    color = fontColor
+                )
+                Text(
+                    modifier = Modifier.weight(1.0f),
+                    text = "4: ${fourthOdd}%",
+                    textAlign = TextAlign.Left,
+                    fontSize = 14.sp,
+                    color = fontColor
+                )
+                Text(
+                    modifier = Modifier.weight(1.0f),
+                    text = "5: ${fifthOdd}%",
+                    textAlign = TextAlign.Left,
+                    fontSize = 14.sp,
+                    color = fontColor
+                )
+            }
+
+            // Total odd
+            Text(
+                modifier = Modifier.align(Alignment.CenterEnd),
+                text = "${totalOdd}%",
+                fontSize = 18.sp,
+                color = fontColor
+            )
         }
     }
 }

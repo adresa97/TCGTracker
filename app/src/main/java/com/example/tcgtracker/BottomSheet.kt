@@ -55,6 +55,7 @@ fun BottomSheet(
     peekArea: Dp,
     safeArea: Dp,
     isFiltersSheet: Boolean,
+    infoScreen: @Composable () -> Unit,
     onIconClick: (Boolean) -> Unit = {},
     onFiltersChanged: () -> Unit = {},
     modifier: Modifier = Modifier
@@ -107,12 +108,7 @@ fun BottomSheet(
                     onFiltersChanged = { onFiltersChanged() }
                 )
             } else {
-                val seriesMap = SetsData.getSeriesMap()
-                val activeFilters = FiltersManager.getActiveFilters()
-                InfoSheet(
-                    sets = seriesMap,
-                    rarities = activeFilters
-                )
+                infoScreen()
             }
         }
     }
@@ -127,6 +123,13 @@ fun PeekArea(
     onIconClick: (Boolean) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
+    var probableColor = trackerColor
+    val hsv = colorToHSV(probableColor)
+    if (hsv[1] < 0.4f) hsv[1] = 0.4f
+    else if (hsv[1] > 0.6f) hsv[1] = 0.6f
+    hsv[2] = 0.9f
+    probableColor = Color(hsvToColorInt(hsv))
+
     Row(
         modifier = modifier.fillMaxWidth().height(height),
         verticalAlignment = Alignment.CenterVertically,
@@ -145,7 +148,7 @@ fun PeekArea(
         }
         Box(
             modifier = Modifier.fillMaxHeight(0.6f).fillMaxWidth(0.75f)
-                .background(trackerColor, RoundedCornerShape(percent = 50))
+                .background(probableColor, RoundedCornerShape(percent = 50))
                 .shadow(
                     elevation = 3.dp,
                     shape = RoundedCornerShape(percent = 50),
@@ -180,34 +183,6 @@ fun PeekArea(
                 tint = MaterialTheme.colorScheme.onSurface,
                 contentDescription = null
             )
-        }
-    }
-}
-
-@Composable
-fun InfoSheet(
-    sets: Map<String, List<Set>>,
-    rarities: List<String>,
-    modifier: Modifier = Modifier
-) {
-    LazyColumn(
-        modifier = modifier
-            .fillMaxWidth()
-            .heightIn(0.dp, 300.dp)
-            .padding(all = 10.dp),
-        horizontalAlignment = Alignment.Start,
-        verticalArrangement = Arrangement.spacedBy(5.dp)
-    ) {
-        sets.forEach{ series ->
-            items(count = series.value.size) { index ->
-                val set = series.value[index]
-                if (!set.set.contains("P-")) {
-                    InfoSetElement(
-                        set = set,
-                        rarities = rarities
-                    )
-                }
-            }
         }
     }
 }
@@ -261,70 +236,6 @@ fun FiltersSheet(
             },
             modifier = Modifier.weight(1f)
         )
-    }
-}
-
-@Composable
-fun InfoSetElement(
-    set: Set,
-    rarities: List<String>,
-    modifier: Modifier = Modifier
-) {
-    var setColor = set.color
-    val hsv = colorToHSV(setColor)
-    if (hsv[1] < 0.4f) hsv[1] = 0.4f
-    else if (hsv[1] > 0.6f) hsv[1] = 0.6f
-    hsv[2] = 0.9f
-    setColor = Color(hsvToColorInt(hsv))
-
-    val fontColor = MaterialTheme.colorScheme.surface
-
-    var probableBooster = SetsData.getMostProbableBooster(set.set, rarities)
-    if (probableBooster == null) {
-        probableBooster = Pair(OriginsData.getOriginByID(set.origins[0])!!, 0.0f)
-    }
-
-    Column(
-        modifier = modifier.fillMaxWidth()
-            .background(setColor, RoundedCornerShape(5.dp))
-            .padding(horizontal = 8.dp),
-        verticalArrangement = Arrangement.spacedBy(5.dp)
-    ) {
-        Box(
-            modifier = Modifier.fillMaxWidth()
-                .offset(y = 4.dp)
-        ) {
-            Text(
-                text = "${set.name} (${set.set})",
-                fontSize = 18.sp,
-                color = fontColor
-            )
-        }
-
-        Box(
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Box(
-                modifier = Modifier.fillMaxWidth()
-                    .align(Alignment.CenterEnd)
-                    .offset(y = (-4).dp)
-            ) {
-                Text(
-                    modifier = Modifier.align(Alignment.CenterStart)
-                        .absolutePadding(left = 15.dp),
-                    text = probableBooster.first.name,
-                    fontSize = 16.sp,
-                    color = fontColor
-                )
-                val percentage = "%.3f".format(probableBooster.second)
-                Text(
-                    modifier = Modifier.align(Alignment.CenterEnd),
-                    text = "${percentage}%",
-                    fontSize = 16.sp,
-                    color = fontColor
-                )
-            }
-        }
     }
 }
 

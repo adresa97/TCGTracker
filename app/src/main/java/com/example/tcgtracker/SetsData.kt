@@ -117,7 +117,7 @@ object SetsData {
         val byRarity = mutableMapOf<String, OwnedData>()
         Concepts.getRarities().forEach{ rarity ->
             // Get this rarity list of cards
-            val rarityCards = cardList.stream().filter{ card -> card.rarity == rarity }
+            val rarityCards = cardList.stream().filter{ card -> card.rarity == rarity && !card.baby }
                 .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
 
             // If there is any card of this rarity
@@ -147,7 +147,7 @@ object SetsData {
         val byBooster = mutableMapOf<String, OwnedBoosterData>()
         boosters.forEach{ booster ->
             // Get this booster list of cards
-            val boosterCards = cardList.stream().filter{ card -> card.origins.contains(booster) }
+            val boosterCards = cardList.stream().filter{ card -> card.origins.contains(booster)}
                 .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
 
             // Calculate general total and owned cards count
@@ -166,7 +166,7 @@ object SetsData {
                 val rarityBoosterData = mutableMapOf<String, OwnedData>()
                 Concepts.getRarities().forEach{ rarity ->
                     // Get list of cards from this booster and rarity
-                    val rarityCards = boosterCards.stream().filter{ card -> card?.rarity == rarity }
+                    val rarityCards = boosterCards.stream().filter{ card -> card?.rarity == rarity && !card.baby }
                         .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
 
                     // Calculate total and owned cards count
@@ -202,6 +202,11 @@ object SetsData {
     // Get all sets of a series
     fun getSeriesMap(): Map<String, List<Set>> {
         return setList.groupBy({ set -> set.series })
+    }
+
+    // Get a set from its ID
+    fun getSetFromID(id: String): Set? {
+        return setList.firstOrNull{ set -> set.set == id }
     }
 
     // Get all sets IDs
@@ -317,7 +322,7 @@ object SetsData {
                         val cardOdd = origin.odds[rarity]?.get(i) ?: 0.0f
                         val totalOdd = (remainingCards * cardOdd) / 100.0f
                         probabilities[i] += totalOdd
-                        if (probabilities[i] > 100.0f) probabilities[i] = 100.0f
+                        if (probabilities[i] > 1.0f) probabilities[i] = 1.0f
                         else if (probabilities[i] < 0.0f) probabilities[i] = 0.0f
                     }
                 }
