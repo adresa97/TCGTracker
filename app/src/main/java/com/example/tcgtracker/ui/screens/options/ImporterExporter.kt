@@ -1,21 +1,20 @@
-package com.example.tcgtracker
+package com.example.tcgtracker.ui.screens.options
 
 import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
-import android.os.ParcelFileDescriptor
+import com.example.tcgtracker.models.CardsData
+import com.example.tcgtracker.models.SQLiteHandler
 import com.example.tcgtracker.models.ExternalJsonSet
+import com.example.tcgtracker.models.SQLOwnedCard
 import com.example.tcgtracker.utils.ReadJSONFromFile
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import okio.Path.Companion.toPath
-import java.io.File
-import java.io.FileOutputStream
 import java.io.IOException
 
-object CardsImporterExporter {
-    fun importFromJSON(context: Context, jsonUri: Uri): Pair<String, List<String>?> {
+object ImporterExporter {
+    fun importFromJSON(handler: SQLiteHandler, context: Context, jsonUri: Uri): Pair<String, List<String>?> {
         var jsonString = ""
         if (ContentResolver.SCHEME_CONTENT == jsonUri.scheme) {
             val cr: ContentResolver = context.contentResolver
@@ -27,33 +26,27 @@ object CardsImporterExporter {
         val type = object : TypeToken<Map<String, ExternalJsonSet>>() {}.type
         val externalData: Map<String, ExternalJsonSet> = Gson().fromJson(jsonString, type)
 
-        val extStorageDir = context.getExternalFilesDir(null)
-        val folder = File(extStorageDir, USER_CARDS_DATA_FOLDER_PATH)
-        folder.mkdirs()
-
         val setsList = mutableListOf<String>()
-        externalData.forEach { set ->
-            val key = if (set.key == "pA") "P-A" else set.key
-            val file = File(folder, "${key}.json")
-            val setString = GsonBuilder().setPrettyPrinting().create().toJson(set.value.values)
-
-            try {
-                val output = FileOutputStream(file)
-                output.write(setString.toByteArray())
-                output.close()
-                setsList.add(key)
-            } catch (e: IOException) {
-                e.printStackTrace()
-                return Pair("ERROR: Error al crear/actualizar ${key}.json", null)
+        val dataList = mutableListOf<SQLOwnedCard>()
+        externalData.forEach{ entry ->
+            val set = if (entry.key == "pA") "P-A" else entry.key
+            val cardList = CardsData.getCardList(context, handler, set)
+            for (i in 0 until entry.value.values.size) {
+                if (cardList.getOrNull(i) != null) {
+                    dataList.add(SQLOwnedCard(cardList[i].id, set, entry.value.values[i]))
+                }
             }
+            setsList.add(set)
         }
+
+        handler.saveCardsInBatch(dataList)
 
         return Pair("Archivo importado con éxito", setsList)
     }
 
-    fun exportToJSON(context: Context, targetFile: Uri): String {
+    fun exportToJSON(handler: SQLiteHandler, context: Context, targetFile: Uri): String {
         val jsonData: MutableMap<String, ExternalJsonSet> = mutableMapOf()
-        val ownedCards = CardsData.getOwnedCardsMap(context)
+        val ownedCards = CardsData.getOwnedCardsMap(context, handler)
         ownedCards.forEach { set->
             jsonData.put(set.key, ExternalJsonSet(set.value))
         }
@@ -72,4 +65,3 @@ object CardsImporterExporter {
         return "Archivo exportado con éxito en: ${targetFile.path}"
     }
 }
-

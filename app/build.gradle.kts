@@ -53,7 +53,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.navigation3)
     implementation(libs.androidx.material3.navigation3)
     implementation(libs.gson)
-    implementation(libs.java.sdk.tcgdex)
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
     implementation(libs.androidx.lifecycle.viewmodel.compose)

@@ -1,13 +1,14 @@
 package com.example.tcgtracker.ui
 
 import android.content.Context
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.ViewModel
-import com.example.tcgtracker.SetsData
-import com.example.tcgtracker.CardsData
-import com.example.tcgtracker.Concepts
-import com.example.tcgtracker.OriginsData
+import androidx.lifecycle.viewModelScope
+import com.example.tcgtracker.models.CardsData
+import com.example.tcgtracker.models.Concepts
+import com.example.tcgtracker.models.SQLiteHandler
+import com.example.tcgtracker.models.OriginsData
+import com.example.tcgtracker.models.SetsData
 import com.example.tcgtracker.models.Card
 import com.example.tcgtracker.models.Origin
 import com.example.tcgtracker.models.Set
@@ -15,6 +16,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 data class TrackerUIState(
     val isLoading: Boolean = false,
@@ -26,17 +28,29 @@ class TrackerViewModel() : ViewModel() {
     private val _uiState = MutableStateFlow(TrackerUIState())
     val uiState: StateFlow<TrackerUIState> = _uiState.asStateFlow()
 
-    // Functions to change state values
     fun changeViewMode() {
         _uiState.update { currentState ->
             currentState.copy(isListMode = !uiState.value.isListMode)
         }
     }
 
+    fun startLoading() {
+        _uiState.update { currentState ->
+            currentState.copy(isLoading = true)
+        }
+    }
+
+    fun endLoading() {
+        _uiState.update { currentState ->
+            currentState.copy(isLoading = false)
+        }
+    }
+
     // Functions to get data from objects outside viewModel
-    fun getPrettyCardsList(context: Context, set: String): List<Card> {
+    fun getPrettyCardsList(context: Context, handler: SQLiteHandler, set: String): List<Card> {
         return CardsData.getCardList(
             applicationContext = context,
+            handler = handler,
             set = set
         ).map{ card ->
             Card(
@@ -54,9 +68,10 @@ class TrackerViewModel() : ViewModel() {
         }
     }
 
-    fun getRawCardList(context: Context, set: String): List<Card> {
+    fun getRawCardList(context: Context, handler: SQLiteHandler, set: String): List<Card> {
         return CardsData.getCardList(
             applicationContext = context,
+            handler = handler,
             set = set
         )
     }
@@ -93,17 +108,25 @@ class TrackerViewModel() : ViewModel() {
     }
 
     // Functions to change data from objects outside viewModel
-    fun changeOwnedCardState(context: Context, set: String, cardIndex: Int) {
-        CardsData.changeCardState(set, cardIndex)
-        val cardList = getRawCardList(context, set)
-        SetsData.recalculateSetData(cardList, set)
+    fun changeOwnedCardState(context: Context, handler: SQLiteHandler, set: String, cardIndex: Int) {
+        viewModelScope.launch {
+            startLoading()
+            CardsData.changeCardState(handler, set, cardIndex)
+            val cardList = getRawCardList(context, handler, set)
+            SetsData.recalculateSetData(handler, cardList, set)
+            endLoading()
+        }
     }
 
-    fun reloadOwnedCardState(context: Context, sets: List<String>) {
-        CardsData.reloadUserJSONSData(context, sets)
-        sets.forEach { set ->
-            val cardList = getRawCardList(context, set)
-            SetsData.recalculateSetData(cardList, set)
+    fun reloadOwnedCardState(context: Context, handler: SQLiteHandler, sets: List<String>) {
+        viewModelScope.launch {
+            startLoading()
+            CardsData.reloadUserData(handler, sets)
+            sets.forEach { set ->
+                val cardList = getRawCardList(context, handler, set)
+                SetsData.recalculateSetData(handler, cardList, set)
+            }
+            endLoading()
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.tcgtracker.ui.screens
+package com.example.tcgtracker.ui.screens.options
 
 import android.content.Context
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -25,8 +26,13 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -35,9 +41,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavKey
-import com.example.tcgtracker.CardsData
-import com.example.tcgtracker.CardsImporterExporter
 import com.example.tcgtracker.R
+import com.example.tcgtracker.models.SQLiteHandler
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
 import com.example.tcgtracker.utils.GetCustomContents
@@ -52,9 +57,14 @@ data object OptionsScreen: NavKey
 @Composable
 fun OptionsScreen(
     context: Context,
+    handler: SQLiteHandler,
     onBackTap: () -> Unit,
     trackerViewModel: TrackerViewModel = viewModel()
 ) {
+    var isLoading: Boolean by rememberSaveable {
+        mutableStateOf(trackerViewModel.uiState.value.isLoading)
+    }
+
     // Get coroutine scope and host state of snackbar
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
@@ -113,10 +123,16 @@ fun OptionsScreen(
                 val jsonPicker = rememberLauncherForActivityResult(
                     contract = GetCustomContents(isMultiple = false),
                     onResult = { uris ->
-                        val message = CardsImporterExporter.importFromJSON(context, uris[0])
-                        if (!message.second.isNullOrEmpty()) {
-                            trackerViewModel.reloadOwnedCardState(context, message.second!!)
-                        }
+                            val message =
+                                ImporterExporter.importFromJSON(handler, context, uris[0])
+                            if (!message.second.isNullOrEmpty()) {
+                                trackerViewModel.reloadOwnedCardState(
+                                    context,
+                                    handler,
+                                    message.second!!
+                                )
+                            }
+
                         scope.launch {
                             snackbarHostState.showSnackbar(message.first)
                         }
@@ -126,7 +142,9 @@ fun OptionsScreen(
                 val storePicker = rememberLauncherForActivityResult(
                     contract = SetCustomContent(),
                     onResult = { uris ->
-                        val message = CardsImporterExporter.exportToJSON(context, uris[0])
+                            val message =
+                                ImporterExporter.exportToJSON(handler, context, uris[0])
+
                         scope.launch {
                             snackbarHostState.showSnackbar(message)
                         }
@@ -156,6 +174,16 @@ fun OptionsScreen(
                         icon = R.drawable.upload,
                         text = "Exportar datos"
                     )
+                }
+            }
+
+            // Loading Overlay
+            if (trackerViewModel.uiState.collectAsState().value.isLoading) {
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator()
                 }
             }
         }

@@ -1,4 +1,6 @@
-package com.example.tcgtracker
+package com.example.tcgtracker.ui.screens.binder
+
+import com.example.tcgtracker.models.Concepts
 
 object FiltersManager {
     private val filtersMap = Concepts.getRarities()

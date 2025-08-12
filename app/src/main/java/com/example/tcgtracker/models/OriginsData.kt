@@ -1,13 +1,9 @@
-package com.example.tcgtracker
+package com.example.tcgtracker.models
 
 import android.content.Context
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.graphics.Color
-import com.example.tcgtracker.models.JsonOrigin
-import com.example.tcgtracker.models.Origin
 import com.example.tcgtracker.utils.ReadJSONFromAssets
 import com.google.gson.Gson
-import kotlinx.serialization.builtins.serializer
 
 const val ASSETS_ORIGINS_DATA_FILE_PATH = "PTCGPocket/origins.json"
 

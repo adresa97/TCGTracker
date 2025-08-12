@@ -1,4 +1,4 @@
-package com.example.tcgtracker.ui.screens
+package com.example.tcgtracker.ui.screens.binder
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -50,12 +50,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavKey
-import com.example.tcgtracker.BottomSheet
-import com.example.tcgtracker.FiltersManager
-import com.example.tcgtracker.OriginsData
 import com.example.tcgtracker.R
-import com.example.tcgtracker.SetsData
+import com.example.tcgtracker.models.OriginsData
 import com.example.tcgtracker.models.Set
+import com.example.tcgtracker.models.SetsData
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
 import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV

@@ -1,35 +1,18 @@
-package com.example.tcgtracker
+package com.example.tcgtracker.models
 
 import android.content.Context
 import androidx.compose.ui.graphics.Color
-import com.example.tcgtracker.models.Card
-import com.example.tcgtracker.models.CoverImage
-import com.example.tcgtracker.models.InnerJsonSet
-import com.example.tcgtracker.models.Origin
-import com.example.tcgtracker.models.OwnedBoosterData
-import com.example.tcgtracker.models.OwnedData
-import com.example.tcgtracker.models.OwnedSetData
-import com.example.tcgtracker.models.Set
 import com.example.tcgtracker.utils.ReadJSONFromAssets
-import com.example.tcgtracker.utils.ReadJSONFromFile
 import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import com.google.gson.reflect.TypeToken
-import java.io.File
-import java.io.FileOutputStream
-import java.io.IOException
 import kotlin.math.pow
 
 const val ASSETS_SETS_DATA_FILE_PATH = "PTCGPocket/sets.json"
-const val USER_SETS_DATA_FILE_PATH = "PTCGPocket/owned/sets.json"
 
 object SetsData {
     private val setList = mutableListOf<Set>()
-    private var userFile: File? = null
-    private var modified: Boolean = false
 
     // Populate collections list
-    fun loadJSONData(context: Context) {
+    fun loadJSONData(context: Context, handler: SQLiteHandler) {
         // If data already stored end function
         if (!setList.isEmpty()) return
 
@@ -37,31 +20,16 @@ object SetsData {
         val innerJsonString = ReadJSONFromAssets(context, ASSETS_SETS_DATA_FILE_PATH)
         val innerJsonData = Gson().fromJson(innerJsonString, Array<InnerJsonSet>::class.java).asList()
 
-        // If user data file not located, find it
-        if(userFile == null) {
-            val extStorageDir = context.getExternalFilesDir(null)
-            userFile = File(extStorageDir, USER_SETS_DATA_FILE_PATH)
-            userFile!!.parentFile!!.mkdirs()
-        }
-
-        // If existing, get user data (subjective data of every set)
-        var userJsonData: Map<String, OwnedSetData> = mutableMapOf()
-        try {
-            val file = File(userFile, "sets.json")
-            val userJsonString = ReadJSONFromFile(file.inputStream())
-            val type = object : TypeToken<Map<String, OwnedSetData>>() {}.type
-            userJsonData = Gson().fromJson(userJsonString, type)
-        } catch(e: IOException) {
-            e.printStackTrace()
-        }
-
-        // Map both data into collections
+        // Map data into collection
         innerJsonData.forEach { set ->
             // Get cover enum from set code
             val cover = CoverImage.from(set.set)
 
             // Turn set color string to Color object
             val color = Color(set.color[0]/255, set.color[1]/255, set.color[2]/255)
+
+            // Get precalculations
+            val precalculations = getPrecalculations(handler, set.set, set.origins)
 
             // Add this set entry to collections.
             // If calculated numbers aren't stored in user data, calculate them from cards data
@@ -74,43 +42,98 @@ object SetsData {
                 color = color,
                 cardCount = set.cardCount,
                 origins = set.origins,
-                numbers = userJsonData[set.set] ?: calculateNumbers(
-                    cardList = CardsData.getCardList(context, set.set)
+                numbers = precalculations ?: calculateNumbers(
+                    handler = handler,
+                    set = set.set,
+                    cardList = CardsData.getCardList(context, handler, set.set)
                 )
             ))
         }
     }
 
-    // Update user data JSON to keep changes
-    fun updateUserJSON() {
-        // If user data file is not located then there's no data to store
-        if (setList.isEmpty() || userFile == null || !modified) return
+    // Get user precalculations
+    private fun getPrecalculations(handler: SQLiteHandler, set: String, origins: List<String>): OwnedSetData? {
+        // Full set data
+        val setData = handler.getSetPrecalculations(set = set)
+        if (setData.second <= 0) return null
+        val all = OwnedData(
+            ownedCards = setData.first,
+            totalCards = setData.second
+        )
 
-        // Get numbers from all sets
-        val allSetsNumbers = mutableMapOf<String, OwnedSetData>()
-        setList.forEach { set ->
-            allSetsNumbers.put(set.set, set.numbers)
+        // From each rarity data
+        val byRarity = mutableMapOf<String, OwnedData>()
+        Concepts.getRarities().forEach{ rarity ->
+            // Get this rarity data
+            val rarityData = handler.getSetPrecalculations(set = set, rarity = rarity)
+            if (rarityData.second > 0) {
+                val ownedRarity = OwnedData(
+                    ownedCards = rarityData.first,
+                    totalCards = rarityData.second
+                )
+                byRarity.put(rarity, ownedRarity)
+            }
         }
 
-        // Turn map to json strings
-        val jsonString = GsonBuilder().setPrettyPrinting().create().toJson(allSetsNumbers)
+        // From each origin data
+        val byBooster = mutableMapOf<String, OwnedBoosterData>()
+        origins.forEach{ origin ->
+            // Get this origin general data
+            val originData = handler.getSetPrecalculations(set = set, booster = origin)
+            val ownedOrigin = OwnedData(
+                ownedCards = originData.first,
+                totalCards = originData.second
+            )
 
-        // Try to create or overwrite json file
-        try {
-            val output = FileOutputStream(userFile)
-            output.write(jsonString.toByteArray())
-            output.close()
-        } catch (e: IOException) {
-            e.printStackTrace()
+            if (OriginsData.isOriginPromo(origin)) {
+                byBooster.put(origin, OwnedBoosterData(
+                    all = ownedOrigin,
+                    byRarity = null
+                ))
+            } else {
+                val byBoosterRarity = mutableMapOf<String, OwnedData>()
+                Concepts.getRarities().forEach{ rarity ->
+                    val originRarityData = handler.getSetPrecalculations(set, origin, rarity)
+                    if (originRarityData.second > 0) {
+                        val ownedBoosterRarity = OwnedData(
+                            ownedCards = originRarityData.first,
+                            totalCards = originRarityData.second
+                        )
+                        byBoosterRarity.put(rarity, ownedBoosterRarity)
+                    }
+                }
+                byBooster.put(origin, OwnedBoosterData(
+                    all = ownedOrigin,
+                    byRarity = byBoosterRarity
+                ))
+            }
         }
+
+        return OwnedSetData(
+            all = all,
+            byBooster = byBooster,
+            byRarity = byRarity.ifEmpty { null }
+        )
     }
 
     // Calculate all needed numbers from a list of cards and boosters
-    private fun calculateNumbers(cardList: List<Card>): OwnedSetData {
+    private fun calculateNumbers(handler: SQLiteHandler, set: String, cardList: List<Card>): OwnedSetData {
+        // List of data to insert or replace
+        val dataList = mutableListOf<SQLOwnedSet>()
+
         // Full set card data
+        val allOwned = cardList.stream().filter{ card -> card.owned }.count().toInt()
+        val allTotal = cardList.count()
         val all = OwnedData(
-            totalCards = cardList.count(),
-            ownedCards = cardList.stream().filter{ card -> card.owned }.count().toInt()
+            ownedCards = allOwned,
+            totalCards = allTotal
+        )
+        dataList.add(
+            SQLOwnedSet(
+                set = set,
+                owned = allOwned,
+                total = allTotal
+            )
         )
 
         // Calculate total and owned cards from each rarity
@@ -123,9 +146,19 @@ object SetsData {
             // If there is any card of this rarity
             if (rarityCards.isNotEmpty()) {
                 // Calculate total and owned cards count
+                val rarityOwned = rarityCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
+                val rarityTotal = rarityCards.count()
                 val ownedRarityData = OwnedData(
-                    totalCards = rarityCards.count(),
-                    ownedCards = rarityCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
+                    ownedCards = rarityOwned,
+                    totalCards = rarityTotal
+                )
+                dataList.add(
+                    SQLOwnedSet(
+                        set = set,
+                        rarity = rarity,
+                        owned = rarityOwned,
+                        total = rarityTotal
+                    )
                 )
 
                 // Add this data to rarity map
@@ -151,9 +184,19 @@ object SetsData {
                 .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
 
             // Calculate general total and owned cards count
+            val boosterOwned = boosterCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
+            val boosterTotal = boosterCards.count()
             val ownedBoosterData = OwnedData(
-                totalCards = boosterCards.count(),
-                ownedCards = boosterCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
+                ownedCards = boosterOwned,
+                totalCards = boosterTotal
+            )
+            dataList.add(
+                SQLOwnedSet(
+                    set = set,
+                    booster = booster,
+                    owned = boosterOwned,
+                    total = boosterTotal
+                )
             )
 
             // If promo booster put data in map, otherwise calculate for each rarity
@@ -170,9 +213,20 @@ object SetsData {
                         .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
 
                     // Calculate total and owned cards count
+                    val rarityOwned = rarityCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
+                    val rarityTotal = rarityCards.count()
                     val ownedRarityData = OwnedData(
-                        totalCards = rarityCards.count(),
-                        ownedCards = rarityCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
+                        ownedCards = rarityOwned,
+                        totalCards = rarityTotal
+                    )
+                    dataList.add(
+                        SQLOwnedSet(
+                            set = set,
+                            booster = booster,
+                            rarity = rarity,
+                            owned = rarityOwned,
+                            total = rarityTotal
+                        )
                     )
 
                     // Add this data to rarity map
@@ -185,6 +239,8 @@ object SetsData {
             }
         }
 
+        handler.saveSetsInBatch(dataList)
+
         return OwnedSetData(
             all = all,
             byBooster = byBooster,
@@ -192,11 +248,9 @@ object SetsData {
         )
     }
 
-    fun recalculateSetData(cardList: List<Card>, setCode: String) {
-        val newCalculations = calculateNumbers(cardList)
+    fun recalculateSetData(handler: SQLiteHandler, cardList: List<Card>, setCode: String) {
+        val newCalculations = calculateNumbers(handler, setCode, cardList)
         setList.firstOrNull{ set -> set.set == setCode }?.numbers = newCalculations
-
-        modified = true
     }
 
     // Get all sets of a series

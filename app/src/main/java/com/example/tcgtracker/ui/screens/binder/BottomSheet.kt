@@ -1,4 +1,4 @@
-package com.example.tcgtracker
+package com.example.tcgtracker.ui.screens.binder
 
 import android.graphics.Color.alpha
 import androidx.compose.foundation.background
@@ -11,12 +11,9 @@ import androidx.compose.foundation.layout.absolutePadding
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxColors
@@ -41,7 +38,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.tcgtracker.models.Set
+import com.example.tcgtracker.R
+import com.example.tcgtracker.models.Concepts
 import com.example.tcgtracker.ui.theme.PocketBlack
 import com.example.tcgtracker.ui.theme.PocketWhite
 import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV

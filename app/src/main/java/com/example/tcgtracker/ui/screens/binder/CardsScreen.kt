@@ -1,8 +1,7 @@
-package com.example.tcgtracker.ui.screens
+package com.example.tcgtracker.ui.screens.binder
 
 import android.content.Context
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
@@ -20,13 +19,10 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentHeight
-import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.BottomSheetScaffold
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxColors
@@ -34,7 +30,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -51,31 +46,24 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.scale
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavKey
 import coil3.compose.AsyncImage
-import com.example.tcgtracker.BottomSheet
-import com.example.tcgtracker.FiltersManager
-import com.example.tcgtracker.OriginsData
 import com.example.tcgtracker.R
-import com.example.tcgtracker.SetsData
 import com.example.tcgtracker.models.Card
 import com.example.tcgtracker.models.Origin
-import com.example.tcgtracker.models.Set
+import com.example.tcgtracker.models.OriginsData
+import com.example.tcgtracker.models.SQLiteHandler
+import com.example.tcgtracker.models.SetsData
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
-import com.example.tcgtracker.ui.theme.PocketWhite
 import com.example.tcgtracker.ui.theme.ptcgFontFamily
 import com.example.tcgtracker.utils.greyScale
 import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV
@@ -83,7 +71,6 @@ import com.smarttoolfactory.extendedcolors.util.HSVUtil.hsvToColorInt
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
 import kotlin.math.pow
-import kotlin.text.contains
 
 @Serializable
 data class CardsScreen(val currentSet: String): NavKey
@@ -92,6 +79,7 @@ data class CardsScreen(val currentSet: String): NavKey
 @Composable
 fun CardsScreen(
     context: Context,
+    handler: SQLiteHandler,
     currentSet: String,
     onBackTap: () -> Unit,
     onOptionsTap: () -> Unit,
@@ -248,7 +236,7 @@ fun CardsScreen(
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
-                val cardList = trackerViewModel.getPrettyCardsList(context, currentSet)
+                val cardList = trackerViewModel.getPrettyCardsList(context, handler, currentSet)
                 val colors = trackerViewModel.getOriginsColorMap()
 
                 if (isListMode) {
@@ -259,6 +247,7 @@ fun CardsScreen(
                         onCardTap = { index ->
                             trackerViewModel.changeOwnedCardState(
                                 context = context,
+                                handler = handler,
                                 set = currentSet,
                                 cardIndex = index
                             )
@@ -271,6 +260,7 @@ fun CardsScreen(
                         onCardTap = { index ->
                             trackerViewModel.changeOwnedCardState(
                                 context = context,
+                                handler = handler,
                                 set = currentSet,
                                 cardIndex = index
                             )

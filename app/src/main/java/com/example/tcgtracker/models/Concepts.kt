@@ -1,7 +1,6 @@
-package com.example.tcgtracker
+package com.example.tcgtracker.models
 
 import android.content.Context
-import com.example.tcgtracker.models.JsonConcepts
 import com.example.tcgtracker.utils.ReadJSONFromAssets
 import com.google.gson.Gson
 
