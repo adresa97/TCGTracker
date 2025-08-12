@@ -1,0 +1,129 @@
+package com.boogie_knight.tcgtracker.services
+
+import com.boogie_knight.tcgtracker.repositories.AssetsRepository
+import com.boogie_knight.tcgtracker.models.Card
+import com.boogie_knight.tcgtracker.models.InnerJsonCard
+import com.boogie_knight.tcgtracker.models.SQLOwnedCard
+import com.boogie_knight.tcgtracker.repositories.UserRepository
+import com.boogie_knight.tcgtracker.utils.ParseJSON
+
+const val ASSETS_CARDS_DATA_FOLDER_PATH = "PTCGPocket/cards"
+
+object CardsData {
+    private val cardMap: MutableMap<String, MutableList<Card>> = mutableMapOf()
+
+    // Return a set's list of cards
+    fun getCardList(set: String): List<Card> {
+        if (cardMap.contains(set)) return cardMap[set]!!.toList()
+
+        val cardList = loadAssetsJSONData(set).toMutableList()
+        if (cardList.isEmpty()) return listOf()
+
+        val ownedList = loadUserData(set, cardList)
+        if (ownedList.isEmpty()) {
+            cardMap.put(set, cardList)
+            return cardList.toList()
+        }
+
+        for (i in 0 until cardList.count()) {
+            cardList[i].owned = ownedList.getOrNull(i) ?: false
+        }
+        cardMap.put(set, cardList)
+        return cardList.toList()
+    }
+
+    // Load user card data for a set
+    fun loadUserData(set: String, cardList: List<Card>): List<Boolean> {
+        val data = UserRepository.getCardsBySet(set)
+        val outList = mutableListOf<Boolean>()
+        cardList.forEach{ card ->
+            if (data.containsKey(card.id)) {
+                outList.add(data[card.id] ?: false)
+            } else {
+                outList.add(false)
+            }
+        }
+
+        return outList
+    }
+
+    // Load assets individual JSON data
+    fun loadAssetsJSONData(set: String): List<Card> {
+        val jsonString = AssetsRepository.getData("${ASSETS_CARDS_DATA_FOLDER_PATH}/${set}.json")
+        return ParseJSON(jsonString, Array<InnerJsonCard>::class.java)?.toList()
+            ?.map{ card ->
+                Card(
+                    id = card.id,
+                    name = card.name,
+                    type = card.type,
+                    origins = card.origins,
+                    rarity = card.rarity,
+                    image = getImageUrl(card.id),
+                    owned = false,
+                    baby = card.baby
+                )
+            } ?: listOf()
+    }
+
+    // Load all user data JSONS and then outputs a full map of owned cards values by set
+    fun getOwnedCardsMap(): Map<String, List<Boolean>> {
+        val output = mutableMapOf<String, List<Boolean>>()
+
+        // Loop through every possible set's lists of cards
+        val setList = SetsData.getSetIDs()
+        setList.forEach { set ->
+            val cardList = getCardList(set)
+            val ownedCards = mutableListOf<Boolean>()
+            cardList.forEach { card ->
+                ownedCards.add(card.owned)
+            }
+            output.put(set, ownedCards)
+        }
+
+        return output
+    }
+
+    // Reload user data and update card map
+    fun reloadUserData(sets: List<String>) {
+        sets.forEach{ set ->
+            if (cardMap.containsKey(set)) {
+                val cardList = cardMap[set]
+                if (cardList != null) {
+                    val userData = loadUserData(set, cardList)
+                    if (userData.isNotEmpty()) {
+                        for (i in 0 until userData.count()) {
+                            cardMap[set]!![i].owned = userData[i]
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private fun getImageUrl(cardID: String): String {
+        val set = cardID.substringBeforeLast('-')
+        val number = cardID.substringAfterLast('-').toInt().toString()
+
+        return "https://cdn.pockettrade.app/images/webp/es/${set}_${number}_SPA.webp"
+    }
+
+    fun changeCardState(set: String, cardIndex: Int) {
+        if (cardIndex < 0) return
+
+        val setList = cardMap[set]
+        if (setList == null || cardIndex >= setList.count()) return
+
+        val card = setList[cardIndex]
+        val isNowOwned = !card.owned
+        card.owned = isNowOwned
+        UserRepository.saveCards(
+            cards =listOf(
+                SQLOwnedCard(
+                    id = card.id,
+                    set = set,
+                    isOwned = isNowOwned
+                )
+            )
+        )
+    }
+}

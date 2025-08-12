@@ -21,11 +21,11 @@ android {
             keyPassword = keystoreProperties["SIGN_KEY_PASSWORD"] as String
         }
     }
-    namespace = "com.example.tcgtracker"
+    namespace = "com.boogie_knight.tcgtracker"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.tcgtracker"
+        applicationId = "com.boogie_knight.tcgtracker"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
