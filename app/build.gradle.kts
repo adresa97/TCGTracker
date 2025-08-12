@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -5,7 +8,19 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
+val keystorePropertiesFile = rootProject.file("keyStore.properties")
+val keystoreProperties = Properties()
+keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+
 android {
+    signingConfigs {
+        create("release") {
+            storeFile = file(keystoreProperties["SIGN_KEY_PATH"] as String)
+            storePassword = keystoreProperties["SIGN_KEY_PASSWORD"] as String
+            keyAlias = keystoreProperties["SIGN_KEY_ALIAS"] as String
+            keyPassword = keystoreProperties["SIGN_KEY_PASSWORD"] as String
+        }
+    }
     namespace = "com.example.tcgtracker"
     compileSdk = 36
 
@@ -21,11 +36,12 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {

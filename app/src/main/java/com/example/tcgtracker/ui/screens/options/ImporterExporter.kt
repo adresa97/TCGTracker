@@ -4,7 +4,7 @@ import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
 import com.example.tcgtracker.models.CardsData
-import com.example.tcgtracker.models.SQLiteHandler
+import com.example.tcgtracker.models.DatabaseHandler
 import com.example.tcgtracker.models.ExternalJsonSet
 import com.example.tcgtracker.models.SQLOwnedCard
 import com.example.tcgtracker.utils.ReadJSONFromFile
@@ -14,7 +14,7 @@ import com.google.gson.reflect.TypeToken
 import java.io.IOException
 
 object ImporterExporter {
-    fun importFromJSON(handler: SQLiteHandler, context: Context, jsonUri: Uri): Pair<String, List<String>?> {
+    fun importFromJSON(context: Context, jsonUri: Uri): Pair<String, List<String>?> {
         var jsonString = ""
         if (ContentResolver.SCHEME_CONTENT == jsonUri.scheme) {
             val cr: ContentResolver = context.contentResolver
@@ -30,23 +30,29 @@ object ImporterExporter {
         val dataList = mutableListOf<SQLOwnedCard>()
         externalData.forEach{ entry ->
             val set = if (entry.key == "pA") "P-A" else entry.key
-            val cardList = CardsData.getCardList(context, handler, set)
+            val cardList = CardsData.getCardList(context, set)
             for (i in 0 until entry.value.values.size) {
                 if (cardList.getOrNull(i) != null) {
-                    dataList.add(SQLOwnedCard(cardList[i].id, set, entry.value.values[i]))
+                    dataList.add(
+                        SQLOwnedCard(
+                            id = cardList[i].id,
+                            set = set,
+                            isOwned = entry.value.values[i]
+                        )
+                    )
                 }
             }
             setsList.add(set)
         }
 
-        handler.saveCardsInBatch(dataList)
+        DatabaseHandler.saveCards(dataList)
 
         return Pair("Archivo importado con éxito", setsList)
     }
 
-    fun exportToJSON(handler: SQLiteHandler, context: Context, targetFile: Uri): String {
+    fun exportToJSON(context: Context, targetFile: Uri): String {
         val jsonData: MutableMap<String, ExternalJsonSet> = mutableMapOf()
-        val ownedCards = CardsData.getOwnedCardsMap(context, handler)
+        val ownedCards = CardsData.getOwnedCardsMap(context)
         ownedCards.forEach { set->
             jsonData.put(set.key, ExternalJsonSet(set.value))
         }

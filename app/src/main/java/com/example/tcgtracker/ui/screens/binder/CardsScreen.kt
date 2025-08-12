@@ -26,6 +26,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.BottomSheetScaffold
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxColors
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -60,10 +61,10 @@ import com.example.tcgtracker.R
 import com.example.tcgtracker.models.Card
 import com.example.tcgtracker.models.Origin
 import com.example.tcgtracker.models.OriginsData
-import com.example.tcgtracker.models.SQLiteHandler
 import com.example.tcgtracker.models.SetsData
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
+import com.example.tcgtracker.ui.theme.getSimilarColor
 import com.example.tcgtracker.ui.theme.ptcgFontFamily
 import com.example.tcgtracker.utils.greyScale
 import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV
@@ -79,7 +80,6 @@ data class CardsScreen(val currentSet: String): NavKey
 @Composable
 fun CardsScreen(
     context: Context,
-    handler: SQLiteHandler,
     currentSet: String,
     onBackTap: () -> Unit,
     onOptionsTap: () -> Unit,
@@ -236,7 +236,7 @@ fun CardsScreen(
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
-                val cardList = trackerViewModel.getPrettyCardsList(context, handler, currentSet)
+                val cardList = trackerViewModel.getPrettyCardsList(context, currentSet)
                 val colors = trackerViewModel.getOriginsColorMap()
 
                 if (isListMode) {
@@ -247,7 +247,6 @@ fun CardsScreen(
                         onCardTap = { index ->
                             trackerViewModel.changeOwnedCardState(
                                 context = context,
-                                handler = handler,
                                 set = currentSet,
                                 cardIndex = index
                             )
@@ -260,7 +259,6 @@ fun CardsScreen(
                         onCardTap = { index ->
                             trackerViewModel.changeOwnedCardState(
                                 context = context,
-                                handler = handler,
                                 set = currentSet,
                                 cardIndex = index
                             )
@@ -421,20 +419,20 @@ fun CardBullet(
     modifier: Modifier = Modifier
 ) {
     val numeral = id.substringAfterLast('-')
-    val fontColor = PocketBlack
+    val fontColor = MaterialTheme.colorScheme.tertiaryContainer
     val checkColor = CheckboxColors(
         checkedCheckmarkColor = color,
         uncheckedCheckmarkColor = color,
-        checkedBoxColor = PocketBlack,
+        checkedBoxColor = MaterialTheme.colorScheme.tertiaryContainer,
         uncheckedBoxColor = color,
-        disabledCheckedBoxColor = PocketBlack,
+        disabledCheckedBoxColor = MaterialTheme.colorScheme.tertiaryContainer,
         disabledUncheckedBoxColor = color,
         disabledIndeterminateBoxColor = color,
-        checkedBorderColor = PocketBlack,
-        uncheckedBorderColor = PocketBlack,
-        disabledBorderColor = PocketBlack,
-        disabledUncheckedBorderColor = PocketBlack,
-        disabledIndeterminateBorderColor = PocketBlack
+        checkedBorderColor = MaterialTheme.colorScheme.tertiaryContainer,
+        uncheckedBorderColor = MaterialTheme.colorScheme.tertiaryContainer,
+        disabledBorderColor = MaterialTheme.colorScheme.tertiaryContainer,
+        disabledUncheckedBorderColor = MaterialTheme.colorScheme.tertiaryContainer,
+        disabledIndeterminateBorderColor = MaterialTheme.colorScheme.tertiaryContainer
     )
     Box(
         modifier = modifier
@@ -555,14 +553,14 @@ fun InfoBoosterElement(
     rarities: List<String>,
     modifier: Modifier = Modifier
 ) {
-    var boosterColor = booster.color
-    val hsv = colorToHSV(boosterColor)
-    if (hsv[1] < 0.4f) hsv[1] = 0.4f
-    else if (hsv[1] > 0.6f) hsv[1] = 0.6f
-    hsv[2] = 0.9f
-    boosterColor = Color(hsvToColorInt(hsv))
+    val boosterColor = getSimilarColor(
+        color = booster.color,
+        minSaturation = 0.4f,
+        maxSaturation = 0.6f,
+        value = 0.9f
+    )
 
-    val fontColor = MaterialTheme.colorScheme.surface
+    val fontColor = MaterialTheme.colorScheme.tertiaryContainer
 
     val probabilities = SetsData.getBoosterRemainingOdds(set, booster, rarities)
     val firstOdd = "%.1f".format(

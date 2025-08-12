@@ -10,13 +10,13 @@ object CardsData {
     private val cardMap: MutableMap<String, MutableList<Card>> = mutableMapOf()
 
     // Return a set's list of cards
-    fun getCardList(applicationContext: Context, handler: SQLiteHandler, set: String): List<Card> {
+    fun getCardList(applicationContext: Context, set: String): List<Card> {
         if (cardMap.contains(set)) return cardMap[set]!!.toList()
 
         val cardList = loadAssetsJSONData(applicationContext, set).toMutableList()
         if (cardList.isEmpty()) return listOf()
 
-        val ownedList = loadUserData(handler, set, cardList)
+        val ownedList = loadUserData(set, cardList)
         if (ownedList.isEmpty()) {
             cardMap.put(set, cardList)
             return cardList.toList()
@@ -30,8 +30,8 @@ object CardsData {
     }
 
     // Load user card data for a set
-    fun loadUserData(handler: SQLiteHandler, set: String, cardList: List<Card>): List<Boolean> {
-        val data = handler.getCardsBySet(set)
+    fun loadUserData(set: String, cardList: List<Card>): List<Boolean> {
+        val data = DatabaseHandler.getCardsBySet(set)
         val outList = mutableListOf<Boolean>()
         cardList.forEach{ card ->
             if (data.containsKey(card.id)) {
@@ -63,13 +63,13 @@ object CardsData {
     }
 
     // Load all user data JSONS and then outputs a full map of owned cards values by set
-    fun getOwnedCardsMap(context: Context, handler: SQLiteHandler): Map<String, List<Boolean>> {
+    fun getOwnedCardsMap(context: Context): Map<String, List<Boolean>> {
         val output = mutableMapOf<String, List<Boolean>>()
 
         // Loop through every possible set's lists of cards
         val setList = SetsData.getSetIDs()
         setList.forEach { set ->
-            val cardList = getCardList(context, handler, set)
+            val cardList = getCardList(context, set)
             val ownedCards = mutableListOf<Boolean>()
             cardList.forEach { card ->
                 ownedCards.add(card.owned)
@@ -81,12 +81,12 @@ object CardsData {
     }
 
     // Reload user data and update card map
-    fun reloadUserData(handler: SQLiteHandler, sets: List<String>) {
+    fun reloadUserData(sets: List<String>) {
         sets.forEach{ set ->
             if (cardMap.containsKey(set)) {
                 val cardList = cardMap[set]
                 if (cardList != null) {
-                    val userData = loadUserData(handler, set, cardList)
+                    val userData = loadUserData(set, cardList)
                     if (userData.isNotEmpty()) {
                         for (i in 0 until userData.count()) {
                             cardMap[set]!![i].owned = userData[i]
@@ -104,7 +104,7 @@ object CardsData {
         return "https://cdn.pockettrade.app/images/webp/es/${set}_${number}_SPA.webp"
     }
 
-    fun changeCardState(handler: SQLiteHandler, set: String, cardIndex: Int) {
+    fun changeCardState(set: String, cardIndex: Int) {
         if (cardIndex < 0) return
 
         val setList = cardMap[set]
@@ -112,7 +112,15 @@ object CardsData {
 
         val card = setList[cardIndex]
         val isNowOwned = !card.owned
-        handler.saveCard(card.id, set, isNowOwned)
         card.owned = isNowOwned
+        DatabaseHandler.saveCards(
+            cards =listOf(
+                SQLOwnedCard(
+                    id = card.id,
+                    set = set,
+                    isOwned = isNowOwned
+                )
+            )
+        )
     }
 }

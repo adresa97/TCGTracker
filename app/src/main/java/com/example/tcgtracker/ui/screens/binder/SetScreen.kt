@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.BottomSheetScaffold
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -56,8 +57,7 @@ import com.example.tcgtracker.models.Set
 import com.example.tcgtracker.models.SetsData
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
-import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV
-import com.smarttoolfactory.extendedcolors.util.HSVUtil.hsvToColorInt
+import com.example.tcgtracker.ui.theme.getSimilarColor
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
 
@@ -223,7 +223,7 @@ fun SetScreen(
                     modifier = Modifier.fillMaxSize()
                         .padding(innerPadding)
                         .alpha(0.6f)
-                        .background(PocketBlack)
+                        .background(MaterialTheme.colorScheme.tertiaryContainer)
                 )
             }
         }
@@ -320,12 +320,12 @@ fun CollectionCell(
 ) {
     val fontColor = PocketBlack
 
-    var backColor = set.color
-    val hsv = colorToHSV(color)
-    if (hsv[1] < 0.4f) hsv[1] = 0.4f
-    else if (hsv[1] > 0.6f) hsv[1] = 0.6f
-    hsv[2] = 0.9f
-    backColor = Color(hsvToColorInt(hsv))
+    val backColor = getSimilarColor(
+        color = set.color,
+        minSaturation = 0.4f,
+        maxSaturation = 0.6f,
+        value = 0.9f
+    )
 
     Box(
         modifier = modifier.background(backColor, RoundedCornerShape(10))
@@ -486,14 +486,14 @@ fun InfoSetElement(
     rarities: List<String>,
     modifier: Modifier = Modifier
 ) {
-    var setColor = set.color
-    val hsv = colorToHSV(setColor)
-    if (hsv[1] < 0.4f) hsv[1] = 0.4f
-    else if (hsv[1] > 0.6f) hsv[1] = 0.6f
-    hsv[2] = 0.9f
-    setColor = Color(hsvToColorInt(hsv))
+    val setColor = getSimilarColor(
+        color = set.color,
+        minSaturation = 0.4f,
+        maxSaturation = 0.6f,
+        value = 0.9f
+    )
 
-    val fontColor = MaterialTheme.colorScheme.surface
+    val fontColor = MaterialTheme.colorScheme.tertiaryContainer
 
     var probableBooster = SetsData.getMostProbableBooster(set.set, rarities)
     if (probableBooster == null) {

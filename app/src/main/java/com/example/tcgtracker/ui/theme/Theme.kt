@@ -15,27 +15,23 @@ import com.example.tcgtracker.R
 private val DarkColorScheme = darkColorScheme(
     surface = PocketBlack,
     onSurface = PocketWhite,
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primaryContainer = DarkGreenContainer,
+    onPrimaryContainer = PocketWhite,
+    secondaryContainer = DarkGreenAccent,
+    onSecondaryContainer = PocketWhite,
+    tertiaryContainer = PocketBlack,
+    onTertiaryContainer = PocketWhite
 )
 
 private val LightColorScheme = lightColorScheme(
     surface = PocketWhite,
     onSurface = PocketBlack,
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    primaryContainer = LightGreenContainer,
+    onPrimaryContainer = PocketBlack,
+    secondaryContainer = LightGreenAccent,
+    onSecondaryContainer = PocketBlack,
+    tertiaryContainer = PocketBlack,
+    onTertiaryContainer = PocketWhite
 )
 
 val ptcgFontFamily = FontFamily(

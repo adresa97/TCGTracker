@@ -42,6 +42,7 @@ import com.example.tcgtracker.R
 import com.example.tcgtracker.models.Concepts
 import com.example.tcgtracker.ui.theme.PocketBlack
 import com.example.tcgtracker.ui.theme.PocketWhite
+import com.example.tcgtracker.ui.theme.getSimilarColor
 import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV
 import com.smarttoolfactory.extendedcolors.util.HSVUtil.hsvToColorInt
 
@@ -73,9 +74,11 @@ fun BottomSheet(
         )
 
         // Divider
-        val hsv = colorToHSV(uiColor)
-        hsv[2] = 0.5f
-        val dividerColor = Color(hsvToColorInt(hsv))
+        val dividerColor = getSimilarColor(
+            color = uiColor,
+            saturation = null,
+            value = 0.5f
+        )
 
         HorizontalDivider(
             thickness = 2.dp,
@@ -92,7 +95,7 @@ fun BottomSheet(
                     bottom = if (safeArea != 0.dp) safeArea * 2 else 30.dp
                 )
                 .background(
-                    color = MaterialTheme.colorScheme.surface,
+                    color = MaterialTheme.colorScheme.tertiaryContainer,
                     shape = RoundedCornerShape(10.dp)
                 ),
             contentAlignment = Alignment.Center
@@ -101,7 +104,7 @@ fun BottomSheet(
                 val filtersState = FiltersManager.getFilters()
                 FiltersSheet(
                     checkColor = uiColor,
-                    backColor = MaterialTheme.colorScheme.surface,
+                    backColor = MaterialTheme.colorScheme.tertiaryContainer,
                     filtersState = filtersState,
                     onFiltersChanged = { onFiltersChanged() }
                 )
@@ -121,12 +124,12 @@ fun PeekArea(
     onIconClick: (Boolean) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
-    var probableColor = trackerColor
-    val hsv = colorToHSV(probableColor)
-    if (hsv[1] < 0.4f) hsv[1] = 0.4f
-    else if (hsv[1] > 0.6f) hsv[1] = 0.6f
-    hsv[2] = 0.9f
-    probableColor = Color(hsvToColorInt(hsv))
+    val probableColor = getSimilarColor(
+        color = trackerColor,
+        minSaturation = 0.4f,
+        maxSaturation = 0.6f,
+        value = 0.9f
+    )
 
     Row(
         modifier = modifier.fillMaxWidth().height(height),
@@ -291,7 +294,7 @@ fun RaritiesFilterColumn(
                 )
                 Text(
                     text = Concepts.getPrettyRarity(rarity),
-                    color = MaterialTheme.colorScheme.onSurface
+                    color = MaterialTheme.colorScheme.onTertiaryContainer
                 )
             }
         }

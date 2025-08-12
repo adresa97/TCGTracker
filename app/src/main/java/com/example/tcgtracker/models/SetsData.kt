@@ -12,7 +12,7 @@ object SetsData {
     private val setList = mutableListOf<Set>()
 
     // Populate collections list
-    fun loadJSONData(context: Context, handler: SQLiteHandler) {
+    fun loadJSONData(context: Context) {
         // If data already stored end function
         if (!setList.isEmpty()) return
 
@@ -29,7 +29,7 @@ object SetsData {
             val color = Color(set.color[0]/255, set.color[1]/255, set.color[2]/255)
 
             // Get precalculations
-            val precalculations = getPrecalculations(handler, set.set, set.origins)
+            val precalculations = getPrecalculations(set.set, set.origins)
 
             // Add this set entry to collections.
             // If calculated numbers aren't stored in user data, calculate them from cards data
@@ -43,18 +43,17 @@ object SetsData {
                 cardCount = set.cardCount,
                 origins = set.origins,
                 numbers = precalculations ?: calculateNumbers(
-                    handler = handler,
                     set = set.set,
-                    cardList = CardsData.getCardList(context, handler, set.set)
+                    cardList = CardsData.getCardList(context, set.set)
                 )
             ))
         }
     }
 
     // Get user precalculations
-    private fun getPrecalculations(handler: SQLiteHandler, set: String, origins: List<String>): OwnedSetData? {
+    private fun getPrecalculations(set: String, origins: List<String>): OwnedSetData? {
         // Full set data
-        val setData = handler.getSetPrecalculations(set = set)
+        val setData = DatabaseHandler.getSetPrecalculations(set = set)
         if (setData.second <= 0) return null
         val all = OwnedData(
             ownedCards = setData.first,
@@ -65,7 +64,7 @@ object SetsData {
         val byRarity = mutableMapOf<String, OwnedData>()
         Concepts.getRarities().forEach{ rarity ->
             // Get this rarity data
-            val rarityData = handler.getSetPrecalculations(set = set, rarity = rarity)
+            val rarityData = DatabaseHandler.getSetPrecalculations(set = set, rarity = rarity)
             if (rarityData.second > 0) {
                 val ownedRarity = OwnedData(
                     ownedCards = rarityData.first,
@@ -79,7 +78,7 @@ object SetsData {
         val byBooster = mutableMapOf<String, OwnedBoosterData>()
         origins.forEach{ origin ->
             // Get this origin general data
-            val originData = handler.getSetPrecalculations(set = set, booster = origin)
+            val originData = DatabaseHandler.getSetPrecalculations(set = set, booster = origin)
             val ownedOrigin = OwnedData(
                 ownedCards = originData.first,
                 totalCards = originData.second
@@ -93,7 +92,7 @@ object SetsData {
             } else {
                 val byBoosterRarity = mutableMapOf<String, OwnedData>()
                 Concepts.getRarities().forEach{ rarity ->
-                    val originRarityData = handler.getSetPrecalculations(set, origin, rarity)
+                    val originRarityData = DatabaseHandler.getSetPrecalculations(set, origin, rarity)
                     if (originRarityData.second > 0) {
                         val ownedBoosterRarity = OwnedData(
                             ownedCards = originRarityData.first,
@@ -117,7 +116,7 @@ object SetsData {
     }
 
     // Calculate all needed numbers from a list of cards and boosters
-    private fun calculateNumbers(handler: SQLiteHandler, set: String, cardList: List<Card>): OwnedSetData {
+    private fun calculateNumbers(set: String, cardList: List<Card>): OwnedSetData {
         // List of data to insert or replace
         val dataList = mutableListOf<SQLOwnedSet>()
 
@@ -239,7 +238,7 @@ object SetsData {
             }
         }
 
-        handler.saveSetsInBatch(dataList)
+        DatabaseHandler.saveSets(dataList)
 
         return OwnedSetData(
             all = all,
@@ -248,8 +247,8 @@ object SetsData {
         )
     }
 
-    fun recalculateSetData(handler: SQLiteHandler, cardList: List<Card>, setCode: String) {
-        val newCalculations = calculateNumbers(handler, setCode, cardList)
+    fun recalculateSetData(cardList: List<Card>, setCode: String) {
+        val newCalculations = calculateNumbers(setCode, cardList)
         setList.firstOrNull{ set -> set.set == setCode }?.numbers = newCalculations
     }
 

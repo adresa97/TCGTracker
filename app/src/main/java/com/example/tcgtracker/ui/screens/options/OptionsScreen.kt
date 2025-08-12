@@ -42,9 +42,9 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavKey
 import com.example.tcgtracker.R
-import com.example.tcgtracker.models.SQLiteHandler
 import com.example.tcgtracker.ui.TrackerViewModel
 import com.example.tcgtracker.ui.theme.PocketBlack
+import com.example.tcgtracker.ui.theme.getSimilarColor
 import com.example.tcgtracker.utils.GetCustomContents
 import com.example.tcgtracker.utils.SetCustomContent
 import kotlinx.coroutines.launch
@@ -57,14 +57,9 @@ data object OptionsScreen: NavKey
 @Composable
 fun OptionsScreen(
     context: Context,
-    handler: SQLiteHandler,
     onBackTap: () -> Unit,
     trackerViewModel: TrackerViewModel = viewModel()
 ) {
-    var isLoading: Boolean by rememberSaveable {
-        mutableStateOf(trackerViewModel.uiState.value.isLoading)
-    }
-
     // Get coroutine scope and host state of snackbar
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
@@ -111,8 +106,9 @@ fun OptionsScreen(
                         Text(data.visuals.message)
                     }
                 }
-            }
+            },
             // Content
+            containerColor = MaterialTheme.colorScheme.surface
         ) { innerPadding ->
             Box(
                 modifier = Modifier
@@ -124,11 +120,10 @@ fun OptionsScreen(
                     contract = GetCustomContents(isMultiple = false),
                     onResult = { uris ->
                             val message =
-                                ImporterExporter.importFromJSON(handler, context, uris[0])
+                                ImporterExporter.importFromJSON(context, uris[0])
                             if (!message.second.isNullOrEmpty()) {
                                 trackerViewModel.reloadOwnedCardState(
                                     context,
-                                    handler,
                                     message.second!!
                                 )
                             }
@@ -143,7 +138,7 @@ fun OptionsScreen(
                     contract = SetCustomContent(),
                     onResult = { uris ->
                             val message =
-                                ImporterExporter.exportToJSON(handler, context, uris[0])
+                                ImporterExporter.exportToJSON(context, uris[0])
 
                         scope.launch {
                             snackbarHostState.showSnackbar(message)
@@ -165,25 +160,19 @@ fun OptionsScreen(
                     HorizontalDivider(
                         modifier = Modifier
                             .fillMaxWidth(0.95f)
-                            .alpha(0.5f),
+                            .alpha(0.75f),
                         thickness = 2.dp,
-                        color = PocketBlack
+                        color = getSimilarColor(
+                            color = MaterialTheme.colorScheme.surface,
+                            saturation = 0.1f,
+                            value = 0.1f
+                        )
                     )
                     OptionButton (
                         onTap = { storePicker.launch("application/json") },
                         icon = R.drawable.upload,
                         text = "Exportar datos"
                     )
-                }
-            }
-
-            // Loading Overlay
-            if (trackerViewModel.uiState.collectAsState().value.isLoading) {
-                Box(
-                    modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
-                    CircularProgressIndicator()
                 }
             }
         }

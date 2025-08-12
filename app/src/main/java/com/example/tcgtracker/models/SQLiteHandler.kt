@@ -6,6 +6,66 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
+data object DatabaseHandler{
+    private var handler: SQLiteHandler? = null
+
+    fun init(context: Context) {
+        handler = SQLiteHandler(context)
+    }
+
+    fun saveCards(
+        cards: List<SQLOwnedCard>
+    ) {
+        if (handler == null) return
+        if (cards.isEmpty()) return
+        if (cards.size == 1) {
+            val card = cards[0]
+            handler!!.saveCard(
+                id = card.id,
+                set = card.set,
+                isOwned = card.isOwned
+            )
+        } else {
+            handler!!.saveCardsInBatch(cards)
+        }
+    }
+
+    fun saveSets(
+        sets: List<SQLOwnedSet>
+    ) {
+        if (handler == null) return
+        if (sets.isEmpty()) return
+        if (sets.size == 1) {
+            val set = sets[0]
+            handler!!.saveSet(
+                set = set.set,
+                booster = set.booster,
+                rarity = set.rarity,
+                owned = set.owned,
+                total = set.total
+            )
+        } else {
+            handler!!.saveSetsInBatch(sets)
+        }
+    }
+
+    fun getCardsBySet(
+        set: String
+    ): Map<String, Boolean> {
+        if (handler == null) return mapOf()
+        return handler!!.getCardsBySet(set)
+    }
+
+    fun getSetPrecalculations(
+        set: String,
+        booster: String = "",
+        rarity: String = ""
+    ): Pair<Int, Int> {
+        if (handler == null) return Pair(0, 0)
+        return handler!!.getSetPrecalculations(set, booster, rarity)
+    }
+}
+
 class SQLiteHandler(
     context: Context?
 ): SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION)  {
