@@ -370,9 +370,12 @@ fun CollectionCell(
                     color = fontColor
                 )
                 // Bottom right
+                val completion = "%.3f".format(
+                    (set.numbers.all.ownedCards.toFloat() / set.numbers.all.totalCards.toFloat()) * 100.0f
+                )
                 Text(
                     modifier = Modifier.align(Alignment.BottomEnd).offset(y = 6.dp),
-                    text = "${set.numbers.all.ownedCards / set.numbers.all.totalCards * 100} %",
+                    text = "${completion} %",
                     textAlign = TextAlign.Right,
                     fontSize = MaterialTheme.typography.bodySmall.fontSize,
                     fontWeight = MaterialTheme.typography.bodySmall.fontWeight,

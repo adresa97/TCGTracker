@@ -1,6 +1,7 @@
 package com.boogie_knight.tcgtracker.models
 
 import androidx.compose.ui.graphics.Color
+import kotlinx.serialization.Serializable
 
 data class Origin (
     val id: String,
@@ -11,6 +12,7 @@ data class Origin (
     val odds: Map<String, List<Float>>?
 )
 
+@Serializable
 data class JsonOrigin (
     val id: String,
     val name: LocalizedName,
@@ -20,6 +22,7 @@ data class JsonOrigin (
     val odds: Map<String, List<Float>>?
 )
 
+@Serializable
 data class JsonConcepts (
     val types: Map<String, String>,
     val rarities: Map<String, String>

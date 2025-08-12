@@ -20,7 +20,7 @@ data object UserRepository{
     ) {
         if (handler == null) return
         if (cards.isEmpty()) return
-        handler!!.saveCardsInBatch(cards)
+        handler!!.saveCardsInBatches(cards)
     }
 
     fun saveSets(
@@ -28,7 +28,7 @@ data object UserRepository{
     ) {
         if (handler == null) return
         if (sets.isEmpty()) return
-        handler!!.saveSetsInBatch(sets)
+        handler!!.saveSetsInBatches(sets)
     }
 
     fun getCardsBySet(
@@ -159,7 +159,27 @@ class SQLiteHandler(
         db.close()
     }
 
-    fun saveCardsInBatch(
+    fun saveCardsInBatches(
+        cards: List<SQLOwnedCard>,
+        batchSize: Int = 300
+    ) {
+        if (cards.isEmpty()) return
+
+        val maxIndex = cards.size
+
+        var startIndex = 0
+        var endIndex = batchSize
+        if (endIndex > maxIndex) endIndex = maxIndex
+        while (startIndex < maxIndex) {
+            saveCardsInBatch(cards.subList(startIndex, endIndex))
+
+            startIndex = endIndex
+            endIndex += batchSize
+            if (endIndex > maxIndex) endIndex = maxIndex
+        }
+    }
+
+    private fun saveCardsInBatch(
         cards: List<SQLOwnedCard>
     ) {
         if (cards.isEmpty()) return
@@ -200,7 +220,27 @@ class SQLiteHandler(
         db.close()
     }
 
-    fun saveSetsInBatch(
+    fun saveSetsInBatches(
+        sets: List<SQLOwnedSet>,
+        batchSize: Int = 150
+    ) {
+        if (sets.isEmpty()) return
+
+        val maxIndex = sets.size
+
+        var startIndex = 0
+        var endIndex = batchSize
+        if (endIndex > maxIndex) endIndex = maxIndex
+        while (startIndex < maxIndex) {
+            saveSetsInBatch(sets.subList(startIndex, endIndex))
+
+            startIndex = endIndex
+            endIndex += batchSize
+            if (endIndex > maxIndex) endIndex = maxIndex
+        }
+    }
+
+    private fun saveSetsInBatch(
         sets: List<SQLOwnedSet>
     ) {
         if (sets.isEmpty()) return

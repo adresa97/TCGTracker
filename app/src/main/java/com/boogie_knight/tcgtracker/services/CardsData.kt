@@ -2,7 +2,7 @@ package com.boogie_knight.tcgtracker.services
 
 import com.boogie_knight.tcgtracker.repositories.AssetsRepository
 import com.boogie_knight.tcgtracker.models.Card
-import com.boogie_knight.tcgtracker.models.InnerJsonCard
+import com.boogie_knight.tcgtracker.models.JsonCard
 import com.boogie_knight.tcgtracker.models.SQLOwnedCard
 import com.boogie_knight.tcgtracker.repositories.UserRepository
 import com.boogie_knight.tcgtracker.utils.ParseJSON
@@ -50,7 +50,7 @@ object CardsData {
     // Load assets individual JSON data
     fun loadAssetsJSONData(set: String): List<Card> {
         val jsonString = AssetsRepository.getData("${ASSETS_CARDS_DATA_FOLDER_PATH}/${set}.json")
-        return ParseJSON(jsonString, Array<InnerJsonCard>::class.java)?.toList()
+        return ParseJSON(jsonString, Array<JsonCard>::class.java)?.toList()
             ?.map{ card ->
                 Card(
                     id = card.id,

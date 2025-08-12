@@ -1,5 +1,7 @@
 package com.boogie_knight.tcgtracker.models
 
+import kotlinx.serialization.Serializable
+
 data class Card(
     val id: String,
     val name: LocalizedName,
@@ -11,7 +13,8 @@ data class Card(
     val baby: Boolean = false
 )
 
-data class InnerJsonCard(
+@Serializable
+data class JsonCard(
     val id: String,
     val name: LocalizedName,
     val type: String,
@@ -20,6 +23,7 @@ data class InnerJsonCard(
     val baby: Boolean = false
 )
 
+@Serializable
 data class LocalizedName(
     val en: String,
     val es: String

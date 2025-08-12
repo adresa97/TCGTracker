@@ -1,7 +1,9 @@
 package com.boogie_knight.tcgtracker.models
 
 import androidx.compose.ui.graphics.Color
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class InnerJsonSet(
     val series: String,
     val expansion: String,
@@ -13,6 +15,7 @@ data class InnerJsonSet(
     val origins: List<String>
 )
 
+@Serializable
 data class ExternalJsonSet (
     val values: List<Boolean>
 )

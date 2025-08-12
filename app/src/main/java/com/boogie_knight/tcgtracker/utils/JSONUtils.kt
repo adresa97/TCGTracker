@@ -41,10 +41,9 @@ fun ReadJSONFromFile(file: InputStream): String {
     }
 }
 
-private val gson = Gson()
 fun <T> ParseJSON(json: String, cls: Class<T>): T? {
     try {
-        val model = gson.fromJson<T>(
+        val model = Gson().fromJson<T>(
             json, cls
         )
         return model
