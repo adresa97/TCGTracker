@@ -106,6 +106,16 @@ fun CardsScreen(
     var isSheetExpanded: Boolean by rememberSaveable { mutableStateOf(false) }
     var isFiltersSheet: Boolean by rememberSaveable { mutableStateOf(false) }
 
+    // Probable booster to show on bottom sheet
+    var probableBooster by rememberSaveable {
+        mutableStateOf(
+            value = trackerViewModel.getMostProbableBoosterFromSet(
+                set = currentSet,
+                filter = currentFilters
+            )
+        )
+    }
+
     val bottomBarHeight = 75.dp
     val safeArea = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
 
@@ -180,15 +190,10 @@ fun CardsScreen(
             sheetContainerColor = uiColor,
             sheetContentColor = uiColor,
             sheetContent = {
-                // Get most probable booster and its associated color
-                val booster =
-                    trackerViewModel.getMostProbableBoosterFromSet(currentSet, currentFilters)
-                val boosterColor = booster?.first?.color ?: MaterialTheme.colorScheme.surface
-
                 BottomSheet(
-                    title = booster?.first?.name?.es ?: "",
+                    title = probableBooster?.first?.name?.es ?: "",
                     uiColor = uiColor,
-                    trackerColor = boosterColor,
+                    trackerColor = probableBooster?.first?.color ?: MaterialTheme.colorScheme.surface,
                     peekArea = bottomBarHeight,
                     safeArea = safeArea,
                     isFiltersSheet = isFiltersSheet,
@@ -210,6 +215,10 @@ fun CardsScreen(
                     },
                     onFiltersChanged = {
                         currentFilters = FiltersManager.getActiveFilters()
+                        probableBooster = trackerViewModel.getMostProbableBoosterFromSet(
+                            set = currentSet,
+                            filter = currentFilters
+                        )
                     },
                     infoScreen = {
                         val boostersIDs = SetsData.getSetFromID(currentSet)?.origins
@@ -262,6 +271,10 @@ fun CardsScreen(
                                     set = currentSet,
                                     cardIndex = index
                                 )
+                                probableBooster = trackerViewModel.getMostProbableBoosterFromSet(
+                                    set = currentSet,
+                                    filter = currentFilters
+                                )
                             }
                         )
                     } else {
@@ -272,6 +285,10 @@ fun CardsScreen(
                                 trackerViewModel.changeOwnedCardState(
                                     set = currentSet,
                                     cardIndex = index
+                                )
+                                probableBooster = trackerViewModel.getMostProbableBoosterFromSet(
+                                    set = currentSet,
+                                    filter = currentFilters
                                 )
                             }
                         )
