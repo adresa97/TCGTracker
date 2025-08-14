@@ -44,6 +44,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -204,16 +205,32 @@ fun SetScreen(
                 val series = trackerViewModel.getSeriesMap()
                 val colors = trackerViewModel.getSetColors()
 
-                series.forEach { element ->
-                    val expansionsMap = getExpansionsMap(series, element.key)
-                    SeriesGroup(
-                        series = element.key,
-                        expansions = expansionsMap,
-                        colors = colors,
-                        isSheetExpanded = isSheetExpanded,
-                        isListView = isListMode,
-                        onSetTap = { set -> onSetTap(set) }
+                if (series.isEmpty()) {
+                    Text(
+                        modifier = Modifier
+                            .align(Alignment.Center)
+                            .padding(all = 10.dp),
+                        text = "No se ha encontrado información.\n" +
+                                "Por favor conecte el dispositivo a intenet.\n" +
+                                "Si persiste, hay problemas en el repositorio",
+                        textAlign = TextAlign.Center,
+                        style = TextStyle(
+                            color = MaterialTheme.colorScheme.onSurface,
+                            fontSize = MaterialTheme.typography.bodyLarge.fontSize
+                        )
                     )
+                } else {
+                    series.forEach { element ->
+                        val expansionsMap = getExpansionsMap(series, element.key)
+                        SeriesGroup(
+                            series = element.key,
+                            expansions = expansionsMap,
+                            colors = colors,
+                            isSheetExpanded = isSheetExpanded,
+                            isListView = isListMode,
+                            onSetTap = { set -> onSetTap(set) }
+                        )
+                    }
                 }
             }
 

@@ -6,6 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.boogie_knight.tcgtracker.utils.NetworkFetchUtils
+import java.io.IOException
 
 data object AssetsRepository{
     const val BASE_URL = "https://raw.githubusercontent.com/adresa97/TCGTracker-database/refs/heads/main/"
@@ -23,7 +24,7 @@ data object AssetsRepository{
         var outString = handler!!.getData(path)
         if (outString == null) {
             outString = NetworkFetchUtils.fetch(BASE_URL + path)
-            handler!!.saveData(path, outString)
+            if (outString.isNotEmpty()) handler!!.saveData(path, outString)
         }
         return outString
     }
@@ -31,8 +32,8 @@ data object AssetsRepository{
     fun checkVersion() {
         if (handler == null) return
         val local = handler!!.getVersion()
-        val remote = NetworkFetchUtils.fetch(BASE_URL + "version").toInt()
-        if (local == null || remote > local) {
+        val remote = NetworkFetchUtils.fetch(BASE_URL + "version").toIntOrNull()
+        if (remote != null && (local == null || remote > local)) {
             handler!!.reset()
             handler!!.saveVersion(remote)
         }

@@ -49,6 +49,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -236,29 +237,45 @@ fun CardsScreen(
                 val cardList = trackerViewModel.getPrettyCardsList(currentSet)
                 val colors = trackerViewModel.getOriginsColorMap()
 
-                if (isListMode) {
-                    CardListView(
-                        cardList = cardList,
-                        colors = colors,
-                        isSheetExpanded = isSheetExpanded,
-                        onCardTap = { index ->
-                            trackerViewModel.changeOwnedCardState(
-                                set = currentSet,
-                                cardIndex = index
-                            )
-                        }
+                if (cardList.isEmpty()) {
+                    Text(
+                        modifier = Modifier
+                            .align(Alignment.Center)
+                            .padding(all = 10.dp),
+                        text = "No se ha encontrado información.\n" +
+                                "Por favor conecte el dispositivo a intenet.\n" +
+                                "Si persiste, hay problemas en el repositorio",
+                        textAlign = TextAlign.Center,
+                        style = TextStyle(
+                            color = MaterialTheme.colorScheme.onSurface,
+                            fontSize = MaterialTheme.typography.bodyLarge.fontSize
+                        )
                     )
                 } else {
-                    CardGridView(
-                        cardList = cardList,
-                        isSheetExpanded = isSheetExpanded,
-                        onCardTap = { index ->
-                            trackerViewModel.changeOwnedCardState(
-                                set = currentSet,
-                                cardIndex = index
-                            )
-                        }
-                    )
+                    if (isListMode) {
+                        CardListView(
+                            cardList = cardList,
+                            colors = colors,
+                            isSheetExpanded = isSheetExpanded,
+                            onCardTap = { index ->
+                                trackerViewModel.changeOwnedCardState(
+                                    set = currentSet,
+                                    cardIndex = index
+                                )
+                            }
+                        )
+                    } else {
+                        CardGridView(
+                            cardList = cardList,
+                            isSheetExpanded = isSheetExpanded,
+                            onCardTap = { index ->
+                                trackerViewModel.changeOwnedCardState(
+                                    set = currentSet,
+                                    cardIndex = index
+                                )
+                            }
+                        )
+                    }
                 }
             }
 

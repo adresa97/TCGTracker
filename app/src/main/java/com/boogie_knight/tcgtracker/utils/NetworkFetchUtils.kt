@@ -8,7 +8,7 @@ object NetworkFetchUtils {
         try {
             val req = URL(url).openConnection()
             return ReadJSONFromFile(req.getInputStream())
-        } catch (e: IOException) {
+        } catch (e: Exception) {
             e.printStackTrace()
             return ""
         }
