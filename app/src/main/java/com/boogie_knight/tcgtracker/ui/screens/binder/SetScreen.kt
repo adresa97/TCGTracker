@@ -43,6 +43,8 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
@@ -222,10 +224,12 @@ fun SetScreen(
                 } else {
                     series.forEach { element ->
                         val expansionsMap = getExpansionsMap(series, element.key)
+                        val screenSize = LocalConfiguration.current.screenHeightDp
                         SeriesGroup(
                             series = element.key,
                             expansions = expansionsMap,
                             colors = colors,
+                            screenSize = screenSize,
                             isSheetExpanded = isSheetExpanded,
                             isListView = isListMode,
                             onSetTap = { set -> onSetTap(set) }
@@ -258,6 +262,7 @@ fun SeriesGroup(
     series: String,
     expansions: Map<String, List<Set>>,
     colors: Map<String, Color>,
+    screenSize: Int,
     isSheetExpanded: Boolean,
     isListView: Boolean,
     onSetTap: (String) -> Unit,
@@ -282,15 +287,13 @@ fun SeriesGroup(
             }
         }
         item {
-            val spacing = if (isListView) 5.dp else 20.dp
-            val verSpace = if (isListView) 20.dp else 40.dp
-            val horSpace = if (isListView) 20.dp else 0.dp
-            Column(
-                Modifier.padding(horizontal = horSpace, verSpace),
-                verticalArrangement = Arrangement.spacedBy(spacing)
-            ) {
-                expansions.forEach { expansion ->
-                    if (isListView) {
+            if (isListView) {
+                Column(
+                    modifier = Modifier
+                        .padding(all = 20.dp),
+                    verticalArrangement = Arrangement.spacedBy(5.dp)
+                ) {
+                    expansions.forEach { expansion ->
                         CollectionList(
                             expansion.value,
                             colors,
@@ -298,13 +301,37 @@ fun SeriesGroup(
                             onSetTap,
                             Modifier.padding(horizontal = 20.dp)
                         )
-                    } else {
-                        CollectionRow(
-                            expansion.value,
-                            !isSheetExpanded,
-                            onSetTap,
-                            Modifier.padding(horizontal = 20.dp)
-                        )
+                    }
+                }
+            } else {
+                val screenWidth = LocalWindowInfo.current.containerSize.width
+                val maxInt = 1080
+                val maxWidth = if (screenWidth < maxInt) 1.0f
+                else maxInt.toFloat() / screenWidth.toFloat()
+
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth(maxWidth)
+                        .padding(vertical = 40.dp),
+                    verticalArrangement = Arrangement.spacedBy(20.dp)
+                ) {
+                    expansions.forEach { expansion ->
+                        val setsCount = expansion.value.size
+                        var startIndex = 0
+                        var endIndex = 3
+                        if (endIndex > setsCount) endIndex = setsCount
+                        while (startIndex < setsCount) {
+                            CollectionRow(
+                                expansion.value.subList(startIndex, endIndex),
+                                !isSheetExpanded,
+                                screenSize,
+                                onSetTap,
+                                Modifier.padding(horizontal = 20.dp)
+                            )
+                            startIndex = endIndex
+                            endIndex += 3
+                            if (endIndex > setsCount) endIndex = setsCount
+                        }
                     }
                 }
             }
@@ -408,30 +435,40 @@ fun CollectionCell(
 fun CollectionRow(
     sets: List<Set>,
     isEnabled: Boolean,
+    screenSize: Int,
     onSetTap: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    var rowHeight = (screenSize / 5).dp
+    if (rowHeight < 150.dp) rowHeight = 150.dp
     Row(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier
+            .fillMaxWidth()
+            .height(rowHeight),
         horizontalArrangement = Arrangement.spacedBy(5.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         var i = 0
+
         sets.forEach { set ->
             SetButton(
                 collection = set.set,
                 imageURL = set.cover,
-                modifier = Modifier.weight(1f)
-                    .clickable(enabled = isEnabled) { onSetTap(set.set) }
+                modifier = Modifier
+                    .weight(1.0f)
+                    .clickable(
+                        enabled = isEnabled
+                    ) {
+                        onSetTap(set.set)
+                    }
             )
 
             i++
         }
 
-        while(i < 3)
-        {
+        while (i < 3) {
             EmptyBox(
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.weight(1.0f)
             )
 
             i++
@@ -447,19 +484,22 @@ fun SetButton(
 ) {
     Column(
         modifier = modifier,
+        verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         AsyncImage(
-            modifier = Modifier,
+            modifier = Modifier.weight(1.0f),
             model = imageURL,
             error = painterResource(R.drawable.booster_placeholder),
             placeholder = painterResource(R.drawable.booster_placeholder),
             contentDescription = null,
-            contentScale = ContentScale.Fit
+            contentScale = ContentScale.Inside
         )
         Text(
             text = collection,
-            modifier = Modifier.padding(bottom = 0.dp)
+            modifier = Modifier
+                .fillMaxHeight(0.2f)
+                .padding(bottom = 0.dp)
         )
     }
 }

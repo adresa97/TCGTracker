@@ -317,7 +317,7 @@ fun CardGridView(
 ) {
     LazyVerticalGrid(
         modifier = modifier.padding(horizontal = 20.dp),
-        columns = GridCells.Adaptive(100.dp),
+        columns = GridCells.Adaptive(150.dp),
         horizontalArrangement = Arrangement.spacedBy(20.dp),
         verticalArrangement = Arrangement.spacedBy((-10).dp),
         userScrollEnabled = !isSheetExpanded
