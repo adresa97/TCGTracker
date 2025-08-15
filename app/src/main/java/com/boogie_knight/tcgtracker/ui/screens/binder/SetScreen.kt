@@ -304,14 +304,8 @@ fun SeriesGroup(
                     }
                 }
             } else {
-                val screenWidth = LocalWindowInfo.current.containerSize.width
-                val maxInt = 1080
-                val maxWidth = if (screenWidth < maxInt) 1.0f
-                else maxInt.toFloat() / screenWidth.toFloat()
-
                 Column(
                     modifier = Modifier
-                        .fillMaxWidth(maxWidth)
                         .padding(vertical = 40.dp),
                     verticalArrangement = Arrangement.spacedBy(20.dp)
                 ) {
@@ -439,8 +433,8 @@ fun CollectionRow(
     onSetTap: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    var rowHeight = (screenSize / 5).dp
-    if (rowHeight < 150.dp) rowHeight = 150.dp
+    var rowHeight = (screenSize.toFloat() / 4.5f).dp
+    if (rowHeight < 100.dp) rowHeight = 100.dp
     Row(
         modifier = modifier
             .fillMaxWidth()
