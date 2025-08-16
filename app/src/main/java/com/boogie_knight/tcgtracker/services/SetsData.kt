@@ -148,7 +148,7 @@ object SetsData {
         val byRarity = mutableMapOf<String, OwnedData>()
         Concepts.getRarities().forEach{ rarity ->
             // Get this rarity list of cards
-            val rarityCards = cardList.stream().filter{ card -> card.rarity == rarity && !card.baby }
+            val rarityCards = cardList.stream().filter{ card -> card.rarity == rarity && !card.extra }
                 .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
 
             // If there is any card of this rarity
@@ -218,7 +218,7 @@ object SetsData {
                 val rarityBoosterData = mutableMapOf<String, OwnedData>()
                 Concepts.getRarities().forEach{ rarity ->
                     // Get list of cards from this booster and rarity
-                    val rarityCards = boosterCards.stream().filter{ card -> card?.rarity == rarity && !card.baby }
+                    val rarityCards = boosterCards.stream().filter{ card -> card?.rarity == rarity && !card.extra }
                         .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
 
                     // Calculate total and owned cards count

@@ -8,6 +8,7 @@ import com.boogie_knight.tcgtracker.repositories.UserRepository
 import com.boogie_knight.tcgtracker.utils.ParseJSON
 
 const val ASSETS_CARDS_DATA_FOLDER_PATH = "PTCGPocket/cards"
+const val POCKETTRADE_IMAGE_URL = "https://cdn.pockettrade.app/images/webp/"
 
 object CardsData {
     private val cardMap: MutableMap<String, MutableList<Card>> = mutableMapOf()
@@ -58,9 +59,9 @@ object CardsData {
                     type = card.type,
                     origins = card.origins,
                     rarity = card.rarity,
-                    image = getImageUrl(card.id),
+                    image = getImageUrl(card.id, card.image),
                     owned = false,
-                    baby = card.baby
+                    extra = card.extra ?: false
                 )
             } ?: listOf()
     }
@@ -100,11 +101,22 @@ object CardsData {
         }
     }
 
-    private fun getImageUrl(cardID: String): String {
-        val set = cardID.substringBeforeLast('-')
-        val number = cardID.substringAfterLast('-').toInt().toString()
+    private fun getImageUrl(cardID: String, url: String?): String {
+        if (url.isNullOrEmpty()) {
+            val set = cardID.substringBeforeLast('-')
+            val number = cardID.substringAfterLast('-').toInt().toString()
 
-        return "https://cdn.pockettrade.app/images/webp/es/${set}_${number}_SPA.webp"
+            val cardFilename = "${set}_${number}_SPA.webp"
+            return "${POCKETTRADE_IMAGE_URL}es/${cardFilename}"
+        }
+
+        val sList = url.split('}')
+        if (sList.size == 2 && sList[0].contains("pockettrade")) {
+            val cardFilename = sList[1].replace("##lang##", "SPA")
+            return "${POCKETTRADE_IMAGE_URL}es/${cardFilename}.webp"
+        }
+
+        return ""
     }
 
     fun changeCardState(set: String, cardIndex: Int) {

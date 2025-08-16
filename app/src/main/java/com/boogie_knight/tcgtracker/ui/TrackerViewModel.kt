@@ -91,7 +91,7 @@ class TrackerViewModel() : ViewModel() {
                 rarity = Concepts.getPrettyRarity(card.rarity),
                 image = card.image,
                 owned = card.owned,
-                baby = card.baby
+                extra = card.extra
             )
         }
     }
