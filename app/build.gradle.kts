@@ -8,9 +8,15 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
-val keystorePropertiesFile = rootProject.file("keyStore.properties")
 val keystoreProperties = Properties()
-keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+val keystorePropertiesFile = rootProject.file("keyStore.properties")
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+} else {
+    keystoreProperties.setProperty("SIGN_KEY_PATH", System.getenv("SIGN_KEY_PATH"))
+    keystoreProperties.setProperty("SIGN_KEY_PASSWORD", System.getenv("SIGN_KEY_PASSWORD"))
+    keystoreProperties.setProperty("SIGN_KEY_ALIAS", System.getenv("SIGN_KEY_ALIAS"))
+}
 
 android {
     signingConfigs {
