@@ -144,6 +144,19 @@ class TrackerViewModel() : ViewModel() {
         return outputMap
     }
 
+    fun getMostProbableBoosterFromList(
+        boosters: Map<Origin, List<Float>>
+    ): Pair<Origin, Float>? {
+        var probableOrigin: Pair<Origin,Float>? = null
+        boosters.forEach{ booster ->
+            val totalProbability = (1 - ((1 - booster.value[0]).pow(3) * (1 - booster.value[1]) * (1 - booster.value[2]))) * 100.0f
+            if (probableOrigin == null || probableOrigin.second < totalProbability) {
+                probableOrigin = Pair(booster.key, totalProbability)
+            }
+        }
+        return probableOrigin
+    }
+
     fun getMostProbableSet(filter: List<String> = listOf()): Pair<Set, Origin>? {
         return SetsData.getMostProbableSet(filter)
     }

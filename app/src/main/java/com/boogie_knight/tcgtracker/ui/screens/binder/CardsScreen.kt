@@ -105,22 +105,20 @@ fun CardsScreen(
     var isSheetExpanded: Boolean by rememberSaveable { mutableStateOf(false) }
     var isFiltersSheet: Boolean by rememberSaveable { mutableStateOf(false) }
 
-    // Probable booster to show on bottom sheet
-    var probableBooster by rememberSaveable {
-        mutableStateOf(
-            value = trackerViewModel.getMostProbableBoosterFromSet(
-                set = currentSet,
-                filter = currentFilters
-            )
-        )
-    }
-
     // Map of origins and probabilities
     var boostersWithProbabilities by rememberSaveable {
         mutableStateOf(
             value = trackerViewModel.getBoostersWithProbabilities(
                 set = currentSet,
                 rarities = currentFilters))
+    }
+
+    // Probable booster to show on bottom sheet
+    var probableBooster by rememberSaveable {
+        mutableStateOf(
+            value = trackerViewModel.getMostProbableBoosterFromList(
+                boosters = boostersWithProbabilities)
+        )
     }
 
     val bottomBarHeight = 75.dp
@@ -222,13 +220,12 @@ fun CardsScreen(
                     },
                     onFiltersChanged = {
                         currentFilters = FiltersManager.getActiveFilters()
-                        probableBooster = trackerViewModel.getMostProbableBoosterFromSet(
-                            set = currentSet,
-                            filter = currentFilters
-                        )
                         boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
                             set = currentSet,
                             rarities = currentFilters
+                        )
+                        probableBooster = trackerViewModel.getMostProbableBoosterFromList(
+                            boosters = boostersWithProbabilities
                         )
                     },
                     infoScreen = {
@@ -274,13 +271,12 @@ fun CardsScreen(
                                     set = currentSet,
                                     cardIndex = index
                                 )
-                                probableBooster = trackerViewModel.getMostProbableBoosterFromSet(
-                                    set = currentSet,
-                                    filter = currentFilters
-                                )
                                 boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
                                     set = currentSet,
                                     rarities = currentFilters
+                                )
+                                probableBooster = trackerViewModel.getMostProbableBoosterFromList(
+                                    boosters = boostersWithProbabilities
                                 )
                             }
                         )
@@ -293,13 +289,12 @@ fun CardsScreen(
                                     set = currentSet,
                                     cardIndex = index
                                 )
-                                probableBooster = trackerViewModel.getMostProbableBoosterFromSet(
-                                    set = currentSet,
-                                    filter = currentFilters
-                                )
                                 boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
                                     set = currentSet,
                                     rarities = currentFilters
+                                )
+                                probableBooster = trackerViewModel.getMostProbableBoosterFromList(
+                                    boosters = boostersWithProbabilities
                                 )
                             }
                         )
