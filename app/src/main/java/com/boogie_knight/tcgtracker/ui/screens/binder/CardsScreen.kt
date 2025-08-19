@@ -59,7 +59,6 @@ import coil3.compose.AsyncImage
 import com.boogie_knight.tcgtracker.R
 import com.boogie_knight.tcgtracker.models.Card
 import com.boogie_knight.tcgtracker.models.Origin
-import com.boogie_knight.tcgtracker.services.OriginsData
 import com.boogie_knight.tcgtracker.services.SetsData
 import com.boogie_knight.tcgtracker.ui.TrackerViewModel
 import com.boogie_knight.tcgtracker.ui.theme.PocketBlack
@@ -114,6 +113,14 @@ fun CardsScreen(
                 filter = currentFilters
             )
         )
+    }
+
+    // Map of origins and probabilities
+    var boostersWithProbabilities by rememberSaveable {
+        mutableStateOf(
+            value = trackerViewModel.getBoostersWithProbabilities(
+                set = currentSet,
+                rarities = currentFilters))
     }
 
     val bottomBarHeight = 75.dp
@@ -219,19 +226,15 @@ fun CardsScreen(
                             set = currentSet,
                             filter = currentFilters
                         )
+                        boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
+                            set = currentSet,
+                            rarities = currentFilters
+                        )
                     },
                     infoScreen = {
-                        val boostersIDs = SetsData.getSetFromID(currentSet)?.origins
-                        val boosters = mutableListOf<Origin>()
-                        boostersIDs?.forEach{ id ->
-                            val origin = OriginsData.getOriginByID(id)
-                            if (origin != null) boosters.add(origin)
-                        }
-
                         InfoBoosterSheet(
                             setID = currentSet,
-                            boosters = boosters.toList(),
-                            rarities = currentFilters
+                            boosters = boostersWithProbabilities
                         )
                     }
                 )
@@ -275,6 +278,10 @@ fun CardsScreen(
                                     set = currentSet,
                                     filter = currentFilters
                                 )
+                                boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
+                                    set = currentSet,
+                                    rarities = currentFilters
+                                )
                             }
                         )
                     } else {
@@ -289,6 +296,10 @@ fun CardsScreen(
                                 probableBooster = trackerViewModel.getMostProbableBoosterFromSet(
                                     set = currentSet,
                                     filter = currentFilters
+                                )
+                                boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
+                                    set = currentSet,
+                                    rarities = currentFilters
                                 )
                             }
                         )
@@ -533,8 +544,7 @@ fun CardBullet(
 @Composable
 fun InfoBoosterSheet(
     setID: String,
-    boosters: List<Origin>,
-    rarities: List<String>,
+    boosters: Map<Origin, List<Float>>,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(
@@ -547,12 +557,13 @@ fun InfoBoosterSheet(
     ) {
         if (!setID.contains("P-")) {
             if (boosters.isNotEmpty()) {
-                items(count = boosters.size) { index ->
-                    InfoBoosterElement(
-                        set = setID,
-                        booster = boosters[index],
-                        rarities = rarities
-                    )
+                boosters.forEach{ origin ->
+                    item {
+                        InfoBoosterElement(
+                            booster = origin.key,
+                            probabilities = origin.value
+                        )
+                    }
                 }
             } else {
                 item {
@@ -577,9 +588,8 @@ fun InfoBoosterSheet(
 
 @Composable
 fun InfoBoosterElement(
-    set: String,
     booster: Origin,
-    rarities: List<String>,
+    probabilities: List<Float>,
     modifier: Modifier = Modifier
 ) {
     val boosterColor = getSimilarColor(
@@ -591,7 +601,6 @@ fun InfoBoosterElement(
 
     val fontColor = MaterialTheme.colorScheme.tertiaryContainer
 
-    val probabilities = SetsData.getBoosterRemainingOdds(set, booster, rarities)
     val firstOdd = "%.1f".format(
         probabilities[0] * 100.0f
     )

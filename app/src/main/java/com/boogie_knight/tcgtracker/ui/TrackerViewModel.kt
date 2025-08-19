@@ -1,6 +1,10 @@
 package com.boogie_knight.tcgtracker.ui
 
 import android.content.Context
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -19,6 +23,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlin.math.pow
 
 data class TrackerUIState(
     val isLoading: Boolean = false,
@@ -116,6 +121,27 @@ class TrackerViewModel() : ViewModel() {
 
     fun getSetColorFromID(id: String): Color? {
         return SetsData.getSetColor(id)
+    }
+
+    fun getBoostersWithProbabilities(
+        set: String,
+        rarities: List<String>
+    ): Map<Origin, List<Float>> {
+        val boostersIDs = SetsData.getSetFromID(set)?.origins
+        val boosters = mutableListOf<Origin>()
+        boostersIDs?.forEach{ id ->
+            val origin = OriginsData.getOriginByID(id)
+            if (origin != null) boosters.add(origin)
+        }
+        if (boosters.isEmpty()) return mapOf()
+
+        val outputMap = mutableMapOf<Origin, List<Float>>()
+        boosters.forEach { booster ->
+            val probabilities = SetsData.getBoosterRemainingOdds(set, booster, rarities)
+            outputMap.put(booster, probabilities)
+        }
+
+        return outputMap
     }
 
     fun getMostProbableSet(filter: List<String> = listOf()): Pair<Set, Origin>? {
