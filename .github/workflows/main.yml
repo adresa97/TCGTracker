@@ -8,6 +8,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -20,7 +21,7 @@ jobs:
         cache: gradle
 
     - name: Recreate signing key from environment variable
-      run: echo $SIGNING_KEY | base64 -d > android/app/key.jks
+      run: echo $SIGNING_KEY | base64 -d > app/key.jks
       env:
         SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
 
@@ -28,7 +29,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build apk with Gradle
-      run: ./gradlew assembleRelease
+      run: ./gradlew assembleRelease -i
       env:
         SIGN_KEY_PASSWORD: ${{ secrets.SIGN_KEY_PASSWORD }}
         SIGN_KEY_ALIAS: ${{ secrets.SIGN_KEY_ALIAS }}
@@ -38,5 +39,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: release-apk
-        path: ${{ env.main_project_module }}/build/outputs/apk/release/
+        path: /app/build/outputs/apk/release/
         retention-days: 5
