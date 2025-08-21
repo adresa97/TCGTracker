@@ -14,6 +14,7 @@ import com.boogie_knight.tcgtracker.models.Card
 import com.boogie_knight.tcgtracker.services.CardsData
 import com.boogie_knight.tcgtracker.services.Concepts
 import com.boogie_knight.tcgtracker.models.Origin
+import com.boogie_knight.tcgtracker.models.OwnedData
 import com.boogie_knight.tcgtracker.services.OriginsData
 import com.boogie_knight.tcgtracker.models.Set
 import com.boogie_knight.tcgtracker.services.SetsData
@@ -121,6 +122,25 @@ class TrackerViewModel() : ViewModel() {
 
     fun getSetColorFromID(id: String): Color? {
         return SetsData.getSetColor(id)
+    }
+
+    fun getPrettyRaritiesOwnedData(
+        setID: String,
+        filters: List<String>
+    ): Map<String, OwnedData> {
+        if (filters.isEmpty()) return mapOf()
+
+        val set = SetsData.getSetFromID(setID)
+        if (set == null) return mapOf()
+
+        val outputMap = mutableMapOf<String, OwnedData>()
+        set.numbers.byRarity?.forEach{ rarity ->
+            if (filters.contains(rarity.key)) {
+                val prettyRarity = Concepts.getPrettyRarity(rarity.key)
+                outputMap.put(prettyRarity, rarity.value)
+            }
+        }
+        return outputMap
     }
 
     fun getBoostersWithProbabilities(

@@ -306,7 +306,7 @@ fun SeriesGroup(
             } else {
                 Column(
                     modifier = Modifier
-                        .padding(vertical = 40.dp),
+                        .padding(vertical = 20.dp),
                     verticalArrangement = Arrangement.spacedBy(20.dp)
                 ) {
                     expansions.forEach { expansion ->

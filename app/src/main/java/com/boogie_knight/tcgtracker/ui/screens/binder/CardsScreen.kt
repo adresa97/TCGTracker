@@ -26,6 +26,7 @@ import androidx.compose.material3.BottomSheetScaffold
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxColors
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -59,6 +60,7 @@ import coil3.compose.AsyncImage
 import com.boogie_knight.tcgtracker.R
 import com.boogie_knight.tcgtracker.models.Card
 import com.boogie_knight.tcgtracker.models.Origin
+import com.boogie_knight.tcgtracker.models.OwnedData
 import com.boogie_knight.tcgtracker.services.SetsData
 import com.boogie_knight.tcgtracker.ui.TrackerViewModel
 import com.boogie_knight.tcgtracker.ui.theme.PocketBlack
@@ -104,6 +106,9 @@ fun CardsScreen(
     val scaffoldState = rememberBottomSheetScaffoldState()
     var isSheetExpanded: Boolean by rememberSaveable { mutableStateOf(false) }
     var isFiltersSheet: Boolean by rememberSaveable { mutableStateOf(false) }
+
+    // Bottom sheet info state
+    var isBoosterView: Boolean by rememberSaveable { mutableStateOf(true) }
 
     // Map of origins and probabilities
     var boostersWithProbabilities by rememberSaveable {
@@ -229,10 +234,29 @@ fun CardsScreen(
                         )
                     },
                     infoScreen = {
-                        InfoBoosterSheet(
-                            setID = currentSet,
-                            boosters = boostersWithProbabilities
-                        )
+                        if (isBoosterView) {
+                            InfoBoosterSheet(
+                                setID = currentSet,
+                                boosters = boostersWithProbabilities
+                            )
+                        } else {
+                            InfoRaritySheet(
+                                setID = currentSet,
+                                rarityCards = trackerViewModel.getPrettyRaritiesOwnedData(
+                                    setID = currentSet,
+                                    filters = FiltersManager.getFilters().keys.toList()
+                                )
+                            )
+                        }
+                    },
+                    isInfoLeftScreen = isBoosterView,
+                    infoLeftButtonText = if (currentSet.contains("P-")) "" else "Por sobre",
+                    onLeftInfoClick = {
+                        isBoosterView = true
+                    },
+                    infoRightButtonText = if (currentSet.contains("P-")) "" else "Por rareza",
+                    onRightInfoClick = {
+                        isBoosterView = false
                     }
                 )
             }
@@ -668,5 +692,91 @@ fun InfoBoosterElement(
                 color = fontColor
             )
         }
+    }
+}
+
+@Composable
+fun InfoRaritySheet(
+    setID: String,
+    rarityCards: Map<String, OwnedData>,
+    modifier: Modifier = Modifier
+) {
+    LazyColumn(
+        modifier = modifier
+            .fillMaxWidth()
+            .heightIn(0.dp, 300.dp)
+            .padding(all = 10.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(5.dp)
+    ) {
+        if (!setID.contains("P-")) {
+            if (rarityCards.isNotEmpty()) {
+                val entryList = rarityCards.entries.toList()
+                items(rarityCards.size){ index ->
+                    val rarity = entryList[index]
+                    InfoRarityElement(
+                        rarity = rarity.key,
+                        total = rarity.value.totalCards,
+                        owned = rarity.value.ownedCards
+                    )
+
+                    if (index != rarityCards.size - 1) {
+                        HorizontalDivider(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .offset(y = 3.dp)
+                                .alpha(0.3f),
+                            thickness = 1.dp,
+                            color = MaterialTheme.colorScheme.onTertiaryContainer
+                        )
+                    }
+                }
+            } else {
+                item {
+                    Text(
+                        text = "No se encontraron rarezas en ${setID}",
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                }
+            }
+        } else {
+            item {
+                Text(
+                    text = "${setID} es una colección promocional",
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+            }
+        }
+    }
+}
+
+@Composable
+fun InfoRarityElement(
+    rarity: String,
+    total: Int,
+    owned: Int,
+    modifier: Modifier = Modifier
+) {
+    val fontColor = MaterialTheme.colorScheme.onTertiaryContainer
+
+    Row(
+        modifier = modifier.fillMaxWidth()
+            .padding(horizontal = 8.dp),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            text = rarity,
+            fontSize = 18.sp,
+            color = fontColor
+        )
+
+        Text(
+            text = "${owned} / ${total}",
+            fontSize = 18.sp,
+            color = fontColor
+        )
     }
 }

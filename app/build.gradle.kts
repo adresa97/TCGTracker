@@ -34,8 +34,8 @@ android {
         applicationId = "com.boogie_knight.tcgtracker"
         minSdk = 29
         targetSdk = 36
-        versionCode = 7
-        versionName = "1.1.1"
+        versionCode = 8
+        versionName = "1.1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
