@@ -132,7 +132,11 @@ fun BottomSheet(
                         onFiltersChanged = { onFiltersChanged() }
                     )
                 } else {
-                    infoScreen()
+                    Box(
+                        modifier = Modifier.padding(all = 10.dp)
+                    ) {
+                        infoScreen()
+                    }
                 }
             }
 
@@ -155,6 +159,7 @@ fun BottomSheet(
                     Box(
                         modifier = Modifier
                             .fillMaxHeight()
+                            .weight(1.0f)
                             .alpha(
                                 alpha = if (isInfoLeftScreen) 1.0f else 0.75f
                             )
@@ -178,6 +183,7 @@ fun BottomSheet(
                     Box(
                         modifier = Modifier
                             .fillMaxHeight()
+                            .weight(1.0f)
                             .alpha(
                                 alpha = if (!isInfoLeftScreen) 1.0f else 0.75f
                             )

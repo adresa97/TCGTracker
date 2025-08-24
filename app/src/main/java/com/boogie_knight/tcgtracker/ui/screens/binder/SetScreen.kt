@@ -44,7 +44,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
@@ -290,7 +289,7 @@ fun SeriesGroup(
             if (isListView) {
                 Column(
                     modifier = Modifier
-                        .padding(all = 20.dp),
+                        .padding(all = 30.dp),
                     verticalArrangement = Arrangement.spacedBy(5.dp)
                 ) {
                     expansions.forEach { expansion ->
@@ -306,7 +305,7 @@ fun SeriesGroup(
             } else {
                 Column(
                     modifier = Modifier
-                        .padding(vertical = 20.dp),
+                        .padding(vertical = 30.dp),
                     verticalArrangement = Arrangement.spacedBy(20.dp)
                 ) {
                     expansions.forEach { expansion ->
@@ -516,8 +515,7 @@ fun InfoSetSheet(
     LazyColumn(
         modifier = modifier
             .fillMaxWidth()
-            .heightIn(0.dp, 300.dp)
-            .padding(all = 10.dp),
+            .heightIn(0.dp, 300.dp),
         horizontalAlignment = Alignment.Start,
         verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {

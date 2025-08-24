@@ -569,8 +569,7 @@ fun InfoBoosterSheet(
     LazyColumn(
         modifier = modifier
             .fillMaxWidth()
-            .heightIn(0.dp, 300.dp)
-            .padding(all = 10.dp),
+            .heightIn(0.dp, 300.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {
@@ -704,8 +703,7 @@ fun InfoRaritySheet(
     LazyColumn(
         modifier = modifier
             .fillMaxWidth()
-            .heightIn(0.dp, 300.dp)
-            .padding(all = 10.dp),
+            .heightIn(0.dp, 300.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {
