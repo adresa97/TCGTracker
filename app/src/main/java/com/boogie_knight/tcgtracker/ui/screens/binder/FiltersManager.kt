@@ -38,4 +38,16 @@ object FiltersManager {
         }
         return inactiveFilters
     }
+
+    fun areAllFiltersActivated(activatedFilters: List<String>): Boolean {
+        return activatedFilters.containsAll(filtersMap.keys)
+    }
+
+    fun isFilterActivated(rarity: String, isPretty: Boolean): Boolean {
+        val id =
+            if (isPretty) Concepts.getRawRarity(rarity)
+            else rarity
+
+        return filtersMap[id] ?: false
+    }
 }

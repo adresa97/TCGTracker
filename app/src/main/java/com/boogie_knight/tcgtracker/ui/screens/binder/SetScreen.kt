@@ -168,6 +168,7 @@ fun SetScreen(
                     peekArea = bottomBarHeight,
                     safeArea = safeArea,
                     isFiltersSheet = isFiltersSheet,
+                    isAlreadyFiltered = !FiltersManager.areAllFiltersActivated(currentFilters),
                     onIconClick = { isFilters ->
                         scaffoldScope.launch {
                             if (!isSheetExpanded) {

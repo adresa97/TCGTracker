@@ -191,6 +191,11 @@ class TrackerViewModel() : ViewModel() {
     fun getOriginsColorMap(): Map<String, Color> {
         return OriginsData.getOriginsNameColorMap()
     }
+
+    fun isOriginIdBooster(id: String): Boolean {
+        if (id == "") return false
+        return !OriginsData.isOriginPromo(id)
+    }
     //endregion
 
     //region Functions to change data from objects outside viewModel

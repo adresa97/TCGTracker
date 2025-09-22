@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxColors
@@ -45,7 +46,9 @@ import com.boogie_knight.tcgtracker.R
 import com.boogie_knight.tcgtracker.services.Concepts
 import com.boogie_knight.tcgtracker.ui.theme.PocketBlack
 import com.boogie_knight.tcgtracker.ui.theme.PocketWhite
+import com.boogie_knight.tcgtracker.ui.theme.getHighlightColor
 import com.boogie_knight.tcgtracker.ui.theme.getSimilarColor
+import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV
 
 @Composable
 fun BottomSheet(
@@ -55,6 +58,7 @@ fun BottomSheet(
     peekArea: Dp,
     safeArea: Dp,
     isFiltersSheet: Boolean,
+    isAlreadyFiltered: Boolean,
     infoScreen: @Composable () -> Unit,
     isInfoLeftScreen: Boolean = true,
     infoLeftButtonText: String = "",
@@ -78,6 +82,7 @@ fun BottomSheet(
             title = title,
             uiColor = uiColor,
             trackerColor = trackerColor,
+            isAlreadyFiltered = isAlreadyFiltered,
             onIconClick = { state -> onIconClick(state) }
         )
 
@@ -216,6 +221,7 @@ fun PeekArea(
     title: String,
     uiColor: Color,
     trackerColor: Color,
+    isAlreadyFiltered: Boolean,
     onIconClick: (Boolean) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
@@ -224,6 +230,12 @@ fun PeekArea(
         minSaturation = 0.4f,
         maxSaturation = 0.6f,
         value = 0.9f
+    )
+
+    val backFilterColor = getHighlightColor(
+        color = uiColor,
+        maxSaturation = 0.6f,
+        difference = 0.2f
     )
 
     Row(
@@ -278,11 +290,37 @@ fun PeekArea(
                 onIconClick(true)
             }
         ) {
-            Icon(
-                painter = painterResource(R.drawable.filter_alt),
-                tint = MaterialTheme.colorScheme.onSurface,
-                contentDescription = null
-            )
+            if (isAlreadyFiltered) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxHeight(1.0f)
+                        .fillMaxWidth(1.0f)
+                        .background(backFilterColor, CircleShape)
+                        .border(2.dp, uiColor.apply { alpha(50) }, CircleShape)
+                        .wrapContentHeight(align = Alignment.CenterVertically)
+                        .wrapContentWidth(align = Alignment.CenterHorizontally),
+                ) {
+                    Icon(
+                        painter = painterResource(R.drawable.filter_alt),
+                        tint = MaterialTheme.colorScheme.onSurface,
+                        contentDescription = null
+                    )
+                }
+            } else {
+                Box(
+                    modifier = Modifier
+                        .fillMaxHeight(1.0f)
+                        .fillMaxWidth(1.0f)
+                        .wrapContentHeight(align = Alignment.CenterVertically)
+                        .wrapContentWidth(align = Alignment.CenterHorizontally),
+                ) {
+                    Icon(
+                        painter = painterResource(R.drawable.filter_alt),
+                        tint = MaterialTheme.colorScheme.onSurface,
+                        contentDescription = null
+                    )
+                }
+            }
         }
     }
 }

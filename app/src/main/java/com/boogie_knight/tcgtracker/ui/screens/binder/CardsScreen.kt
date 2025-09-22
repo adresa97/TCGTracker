@@ -61,6 +61,7 @@ import com.boogie_knight.tcgtracker.R
 import com.boogie_knight.tcgtracker.models.Card
 import com.boogie_knight.tcgtracker.models.Origin
 import com.boogie_knight.tcgtracker.models.OwnedData
+import com.boogie_knight.tcgtracker.services.Concepts
 import com.boogie_knight.tcgtracker.services.SetsData
 import com.boogie_knight.tcgtracker.ui.TrackerViewModel
 import com.boogie_knight.tcgtracker.ui.theme.PocketBlack
@@ -200,13 +201,21 @@ fun CardsScreen(
             sheetContainerColor = uiColor,
             sheetContentColor = uiColor,
             sheetContent = {
+                val originID = probableBooster?.first?.id ?: ""
+                val originName =
+                    if (trackerViewModel.isOriginIdBooster(originID)) probableBooster?.first?.name?.es ?: ""
+                    else ""
+                val originColor =
+                    if (originName == "") MaterialTheme.colorScheme.surface
+                    else probableBooster?.first?.color ?: MaterialTheme.colorScheme.surface
                 BottomSheet(
-                    title = probableBooster?.first?.name?.es ?: "",
+                    title = originName,
                     uiColor = uiColor,
-                    trackerColor = probableBooster?.first?.color ?: MaterialTheme.colorScheme.surface,
+                    trackerColor = originColor,
                     peekArea = bottomBarHeight,
                     safeArea = safeArea,
                     isFiltersSheet = isFiltersSheet,
+                    isAlreadyFiltered = !FiltersManager.areAllFiltersActivated(currentFilters),
                     onIconClick = { isFilters ->
                         scaffoldScope.launch {
                             if (!isSheetExpanded) {
@@ -270,7 +279,10 @@ fun CardsScreen(
                 val cardList = trackerViewModel.getPrettyCardsList(currentSet)
                 val colors = trackerViewModel.getOriginsColorMap()
 
-                if (cardList.isEmpty()) {
+                val filteredCardList = cardList.filter { card ->
+                    FiltersManager.isFilterActivated(card.rarity, true)
+                }
+                if (filteredCardList.isEmpty()) {
                     Text(
                         modifier = Modifier
                             .align(Alignment.Center)
@@ -287,7 +299,7 @@ fun CardsScreen(
                 } else {
                     if (isListMode) {
                         CardListView(
-                            cardList = cardList,
+                            cardList = filteredCardList,
                             colors = colors,
                             isSheetExpanded = isSheetExpanded,
                             onCardTap = { index ->
@@ -306,7 +318,7 @@ fun CardsScreen(
                         )
                     } else {
                         CardGridView(
-                            cardList = cardList,
+                            cardList = filteredCardList,
                             isSheetExpanded = isSheetExpanded,
                             onCardTap = { index ->
                                 trackerViewModel.changeOwnedCardState(

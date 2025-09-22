@@ -9,6 +9,7 @@ const val ASSETS_CONCEPTS_DATA_FILE_PATH = "PTCGPocket/concepts.json"
 object Concepts {
     private val types = mutableMapOf<String, String>()
     private val rarities = mutableMapOf<String, String>()
+    private val reverseRarities = mutableMapOf<String, String>()
 
     fun loadJSONData() {
         val jsonString = AssetsRepository.getData(ASSETS_CONCEPTS_DATA_FILE_PATH)
@@ -16,6 +17,10 @@ object Concepts {
         if (jsonData != null) {
             types.putAll(jsonData.types)
             rarities.putAll(jsonData.rarities)
+        }
+
+        rarities.forEach { rarity ->
+            reverseRarities.put(key = rarity.value, value = rarity.key)
         }
     }
 
@@ -37,6 +42,10 @@ object Concepts {
 
     fun getTypeUrl(type: String): String {
         return types[type] ?: ""
+    }
+
+    fun getRawRarity(rarity: String): String {
+        return reverseRarities[rarity] ?: ""
     }
 
     fun getPrettyRarity(rarity: String): String {

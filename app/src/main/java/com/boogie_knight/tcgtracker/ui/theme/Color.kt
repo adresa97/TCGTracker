@@ -48,3 +48,17 @@ fun getSimilarColor(
     if (value != null) hsv[2] = value
     return Color(hsvToColorInt(hsv))
 }
+
+fun getHighlightColor(
+    color: Color,
+    minSaturation: Float? = null,
+    maxSaturation: Float? = null,
+    difference: Float = 0.0f
+) : Color {
+    val hsv = colorToHSV(color)
+    if (minSaturation != null && hsv[1] < minSaturation) hsv[1] = minSaturation
+    else if (maxSaturation != null && hsv[1] > maxSaturation) hsv[1] = maxSaturation
+    if (hsv[2] > 6.0f) hsv[2] -= difference
+    else hsv[2] += difference
+    return Color(hsvToColorInt(hsv))
+}
