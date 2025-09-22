@@ -279,23 +279,37 @@ fun CardsScreen(
                 val cardList = trackerViewModel.getPrettyCardsList(currentSet)
                 val colors = trackerViewModel.getOriginsColorMap()
 
-                val filteredCardList = cardList.filter { card ->
-                    FiltersManager.isFilterActivated(card.rarity, true)
-                }
+                val filteredCardList =
+                    if (trackerViewModel.isSetPromo(currentSet)) cardList
+                    else cardList.filter { card -> FiltersManager.isFilterActivated(card.rarity, true) }
                 if (filteredCardList.isEmpty()) {
-                    Text(
-                        modifier = Modifier
-                            .align(Alignment.Center)
-                            .padding(all = 10.dp),
-                        text = "No se ha encontrado información.\n" +
-                                "Por favor conecte el dispositivo a intenet.\n" +
-                                "Si persiste, hay problemas en el repositorio",
-                        textAlign = TextAlign.Center,
-                        style = TextStyle(
-                            color = MaterialTheme.colorScheme.onSurface,
-                            fontSize = MaterialTheme.typography.bodyLarge.fontSize
+                    if (cardList.isEmpty()) {
+                        Text(
+                            modifier = Modifier
+                                .align(Alignment.Center)
+                                .padding(all = 10.dp),
+                            text = "No se ha encontrado información.\n" +
+                                    "Por favor conecte el dispositivo a intenet.\n" +
+                                    "Si persiste, hay problemas en el repositorio",
+                            textAlign = TextAlign.Center,
+                            style = TextStyle(
+                                color = MaterialTheme.colorScheme.onSurface,
+                                fontSize = MaterialTheme.typography.bodyLarge.fontSize
+                            )
                         )
-                    )
+                    } else {
+                        Text(
+                            modifier = Modifier
+                                .align(Alignment.Center)
+                                .padding(all = 10.dp),
+                            text = "No se encuentran cartas para los filtros activos.",
+                            textAlign = TextAlign.Center,
+                            style = TextStyle(
+                                color = MaterialTheme.colorScheme.onSurface,
+                                fontSize = MaterialTheme.typography.bodyLarge.fontSize
+                            )
+                        )
+                    }
                 } else {
                     if (isListMode) {
                         CardListView(

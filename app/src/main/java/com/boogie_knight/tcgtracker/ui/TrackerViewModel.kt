@@ -124,6 +124,14 @@ class TrackerViewModel() : ViewModel() {
         return SetsData.getSetColor(id)
     }
 
+    fun isSetPromo(id: String): Boolean {
+        val set = SetsData.getSetFromID(id)
+        set?.origins?.forEach{ origin ->
+            if (OriginsData.isOriginPromo(origin)) return true
+        }
+        return false
+    }
+
     fun getPrettyRaritiesOwnedData(
         setID: String,
         filters: List<String>
