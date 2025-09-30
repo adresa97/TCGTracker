@@ -177,7 +177,11 @@ class TrackerViewModel() : ViewModel() {
     ): Pair<Origin, Float>? {
         var probableOrigin: Pair<Origin,Float>? = null
         boosters.forEach{ booster ->
-            val totalProbability = (1 - ((1 - booster.value[0]).pow(3) * (1 - booster.value[1]) * (1 - booster.value[2]))) * 100.0f
+            var totalProbability = 1.0f
+            for (i in 0 until booster.value.size) {
+                totalProbability *= (1.0f - booster.value[i])
+            }
+            totalProbability = (1.0f - totalProbability) * 100.0f
             if (probableOrigin == null || probableOrigin.second < totalProbability) {
                 probableOrigin = Pair(booster.key, totalProbability)
             }
