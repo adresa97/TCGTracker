@@ -51,6 +51,8 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.GenericFontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -61,7 +63,6 @@ import com.boogie_knight.tcgtracker.R
 import com.boogie_knight.tcgtracker.models.Card
 import com.boogie_knight.tcgtracker.models.Origin
 import com.boogie_knight.tcgtracker.models.OwnedData
-import com.boogie_knight.tcgtracker.services.Concepts
 import com.boogie_knight.tcgtracker.services.SetsData
 import com.boogie_knight.tcgtracker.ui.TrackerViewModel
 import com.boogie_knight.tcgtracker.ui.theme.PocketBlack
@@ -72,7 +73,6 @@ import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV
 import com.smarttoolfactory.extendedcolors.util.HSVUtil.hsvToColorInt
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
-import kotlin.math.pow
 
 @Serializable
 data class CardsScreen(val currentSet: String): NavKey
@@ -569,7 +569,7 @@ fun CardBullet(
                     text = "${numeral} ${rarity}",
                     fontSize = MaterialTheme.typography.bodySmall.fontSize,
                     fontWeight = MaterialTheme.typography.bodySmall.fontWeight,
-                    fontFamily = MaterialTheme.typography.bodySmall.fontFamily,
+                    fontFamily = FontFamily.Monospace,
                     color = fontColor
                 )
                 // Bottom right
@@ -645,17 +645,14 @@ fun InfoBoosterElement(
 
     val fontColor = MaterialTheme.colorScheme.tertiaryContainer
 
-    val firstOdd = "%.1f".format(
-        probabilities[0] * 100.0f
-    )
-    val fourthOdd = "%.1f".format(
-        probabilities[1] * 100.0f
-    )
-    val fifthOdd = "%.1f".format(
-        probabilities[2] * 100.0f
-    )
+    val cardOdds = mutableListOf<String>()
+    var totalOddCounter = 1.0f
+    for (i in 0 until probabilities.size) {
+        cardOdds.add("%.1f".format(probabilities[i] * 100.0f))
+        totalOddCounter *= (1 - probabilities[i])
+    }
     val totalOdd = "%.3f".format(
-        (1 - ((1 - probabilities[0]).pow(3)) * (1 - probabilities[1]) * (1 - probabilities[2])) * 100.0f
+        (1 - totalOddCounter) * 100.0f
     )
 
     Column(
@@ -684,29 +681,17 @@ fun InfoBoosterElement(
                 modifier = Modifier.align(Alignment.CenterStart)
                     .absolutePadding(left = 15.dp)
                     .fillMaxWidth(0.7f),
-                verticalAlignment = Alignment.Bottom
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Text(
-                    modifier = Modifier.weight(1.0f),
-                    text = "3: ${firstOdd}%",
-                    textAlign = TextAlign.Left,
-                    fontSize = 14.sp,
-                    color = fontColor
-                )
-                Text(
-                    modifier = Modifier.weight(1.0f),
-                    text = "4: ${fourthOdd}%",
-                    textAlign = TextAlign.Left,
-                    fontSize = 14.sp,
-                    color = fontColor
-                )
-                Text(
-                    modifier = Modifier.weight(1.0f),
-                    text = "5: ${fifthOdd}%",
-                    textAlign = TextAlign.Left,
-                    fontSize = 14.sp,
-                    color = fontColor
-                )
+                for (i in 0 until cardOdds.size) {
+                    Text(
+                        text = cardOdds[i],
+                        textAlign = TextAlign.Left,
+                        fontSize = 14.sp,
+                        color = fontColor
+                    )
+                }
             }
 
             // Total odd

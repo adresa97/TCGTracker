@@ -22,6 +22,7 @@ object OriginsData {
                     type = origin.type,
                     color = color,
                     cardCount = origin.cardCount,
+                    packSize = origin.packSize ?: 0,
                     odds = origin.odds
                 )
             } ?: listOf()

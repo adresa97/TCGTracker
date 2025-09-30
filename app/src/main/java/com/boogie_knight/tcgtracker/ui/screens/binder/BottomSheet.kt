@@ -35,7 +35,6 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
-import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
@@ -48,7 +47,6 @@ import com.boogie_knight.tcgtracker.ui.theme.PocketBlack
 import com.boogie_knight.tcgtracker.ui.theme.PocketWhite
 import com.boogie_knight.tcgtracker.ui.theme.getHighlightColor
 import com.boogie_knight.tcgtracker.ui.theme.getSimilarColor
-import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV
 
 @Composable
 fun BottomSheet(
@@ -416,6 +414,7 @@ fun RaritiesFilterColumn(
                 var isFilterActive: Boolean by rememberSaveable {
                     mutableStateOf(filtersState[rarity]!!)
                 }
+
                 Checkbox(
                     modifier = Modifier,
                     checked = isFilterActive,

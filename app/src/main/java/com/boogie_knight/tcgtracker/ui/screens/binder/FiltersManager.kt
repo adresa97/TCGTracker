@@ -11,11 +11,21 @@ object FiltersManager {
         if (filtersMap.containsKey(rarity)) {
             filtersMap[rarity] = true
         }
+
+        val parallel = Concepts.getParallelRarity(rarity)
+        if (filtersMap.containsKey(parallel)) {
+            filtersMap[parallel] = true
+        }
     }
 
     fun removeFilter(rarity: String) {
         if (filtersMap.containsKey(rarity)) {
             filtersMap[rarity] = false
+        }
+
+        val parallel = Concepts.getParallelRarity(rarity)
+        if (filtersMap.containsKey(parallel)) {
+            filtersMap[parallel] = false
         }
     }
 

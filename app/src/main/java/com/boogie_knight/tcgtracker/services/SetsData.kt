@@ -344,7 +344,11 @@ object SetsData {
             val originObject = OriginsData.getOriginByID(origin)
             if (originObject != null) {
                 val probabilities = getBoosterRemainingOdds(setID, originObject, rarities)
-                var totalProbability = (1 - ((1 - probabilities[0]).pow(3) * (1 - probabilities[1]) * (1 - probabilities[2]))) * 100.0f
+                var totalProbability = 1.0f
+                for (i in 0 until probabilities.size) {
+                    totalProbability *= (1.0f - probabilities[i])
+                }
+                totalProbability = (1.0f - totalProbability) * 100.0f
                 if (totalProbability > 99.9f) totalProbability = 100.0f
                 else if (totalProbability < 0.0f) totalProbability = 0.0f
                 if (totalProbability >= probableOdd) {
@@ -364,7 +368,11 @@ object SetsData {
         origin: Origin,
         rarities: List<String> = listOf()
     ): List<Float> {
-        val probabilities = mutableListOf(0.0f, 0.0f, 0.0f)
+        val packSize = origin.packSize ?: 0
+        val probabilities = mutableListOf<Float>()
+        for (i in 0 until packSize) {
+            probabilities.add(0.0f)
+        }
 
         if (origin.type != "BOOSTER" || origin.odds == null) return probabilities
 
@@ -382,7 +390,7 @@ object SetsData {
                 val totalCards = numbers[rarity]!!.totalCards
                 if (totalCards != 0) {
                     val remainingCards = totalCards - numbers[rarity]!!.ownedCards
-                    for (i in 0 until 3) {
+                    for (i in 0 until packSize) {
                         val cardOdd = origin.odds[rarity]?.get(i) ?: 0.0f
                         val totalOdd = (remainingCards * cardOdd) / 100.0f
                         probabilities[i] += totalOdd

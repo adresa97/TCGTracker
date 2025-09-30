@@ -10,6 +10,7 @@ object Concepts {
     private val types = mutableMapOf<String, String>()
     private val rarities = mutableMapOf<String, String>()
     private val reverseRarities = mutableMapOf<String, String>()
+    private val parallel = mutableMapOf<String, String>()
 
     fun loadJSONData() {
         val jsonString = AssetsRepository.getData(ASSETS_CONCEPTS_DATA_FILE_PATH)
@@ -17,6 +18,7 @@ object Concepts {
         if (jsonData != null) {
             types.putAll(jsonData.types)
             rarities.putAll(jsonData.rarities)
+            if (jsonData.parallel != null) parallel.putAll(jsonData.parallel)
         }
 
         rarities.forEach { rarity ->
@@ -50,6 +52,10 @@ object Concepts {
 
     fun getPrettyRarity(rarity: String): String {
         return rarities[rarity] ?: ""
+    }
+
+    fun getParallelRarity(rarity: String): String {
+        return parallel[rarity] ?: ""
     }
 
     fun getDiamondRarities(): List<String> {
