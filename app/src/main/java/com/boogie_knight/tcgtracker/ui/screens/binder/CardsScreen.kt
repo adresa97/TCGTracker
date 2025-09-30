@@ -779,6 +779,7 @@ fun InfoRarityElement(
         Text(
             text = rarity,
             fontSize = 18.sp,
+            fontFamily = FontFamily.Monospace,
             color = fontColor
         )
 

@@ -61,7 +61,7 @@ object Concepts {
     fun getDiamondRarities(): List<String> {
         val output = mutableListOf<String>()
         rarities.forEach{ rarity ->
-            if (rarity.key.contains("DIAMOND")) {
+            if (rarity.key.endsWith("DIAMOND")) {
                 output.add(rarity.key)
             }
         }
@@ -71,7 +71,7 @@ object Concepts {
     fun getStarCrownRarities(): List<String> {
         val output = mutableListOf<String>()
         rarities.forEach{ rarity ->
-            if (rarity.key.contains("STAR") || rarity.key.contains("CROWN")) {
+            if (rarity.key.endsWith("STAR") || rarity.key.endsWith("CROWN")) {
                 output.add(rarity.key)
             }
         }
@@ -81,7 +81,7 @@ object Concepts {
     fun getShinyRarities(): List<String> {
         val output = mutableListOf<String>()
         rarities.forEach{ rarity ->
-            if (rarity.key.contains("SHINY")) {
+            if (rarity.key.endsWith("SHINY")) {
                 output.add(rarity.key)
             }
         }
