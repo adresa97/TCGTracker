@@ -9,7 +9,7 @@ data class Origin (
     val type: String,
     val color: Color,
     val cardCount: Int,
-    val packSize: Int,
+    val packSize: Int?,
     val odds: Map<String, List<Float>>?
 )
 
