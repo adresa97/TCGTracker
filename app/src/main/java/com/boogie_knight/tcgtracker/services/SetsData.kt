@@ -282,6 +282,12 @@ object SetsData {
         return ids
     }
 
+    // Get set id from its name
+    fun getSetID(name: String): String {
+        // TODO: Only works with spanish names
+        return setList.firstOrNull{ set -> set.name.es == name }?.set ?: name
+    }
+
     // Get set name from its code
     fun getSetName(code: String): String {
         return setList.firstOrNull{ set -> set.set == code }?.name?.es ?: code
@@ -313,6 +319,31 @@ object SetsData {
         var probableBooster: Origin? = null
         var probableOdd = 0.0f
         setList.forEach{ set ->
+            val setOrigin = getMostProbableBooster(set.set, rarities)
+            if (setOrigin != null) {
+                if (setOrigin.second >= probableOdd) {
+                    probableOdd = setOrigin.second
+                    probableBooster = setOrigin.first
+                    probableSet = set
+                }
+            }
+        }
+
+        if (probableSet == null || probableBooster == null) return null
+        return Pair(probableSet, probableBooster)
+    }
+
+    // Get most probable out of a list of sets
+    fun getMostProbableSetFromList(
+        sets: List<Set>,
+        rarities: List<String> = listOf()
+    ): Pair<Set, Origin>? {
+        if (sets.isEmpty()) return null
+
+        var probableSet: Set? = null
+        var probableBooster: Origin? = null
+        var probableOdd = 0.0f
+        sets.forEach{ set ->
             val setOrigin = getMostProbableBooster(set.set, rarities)
             if (setOrigin != null) {
                 if (setOrigin.second >= probableOdd) {

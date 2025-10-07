@@ -13,3 +13,9 @@ data class SQLOwnedSet(
     val owned: Int,
     val total: Int
 )
+
+data class SQLFilterConfig(
+    val filter: String,
+    val type: String,
+    val state: Int
+)

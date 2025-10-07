@@ -18,9 +18,12 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.BottomSheetScaffold
+import androidx.compose.material3.Checkbox
+import androidx.compose.material3.CheckboxColors
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -59,6 +62,7 @@ import com.boogie_knight.tcgtracker.services.SetsData
 import com.boogie_knight.tcgtracker.ui.TrackerViewModel
 import com.boogie_knight.tcgtracker.ui.theme.PocketBlack
 import com.boogie_knight.tcgtracker.ui.theme.getSimilarColor
+import com.boogie_knight.tcgtracker.utils.greyScale
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
 
@@ -81,8 +85,13 @@ fun SetScreen(
     }
 
     // Get active rarities from FiltersManager
-    var currentFilters: List<String> by rememberSaveable {
-        mutableStateOf(FiltersManager.getActiveFilters())
+    var currentRarityFilters: List<String> by rememberSaveable {
+        mutableStateOf(FiltersManager.getActiveRarityFilters())
+    }
+
+    // Get active sets from FiltersManager
+    var currentSetFilters: List<String> by rememberSaveable {
+        mutableStateOf(FiltersManager.getActiveSetFilters())
     }
 
     // UI color
@@ -158,7 +167,7 @@ fun SetScreen(
             sheetShadowElevation = 10.dp,
             sheetContent = {
                 // Get most probable set and its associated color
-                val setBooster = trackerViewModel.getMostProbableSet(currentFilters)
+                val setBooster = trackerViewModel.getMostProbableSetFromList(currentSetFilters, currentRarityFilters)
                 val setColor = setBooster?.first?.color ?: MaterialTheme.colorScheme.surface
 
                 BottomSheet(
@@ -168,7 +177,7 @@ fun SetScreen(
                     peekArea = bottomBarHeight,
                     safeArea = safeArea,
                     isFiltersSheet = isFiltersSheet,
-                    isAlreadyFiltered = !FiltersManager.areAllFiltersActivated(currentFilters),
+                    isAlreadyFiltered = !FiltersManager.areAllRarityFiltersActivated(currentRarityFilters),
                     onIconClick = { isFilters ->
                         scaffoldScope.launch {
                             if (!isSheetExpanded) {
@@ -186,13 +195,17 @@ fun SetScreen(
                         }
                     },
                     onFiltersChanged = {
-                        currentFilters = FiltersManager.getActiveFilters()
+                        currentRarityFilters = FiltersManager.getActiveRarityFilters()
                     },
                     infoScreen = {
                         val seriesMap = trackerViewModel.getSeriesMap()
                         InfoSetSheet(
                             sets = seriesMap,
-                            rarities = currentFilters
+                            activeSets = currentSetFilters,
+                            onSetClick = {
+                                currentSetFilters = FiltersManager.getActiveSetFilters()
+                            },
+                            rarities = currentRarityFilters
                         )
                     }
                 )
@@ -510,7 +523,9 @@ fun EmptyBox(modifier: Modifier = Modifier) {
 @Composable
 fun InfoSetSheet(
     sets: Map<String, List<Set>>,
+    activeSets: List<String>,
     rarities: List<String>,
+    onSetClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(
@@ -526,7 +541,9 @@ fun InfoSetSheet(
                 if (!set.set.contains("P-")) {
                     InfoSetElement(
                         set = set,
-                        rarities = rarities
+                        isActive = activeSets.contains(set.set),
+                        rarities = rarities,
+                        onSetClick = onSetClick
                     )
                 }
             }
@@ -537,7 +554,9 @@ fun InfoSetSheet(
 @Composable
 fun InfoSetElement(
     set: Set,
+    isActive: Boolean,
     rarities: List<String>,
+    onSetClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val setColor = getSimilarColor(
@@ -549,50 +568,100 @@ fun InfoSetElement(
 
     val fontColor = MaterialTheme.colorScheme.tertiaryContainer
 
+    val checkColors = CheckboxColors(
+        checkedCheckmarkColor = setColor,
+        uncheckedCheckmarkColor = setColor,
+        checkedBoxColor = MaterialTheme.colorScheme.tertiaryContainer,
+        uncheckedBoxColor = setColor,
+        disabledCheckedBoxColor = setColor,
+        disabledUncheckedBoxColor = setColor,
+        disabledIndeterminateBoxColor = setColor,
+        checkedBorderColor = MaterialTheme.colorScheme.tertiaryContainer,
+        uncheckedBorderColor = MaterialTheme.colorScheme.tertiaryContainer,
+        disabledBorderColor = setColor,
+        disabledUncheckedBorderColor = setColor,
+        disabledIndeterminateBorderColor = setColor
+    )
+
     var probableBooster = SetsData.getMostProbableBooster(set.set, rarities)
     if (probableBooster == null) {
         probableBooster = Pair(OriginsData.getOriginByID(set.origins[0])!!, 0.0f)
     }
 
-    Column(
-        modifier = modifier.fillMaxWidth()
-            .background(setColor, RoundedCornerShape(5.dp))
-            .padding(horizontal = 8.dp),
-        verticalArrangement = Arrangement.spacedBy(5.dp)
-    ) {
-        Box(
-            modifier = Modifier.fillMaxWidth()
-                .offset(y = 4.dp)
-        ) {
-            Text(
-                text = "${set.name.es} (${set.set})",
-                fontSize = 18.sp,
-                color = fontColor
-            )
-        }
+    val greyStrength = if (isActive) 1.0f else 0.5f
+    val alpha = if (isActive) 1.0f else 0.5f
 
-        Box(
-            modifier = Modifier.fillMaxWidth()
+
+    Box(
+        modifier = modifier.greyScale(greyStrength)
+            .alpha(alpha)
+    ) {
+        Column(
+            modifier = modifier.fillMaxWidth()
+                .background(setColor, RoundedCornerShape(5.dp)),
+            verticalArrangement = Arrangement.spacedBy(5.dp)
         ) {
             Box(
                 modifier = Modifier.fillMaxWidth()
-                    .align(Alignment.CenterEnd)
-                    .offset(y = (-4).dp)
+                    .padding(horizontal = 8.dp)
+                    .offset(y = 4.dp)
             ) {
                 Text(
-                    modifier = Modifier.align(Alignment.CenterStart)
-                        .absolutePadding(left = 15.dp),
-                    text = probableBooster.first.name.es,
-                    fontSize = 16.sp,
+                    text = "${set.name.es} (${set.set})",
+                    fontSize = 18.sp,
                     color = fontColor
                 )
-                val percentage = "%.3f".format(probableBooster.second)
-                Text(
-                    modifier = Modifier.align(Alignment.CenterEnd),
-                    text = "${percentage}%",
-                    fontSize = 16.sp,
-                    color = fontColor
+            }
+
+            Row(
+                modifier = Modifier.fillMaxWidth()
+                    .padding(horizontal = 8.dp)
+            ) {
+                var isFilterActive: Boolean by rememberSaveable {
+                    mutableStateOf(isActive)
+                }
+
+                Checkbox(
+                    modifier = Modifier
+                        .size(16.dp)
+                        .alpha(0.75f),
+                    checked = isFilterActive,
+                    colors = checkColors,
+                    onCheckedChange = { checkState ->
+                        if (checkState) {
+                            FiltersManager.addFilter(set.set)
+                        } else {
+                            FiltersManager.removeFilter(set.set)
+                        }
+                        onSetClick()
+                        isFilterActive = checkState
+                    }
                 )
+
+                Box(
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Box(
+                        modifier = Modifier.fillMaxWidth()
+                            .align(Alignment.CenterEnd)
+                            .offset(y = (-4).dp)
+                    ) {
+                        Text(
+                            modifier = Modifier.align(Alignment.CenterStart)
+                                .absolutePadding(left = 15.dp),
+                            text = probableBooster.first.name.es,
+                            fontSize = 16.sp,
+                            color = fontColor
+                        )
+                        val percentage = "%.3f".format(probableBooster.second)
+                        Text(
+                            modifier = Modifier.align(Alignment.CenterEnd),
+                            text = "${percentage}%",
+                            fontSize = 16.sp,
+                            color = fontColor
+                        )
+                    }
+                }
             }
         }
     }

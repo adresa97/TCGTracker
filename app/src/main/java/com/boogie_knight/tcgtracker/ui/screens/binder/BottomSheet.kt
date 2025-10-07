@@ -38,7 +38,6 @@ import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.GenericFontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -129,7 +128,7 @@ fun BottomSheet(
                     )
             ) {
                 if (isFiltersSheet) {
-                    val filtersState = FiltersManager.getFilters()
+                    val filtersState = FiltersManager.getRarityFilters()
                     FiltersSheet(
                         checkColor = uiColor,
                         backColor = MaterialTheme.colorScheme.tertiaryContainer,

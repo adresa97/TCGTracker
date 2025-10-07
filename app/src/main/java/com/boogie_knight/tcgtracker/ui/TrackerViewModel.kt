@@ -19,6 +19,7 @@ import com.boogie_knight.tcgtracker.services.OriginsData
 import com.boogie_knight.tcgtracker.models.Set
 import com.boogie_knight.tcgtracker.services.SetsData
 import com.boogie_knight.tcgtracker.repositories.UserRepository
+import com.boogie_knight.tcgtracker.ui.screens.binder.FiltersManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -76,6 +77,7 @@ class TrackerViewModel() : ViewModel() {
             Concepts.loadJSONData()
             OriginsData.loadJSONData()
             SetsData.loadJSONData()
+            FiltersManager.initiateFilters()
 
             endLoading()
         }
@@ -191,6 +193,19 @@ class TrackerViewModel() : ViewModel() {
 
     fun getMostProbableSet(filter: List<String> = listOf()): Pair<Set, Origin>? {
         return SetsData.getMostProbableSet(filter)
+    }
+
+    fun getMostProbableSetFromList(
+        sets: List<String>,
+        filter: List<String> = listOf()
+    ): Pair<Set, Origin>? {
+        val setList = mutableListOf<Set>()
+        sets.forEach{ id ->
+            val set = SetsData.getSetFromID(id)
+            if (set != null) setList.add(set)
+        }
+
+        return SetsData.getMostProbableSetFromList(setList, filter)
     }
 
     fun getMostProbableBoosterFromSet(

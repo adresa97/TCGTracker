@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.boogie_knight.tcgtracker.models.SQLFilterConfig
 import com.boogie_knight.tcgtracker.models.SQLOwnedCard
 import com.boogie_knight.tcgtracker.models.SQLOwnedSet
 
@@ -31,6 +32,14 @@ data object UserRepository{
         handler!!.saveSetsInBatches(sets)
     }
 
+    fun saveFilters(
+        filters: List<SQLFilterConfig>
+    ) {
+        if (handler == null) return
+        if (filters.isEmpty()) return
+        handler!!.saveFiltersInBatches(filters)
+    }
+
     fun getCardsBySet(
         set: String
     ): Map<String, Boolean> {
@@ -45,6 +54,14 @@ data object UserRepository{
     ): Pair<Int, Int> {
         if (handler == null) return Pair(0, 0)
         return handler!!.getSetPrecalculations(set, booster, rarity)
+    }
+
+    fun getFilterState(
+        filter: String,
+        type: String
+    ): Boolean? {
+        if (handler == null) return null
+        return handler!!.getFilterState(filter, type)
     }
 }
 
@@ -73,6 +90,18 @@ class SQLiteHandler(
             ${OWNED_COL} INTEGER NOT NULL,
             ${TOTAL_COL} INTEGER NOT NULL,
             CONSTRAINT Set_PK PRIMARY KEY (${SET_COL},${BOOSTER_COL},${RARITY_COL})
+            );
+            """
+        )
+        db.execSQL(query)
+
+        query = (
+            """
+            CREATE TABLE IF NOT EXISTS ${FILTER_TABLE} (
+            ${FILTER_COL} TEXT NOT NULL,
+            ${TYPE_COL} TEXT NOT NULL,
+            ${STATE_COL} INTEGER NOT NULL,
+            CONSTRAINT Filter_PK PRIMARY KEY (${FILTER_COL},${TYPE_COL})
             );
             """
         )
@@ -263,6 +292,47 @@ class SQLiteHandler(
         db.close()
     }
 
+    fun saveFiltersInBatches(
+        filters: List<SQLFilterConfig>,
+        batchSize: Int = 150
+    ) {
+        if (filters.isEmpty()) return
+
+        val maxIndex = filters.size
+
+        var startIndex = 0
+        var endIndex = batchSize
+        if (endIndex > maxIndex) endIndex = maxIndex
+        while (startIndex < maxIndex) {
+            saveFiltersInBatch(filters.subList(startIndex, endIndex))
+
+            startIndex = endIndex
+            endIndex += batchSize
+            if (endIndex > maxIndex) endIndex = maxIndex
+        }
+    }
+
+    private fun saveFiltersInBatch(
+        filters: List<SQLFilterConfig>
+    ) {
+        if (filters.isEmpty()) return
+
+        val db = this.writableDatabase
+
+        var query = "REPLACE INTO ${FILTER_TABLE} (${FILTER_COL}, ${TYPE_COL}, ${STATE_COL}) VALUES "
+        val arguments = mutableListOf<Any>()
+        filters.forEach { filter ->
+            query += "(?, ?, ?),"
+            arguments.add(filter.filter)
+            arguments.add(filter.type)
+            arguments.add(filter.state)
+        }
+        query = query.dropLast(1)
+
+        db.execSQL(query, arguments.toTypedArray())
+        db.close()
+    }
+
     fun getCardsBySet(
         set: String
     ): Map<String, Boolean> {
@@ -301,6 +371,24 @@ class SQLiteHandler(
         return outPair
     }
 
+    fun getFilterState(
+        filter: String,
+        type: String
+    ): Boolean? {
+        val db = this.readableDatabase
+
+        val query: String ="SELECT ${STATE_COL} FROM ${FILTER_TABLE} WHERE ${FILTER_COL}=? AND ${TYPE_COL}=?"
+        val cursorFilters: Cursor = db.rawQuery(query, arrayOf(filter, type))
+
+        var outBool: Boolean? = null
+        if (cursorFilters.moveToFirst()) {
+            outBool = cursorFilters.getInt(0) == 1
+        }
+
+        cursorFilters.close()
+        return outBool
+    }
+
     override fun onUpgrade(
         db: SQLiteDatabase,
         oldVersion: Int,
@@ -308,6 +396,7 @@ class SQLiteHandler(
     ) {
         db.execSQL("DROP TABLE IF EXISTS ${CARD_TABLE}")
         db.execSQL("DROP TABLE IF EXISTS ${SET_TABLE}")
+        db.execSQL("DROP TABLE IF EXISTS ${FILTER_TABLE}")
 
         onCreate(db)
     }
@@ -317,11 +406,15 @@ class SQLiteHandler(
         private const val DB_VERSION = 1
         private const val CARD_TABLE = "OwnedCard"
         private const val SET_TABLE = "OwnedSet"
+        private const val FILTER_TABLE = "FiltersConfig"
         private const val ID_COL = "id"
         private const val OWNED_COL = "owned"
         private const val SET_COL = "\"set\""
         private const val BOOSTER_COL = "booster"
         private const val RARITY_COL = "rarity"
         private const val TOTAL_COL = "total"
+        private const val FILTER_COL = "name"
+        private const val TYPE_COL = "kind"
+        private const val STATE_COL = "state"
     }
 }

@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -52,7 +53,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.GenericFontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -73,6 +73,7 @@ import com.smarttoolfactory.extendedcolors.util.ColorUtil.colorToHSV
 import com.smarttoolfactory.extendedcolors.util.HSVUtil.hsvToColorInt
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
+import kotlin.math.ceil
 
 @Serializable
 data class CardsScreen(val currentSet: String): NavKey
@@ -95,7 +96,7 @@ fun CardsScreen(
 
     // Get active rarities from FiltersManager
     var currentFilters: List<String> by rememberSaveable {
-        mutableStateOf(FiltersManager.getActiveFilters())
+        mutableStateOf(FiltersManager.getActiveRarityFilters())
     }
 
     // UI color
@@ -215,7 +216,7 @@ fun CardsScreen(
                     peekArea = bottomBarHeight,
                     safeArea = safeArea,
                     isFiltersSheet = isFiltersSheet,
-                    isAlreadyFiltered = !FiltersManager.areAllFiltersActivated(currentFilters),
+                    isAlreadyFiltered = !FiltersManager.areAllRarityFiltersActivated(currentFilters),
                     onIconClick = { isFilters ->
                         scaffoldScope.launch {
                             if (!isSheetExpanded) {
@@ -233,7 +234,7 @@ fun CardsScreen(
                         }
                     },
                     onFiltersChanged = {
-                        currentFilters = FiltersManager.getActiveFilters()
+                        currentFilters = FiltersManager.getActiveRarityFilters()
                         boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
                             set = currentSet,
                             rarities = currentFilters
@@ -253,7 +254,7 @@ fun CardsScreen(
                                 setID = currentSet,
                                 rarityCards = trackerViewModel.getPrettyRaritiesOwnedData(
                                     setID = currentSet,
-                                    filters = FiltersManager.getFilters().keys.toList()
+                                    filters = FiltersManager.getRarityFilters().keys.toList()
                                 )
                             )
                         }
@@ -645,10 +646,10 @@ fun InfoBoosterElement(
 
     val fontColor = MaterialTheme.colorScheme.tertiaryContainer
 
-    val cardOdds = mutableListOf<String>()
+    val cardOdds = mutableListOf<Int>()
     var totalOddCounter = 1.0f
     for (i in 0 until probabilities.size) {
-        cardOdds.add("%.1f".format(probabilities[i] * 100.0f))
+        cardOdds.add(ceil(probabilities[i] * 100.0f).toInt())
         totalOddCounter *= (1 - probabilities[i])
     }
     val totalOdd = "%.3f".format(
@@ -679,15 +680,17 @@ fun InfoBoosterElement(
             // Each card odds
             Row(
                 modifier = Modifier.align(Alignment.CenterStart)
-                    .absolutePadding(left = 15.dp)
-                    .fillMaxWidth(0.7f),
+                    .absolutePadding(left = 5.dp)
+                    .fillMaxWidth(0.7f)
+                    .wrapContentWidth(),
                 verticalAlignment = Alignment.Bottom,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 for (i in 0 until cardOdds.size) {
                     Text(
-                        text = cardOdds[i],
-                        textAlign = TextAlign.Left,
+                        modifier = Modifier.weight(1.0f),
+                        text = "${cardOdds[i]}%",
+                        textAlign = TextAlign.Right,
                         fontSize = 14.sp,
                         color = fontColor
                     )
