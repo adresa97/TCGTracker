@@ -1,5 +1,6 @@
 package com.boogie_knight.tcgtracker.ui.screens.binder
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -69,6 +70,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data object SetScreen: NavKey
 
+@SuppressLint("ConfigurationScreenWidthHeight")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SetScreen(
@@ -235,18 +237,39 @@ fun SetScreen(
                         )
                     )
                 } else {
-                    series.forEach { element ->
-                        val expansionsMap = getExpansionsMap(series, element.key)
-                        val screenSize = LocalConfiguration.current.screenHeightDp
-                        SeriesGroup(
-                            series = element.key,
-                            expansions = expansionsMap,
-                            colors = colors,
-                            screenSize = screenSize,
-                            isSheetExpanded = isSheetExpanded,
-                            isListView = isListMode,
-                            onSetTap = { set -> onSetTap(set) }
-                        )
+                    val screenSize = LocalConfiguration.current.screenHeightDp
+                    LazyColumn(
+                        modifier = Modifier.fillMaxSize(),
+                        userScrollEnabled = !isSheetExpanded
+                    ) {
+                        series.forEach { element ->
+                            stickyHeader {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth()
+                                        .background(MaterialTheme.colorScheme.secondaryContainer),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Text(
+                                        modifier = Modifier.padding(horizontal = 15.dp, vertical = 5.dp),
+                                        text = element.key,
+                                        fontSize = 22.sp,
+                                        color = MaterialTheme.colorScheme.secondary
+                                    )
+                                }
+                            }
+
+                            val expansionsMap = getExpansionsMap(series, element.key)
+                            item {
+                                SeriesContent(
+                                    expansions = expansionsMap,
+                                    colors = colors,
+                                    screenSize = screenSize,
+                                    isSheetExpanded = isSheetExpanded,
+                                    isListView = isListMode,
+                                    onSetTap = { set -> onSetTap(set) }
+                                )
+                            }
+                        }
                     }
                 }
             }
@@ -271,8 +294,7 @@ fun getExpansionsMap(
 }
 
 @Composable
-fun SeriesGroup(
-    series: String,
+fun SeriesContent(
     expansions: Map<String, List<Set>>,
     colors: Map<String, Color>,
     screenSize: Int,
@@ -281,65 +303,44 @@ fun SeriesGroup(
     onSetTap: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    LazyColumn(
-        modifier = modifier.fillMaxSize(),
-        userScrollEnabled = !isSheetExpanded
-    ) {
-        stickyHeader {
-            Row(
-                modifier = Modifier.fillMaxWidth()
-                    .background(MaterialTheme.colorScheme.secondaryContainer),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    modifier = Modifier.padding(horizontal = 15.dp, vertical = 5.dp),
-                    text = series,
-                    fontSize = 22.sp,
-                    color = MaterialTheme.colorScheme.secondary
+    if (isListView) {
+        Column(
+            modifier = Modifier
+                .padding(all = 30.dp),
+            verticalArrangement = Arrangement.spacedBy(5.dp)
+        ) {
+            expansions.forEach { expansion ->
+                CollectionList(
+                    expansion.value,
+                    colors,
+                    !isSheetExpanded,
+                    onSetTap,
+                    Modifier.padding(horizontal = 20.dp)
                 )
             }
         }
-        item {
-            if (isListView) {
-                Column(
-                    modifier = Modifier
-                        .padding(all = 30.dp),
-                    verticalArrangement = Arrangement.spacedBy(5.dp)
-                ) {
-                    expansions.forEach { expansion ->
-                        CollectionList(
-                            expansion.value,
-                            colors,
-                            !isSheetExpanded,
-                            onSetTap,
-                            Modifier.padding(horizontal = 20.dp)
-                        )
-                    }
-                }
-            } else {
-                Column(
-                    modifier = Modifier
-                        .padding(vertical = 30.dp),
-                    verticalArrangement = Arrangement.spacedBy(20.dp)
-                ) {
-                    expansions.forEach { expansion ->
-                        val setsCount = expansion.value.size
-                        var startIndex = 0
-                        var endIndex = 3
-                        if (endIndex > setsCount) endIndex = setsCount
-                        while (startIndex < setsCount) {
-                            CollectionRow(
-                                expansion.value.subList(startIndex, endIndex),
-                                !isSheetExpanded,
-                                screenSize,
-                                onSetTap,
-                                Modifier.padding(horizontal = 20.dp)
-                            )
-                            startIndex = endIndex
-                            endIndex += 3
-                            if (endIndex > setsCount) endIndex = setsCount
-                        }
-                    }
+    } else {
+        Column(
+            modifier = Modifier
+                .padding(vertical = 30.dp),
+            verticalArrangement = Arrangement.spacedBy(20.dp)
+        ) {
+            expansions.forEach { expansion ->
+                val setsCount = expansion.value.size
+                var startIndex = 0
+                var endIndex = 3
+                if (endIndex > setsCount) endIndex = setsCount
+                while (startIndex < setsCount) {
+                    CollectionRow(
+                        expansion.value.subList(startIndex, endIndex),
+                        !isSheetExpanded,
+                        screenSize,
+                        onSetTap,
+                        Modifier.padding(horizontal = 20.dp)
+                    )
+                    startIndex = endIndex
+                    endIndex += 3
+                    if (endIndex > setsCount) endIndex = setsCount
                 }
             }
         }
