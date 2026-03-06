@@ -15,9 +15,7 @@ object CardsData {
 
     // Return a set's list of cards
     fun getCardList(set: String): List<Card> {
-        if (cardMap.contains(set)) return cardMap[set]!!.toList()
-
-        val cardList = loadAssetsJSONData(set).toMutableList()
+        val cardList = cardMap.getOrElse(set, { loadAssetsJSONData(set).toMutableList() })
         if (cardList.isEmpty()) return listOf()
 
         val ownedList = loadUserData(cardList)
