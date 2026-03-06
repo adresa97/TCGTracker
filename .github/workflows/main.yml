@@ -2,6 +2,8 @@ name: Build CI
 
 on:
   push:
+    branches:
+      - reprint-update
     tags:
       - '**'
 
