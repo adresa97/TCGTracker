@@ -33,11 +33,21 @@ object ImporterExporter {
             val cardList = CardsData.getCardList(set)
             for (i in 0 until entry.value.values.size) {
                 if (cardList.getOrNull(i) != null) {
+                    val firstPrint = cardList[i].firstPrint
+                    val printSet = firstPrint.substringBeforeLast('-')
+                    var isOwned = entry.value.values[i]
+                    if (firstPrint != cardList[i].id) {
+                        val externalDataSet = if (printSet == "P-A") "pA" else printSet
+                        if (externalData[externalDataSet] != null) {
+                            val externalIndex = firstPrint.substringAfterLast('-').toIntOrNull()
+                            if (externalIndex != null) isOwned = externalData[externalDataSet]!!.values[externalIndex]
+                        }
+                    }
                     dataList.add(
                         SQLOwnedCard(
-                            id = cardList[i].id,
-                            set = set,
-                            isOwned = entry.value.values[i]
+                            id = firstPrint,
+                            set = printSet,
+                            isOwned = isOwned
                         )
                     )
                 }

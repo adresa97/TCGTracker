@@ -99,7 +99,8 @@ class TrackerViewModel() : ViewModel() {
                 rarity = Concepts.getPrettyRarity(card.rarity),
                 image = card.image,
                 owned = card.owned,
-                extra = card.extra
+                extra = card.extra,
+                firstPrint = card.firstPrint
             )
         }
     }
