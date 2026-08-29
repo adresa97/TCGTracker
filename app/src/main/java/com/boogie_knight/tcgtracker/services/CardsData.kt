@@ -127,11 +127,11 @@ object CardsData {
         val lang3 = "SPA"
 
         val url = "${source.host}${source.folder}${source.file}"
-        url.replace("#set#", set)
-        url.replace("#number#", number)
-        url.replace("#single#", single)
-        url.replace("#lang2#", lang2)
-        url.replace("#lang3#", lang3)
+            .replace("#set#", set)
+            .replace("#number#", number)
+            .replace("#single#", single)
+            .replace("#lang2#", lang2)
+            .replace("#lang3#", lang3)
         return url
     }
 
