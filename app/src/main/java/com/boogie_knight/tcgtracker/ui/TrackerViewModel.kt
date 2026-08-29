@@ -75,6 +75,7 @@ class TrackerViewModel() : ViewModel() {
             UserRepository.init(context)
 
             Concepts.loadJSONData()
+            CardsData.loadImageJSONData()
             OriginsData.loadJSONData()
             SetsData.loadJSONData()
             FiltersManager.initiateFilters()
@@ -99,7 +100,8 @@ class TrackerViewModel() : ViewModel() {
                 rarity = Concepts.getPrettyRarity(card.rarity),
                 image = card.image,
                 owned = card.owned,
-                extra = card.extra
+                extra = card.extra,
+                firstPrint = card.firstPrint
             )
         }
     }

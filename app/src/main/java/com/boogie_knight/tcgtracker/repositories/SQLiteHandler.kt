@@ -40,6 +40,21 @@ data object UserRepository{
         handler!!.saveFiltersInBatches(filters)
     }
 
+    fun deleteCards(
+        cards: List<String>
+    ) {
+        if (handler == null) return
+        if (cards.isEmpty()) return
+        handler!!.deleteCards(cards)
+    }
+
+    fun getCardsByIds(
+        ids: List<String>
+    ): Map<String, Boolean> {
+        if (handler == null) return mapOf()
+        return handler!!.getCardsByIds(ids)
+    }
+
     fun getCardsBySet(
         set: String
     ): Map<String, Boolean> {
@@ -229,6 +244,22 @@ class SQLiteHandler(
         db.close()
     }
 
+    fun deleteCards(
+        cards: List<String>
+    ) {
+        if (cards.isEmpty()) return
+
+        val db = this.writableDatabase
+
+        var query = "DELETE FROM ${CARD_TABLE} WHERE ${ID_COL} IN ("
+        cards.forEach { card -> query += "?," }
+        query = query.dropLast(1)
+        query += ")"
+
+        db.execSQL(query, cards.toTypedArray())
+        db.close()
+    }
+
     fun saveSet(
         set: String,
         booster: String = "",
@@ -331,6 +362,28 @@ class SQLiteHandler(
 
         db.execSQL(query, arguments.toTypedArray())
         db.close()
+    }
+
+    fun getCardsByIds(
+        ids: List<String>
+    ): Map<String, Boolean> {
+        val db = this.readableDatabase
+
+        var query = "SELECT ${ID_COL},${OWNED_COL} FROM ${CARD_TABLE} WHERE ${ID_COL} IN ("
+        ids.forEach { id -> query += "?," }
+        query = query.dropLast(1)
+        query += ")"
+        val cursorCards: Cursor = db.rawQuery(query, ids.toTypedArray())
+
+        val outMap = mutableMapOf<String, Boolean>()
+        if (cursorCards.moveToFirst()) {
+            do {
+                outMap.put(cursorCards.getString(0), cursorCards.getInt(1) == 1)
+            } while (cursorCards.moveToNext())
+        }
+
+        cursorCards.close()
+        return outMap
     }
 
     fun getCardsBySet(

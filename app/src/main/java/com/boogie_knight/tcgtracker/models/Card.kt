@@ -10,7 +10,8 @@ data class Card(
     val rarity: String,
     val image: String?,
     var owned: Boolean = false,
-    val extra: Boolean = false
+    val extra: Boolean = false,
+    val firstPrint: String
 )
 
 @Serializable
@@ -21,7 +22,8 @@ data class JsonCard(
     val origins: List<String>,
     val rarity: String,
     val image: String? = "",
-    val extra: Boolean? = false
+    val extra: Boolean? = false,
+    val firstPrint: String
 )
 
 @Serializable
