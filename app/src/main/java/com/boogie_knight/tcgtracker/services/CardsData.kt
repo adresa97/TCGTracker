@@ -2,16 +2,32 @@ package com.boogie_knight.tcgtracker.services
 
 import com.boogie_knight.tcgtracker.repositories.AssetsRepository
 import com.boogie_knight.tcgtracker.models.Card
+import com.boogie_knight.tcgtracker.models.ImageURLData
 import com.boogie_knight.tcgtracker.models.JsonCard
+import com.boogie_knight.tcgtracker.models.JsonImageURL
 import com.boogie_knight.tcgtracker.models.SQLOwnedCard
 import com.boogie_knight.tcgtracker.repositories.UserRepository
 import com.boogie_knight.tcgtracker.utils.ParseJSON
 
 const val ASSETS_CARDS_DATA_FOLDER_PATH = "PTCGPocket/cards"
-const val POCKETTRADE_IMAGE_URL = "https://cdn.pockettrade.app/images/webp/"
+const val ASSETS_IMAGE_SOURCES_DATA_FILE_PATH = "PTCGPocket/imageSources.json"
 
 object CardsData {
     private val cardMap: MutableMap<String, MutableList<Card>> = mutableMapOf()
+    private val imageSources: MutableMap<String, ImageURLData> = mutableMapOf()
+
+    // Load image url constructors from repository
+    fun loadImageJSONData() {
+        val jsonString = AssetsRepository.getData(ASSETS_IMAGE_SOURCES_DATA_FILE_PATH)
+        val jsonData = ParseJSON(jsonString, Array<JsonImageURL>::class.java)?.asList()
+        jsonData?.forEach { source ->
+            imageSources.put(source.code, ImageURLData(
+                source.host,
+                source.folder,
+                source.file
+            ))
+        }
+    }
 
     // Return a set's list of cards
     fun getCardList(set: String): List<Card> {
@@ -99,22 +115,24 @@ object CardsData {
         }
     }
 
-    private fun getImageUrl(cardID: String, url: String?): String {
-        if (url.isNullOrEmpty()) {
-            val set = cardID.substringBeforeLast('-')
-            val number = cardID.substringAfterLast('-').toInt().toString()
+    private fun getImageUrl(cardID: String, urlCode: String?): String {
+        val code = urlCode ?: "v1"
+        val source = imageSources[code]
+        if (source == null) return ""
 
-            val cardFilename = "${set}_${number}_SPA.webp"
-            return "${POCKETTRADE_IMAGE_URL}es/${cardFilename}"
-        }
+        val set = cardID.substringBeforeLast('-')
+        val number = cardID.substringAfterLast('-')
+        val single = number.toInt().toString()
+        val lang2 = "es"
+        val lang3 = "SPA"
 
-        val sList = url.split('}')
-        if (sList.size == 2 && sList[0].contains("pockettrade")) {
-            val cardFilename = sList[1].replace("##lang##", "SPA")
-            return "${POCKETTRADE_IMAGE_URL}es/${cardFilename}.webp"
-        }
-
-        return ""
+        val url = "${source.host}${source.folder}${source.file}"
+        url.replace("#set#", set)
+        url.replace("#number#", number)
+        url.replace("#single#", single)
+        url.replace("#lang2#", lang2)
+        url.replace("#lang3#", lang3)
+        return url
     }
 
     fun changeCardState(set: String, cardIndex: Int) {

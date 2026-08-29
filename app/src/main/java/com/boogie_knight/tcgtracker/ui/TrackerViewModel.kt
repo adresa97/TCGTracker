@@ -75,6 +75,7 @@ class TrackerViewModel() : ViewModel() {
             UserRepository.init(context)
 
             Concepts.loadJSONData()
+            CardsData.loadImageJSONData()
             OriginsData.loadJSONData()
             SetsData.loadJSONData()
             FiltersManager.initiateFilters()
