@@ -72,7 +72,7 @@ object CardsData {
                     type = card.type,
                     origins = card.origins,
                     rarity = card.rarity,
-                    image = getImageUrl(card.id, card.image),
+                    image = getImageUrl(card.firstPrint, card.image),
                     owned = false,
                     extra = card.extra ?: false,
                     firstPrint = card.firstPrint
