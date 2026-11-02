@@ -9,41 +9,73 @@ import com.boogie_knight.tcgtracker.models.SQLOwnedCard
 import com.boogie_knight.tcgtracker.repositories.UserRepository
 import com.boogie_knight.tcgtracker.utils.ParseJSON
 
-const val ASSETS_CARDS_DATA_FOLDER_PATH = "PTCGPocket/cards"
-const val ASSETS_IMAGE_SOURCES_DATA_FILE_PATH = "PTCGPocket/imageSources.json"
-
 object CardsData {
-    private val cardMap: MutableMap<String, MutableList<Card>> = mutableMapOf()
-    private val imageSources: MutableMap<String, ImageURLData> = mutableMapOf()
+    data class CardCollection (
+        val cardMap: MutableMap<String, MutableList<Card>>,
+        val imageSources: MutableMap<String, ImageURLData>
+    )
+
+    private val cardCollectionMap = mutableMapOf<String, CardCollection>()
+    private var activeCollection = ""
 
     // Load image url constructors from repository
     fun loadImageJSONData() {
-        val jsonString = AssetsRepository.getData(ASSETS_IMAGE_SOURCES_DATA_FILE_PATH)
-        val jsonData = ParseJSON(jsonString, Array<JsonImageURL>::class.java)?.asList()
-        jsonData?.forEach { source ->
-            imageSources.put(source.code, ImageURLData(
-                source.host,
-                source.folder,
-                source.file
-            ))
+        for (game in Routes.Game.entries)
+        {
+            val jsonString = AssetsRepository.getData(Routes.getRoute(game, Routes.File.IMAGES))
+            val jsonData = ParseJSON(jsonString, Array<JsonImageURL>::class.java)?.asList()
+
+            if (jsonData != null)
+            {
+                val sources = mutableMapOf<String, ImageURLData>()
+                jsonData.forEach { source ->
+                    sources.put(source.code, ImageURLData(
+                        source.host,
+                        source.folder,
+                        source.file
+                    ))
+                }
+
+                if (cardCollectionMap[game.route] == null) {
+                    cardCollectionMap.put(
+                        game.route, CardCollection(
+                            cardMap = mutableMapOf(),
+                            imageSources = sources
+                        )
+                    )
+                } else {
+                    cardCollectionMap[game.route]?.imageSources?.putAll(sources)
+                }
+            }
         }
+    }
+
+    fun setActiveCollection(game: Routes.Game) {
+        activeCollection = game.route
+    }
+
+    fun getActiveCollection(): CardCollection? {
+        return cardCollectionMap[activeCollection]
     }
 
     // Return a set's list of cards
     fun getCardList(set: String): List<Card> {
-        val cardList = cardMap.getOrElse(set, { loadAssetsJSONData(set).toMutableList() })
+        val activeCardMap = getActiveCollection()?.cardMap
+        if (activeCardMap == null) return listOf()
+
+        val cardList = activeCardMap.getOrElse(set, { loadAssetsJSONData(set).toMutableList() })
         if (cardList.isEmpty()) return listOf()
 
         val ownedList = loadUserData(cardList)
         if (ownedList.isEmpty()) {
-            cardMap.put(set, cardList)
+            activeCardMap.put(set, cardList)
             return cardList.toList()
         }
 
         for (i in 0 until cardList.count()) {
             cardList[i].owned = ownedList.getOrNull(i) ?: false
         }
-        cardMap.put(set, cardList)
+        activeCardMap.put(set, cardList)
         return cardList.toList()
     }
 
@@ -63,7 +95,8 @@ object CardsData {
 
     // Load assets individual JSON data
     fun loadAssetsJSONData(set: String): List<Card> {
-        val jsonString = AssetsRepository.getData("${ASSETS_CARDS_DATA_FOLDER_PATH}/${set}.json")
+        if (activeCollection == "") return emptyList()
+        val jsonString = AssetsRepository.getData("${Routes.getRoute(activeCollection, Routes.File.CARDS)}${set}.json")
         return ParseJSON(jsonString, Array<JsonCard>::class.java)?.toList()
             ?.map{ card ->
                 Card(
@@ -100,14 +133,17 @@ object CardsData {
 
     // Reload user data and update card map
     fun reloadUserData(sets: List<String>) {
+        val activeCardMap = getActiveCollection()?.cardMap
+        if (activeCardMap == null) return
+
         sets.forEach{ set ->
-            if (cardMap.containsKey(set)) {
-                val cardList = cardMap[set]
+            if (activeCardMap.containsKey(set)) {
+                val cardList = activeCardMap[set]
                 if (cardList != null) {
                     val userData = loadUserData(cardList)
                     if (userData.isNotEmpty()) {
                         for (i in 0 until userData.count()) {
-                            cardMap[set]!![i].owned = userData[i]
+                            getActiveCollection()!!.cardMap[set]!![i].owned = userData[i]
                         }
                     }
                 }
@@ -117,14 +153,20 @@ object CardsData {
 
     private fun getImageUrl(cardID: String, urlCode: String?): String {
         val code = urlCode ?: "v1"
-        val source = imageSources[code]
+        val source = getActiveCollection()?.imageSources[code]
         if (source == null) return ""
 
         val set = cardID.substringBeforeLast('-')
         val number = cardID.substringAfterLast('-')
         val single = number.toInt().toString()
-        val lang2 = "es"
-        val lang3 = "SPA"
+
+        var lang2 = "es"
+        var lang3 = "SPA"
+
+        if (activeCollection == Routes.Game.ALYSION.route) {
+            lang2 = "en"
+            lang3 = "ENG"
+        }
 
         val url = "${source.host}${source.folder}${source.file}"
             .replace("#set#", set)
@@ -138,7 +180,10 @@ object CardsData {
     fun changeCardState(set: String, cardIndex: Int) {
         if (cardIndex < 0) return
 
-        val setList = cardMap[set]
+        val activeCardMap = getActiveCollection()?.cardMap
+        if (activeCardMap == null) return
+
+        val setList = activeCardMap[set]
         if (setList == null || cardIndex >= setList.count()) return
 
         val card = setList[cardIndex]

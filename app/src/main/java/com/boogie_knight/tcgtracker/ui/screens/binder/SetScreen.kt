@@ -207,7 +207,8 @@ fun SetScreen(
                             onSetClick = {
                                 currentSetFilters = FiltersManager.getActiveSetFilters()
                             },
-                            rarities = currentRarityFilters
+                            rarities = currentRarityFilters,
+                            viewModel = trackerViewModel
                         )
                     }
                 )
@@ -527,6 +528,7 @@ fun InfoSetSheet(
     activeSets: List<String>,
     rarities: List<String>,
     onSetClick: () -> Unit,
+    viewModel: TrackerViewModel,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(
@@ -539,11 +541,13 @@ fun InfoSetSheet(
         sets.forEach{ series ->
             items(count = series.value.size) { index ->
                 val set = series.value[index]
-                if (!set.set.contains("P-")) {
+                val isSpecial = viewModel.isSetSpecial(set.set)
+                if (!viewModel.isSetPromo(set.set)) {
                     InfoSetElement(
                         set = set,
                         isActive = activeSets.contains(set.set),
                         rarities = rarities,
+                        isSpecial = isSpecial,
                         onSetClick = onSetClick
                     )
                 }
@@ -557,6 +561,7 @@ fun InfoSetElement(
     set: Set,
     isActive: Boolean,
     rarities: List<String>,
+    isSpecial: Boolean,
     onSetClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -572,13 +577,13 @@ fun InfoSetElement(
     val checkColors = CheckboxColors(
         checkedCheckmarkColor = setColor,
         uncheckedCheckmarkColor = setColor,
-        checkedBoxColor = MaterialTheme.colorScheme.tertiaryContainer,
+        checkedBoxColor = if (isSpecial) setColor else MaterialTheme.colorScheme.tertiaryContainer,
         uncheckedBoxColor = setColor,
         disabledCheckedBoxColor = setColor,
         disabledUncheckedBoxColor = setColor,
         disabledIndeterminateBoxColor = setColor,
-        checkedBorderColor = MaterialTheme.colorScheme.tertiaryContainer,
-        uncheckedBorderColor = MaterialTheme.colorScheme.tertiaryContainer,
+        checkedBorderColor = if (isSpecial) setColor else MaterialTheme.colorScheme.tertiaryContainer,
+        uncheckedBorderColor = if (isSpecial) setColor else MaterialTheme.colorScheme.tertiaryContainer,
         disabledBorderColor = setColor,
         disabledUncheckedBorderColor = setColor,
         disabledIndeterminateBorderColor = setColor
@@ -589,9 +594,8 @@ fun InfoSetElement(
         probableBooster = Pair(OriginsData.getOriginByID(set.origins[0])!!, 0.0f)
     }
 
-    val greyStrength = if (isActive) 1.0f else 0.5f
-    val alpha = if (isActive) 1.0f else 0.5f
-
+    val greyStrength = if (isActive || isSpecial) 1.0f else 0.5f
+    val alpha = if (isActive || isSpecial) 1.0f else 0.5f
 
     Box(
         modifier = modifier.greyScale(greyStrength)
@@ -629,13 +633,15 @@ fun InfoSetElement(
                     checked = isFilterActive,
                     colors = checkColors,
                     onCheckedChange = { checkState ->
-                        if (checkState) {
-                            FiltersManager.addFilter(set.set)
-                        } else {
-                            FiltersManager.removeFilter(set.set)
+                        if (!isSpecial) {
+                            if (checkState) {
+                                FiltersManager.addFilter(set.set)
+                            } else {
+                                FiltersManager.removeFilter(set.set)
+                            }
+                            onSetClick()
+                            isFilterActive = checkState
                         }
-                        onSetClick()
-                        isFilterActive = checkState
                     }
                 )
 

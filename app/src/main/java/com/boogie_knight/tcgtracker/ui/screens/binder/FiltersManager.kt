@@ -11,11 +11,11 @@ enum class FilterType(val value: String) {
 }
 
 object FiltersManager {
-    private val rarityFiltersMap = Concepts.getRarities()
+    private val rarityFiltersMap = Concepts.getGlobalRarities()
         .associateBy({key -> key}, {key -> true})
         .toMutableMap()
 
-    private val setFiltersMap = SetsData.getSetIDs()
+    private val setFiltersMap = SetsData.getGlobalSetIDs()
         .associateBy({key -> key}, {key -> true})
         .toMutableMap()
 

@@ -14,47 +14,58 @@ import com.boogie_knight.tcgtracker.repositories.UserRepository
 import com.boogie_knight.tcgtracker.utils.ParseJSON
 import kotlin.math.pow
 
-const val ASSETS_SETS_DATA_FILE_PATH = "PTCGPocket/sets.json"
-
 object SetsData {
-    private val setList = mutableListOf<Set>()
+    private val setListMap = mutableMapOf<String, MutableList<Set>>()
+    private var activeSetList = ""
 
     // Populate collections list
     fun loadJSONData() {
-        // If data already stored end function
-        if (!setList.isEmpty()) return
+        for (game in Routes.Game.entries)
+        {
+            // If data already stored end function
+            if (!setListMap.containsKey(game.route)) setListMap.put(game.route, mutableListOf<Set>())
+            if (!(setListMap[game.route]?.isEmpty() ?: true)) return
 
-        // Get inner data (objective data of every set)
-        val innerJsonString = AssetsRepository.getData(ASSETS_SETS_DATA_FILE_PATH)
-        val innerJsonData = ParseJSON(innerJsonString, Array<InnerJsonSet>::class.java)?.asList() ?: listOf()
+            // Get inner data (objective data of every set)
+            val innerJsonString = AssetsRepository.getData(Routes.getRoute(game, Routes.File.SETS))
+            val innerJsonData = ParseJSON(innerJsonString, Array<InnerJsonSet>::class.java)?.asList() ?: listOf()
 
-        // Map data into collection
-        innerJsonData.forEach { set ->
-            // Turn set color string to Color object
-            val color = Color(set.color[0]/255, set.color[1]/255, set.color[2]/255)
+            // Map data into collection
+            innerJsonData.forEach { set ->
+                // Turn set color string to Color object
+                val color = Color(set.color[0] / 255, set.color[1] / 255, set.color[2] / 255)
 
-            // Get precalculations
-            val precalculations = getPrecalculations(set.set, set.origins)
+                // Get precalculations
+                val precalculations = getPrecalculations(set.set, set.origins)
 
-            // Add this set entry to collections.
-            // If calculated numbers aren't stored in user data, calculate them from cards data
-            setList.add(
-                Set(
-                    series = set.series,
-                    expansion = set.expansion,
-                    set = set.set,
-                    name = set.name,
-                    cover = set.cover,
-                    color = color,
-                    cardCount = set.cardCount,
-                    origins = set.origins,
-                    numbers = precalculations ?: calculateNumbers(
+                // Add this set entry to collections.
+                // If calculated numbers aren't stored in user data, calculate them from cards data
+                setListMap[game.route]?.add(
+                    Set(
+                        series = set.series,
+                        expansion = set.expansion,
                         set = set.set,
-                        cardList = CardsData.getCardList(set.set)
+                        name = set.name,
+                        cover = set.cover,
+                        color = color,
+                        cardCount = set.cardCount,
+                        origins = set.origins,
+                        numbers = precalculations ?: calculateNumbers(
+                            set = set.set,
+                            cardList = CardsData.getCardList(set.set)
+                        )
                     )
                 )
-            )
+            }
         }
+    }
+
+    fun setActiveList(game: Routes.Game) {
+        activeSetList = game.route
+    }
+
+    fun getActiveList(): List<Set> {
+        return setListMap[activeSetList] ?: emptyList()
     }
 
     // Get user precalculations
@@ -69,7 +80,7 @@ object SetsData {
 
         // From each rarity data
         val byRarity = mutableMapOf<String, OwnedData>()
-        Concepts.getRarities().forEach{ rarity ->
+        Concepts.getGlobalRarities().forEach{ rarity ->
             // Get this rarity data
             val rarityData = UserRepository.getSetPrecalculations(set = set, rarity = rarity)
             if (rarityData.second > 0) {
@@ -99,7 +110,7 @@ object SetsData {
                 )
             } else {
                 val byBoosterRarity = mutableMapOf<String, OwnedData>()
-                Concepts.getRarities().forEach{ rarity ->
+                Concepts.getGlobalRarities().forEach{ rarity ->
                     val originRarityData = UserRepository.getSetPrecalculations(set, origin, rarity)
                     if (originRarityData.second > 0) {
                         val ownedBoosterRarity = OwnedData(
@@ -146,7 +157,7 @@ object SetsData {
 
         // Calculate total and owned cards from each rarity
         val byRarity = mutableMapOf<String, OwnedData>()
-        Concepts.getRarities().forEach{ rarity ->
+        Concepts.getGlobalRarities().forEach{ rarity ->
             // Get this rarity list of cards (including extra ones)
             val rarityCards = cardList.stream().filter{ card -> card.rarity == rarity }
                 .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
@@ -216,7 +227,7 @@ object SetsData {
                 )
             } else {
                 val rarityBoosterData = mutableMapOf<String, OwnedData>()
-                Concepts.getRarities().forEach{ rarity ->
+                Concepts.getGlobalRarities().forEach{ rarity ->
                     // Get list of cards from this booster and rarity
                     val rarityCards = boosterCards.stream().filter{ card -> card?.rarity == rarity && !card.extra }
                         .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
@@ -260,23 +271,47 @@ object SetsData {
 
     fun recalculateSetData(cardList: List<Card>, setCode: String) {
         val newCalculations = calculateNumbers(setCode, cardList)
-        setList.firstOrNull{ set -> set.set == setCode }?.numbers = newCalculations
+        getActiveList().firstOrNull{ set -> set.set == setCode }?.numbers = newCalculations
     }
 
     // Get all sets of a series
     fun getSeriesMap(): Map<String, List<Set>> {
-        return setList.groupBy({ set -> set.series })
+        return getActiveList().groupBy({ set -> set.series })
     }
 
     // Get a set from its ID
     fun getSetFromID(id: String): Set? {
-        return setList.firstOrNull{ set -> set.set == id }
+        return getActiveList().firstOrNull{ set -> set.set == id }
+    }
+
+    fun getGlobalSetIDs(): List<String> {
+        val ids = mutableListOf<String>()
+        setListMap.forEach { entry ->
+            entry.value.forEach { set ->
+                ids.add(set.set)
+            }
+        }
+        return ids
+    }
+
+    fun getGlobalSpecialSetIDs(): List<String> {
+        val ids = mutableListOf<String>()
+        setListMap.forEach { entry ->
+            entry.value.forEach { set ->
+                var isSpecial = false
+                set.origins.forEach { origin ->
+                    if (OriginsData.isOriginSpecial(origin)) isSpecial = true
+                }
+                if (isSpecial) ids.add(set.set)
+            }
+        }
+        return ids
     }
 
     // Get all sets IDs
     fun getSetIDs(): List<String> {
         val ids = mutableListOf<String>()
-        setList.forEach{ set ->
+        getActiveList().forEach{ set ->
             ids.add(set.set)
         }
         return ids
@@ -285,18 +320,18 @@ object SetsData {
     // Get set id from its name
     fun getSetID(name: String): String {
         // TODO: Only works with spanish names
-        return setList.firstOrNull{ set -> set.name.es == name }?.set ?: name
+        return getActiveList().firstOrNull{ set -> set.name.es == name }?.set ?: name
     }
 
     // Get set name from its code
     fun getSetName(code: String): String {
-        return setList.firstOrNull{ set -> set.set == code }?.name?.es ?: code
+        return getActiveList().firstOrNull{ set -> set.set == code }?.name?.es ?: code
     }
 
     // Get map of set color assign to set ids
     fun getSetColors(): Map<String, Color> {
         val outputMap = mutableMapOf<String, Color>()
-        setList.forEach { set ->
+        getActiveList().forEach { set ->
             outputMap.put(set.set, set.color)
         }
         return outputMap
@@ -304,8 +339,8 @@ object SetsData {
 
     // Get set color form its code
     fun getSetColor(value: String): Color? {
-        var set = setList.firstOrNull{ set -> set.name.es == value }
-        if (set == null) set = setList.firstOrNull{ set -> set.set == value }
+        var set = getActiveList().firstOrNull{ set -> set.name.es == value }
+        if (set == null) set = getActiveList().firstOrNull{ set -> set.set == value }
         return set?.color
     }
 
@@ -313,12 +348,12 @@ object SetsData {
     fun getMostProbableSet(
         rarities: List<String> = listOf()
     ): Pair<Set, Origin>? {
-        if (setList.isEmpty()) return null
+        if (getActiveList().isEmpty()) return null
 
         var probableSet: Set? = null
         var probableBooster: Origin? = null
         var probableOdd = 0.0f
-        setList.forEach{ set ->
+        getActiveList().forEach{ set ->
             val setOrigin = getMostProbableBooster(set.set, rarities)
             if (setOrigin != null) {
                 if (setOrigin.second >= probableOdd) {
@@ -363,10 +398,10 @@ object SetsData {
         setID: String,
         rarities: List<String> = listOf()
     ): Pair<Origin, Float>? {
-        val set = setList.find{ set -> set.set == setID }
+        val set = getActiveList().find{ set -> set.set == setID }
         if (set == null) return null
 
-        val setOrigins = set.origins.filter{ origin -> OriginsData.getOriginType(origin) == "BOOSTER" }
+        val setOrigins = set.origins.filter{ origin -> OriginsData.getOriginType(origin) != "PROMO" }
         if (setOrigins.isEmpty())  return null
 
         var probableOrigin: Origin? = null
@@ -405,9 +440,9 @@ object SetsData {
             probabilities.add(0.0f)
         }
 
-        if (origin.type != "BOOSTER" || origin.odds == null) return probabilities
+        if (origin.type == "PROMO" || origin.odds == null) return probabilities
 
-        val set = setList.find{ set -> set.set == setID }
+        val set = getActiveList().find{ set -> set.set == setID }
         if (set == null) return probabilities
         if (!set.origins.contains(origin.id)) return probabilities
 

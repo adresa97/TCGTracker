@@ -19,6 +19,7 @@ import com.boogie_knight.tcgtracker.services.OriginsData
 import com.boogie_knight.tcgtracker.models.Set
 import com.boogie_knight.tcgtracker.services.SetsData
 import com.boogie_knight.tcgtracker.repositories.UserRepository
+import com.boogie_knight.tcgtracker.services.Routes
 import com.boogie_knight.tcgtracker.ui.screens.binder.FiltersManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -80,8 +81,24 @@ class TrackerViewModel() : ViewModel() {
             SetsData.loadJSONData()
             FiltersManager.initiateFilters()
 
+            setPocketActive(context)
+
             endLoading()
         }
+    }
+
+    fun setPocketActive(context: Context) {
+        Concepts.setActiveConcept(Routes.Game.POCKET)
+        CardsData.setActiveCollection(Routes.Game.POCKET)
+        OriginsData.setActiveOrigins(Routes.Game.POCKET)
+        SetsData.setActiveList(Routes.Game.POCKET)
+    }
+
+    fun setAlysionActive(context: Context) {
+        Concepts.setActiveConcept(Routes.Game.ALYSION)
+        CardsData.setActiveCollection(Routes.Game.ALYSION)
+        OriginsData.setActiveOrigins(Routes.Game.ALYSION)
+        SetsData.setActiveList(Routes.Game.ALYSION)
     }
     //endregion
 
@@ -132,6 +149,14 @@ class TrackerViewModel() : ViewModel() {
         val set = SetsData.getSetFromID(id)
         set?.origins?.forEach{ origin ->
             if (OriginsData.isOriginPromo(origin)) return true
+        }
+        return false
+    }
+
+    fun isSetSpecial(id: String): Boolean {
+        val set = SetsData.getSetFromID(id)
+        set?.origins?.forEach{ origin ->
+            if (OriginsData.isOriginSpecial(origin)) return true
         }
         return false
     }

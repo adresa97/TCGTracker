@@ -4,6 +4,7 @@ import android.graphics.Color.alpha
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -269,7 +270,7 @@ fun PeekArea(
                 )
                 .border(2.dp, uiColor.apply { alpha(50) }, RoundedCornerShape(percent = 50))
                 .wrapContentHeight(align = Alignment.CenterVertically)
-                .wrapContentWidth(align = Alignment.CenterHorizontally),
+                .wrapContentWidth(align = Alignment.CenterHorizontally)
         ) {
             Text(
                 text = title,
@@ -363,12 +364,12 @@ fun FiltersSheet(
             modifier = Modifier.weight(1f)
         )
 
-        // Shiny column
+        // Shiny and anomaly column
         RaritiesFilterColumn(
             checkColor = checkColor,
             backColor = backColor,
             filtersState = filtersState,
-            rarities = Concepts.getShinyRarities(),
+            rarities = Concepts.getShinyAnomalyRarities(),
             onCheckChange = {
                 onFiltersChanged()
             },
