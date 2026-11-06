@@ -9,9 +9,13 @@ import com.boogie_knight.tcgtracker.POCKET_GAME_KEY
 import com.boogie_knight.tcgtracker.models.SQLFilterConfig
 import com.boogie_knight.tcgtracker.models.SQLOwnedCard
 import com.boogie_knight.tcgtracker.models.SQLOwnedSet
+import com.boogie_knight.tcgtracker.services.UserOptions
 
 data object UserRepository{
     private var handler: SQLiteHandler? = null
+
+    private const val STARTSCREEN = "startScreen"
+    private const val LASTOPENED = "lastOpened"
 
     fun init(context: Context) {
         handler = SQLiteHandler(context)
@@ -39,6 +43,21 @@ data object UserRepository{
         if (handler == null) return
         if (filters.isEmpty()) return
         handler!!.saveFiltersInBatches(filters)
+    }
+
+    fun saveStartScreen(
+        startScreen: String
+    ) {
+        if (handler == null) return
+        val value = if (startScreen == "") UserOptions.StartScreen.SELECTOR.name else startScreen
+        handler!!.saveUserOption(STARTSCREEN, value)
+    }
+
+    fun saveLastOpened(
+        lastOpened: String
+    ) {
+        if (handler == null) return
+        handler!!.saveUserOption(LASTOPENED, lastOpened)
     }
 
     fun deleteCards(
@@ -84,6 +103,21 @@ data object UserRepository{
         if (handler == null) return null
         return handler!!.getFilterState(filter = filter, game = game, type = type)
     }
+
+    fun getAllStartingOptions(): Pair<String, String> {
+        return Pair(getStartScreen(), getLastOpened())
+    }
+
+    fun getStartScreen(): String {
+        if (handler == null) return ""
+        var startScreen = handler!!.getUserOption(STARTSCREEN)
+        return if (startScreen == "") UserOptions.StartScreen.SELECTOR.name else startScreen
+    }
+
+    fun getLastOpened(): String {
+        if (handler == null) return ""
+        return handler!!.getUserOption(LASTOPENED)
+    }
 }
 
 class SQLiteHandler(
@@ -94,7 +128,6 @@ class SQLiteHandler(
             """
             CREATE TABLE IF NOT EXISTS ${CARD_TABLE} (
             ${ID_COL} TEXT NOT NULL,
-            ${GAME_COL} TEXT NOT NULL,
             ${OWNED_COL} INTEGER NOT NULL,
             ${SET_COL} TEXT NOT NULL,
             CONSTRAINT Card_PK PRIMARY KEY (${ID_COL})
@@ -107,7 +140,6 @@ class SQLiteHandler(
             """
             CREATE TABLE IF NOT EXISTS ${SET_TABLE} (
             ${SET_COL} TEXT NOT NULL,
-            ${GAME_COL} TEXT NOT NULL,
             ${BOOSTER_COL} TEXT NOT NULL,
             ${RARITY_COL} TEXT NOT NULL,
             ${OWNED_COL} INTEGER NOT NULL,
@@ -122,7 +154,6 @@ class SQLiteHandler(
             """
             CREATE TABLE IF NOT EXISTS ${FILTER_TABLE} (
             ${FILTER_COL} TEXT NOT NULL,
-            ${GAME_COL} TEXT NOT NULL,
             ${TYPE_COL} TEXT NOT NULL,
             ${STATE_COL} INTEGER NOT NULL,
             CONSTRAINT Filter_PK PRIMARY KEY (${FILTER_COL},${TYPE_COL})
@@ -130,11 +161,13 @@ class SQLiteHandler(
             """
         )
         db.execSQL(query)
+
+        onUpgrade(db, 1, DB_VERSION)
     }
 
     fun saveCardsInBatches(
         cards: List<SQLOwnedCard>,
-        batchSize: Int = 300
+        batchSize: Int = 200
     ) {
         if (cards.isEmpty()) return
 
@@ -279,6 +312,19 @@ class SQLiteHandler(
         db.close()
     }
 
+    fun saveUserOption(
+        option: String,
+        value: String
+    ) {
+        val db = this.writableDatabase
+
+        var query = "REPLACE INTO ${OPTIONS_TABLE} (${OPTION_COL}, ${VALUE_COL}) VALUES (?, ?)"
+        val arguments = listOf(option, value)
+
+        db.execSQL(query, arguments.toTypedArray())
+        db.close()
+    }
+
     fun getCardsByIds(
         ids: List<String>,
         game: String
@@ -333,7 +379,7 @@ class SQLiteHandler(
         val db = this.readableDatabase
 
         val query: String ="SELECT ${OWNED_COL},${TOTAL_COL} FROM ${SET_TABLE} WHERE ${SET_COL}=? AND ${BOOSTER_COL}=? AND ${RARITY_COL}=? AND ${GAME_COL}=?"
-        val cursorSets: Cursor = db.rawQuery(query, arrayOf(set, booster, rarity, game))
+         val cursorSets: Cursor = db.rawQuery(query, arrayOf(set, booster, rarity, game))
 
         var outPair = Pair(0, 0)
         if (cursorSets.moveToFirst()) {
@@ -363,6 +409,23 @@ class SQLiteHandler(
         return outBool
     }
 
+    fun getUserOption(
+        option: String
+    ): String {
+        val db = this.readableDatabase
+
+        val query: String = "SELECT ${VALUE_COL} FROM ${OPTIONS_TABLE} WHERE ${OPTION_COL}=?"
+        var cursorFilters: Cursor = db.rawQuery(query, arrayOf(option))
+
+        var outString: String = ""
+        if (cursorFilters.moveToFirst()) {
+            outString = cursorFilters.getString(0)
+        }
+
+        cursorFilters.close()
+        return outString
+    }
+
     override fun onUpgrade(
         db: SQLiteDatabase,
         oldVersion: Int,
@@ -374,29 +437,40 @@ class SQLiteHandler(
 
         if(newVersion >= 2 && oldVersion < 2) {
             var query = (
-            """
+                """
                 ALTER TABLE ${CARD_TABLE} ADD COLUMN ${GAME_COL} TEXT NULL;
                 UPDATE ${CARD_TABLE} SET $GAME_COL = '$POCKET_GAME_KEY';
                 ALTER TABLE $CARD_TABLE ALTER COLUMN $GAME_COL SET NOT NULL;
-            """
+                """
             )
             db.execSQL(query)
 
             query = (
-            """
+                """
                 ALTER TABLE ${SET_TABLE} ADD COLUMN ${GAME_COL} TEXT NULL;
                 UPDATE ${SET_TABLE} SET $GAME_COL = '$POCKET_GAME_KEY';
                 ALTER TABLE $SET_TABLE ALTER COLUMN $GAME_COL SET NOT NULL;
-            """
+                """
             )
             db.execSQL(query)
 
             query = (
-            """
+                """
                 ALTER TABLE ${FILTER_TABLE} ADD COLUMN ${GAME_COL} TEXT NULL;
                 UPDATE ${FILTER_TABLE} SET $GAME_COL = '$POCKET_GAME_KEY';
                 ALTER TABLE $FILTER_TABLE ALTER COLUMN $GAME_COL SET NOT NULL;
-            """
+                """
+            )
+            db.execSQL(query)
+
+            query = (
+                """
+                CREATE TABLE IF NOT EXISTS ${OPTIONS_TABLE} (
+                ${OPTION_COL} TEXT NOT NULL,
+                ${VALUE_COL} TEXT NOT NULL,
+                CONSTRAINT Set_PK PRIMARY KEY (${OPTION_COL})
+                );
+                """
             )
             db.execSQL(query)
         }
@@ -408,6 +482,7 @@ class SQLiteHandler(
         private const val CARD_TABLE = "OwnedCard"
         private const val SET_TABLE = "OwnedSet"
         private const val FILTER_TABLE = "FiltersConfig"
+        private const val OPTIONS_TABLE = "UserOptions"
         private const val ID_COL = "id"
         private const val OWNED_COL = "owned"
         private const val SET_COL = "\"set\""
@@ -418,5 +493,7 @@ class SQLiteHandler(
         private const val TYPE_COL = "kind"
         private const val STATE_COL = "state"
         private const val GAME_COL = "game"
+        private const val OPTION_COL = "option"
+        private const val VALUE_COL = "value"
     }
 }

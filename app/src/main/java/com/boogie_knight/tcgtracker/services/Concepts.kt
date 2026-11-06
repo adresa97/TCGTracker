@@ -8,6 +8,9 @@ object Concepts {
     data class ConceptData (
         val types: Map<String, String>,
         val rarities: Map<String, String>,
+        val common: List<String>,
+        val uncommon: List<String>,
+        val rare: List<String>,
         val reverseRarities: Map<String, String>,
         val parallel: Map<String, String>
     )
@@ -27,6 +30,9 @@ object Concepts {
                 conceptDataMap.put(game, ConceptData(
                     types = jsonData.types,
                     rarities = jsonData.rarities,
+                    common = jsonData.common,
+                    uncommon = jsonData.uncommon,
+                    rare = jsonData.rare,
                     reverseRarities = reverseRarities,
                     parallel = jsonData.parallel ?: mapOf()
                 ))
@@ -83,33 +89,46 @@ object Concepts {
         return getGameConcepts(game)?.parallel[rarity] ?: ""
     }
 
-    fun getDiamondRarities(game: String): List<String> {
+    fun getCommonRarities(game: String): List<String> {
+        val concepts = getGameConcepts(game)
+        if (concepts == null) listOf<String>()
+
         val output = mutableListOf<String>()
-        getGameConcepts(game)?.rarities?.forEach{ rarity ->
-            if (rarity.key.endsWith("DIAMOND")) {
-                output.add(rarity.key)
+        concepts!!.common.forEach{ rarity ->
+            if (concepts.rarities.containsKey(rarity)) {
+                output.add(rarity)
             }
         }
         return output
     }
 
-    fun getStarCrownRarities(game: String): List<String> {
+    fun getUncommonRarities(game: String): List<String> {
+        val concepts = getGameConcepts(game)
+        if (concepts == null) listOf<String>()
+
         val output = mutableListOf<String>()
-        getGameConcepts(game)?.rarities?.forEach{ rarity ->
-            if (rarity.key.endsWith("STAR") || rarity.key.endsWith("CROWN")) {
-                output.add(rarity.key)
+        concepts!!.uncommon.forEach{ rarity ->
+            if (concepts.rarities.containsKey(rarity)) {
+                output.add(rarity)
             }
         }
         return output
     }
 
-    fun getShinyAnomalyRarities(game: String): List<String> {
+    fun getRareRarities(game: String): List<String> {
+        val concepts = getGameConcepts(game)
+        if (concepts == null) listOf<String>()
+
         val output = mutableListOf<String>()
-        getGameConcepts(game)?.rarities?.forEach{ rarity ->
-            if (rarity.key.endsWith("SHINY") || rarity.key.endsWith("ANOMALY")) {
-                output.add(rarity.key)
+        concepts!!.rare.forEach{ rarity ->
+            if (concepts.rarities.containsKey(rarity)) {
+                output.add(rarity)
             }
         }
         return output
+    }
+
+    fun isRarityInGame(game: String, rarity: String): Boolean {
+        return getGameConcepts(game)?.rarities?.containsKey(rarity) ?: false
     }
 }

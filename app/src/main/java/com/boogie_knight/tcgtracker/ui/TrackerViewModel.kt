@@ -19,9 +19,11 @@ import com.boogie_knight.tcgtracker.models.Origin
 import com.boogie_knight.tcgtracker.models.OwnedData
 import com.boogie_knight.tcgtracker.services.OriginsData
 import com.boogie_knight.tcgtracker.models.Set
+import com.boogie_knight.tcgtracker.repositories.SQLiteHandler
 import com.boogie_knight.tcgtracker.services.SetsData
 import com.boogie_knight.tcgtracker.repositories.UserRepository
 import com.boogie_knight.tcgtracker.services.GamesData
+import com.boogie_knight.tcgtracker.services.UserOptions
 import com.boogie_knight.tcgtracker.ui.screens.binder.FiltersManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -84,6 +86,7 @@ class TrackerViewModel() : ViewModel() {
             OriginsData.loadJSONData()
             SetsData.loadJSONData()
             FiltersManager.initiateFilters()
+            UserOptions.initUserOptions()
 
             endLoading()
         }
@@ -101,6 +104,27 @@ class TrackerViewModel() : ViewModel() {
 
     fun getGameName(gameCode: String): String {
         return GamesData.getGameName(gameCode)
+    }
+
+    fun isGameInDatabase(gameCode: String): Boolean {
+        return GamesData.isGameInData(gameCode)
+    }
+
+    fun getStartScreenMap(): Map<String, String> {
+        return UserOptions.getStartScreenMap()
+    }
+
+    fun getUserStartScreen(): Pair<String, String> {
+        val userOptions = UserRepository.getAllStartingOptions()
+        return userOptions
+    }
+
+    fun saveStartScreen(startScreen: String) {
+        UserRepository.saveStartScreen(startScreen)
+    }
+
+    fun saveLastOpened(lastOpened: String) {
+        UserRepository.saveLastOpened(lastOpened)
     }
 
     fun getPrettyCardsList(game: String, set: String): List<Card> {
@@ -135,28 +159,28 @@ class TrackerViewModel() : ViewModel() {
         return SetsData.getSeriesMap(game)
     }
 
-    fun getSetNameFromID(id: String): String {
-        return SetsData.getSetName(id)
+    fun getSetNameFromID(game: String, id: String): String {
+        return SetsData.getSetName(game, id)
     }
 
     fun getSetColors(game: String): Map<String, Color> {
         return SetsData.getSetColors(game)
     }
 
-    fun getSetColorFromID(id: String): Color? {
-        return SetsData.getSetColor(id)
+    fun getSetColorFromID(game: String, id: String): Color? {
+        return SetsData.getSetColor(game, id)
     }
 
-    fun isSetPromo(id: String): Boolean {
-        val set = SetsData.getSetFromID(id)
+    fun isSetPromo(game: String, id: String): Boolean {
+        val set = SetsData.getSetFromID(game, id)
         set?.origins?.forEach{ origin ->
             if (OriginsData.isOriginPromo(origin)) return true
         }
         return false
     }
 
-    fun isSetSpecial(id: String): Boolean {
-        val set = SetsData.getSetFromID(id)
+    fun isSetSpecial(game: String, id: String): Boolean {
+        val set = SetsData.getSetFromID(game, id)
         set?.origins?.forEach{ origin ->
             if (OriginsData.isOriginSpecial(origin)) return true
         }
@@ -170,7 +194,7 @@ class TrackerViewModel() : ViewModel() {
     ): Map<String, OwnedData> {
         if (filters.isEmpty()) return mapOf()
 
-        val set = SetsData.getSetFromID(setID)
+        val set = SetsData.getSetFromID(game, setID)
         if (set == null) return mapOf()
 
         val outputMap = mutableMapOf<String, OwnedData>()
@@ -188,7 +212,7 @@ class TrackerViewModel() : ViewModel() {
         set: String,
         rarities: List<String>
     ): Map<Origin, List<Float>> {
-        val boostersIDs = SetsData.getSetFromID(set)?.origins
+        val boostersIDs = SetsData.getSetFromID(game, set)?.origins
         val boosters = mutableListOf<Origin>()
         boostersIDs?.forEach{ id ->
             val origin = OriginsData.getOriginByID(game, id)
@@ -198,7 +222,7 @@ class TrackerViewModel() : ViewModel() {
 
         val outputMap = mutableMapOf<Origin, List<Float>>()
         boosters.forEach { booster ->
-            val probabilities = SetsData.getBoosterRemainingOdds(set, booster, rarities)
+            val probabilities = SetsData.getBoosterRemainingOdds(set, game, booster, rarities)
             outputMap.put(booster, probabilities)
         }
 
@@ -233,7 +257,7 @@ class TrackerViewModel() : ViewModel() {
     ): Pair<Set, Origin>? {
         val setList = mutableListOf<Set>()
         sets.forEach{ id ->
-            val set = SetsData.getSetFromID(id)
+            val set = SetsData.getSetFromID(game, id)
             if (set != null) setList.add(set)
         }
 

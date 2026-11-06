@@ -35,8 +35,29 @@ object SetsData {
                 // Turn set color string to Color object
                 val color = Color(set.color[0] / 255, set.color[1] / 255, set.color[2] / 255)
 
+                // Get this set available rarities
+                val setRarities = mutableMapOf<String, List<String>>()
+                var i = 0
+                var isPromo = false
+                while (i < set.origins.size && !isPromo)
+                {
+                    val originRarities = mutableListOf<String>()
+                    val originObject = OriginsData.getOriginByID(game, set.origins[i])
+                    originObject?.odds?.forEach { rarity ->
+                        if (Concepts.isRarityInGame(game, rarity.key)) originRarities.add(rarity.key)
+                    }
+                    isPromo = OriginsData.isOriginPromo(set.origins[i])
+                    setRarities.put(set.origins[i], originRarities)
+                    i++
+                }
+
+                // Add origin NONE and its available rarities to setRarities
+                val cardList = CardsData.getCardList(game, set.set)
+                val noneRarities = cardList.filter{ card -> card.origins[0] == "NONE" }.map{ card -> card.rarity }.toSet()
+                if (!noneRarities.isEmpty()) setRarities.put("NONE", noneRarities.toList())
+
                 // Get precalculations
-                val precalculations = getPrecalculations(game, set.set, set.origins)
+                val precalculations = getPrecalculations(game, set.set, set.origins, setRarities)
 
                 // Add this set entry to collections.
                 // If calculated numbers aren't stored in user data, calculate them from cards data
@@ -50,10 +71,12 @@ object SetsData {
                         color = color,
                         cardCount = set.cardCount,
                         origins = set.origins,
+                        availableRarities = setRarities,
                         numbers = precalculations ?: calculateNumbers(
                             game = game,
                             set = set.set,
-                            cardList = CardsData.getCardList(game,set.set)
+                            cardList = cardList,
+                            rarities = setRarities
                         )
                     )
                 )
@@ -69,25 +92,42 @@ object SetsData {
         return setList
     }
 
+    fun getGameSets(game: String): List<Set> {
+        val setList = setListMap[game]
+        return setList ?: listOf()
+    }
+
+    fun getAvailableRarities(game: String, setCode: String): Map<String, List<String>> {
+        val rarities = getGameSets(game).find{ set -> set.set == setCode }?.availableRarities
+        return rarities ?: mapOf()
+    }
+
+    fun getAvailableRarities(game: String, setCode: String, origin: String): List<String> {
+        val rarities = getAvailableRarities(game, setCode)[origin]
+        return rarities ?: listOf()
+    }
+
     // Get user precalculations
-    private fun getPrecalculations(game: String, set: String, origins: List<String>): OwnedSetData? {
+    private fun getPrecalculations(game: String, set: String, origins: List<String>, rarities: Map<String, List<String>>): OwnedSetData? {
         // Full set data
         val setData = UserRepository.getSetPrecalculations(game = game, set = set)
         if (setData.second <= 0) return null
         val all = OwnedData(
-            game = game,
             ownedCards = setData.first,
             totalCards = setData.second
         )
 
         // From each rarity data
+        val allRarities = mutableSetOf<String>()
+        rarities.forEach{ booster->
+            allRarities.addAll(booster.value)
+        }
         val byRarity = mutableMapOf<String, OwnedData>()
-        Concepts.getRarities(game).forEach{ rarity ->
+        allRarities.forEach{ rarity ->
             // Get this rarity data
             val rarityData = UserRepository.getSetPrecalculations(game = game, set = set, rarity = rarity)
             if (rarityData.second > 0) {
                 val ownedRarity = OwnedData(
-                    game = game,
                     ownedCards = rarityData.first,
                     totalCards = rarityData.second
                 )
@@ -101,42 +141,28 @@ object SetsData {
             // Get this origin general data
             val originData = UserRepository.getSetPrecalculations(game = game, set = set, booster = origin)
             val ownedOrigin = OwnedData(
-                game = game,
                 ownedCards = originData.first,
                 totalCards = originData.second
             )
 
-            if (OriginsData.isOriginPromo(origin)) {
-                byBooster.put(origin, OwnedBoosterData(
-                    game = game,
-                    all = ownedOrigin,
-                    byRarity = null
-                )
-                )
-            } else {
-                val byBoosterRarity = mutableMapOf<String, OwnedData>()
-                Concepts.getRarities(game).forEach{ rarity ->
-                    val originRarityData = UserRepository.getSetPrecalculations(set, origin, rarity)
-                    if (originRarityData.second > 0) {
-                        val ownedBoosterRarity = OwnedData(
-                            game = game,
-                            ownedCards = originRarityData.first,
-                            totalCards = originRarityData.second
-                        )
-                        byBoosterRarity.put(rarity, ownedBoosterRarity)
-                    }
+            val byBoosterRarity = mutableMapOf<String, OwnedData>()
+            rarities[origin]?.forEach{ rarity ->
+                val originRarityData = UserRepository.getSetPrecalculations(game = game, set = set, booster = origin, rarity = rarity)
+                if (originRarityData.second > 0) {
+                    val ownedBoosterRarity = OwnedData(
+                        ownedCards = originRarityData.first,
+                        totalCards = originRarityData.second
+                    )
+                    byBoosterRarity.put(rarity, ownedBoosterRarity)
                 }
-                byBooster.put(origin, OwnedBoosterData(
-                    game = game,
-                    all = ownedOrigin,
-                    byRarity = byBoosterRarity
-                )
-                )
             }
+            byBooster.put(origin, OwnedBoosterData(
+                all = ownedOrigin,
+                byRarity = byBoosterRarity.ifEmpty{ null }
+            ))
         }
 
         return OwnedSetData(
-            game = game,
             all = all,
             byBooster = byBooster,
             byRarity = byRarity.ifEmpty { null }
@@ -144,7 +170,7 @@ object SetsData {
     }
 
     // Calculate all needed numbers from a list of cards and boosters
-    private fun calculateNumbers(game: String, set: String, cardList: List<Card>): OwnedSetData {
+    private fun calculateNumbers(game: String, set: String, cardList: List<Card>, rarities: Map<String, List<String>>): OwnedSetData {
         // List of data to insert or replace
         val dataList = mutableListOf<SQLOwnedSet>()
 
@@ -152,7 +178,6 @@ object SetsData {
         val allOwned = cardList.stream().filter{ card -> card.owned }.count().toInt()
         val allTotal = cardList.count()
         val all = OwnedData(
-            game = game,
             ownedCards = allOwned,
             totalCards = allTotal
         )
@@ -166,8 +191,12 @@ object SetsData {
         )
 
         // Calculate total and owned cards from each rarity
+        val allRarities = mutableSetOf<String>()
+        rarities.forEach{ booster->
+            allRarities.addAll(booster.value)
+        }
         val byRarity = mutableMapOf<String, OwnedData>()
-        Concepts.getRarities(game).forEach{ rarity ->
+        allRarities.forEach{ rarity ->
             // Get this rarity list of cards (including extra ones)
             val rarityCards = cardList.stream().filter{ card -> card.rarity == rarity }
                 .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
@@ -178,7 +207,6 @@ object SetsData {
                 val rarityOwned = rarityCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
                 val rarityTotal = rarityCards.count()
                 val ownedRarityData = OwnedData(
-                    game = game,
                     ownedCards = rarityOwned,
                     totalCards = rarityTotal
                 )
@@ -218,7 +246,6 @@ object SetsData {
             val boosterOwned = boosterCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
             val boosterTotal = boosterCards.count()
             val ownedBoosterData = OwnedData(
-                game = game,
                 ownedCards = boosterOwned,
                 totalCards = boosterTotal
             )
@@ -232,56 +259,43 @@ object SetsData {
                 )
             )
 
-            // If promo booster put data in map, otherwise calculate for each rarity
-            if (OriginsData.isOriginPromo(booster)) {
-                byBooster.put(booster, OwnedBoosterData(
-                    game = game,
-                    all = ownedBoosterData,
-                    byRarity = null
-                )
-                )
-            } else {
-                val rarityBoosterData = mutableMapOf<String, OwnedData>()
-                Concepts.getRarities(game).forEach{ rarity ->
-                    // Get list of cards from this booster and rarity
-                    val rarityCards = boosterCards.stream().filter{ card -> card?.rarity == rarity && !card.extra }
-                        .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
+            // Calculate for each rarity, promo boosters do not have available rarities so byRarity must be null
+            val rarityBoosterData = mutableMapOf<String, OwnedData>()
+            rarities[booster]?.forEach{ rarity ->
+                // Get list of cards from this booster and rarity
+                val rarityCards = boosterCards.stream().filter{ card -> card?.rarity == rarity && !card.extra }
+                    .toArray({ size -> arrayOfNulls<Card>(size) }).asList()
 
-                    // Calculate total and owned cards count
-                    val rarityOwned = rarityCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
-                    val rarityTotal = rarityCards.count()
-                    val ownedRarityData = OwnedData(
+                // Calculate total and owned cards count
+                val rarityOwned = rarityCards.stream().filter{ card -> card?.owned ?: false }.count().toInt()
+                val rarityTotal = rarityCards.count()
+                val ownedRarityData = OwnedData(
+                    ownedCards = rarityOwned,
+                    totalCards = rarityTotal
+                )
+                dataList.add(
+                    SQLOwnedSet(
                         game = game,
-                        ownedCards = rarityOwned,
-                        totalCards = rarityTotal
+                        set = set,
+                        booster = booster,
+                        rarity = rarity,
+                        owned = rarityOwned,
+                        total = rarityTotal
                     )
-                    dataList.add(
-                        SQLOwnedSet(
-                            game = game,
-                            set = set,
-                            booster = booster,
-                            rarity = rarity,
-                            owned = rarityOwned,
-                            total = rarityTotal
-                        )
-                    )
+                )
 
-                    // Add this data to rarity map
-                    rarityBoosterData.put(rarity, ownedRarityData)
-                }
-                byBooster.put(booster, OwnedBoosterData(
-                    game = game,
-                    all = ownedBoosterData,
-                    byRarity = rarityBoosterData
-                )
-                )
+                // Add this data to rarity map
+                rarityBoosterData.put(rarity, ownedRarityData)
             }
+            byBooster.put(booster, OwnedBoosterData(
+                all = ownedBoosterData,
+                byRarity = rarityBoosterData.ifEmpty { null }
+            ))
         }
 
         UserRepository.saveSets(dataList)
 
         return OwnedSetData(
-            game = game,
             all = all,
             byBooster = byBooster,
             byRarity = byRarity.ifEmpty { null }
@@ -289,20 +303,21 @@ object SetsData {
     }
 
     fun recalculateSetData(game: String, cardList: List<Card>, setCode: String) {
-        val newCalculations = calculateNumbers(game, setCode, cardList)
-        getGlobalList().firstOrNull{ set -> set.set == setCode }?.numbers = newCalculations
+        val availableRarities = getAvailableRarities(game, setCode)
+        val newCalculations = calculateNumbers(game, setCode, cardList, availableRarities)
+        getGameSets(game).firstOrNull{ set -> set.set == setCode }?.numbers = newCalculations
     }
 
     // Get all sets of a game, mapped by series
     fun getSeriesMap(game: String): Map<String, List<Set>> {
-        val setList = setListMap[game]
-        if (setList == null) return mapOf<String, List<Set>>()
+        val setList = getGameSets(game)
+        if (setList.isEmpty()) return mapOf<String, List<Set>>()
         return setList.groupBy({ set -> set.series })
     }
 
     // Get a set from its ID
-    fun getSetFromID(id: String): Set? {
-        return getGlobalList().firstOrNull{ set -> set.set == id }
+    fun getSetFromID(game: String, id: String): Set? {
+        return getGameSets(game).firstOrNull{ set -> set.set == id }
     }
 
     fun getGlobalSetIDs(): List<String> {
@@ -367,8 +382,7 @@ object SetsData {
 
     // Get all sets IDs
     fun getSetIDs(game: String): List<String> {
-        val setList = setListMap[game]
-        if (setList == null) return listOf<String>()
+        val setList = getGameSets(game)
         val ids = mutableListOf<String>()
         setList.forEach{ set ->
             ids.add(set.set)
@@ -377,19 +391,18 @@ object SetsData {
     }
 
     // Get set id from its name
-    fun getSetID(name: String): String {
-        return getGlobalList().firstOrNull{ set -> (set.name.es == name || set.name.en == name) }?.set ?: name
+    fun getSetID(game: String, name: String): String {
+        return getGameSets(game).firstOrNull{ set -> (set.name.es == name || set.name.en == name) }?.set ?: name
     }
 
     // Get set name from its code
-    fun getSetName(code: String): String {
-        return getGlobalList().firstOrNull{ set -> set.set == code }?.name?.es ?: code
+    fun getSetName(game: String, code: String): String {
+        return getGameSets(game).firstOrNull{ set -> set.set == code }?.name?.es ?: code
     }
 
     // Get map of set color assign to set ids
     fun getSetColors(game: String): Map<String, Color> {
-        val setList = setListMap[game]
-        if (setList == null) return mapOf<String, Color>()
+        val setList = getGameSets(game)
         val outputMap = mutableMapOf<String, Color>()
         setList.forEach { set ->
             outputMap.put(set.set, set.color)
@@ -398,8 +411,8 @@ object SetsData {
     }
 
     // Get set color form its code
-    fun getSetColor(value: String): Color? {
-        val set = getGlobalList().firstOrNull{ set -> (set.name.es == value || set.set == value) }
+    fun getSetColor(game: String, value: String): Color? {
+        val set = getGameSets(game).firstOrNull{ set -> (set.name.es == value || set.set == value) }
         return set?.color
     }
 
@@ -408,8 +421,8 @@ object SetsData {
         game: String,
         rarities: List<String> = listOf()
     ): Pair<Set, Origin>? {
-        val setList = setListMap[game]
-        if (setList == null || setList.isEmpty()) return null
+        val setList = getGameSets(game)
+        if (setList.isEmpty()) return null
 
         var probableSet: Set? = null
         var probableBooster: Origin? = null
@@ -461,7 +474,8 @@ object SetsData {
         setID: String,
         rarities: List<String> = listOf()
     ): Pair<Origin, Float>? {
-        val set = getGlobalList().find{ set -> set.set == setID }
+        val setList = getGameSets(game)
+        val set = setList.find{ set -> set.set == setID }
         if (set == null) return null
 
         val setOrigins = set.origins.filter{ origin -> OriginsData.getOriginType(game, origin) != "PROMO" }
@@ -472,7 +486,7 @@ object SetsData {
         setOrigins.forEach{ origin ->
             val originObject = OriginsData.getOriginByID(game, origin)
             if (originObject != null) {
-                val probabilities = getBoosterRemainingOdds(setID, originObject, rarities)
+                val probabilities = getBoosterRemainingOdds(setID, game,originObject, rarities)
                 var totalProbability = 1.0f
                 for (i in 0 until probabilities.size) {
                     totalProbability *= (1.0f - probabilities[i])
@@ -494,6 +508,7 @@ object SetsData {
     // Get a booster remaining cards odds
     fun getBoosterRemainingOdds(
         setID: String,
+        game: String,
         origin: Origin,
         rarities: List<String> = listOf()
     ): List<Float> {
@@ -503,9 +518,10 @@ object SetsData {
             probabilities.add(0.0f)
         }
 
-        if (origin.type == "PROMO" || origin.odds == null) return probabilities
+        if (OriginsData.isOriginPromo(origin.id) || origin.odds == null) return probabilities
 
-        val set = getGlobalList().find{ set -> set.set == setID }
+        val setList = getGameSets(game)
+        val set = setList.find{ set -> set.set == setID }
         if (set == null) return probabilities
         if (!set.origins.contains(origin.id)) return probabilities
 

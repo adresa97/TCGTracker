@@ -126,4 +126,8 @@ object OriginsData {
     fun isOriginSpecial(id: String): Boolean {
         return getGlobalList().find{ origin -> origin.id == id }?.type == "SPECIAL"
     }
+
+    fun isOriginInGame(game: String, id: String): Boolean {
+        return getGameList(game).any{ origin -> origin.id == id }
+    }
 }

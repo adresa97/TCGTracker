@@ -5,6 +5,7 @@ import kotlinx.serialization.Serializable
 
 data class Game(
     val name: String,
+    val compactName: String,
     val folder: String,
     val logo: String,
     val color: Color,
@@ -25,6 +26,7 @@ data class GameIcon(
 data class JsonGame(
     val key: String,
     val name: String,
+    val compactName: String,
     val folder: String,
     val logo: String,
     val color: List<Float>,

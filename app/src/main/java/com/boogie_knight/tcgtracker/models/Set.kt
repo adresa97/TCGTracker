@@ -29,24 +29,22 @@ data class Set(
     val color: Color,
     val cardCount: Int,
     val origins: List<String>,
+    val availableRarities: Map<String, List<String>>,
     var numbers: OwnedSetData
 )
 
 data class OwnedSetData(
-    val game: String,
     val all: OwnedData,
     val byBooster: Map<String, OwnedBoosterData>,
     val byRarity: Map<String, OwnedData>?
 )
 
 data class OwnedBoosterData(
-    val game: String,
     val all: OwnedData,
     val byRarity: Map<String, OwnedData>?
 )
 
 data class OwnedData(
-    val game: String,
     val totalCards: Int,
     val ownedCards: Int
 )

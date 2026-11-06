@@ -28,5 +28,8 @@ data class JsonOrigin (
 data class JsonConcepts (
     val types: Map<String, String>,
     val rarities: Map<String, String>,
+    val common: List<String>,
+    val uncommon: List<String>,
+    val rare: List<String>,
     val parallel: Map<String, String>?
 )

@@ -39,6 +39,7 @@ import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -349,7 +350,7 @@ fun FiltersSheet(
             checkColor = checkColor,
             backColor = backColor,
             filtersState = filtersState,
-            rarities = Concepts.getDiamondRarities(game),
+            rarities = Concepts.getCommonRarities(game),
             onCheckChange = {
                 onFiltersChanged()
             },
@@ -362,7 +363,7 @@ fun FiltersSheet(
             checkColor = checkColor,
             backColor = backColor,
             filtersState = filtersState,
-            rarities = Concepts.getStarCrownRarities(game),
+            rarities = Concepts.getUncommonRarities(game),
             onCheckChange = {
                 onFiltersChanged()
             },
@@ -375,7 +376,7 @@ fun FiltersSheet(
             checkColor = checkColor,
             backColor = backColor,
             filtersState = filtersState,
-            rarities = Concepts.getShinyAnomalyRarities(game),
+            rarities = Concepts.getRareRarities(game),
             onCheckChange = {
                 onFiltersChanged()
             },
@@ -441,6 +442,7 @@ fun RaritiesFilterColumn(
                 Text(
                     text = Concepts.getPrettyRarity(game, rarity),
                     fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onTertiaryContainer
                 )
             }

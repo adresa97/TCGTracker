@@ -1,5 +1,6 @@
 package com.boogie_knight.tcgtracker.services
 
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.graphics.Color
 import com.boogie_knight.tcgtracker.models.Game
 import com.boogie_knight.tcgtracker.models.GameIcon
@@ -21,6 +22,7 @@ object GamesData {
             val color = Color(game.color[0] / 255, game.color[1] / 255, game.color[2] / 255)
             games.put(game.key, Game(
                 name = game.name,
+                compactName = game.compactName,
                 folder = game.folder,
                 logo = game.logo,
                 color = color,
@@ -54,6 +56,13 @@ object GamesData {
         val game = games[key]
         if (game == null) return ""
         return game.name
+    }
+
+    // Get game compact name
+    fun getGameCompactName(key: String): String {
+        val game = games[key]
+        if (game == null) return ""
+        return game.compactName
     }
 
     // Getters for each individual path
@@ -97,6 +106,10 @@ object GamesData {
         val game = games[key]
         if (game == null) return ""
         return game.cards
+    }
+
+    fun getGameColor(key: String): Color? {
+        return games[key]?.color
     }
 
     fun isGameInData(game: String): Boolean {

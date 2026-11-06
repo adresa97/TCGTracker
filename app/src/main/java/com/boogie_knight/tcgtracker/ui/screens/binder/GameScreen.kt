@@ -51,6 +51,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -188,14 +189,26 @@ fun GamesContent(
         Column(
             modifier = Modifier
                 .padding(all = 30.dp),
-            verticalArrangement = Arrangement.spacedBy(5.dp)
+            verticalArrangement = Arrangement.spacedBy(20.dp)
         ) {
+            var rowHeight = (screenSize.toFloat() / 6.0f).dp
+            if (rowHeight < 100.dp) rowHeight = 100.dp
+
             games.forEach { game ->
-                GameCell(
-                    gameName = game.value.name,
-                    color = game.value.color,
-                    modifier = Modifier.clickable{ onGameTap(game.key) }
-                )
+                Row(
+                    modifier = modifier
+                        .fillMaxWidth()
+                        .height(rowHeight),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    GameCell(
+                        gameName = game.value.name,
+                        color = MaterialTheme.colorScheme.primaryContainer,
+                        gameColor = game.value.color,
+                        modifier = Modifier.clickable { onGameTap(game.key) }
+                    )
+                }
             }
         }
     } else {
@@ -231,37 +244,45 @@ fun GamesContent(
 fun GameCell(
     gameName: String,
     color: Color,
+    gameColor: Color,
     modifier: Modifier = Modifier
 ) {
     val backColor = getSimilarColor(
         color = color,
-        minSaturation = 0.4f,
-        maxSaturation = 0.6f,
-        value = 0.9f
+        minSaturation = 0.2f,
+        maxSaturation = 0.3f,
+        value = 0.4f
     )
 
     Box(
-        modifier = modifier.background(backColor, RoundedCornerShape(10))
-            .height(50.dp)
+        modifier = modifier.background(gameColor, RoundedCornerShape(10))
+            .fillMaxSize().padding(horizontal = 25.dp),
+        contentAlignment = Alignment.Center
     ) {
-        Row(
-            modifier = Modifier.fillMaxSize().padding(horizontal = 12.dp),
-            verticalAlignment = Alignment.CenterVertically
+        Box(
+            modifier = modifier.background(backColor)
+                .fillMaxSize(),
+            contentAlignment = Alignment.Center
         ) {
-            Box(
-                modifier = Modifier.fillMaxWidth().fillMaxHeight(0.6f),
-                contentAlignment = Alignment.Center
+            Row(
+                modifier = Modifier.fillMaxSize().padding(horizontal = 12.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                // Center
-                Text(
-                    modifier = Modifier.align(Alignment.Center),
-                    text = gameName,
-                    color = MaterialTheme.colorScheme.onSurface,
-                    textAlign = TextAlign.Center,
-                    fontSize = MaterialTheme.typography.bodyLarge.fontSize,
-                    fontWeight = MaterialTheme.typography.bodyLarge.fontWeight,
-                    fontFamily = MaterialTheme.typography.bodyLarge.fontFamily
-                )
+                Box(
+                    modifier = Modifier.fillMaxWidth().fillMaxHeight(0.6f),
+                    contentAlignment = Alignment.Center
+                ) {
+                    // Center
+                    Text(
+                        modifier = Modifier.align(Alignment.Center),
+                        text = gameName,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        textAlign = TextAlign.Center,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = MaterialTheme.typography.bodyLarge.fontFamily
+                    )
+                }
             }
         }
     }
@@ -301,6 +322,8 @@ fun GameButton(
             Text(
                 text = gameName,
                 color = MaterialTheme.colorScheme.onSurface,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .fillMaxHeight(0.2f)
                     .padding(bottom = 0.dp)

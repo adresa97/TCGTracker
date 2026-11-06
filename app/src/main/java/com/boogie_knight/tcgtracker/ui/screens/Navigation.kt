@@ -25,6 +25,7 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSavedStateNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import androidx.navigation3.ui.rememberSceneSetupNavEntryDecorator
+import com.boogie_knight.tcgtracker.services.UserOptions
 import com.boogie_knight.tcgtracker.ui.TrackerViewModel
 import com.boogie_knight.tcgtracker.ui.screens.binder.CardsScreen
 import com.boogie_knight.tcgtracker.ui.screens.binder.GameScreen
@@ -40,8 +41,17 @@ fun Navigation (
     // Load data
     trackerViewModel.loadData(context)
 
+    // Get initial screen from stored user options
+    val startingOptions = trackerViewModel.getUserStartScreen()
+    var initialScreen = ""
+    if (startingOptions.first != UserOptions.StartScreen.SELECTOR.name) {
+        if (trackerViewModel.isGameInDatabase(startingOptions.first)) initialScreen = startingOptions.first
+        else if (trackerViewModel.isGameInDatabase(startingOptions.second)) initialScreen = startingOptions.second
+    }
+
     // Create navigation backstack
     val backStack = rememberNavBackStack(GameScreen)
+    if (initialScreen != "") backStack.add(SetScreen(initialScreen))
 
     // Navigation
     Surface(
@@ -81,6 +91,7 @@ fun Navigation (
                         },
                         onGameTap = { selectedGame ->
                             backStack.add(SetScreen(selectedGame))
+                            trackerViewModel.saveLastOpened(selectedGame)
                         }
                     )
                 }

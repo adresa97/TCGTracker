@@ -101,7 +101,7 @@ fun CardsScreen(
     }
 
     // UI color
-    val uiColor = SetsData.getSetColor(currentSet)
+    val uiColor = SetsData.getSetColor(currentGame, currentSet)
         ?: MaterialTheme.colorScheme.primaryContainer
 
     // Bottom sheet state
@@ -155,7 +155,7 @@ fun CardsScreen(
                         containerColor = uiColor,
                         titleContentColor = MaterialTheme.colorScheme.onSurface
                     ),
-                    title = { Text(text = SetsData.getSetName(currentSet), style = MaterialTheme.typography.titleLarge) },
+                    title = { Text(text = SetsData.getSetName(currentGame, currentSet), style = MaterialTheme.typography.titleLarge) },
                     modifier = Modifier,
                     navigationIcon = {
                         IconButton(
@@ -286,7 +286,7 @@ fun CardsScreen(
                 val colors = trackerViewModel.getOriginsColorMap(currentGame)
 
                 val filteredCardList =
-                    if (trackerViewModel.isSetPromo(currentSet)) cardList
+                    if (trackerViewModel.isSetPromo(currentGame, currentSet)) cardList
                     else cardList.filter { card -> FiltersManager.isFilterActivated(currentGame, card.rarity, true) }
                 if (filteredCardList.isEmpty()) {
                     if (cardList.isEmpty()) {

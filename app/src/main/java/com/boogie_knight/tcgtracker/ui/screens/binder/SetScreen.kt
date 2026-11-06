@@ -26,6 +26,7 @@ import androidx.compose.material3.BottomSheetScaffold
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxColors
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -58,6 +59,7 @@ import androidx.navigation3.runtime.NavKey
 import coil3.compose.AsyncImage
 import com.boogie_knight.tcgtracker.R
 import com.boogie_knight.tcgtracker.models.Set
+import com.boogie_knight.tcgtracker.services.GamesData
 import com.boogie_knight.tcgtracker.services.OriginsData
 import com.boogie_knight.tcgtracker.services.SetsData
 import com.boogie_knight.tcgtracker.ui.TrackerViewModel
@@ -102,7 +104,16 @@ fun SetScreen(
     val gameName = trackerViewModel.getGameName(currentGame)
 
     // UI color
-    val uiColor = MaterialTheme.colorScheme.primaryContainer
+    val uiColor = getSimilarColor(
+        color = GamesData.getGameColor(currentGame) ?: MaterialTheme.colorScheme.primaryContainer,
+        saturation = 0.8f,
+        value = 0.6f
+    )
+    val headerColor = getSimilarColor(
+        color = uiColor,
+        saturation = 0.2f,
+        value = 0.4f
+    )
 
     // Bottom sheet state
     val scaffoldScope = rememberCoroutineScope()
@@ -267,7 +278,7 @@ fun SetScreen(
                             stickyHeader {
                                 Row(
                                     modifier = Modifier.fillMaxWidth()
-                                        .background(MaterialTheme.colorScheme.secondaryContainer),
+                                        .background(headerColor),
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     Text(
@@ -559,18 +570,34 @@ fun InfoSetSheet(
         horizontalAlignment = Alignment.Start,
         verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {
+        val seriesCount = sets.keys.size
+        var counter = 0
         sets.forEach{ series ->
-            items(count = series.value.size) { index ->
-                val set = series.value[index]
-                val isSpecial = viewModel.isSetSpecial(set.set)
-                if (!viewModel.isSetPromo(set.set)) {
-                    InfoSetElement(
-                        game = game,
-                        set = set,
-                        isActive = activeSets.contains(set.set),
-                        rarities = rarities,
-                        isSpecial = isSpecial,
-                        onSetClick = onSetClick
+            counter++
+            val divider = if (counter == seriesCount) 0 else 1
+            val setsCount = series.value.size + divider
+            items(count = setsCount) { index ->
+                if (index < setsCount - divider) {
+                    val set = series.value[index]
+                    val isSpecial = viewModel.isSetSpecial(game, set.set)
+                    if (!viewModel.isSetPromo(game, set.set)) {
+                        InfoSetElement(
+                            game = game,
+                            set = set,
+                            isActive = activeSets.contains(set.set),
+                            rarities = rarities,
+                            isSpecial = isSpecial,
+                            onSetClick = onSetClick
+                        )
+                    }
+                } else {
+                    HorizontalDivider(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 5.dp)
+                            .alpha(0.25f),
+                        thickness = 2.dp,
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                 }
             }

@@ -206,7 +206,7 @@ object FiltersManager {
             if (isPretty) {
                 val rawRarity = Concepts.getRawRarity(game, filter)
                 if (rawRarity != "") rawRarity
-                else SetsData.getSetID(filter)
+                else SetsData.getSetID(game, filter)
             }
             else filter
 
