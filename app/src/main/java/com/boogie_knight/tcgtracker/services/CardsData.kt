@@ -16,13 +16,13 @@ object CardsData {
     )
 
     private val cardCollectionMap = mutableMapOf<String, CardCollection>()
-    private var activeCollection = ""
 
     // Load image url constructors from repository
     fun loadImageJSONData() {
-        for (game in Routes.Game.entries)
+        val games = GamesData.getGamesList()
+        for (game in games)
         {
-            val jsonString = AssetsRepository.getData(Routes.getRoute(game, Routes.File.IMAGES))
+            val jsonString = AssetsRepository.getData(GamesData.getGameImageSourcesRoute(game))
             val jsonData = ParseJSON(jsonString, Array<JsonImageURL>::class.java)?.asList()
 
             if (jsonData != null)
@@ -36,53 +36,57 @@ object CardsData {
                     ))
                 }
 
-                if (cardCollectionMap[game.route] == null) {
+                if (cardCollectionMap[game] == null) {
                     cardCollectionMap.put(
-                        game.route, CardCollection(
+                        game, CardCollection(
                             cardMap = mutableMapOf(),
                             imageSources = sources
                         )
                     )
                 } else {
-                    cardCollectionMap[game.route]?.imageSources?.putAll(sources)
+                    cardCollectionMap[game]?.imageSources?.putAll(sources)
                 }
             }
         }
     }
 
-    fun setActiveCollection(game: Routes.Game) {
-        activeCollection = game.route
+    fun getGameCollection(game: String): CardCollection? {
+        return cardCollectionMap[game]
     }
 
-    fun getActiveCollection(): CardCollection? {
-        return cardCollectionMap[activeCollection]
+    fun getGlobalCardMap(): Map<String, List<Card>> {
+        val cardMap = mutableMapOf<String, List<Card>>()
+        cardCollectionMap.forEach{ game ->
+            cardMap.putAll(game.value.cardMap)
+        }
+        return cardMap
     }
 
     // Return a set's list of cards
-    fun getCardList(set: String): List<Card> {
-        val activeCardMap = getActiveCollection()?.cardMap
-        if (activeCardMap == null) return listOf()
+    fun getCardList(game: String, set: String): List<Card> {
+        val cardMap = getGameCollection(game)?.cardMap
+        if (cardMap == null) return listOf()
 
-        val cardList = activeCardMap.getOrElse(set, { loadAssetsJSONData(set).toMutableList() })
+        val cardList = cardMap.getOrElse(set, { loadAssetsJSONData(game, set).toMutableList() })
         if (cardList.isEmpty()) return listOf()
 
-        val ownedList = loadUserData(cardList)
+        val ownedList = loadUserData(game, cardList)
         if (ownedList.isEmpty()) {
-            activeCardMap.put(set, cardList)
+            cardMap.put(set, cardList)
             return cardList.toList()
         }
 
         for (i in 0 until cardList.count()) {
             cardList[i].owned = ownedList.getOrNull(i) ?: false
         }
-        activeCardMap.put(set, cardList)
+        cardMap.put(set, cardList)
         return cardList.toList()
     }
 
     // Load user card data for a set
-    fun loadUserData(cardList: List<Card>): List<Boolean> {
+    fun loadUserData(game: String, cardList: List<Card>): List<Boolean> {
         val firstPrints = cardList.map{ card -> card.firstPrint }
-        val data = UserRepository.getCardsByIds(firstPrints)
+        val data = UserRepository.getCardsByIds(game = game, ids = firstPrints)
 
         return cardList.map{ card ->
             if (data.containsKey(card.firstPrint)) {
@@ -94,9 +98,8 @@ object CardsData {
     }
 
     // Load assets individual JSON data
-    fun loadAssetsJSONData(set: String): List<Card> {
-        if (activeCollection == "") return emptyList()
-        val jsonString = AssetsRepository.getData("${Routes.getRoute(activeCollection, Routes.File.CARDS)}${set}.json")
+    fun loadAssetsJSONData(game: String, set: String): List<Card> {
+        val jsonString = AssetsRepository.getData("${GamesData.getGameCardsFolderRoute(game)}${set}.json")
         return ParseJSON(jsonString, Array<JsonCard>::class.java)?.toList()
             ?.map{ card ->
                 Card(
@@ -105,7 +108,7 @@ object CardsData {
                     type = card.type,
                     origins = card.origins,
                     rarity = card.rarity,
-                    image = getImageUrl(card.firstPrint, card.image),
+                    image = getImageUrl(game, card.firstPrint, card.image),
                     owned = false,
                     extra = card.extra ?: false,
                     firstPrint = card.firstPrint
@@ -114,13 +117,13 @@ object CardsData {
     }
 
     // Load all user data JSONS and then outputs a full map of owned cards values by set
-    fun getOwnedCardsMap(): Map<String, List<Boolean>> {
+    fun getOwnedCardsMap(game: String): Map<String, List<Boolean>> {
         val output = mutableMapOf<String, List<Boolean>>()
 
         // Loop through every possible set's lists of cards
-        val setList = SetsData.getSetIDs()
+        val setList = SetsData.getSetIDs(game)
         setList.forEach { set ->
-            val cardList = getCardList(set)
+            val cardList = getCardList(game, set)
             val ownedCards = mutableListOf<Boolean>()
             cardList.forEach { card ->
                 ownedCards.add(card.owned)
@@ -132,18 +135,18 @@ object CardsData {
     }
 
     // Reload user data and update card map
-    fun reloadUserData(sets: List<String>) {
-        val activeCardMap = getActiveCollection()?.cardMap
-        if (activeCardMap == null) return
+    fun reloadUserData(game: String, sets: List<String>) {
+        val cardMap = getGameCollection(game)?.cardMap
+        if (cardMap == null) return
 
         sets.forEach{ set ->
-            if (activeCardMap.containsKey(set)) {
-                val cardList = activeCardMap[set]
+            if (cardMap.containsKey(set)) {
+                val cardList = cardMap[set]
                 if (cardList != null) {
-                    val userData = loadUserData(cardList)
+                    val userData = loadUserData(game, cardList)
                     if (userData.isNotEmpty()) {
                         for (i in 0 until userData.count()) {
-                            getActiveCollection()!!.cardMap[set]!![i].owned = userData[i]
+                            getGameCollection(game)!!.cardMap[set]!![i].owned = userData[i]
                         }
                     }
                 }
@@ -151,9 +154,9 @@ object CardsData {
         }
     }
 
-    private fun getImageUrl(cardID: String, urlCode: String?): String {
+    private fun getImageUrl(game: String, cardID: String, urlCode: String?): String {
         val code = urlCode ?: "v1"
-        val source = getActiveCollection()?.imageSources[code]
+        val source = getGameCollection(game)?.imageSources[code]
         if (source == null) return ""
 
         val set = cardID.substringBeforeLast('-')
@@ -163,7 +166,7 @@ object CardsData {
         var lang2 = "es"
         var lang3 = "SPA"
 
-        if (activeCollection == Routes.Game.ALYSION.route) {
+        if (game == "ALYSION") {
             lang2 = "en"
             lang3 = "ENG"
         }
@@ -177,13 +180,13 @@ object CardsData {
         return url
     }
 
-    fun changeCardState(set: String, cardIndex: Int) {
+    fun changeCardState(game: String, set: String, cardIndex: Int) {
         if (cardIndex < 0) return
 
-        val activeCardMap = getActiveCollection()?.cardMap
-        if (activeCardMap == null) return
+        val cardMap = getGameCollection(game)?.cardMap
+        if (cardMap == null) return
 
-        val setList = activeCardMap[set]
+        val setList = cardMap[set]
         if (setList == null || cardIndex >= setList.count()) return
 
         val card = setList[cardIndex]
@@ -196,6 +199,7 @@ object CardsData {
             cards =listOf(
                 SQLOwnedCard(
                     id = originalPrint,
+                    game = game,
                     set = originalSet,
                     isOwned = isNowOwned
                 )

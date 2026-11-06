@@ -71,7 +71,7 @@ fun OptionsScreen(
                         containerColor = uiColor,
                         titleContentColor = MaterialTheme.colorScheme.onSurface
                     ),
-                    title = { Text("Opciones") },
+                    title = { Text(text = "Opciones", style = MaterialTheme.typography.titleLarge) },
                     modifier = Modifier,
                     navigationIcon = {
                         IconButton(
@@ -115,7 +115,9 @@ fun OptionsScreen(
                             val message =
                                 ImporterExporter.importFromJSON(context, uris[0])
                             if (!message.second.isNullOrEmpty()) {
-                                trackerViewModel.reloadOwnedCardState(message.second!!)
+                                message.second!!.forEach{ game->
+                                    if (!game.value.isEmpty()) trackerViewModel.reloadOwnedCardState(game.key, game.value)
+                                }
                             }
 
                         scope.launch {

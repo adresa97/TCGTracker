@@ -13,18 +13,18 @@ object Concepts {
     )
 
     private val conceptDataMap = mutableMapOf<String, ConceptData>()
-    private var activeConceptData = ""
 
     fun loadJSONData() {
-        for (game in Routes.Game.entries) {
-            val jsonString = AssetsRepository.getData(Routes.getRoute(game, Routes.File.CONCEPTS))
+        val games = GamesData.getGamesList()
+        for (game in games) {
+            val jsonString = AssetsRepository.getData(GamesData.getGameConceptsRoute(game))
             val jsonData = ParseJSON(jsonString, JsonConcepts::class.java)
             if (jsonData != null) {
                 val reverseRarities = mutableMapOf<String, String>()
                 jsonData.rarities.forEach { rarity ->
                     reverseRarities.put(key = rarity.value, value = rarity.key)
                 }
-                conceptDataMap.put(game.route, ConceptData(
+                conceptDataMap.put(game, ConceptData(
                     types = jsonData.types,
                     rarities = jsonData.rarities,
                     reverseRarities = reverseRarities,
@@ -34,64 +34,58 @@ object Concepts {
         }
     }
 
-    fun setActiveConcept(game: Routes.Game) {
-        activeConceptData = game.route
+    private fun getGameConcepts(game: String): ConceptData? {
+        return conceptDataMap[game]
     }
 
-    private fun getActiveConcept(): ConceptData? {
-        return conceptDataMap[activeConceptData]
-    }
-
-    fun getTypes(): List<String> {
-        return getActiveConcept()?.types?.keys?.toList() ?: emptyList()
+    fun getTypes(game: String): List<String> {
+        return getGameConcepts(game)?.types?.keys?.toList() ?: emptyList()
     }
     
-    fun getTypeUrls(): List<String> {
-        return getActiveConcept()?.types?.values?.toList() ?: emptyList()
+    fun getTypeUrls(game: String): List<String> {
+        return getGameConcepts(game)?.types?.values?.toList() ?: emptyList()
     }
 
-    fun getGlobalRarities(): List<String> {
-        val rarities = mutableListOf<String>()
-        for (data in conceptDataMap)
-        {
-            rarities.addAll(data.value.rarities.keys.toList())
+    fun getGlobalRaritiesMap(): Map<String, List<String>> {
+        val raritiesMap = mutableMapOf<String, List<String>>()
+        conceptDataMap.forEach{ game->
+            raritiesMap.put(game.key, game.value.rarities.keys.toList())
         }
-
-        return rarities
+        return raritiesMap
     }
 
-    fun getRarities(): List<String> {
-        return getActiveConcept()?.rarities?.keys?.toList() ?: emptyList()
+    fun getRarities(game: String): List<String> {
+        return getGameConcepts(game)?.rarities?.keys?.toList() ?: emptyList()
     }
 
-    fun getPrettyRarities(): List<String> {
-        return getActiveConcept()?.rarities?.values?.toList() ?: emptyList()
+    fun getPrettyRarities(game: String): List<String> {
+        return getGameConcepts(game)?.rarities?.values?.toList() ?: emptyList()
     }
 
-    fun getTypeUrl(type: String): String {
+    fun getTypeUrl(game: String, type: String): String {
         var resultTypes = ""
         val cardTypes = type.split(' ')
         for (cardType in cardTypes) {
-            resultTypes += getActiveConcept()?.types[cardType] ?: ""
+            resultTypes += getGameConcepts(game)?.types[cardType] ?: ""
         }
         return resultTypes
     }
 
-    fun getRawRarity(rarity: String): String {
-        return getActiveConcept()?.reverseRarities[rarity] ?: ""
+    fun getRawRarity(game: String, rarity: String): String {
+        return getGameConcepts(game)?.reverseRarities[rarity] ?: ""
     }
 
-    fun getPrettyRarity(rarity: String): String {
-        return getActiveConcept()?.rarities[rarity] ?: ""
+    fun getPrettyRarity(game:String, rarity: String): String {
+        return getGameConcepts(game)?.rarities[rarity] ?: ""
     }
 
-    fun getParallelRarity(rarity: String): String {
-        return getActiveConcept()?.parallel[rarity] ?: ""
+    fun getParallelRarity(game: String, rarity: String): String {
+        return getGameConcepts(game)?.parallel[rarity] ?: ""
     }
 
-    fun getDiamondRarities(): List<String> {
+    fun getDiamondRarities(game: String): List<String> {
         val output = mutableListOf<String>()
-        getActiveConcept()?.rarities?.forEach{ rarity ->
+        getGameConcepts(game)?.rarities?.forEach{ rarity ->
             if (rarity.key.endsWith("DIAMOND")) {
                 output.add(rarity.key)
             }
@@ -99,9 +93,9 @@ object Concepts {
         return output
     }
 
-    fun getStarCrownRarities(): List<String> {
+    fun getStarCrownRarities(game: String): List<String> {
         val output = mutableListOf<String>()
-        getActiveConcept()?.rarities?.forEach{ rarity ->
+        getGameConcepts(game)?.rarities?.forEach{ rarity ->
             if (rarity.key.endsWith("STAR") || rarity.key.endsWith("CROWN")) {
                 output.add(rarity.key)
             }
@@ -109,9 +103,9 @@ object Concepts {
         return output
     }
 
-    fun getShinyAnomalyRarities(): List<String> {
+    fun getShinyAnomalyRarities(game: String): List<String> {
         val output = mutableListOf<String>()
-        getActiveConcept()?.rarities?.forEach{ rarity ->
+        getGameConcepts(game)?.rarities?.forEach{ rarity ->
             if (rarity.key.endsWith("SHINY") || rarity.key.endsWith("ANOMALY")) {
                 output.add(rarity.key)
             }

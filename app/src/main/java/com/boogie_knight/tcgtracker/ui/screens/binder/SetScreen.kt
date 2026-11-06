@@ -68,14 +68,16 @@ import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
 
 @Serializable
-data object SetScreen: NavKey
+data class SetScreen(val currentGame: String): NavKey
 
 @SuppressLint("ConfigurationScreenWidthHeight")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SetScreen(
+    currentGame: String,
+    onBackTap: () -> Unit,
     onOptionsTap: () -> Unit,
-    onSetTap: (String) -> Unit,
+    onSetTap: (String, String) -> Unit,
     trackerViewModel: TrackerViewModel = viewModel()
 ) {
     // Collect uiState
@@ -88,13 +90,16 @@ fun SetScreen(
 
     // Get active rarities from FiltersManager
     var currentRarityFilters: List<String> by rememberSaveable {
-        mutableStateOf(FiltersManager.getActiveRarityFilters())
+        mutableStateOf(FiltersManager.getActiveRarityFilters(currentGame))
     }
 
     // Get active sets from FiltersManager
     var currentSetFilters: List<String> by rememberSaveable {
-        mutableStateOf(FiltersManager.getActiveSetFilters())
+        mutableStateOf(FiltersManager.getActiveSetFilters(currentGame))
     }
+
+    // Screen title
+    val gameName = trackerViewModel.getGameName(currentGame)
 
     // UI color
     val uiColor = MaterialTheme.colorScheme.primaryContainer
@@ -130,8 +135,21 @@ fun SetScreen(
                         containerColor = uiColor,
                         titleContentColor = MaterialTheme.colorScheme.onSurface
                     ),
-                    title = { Text("Pokémon TCG Pocket Tracker") },
+                    title = { Text(text = gameName, style = MaterialTheme.typography.titleLarge) },
                     modifier = Modifier,
+                    navigationIcon = {
+                        IconButton(
+                            onClick = {
+                                onBackTap()
+                            }
+                        ) {
+                            Icon(
+                                painter = painterResource(R.drawable.arrow_back),
+                                tint = MaterialTheme.colorScheme.onSurface,
+                                contentDescription = null
+                            )
+                        }
+                    },
                     actions = {
                         IconButton(
                             onClick = {
@@ -169,17 +187,18 @@ fun SetScreen(
             sheetShadowElevation = 10.dp,
             sheetContent = {
                 // Get most probable set and its associated color
-                val setBooster = trackerViewModel.getMostProbableSetFromList(currentSetFilters, currentRarityFilters)
+                val setBooster = trackerViewModel.getMostProbableSetFromList(currentGame, currentSetFilters, currentRarityFilters)
                 val setColor = setBooster?.first?.color ?: MaterialTheme.colorScheme.surface
 
                 BottomSheet(
+                    game = currentGame,
                     title = setBooster?.second?.name?.es ?: "",
                     uiColor = uiColor,
                     trackerColor = setColor,
                     peekArea = bottomBarHeight,
                     safeArea = safeArea,
                     isFiltersSheet = isFiltersSheet,
-                    isAlreadyFiltered = !FiltersManager.areAllRarityFiltersActivated(currentRarityFilters),
+                    isAlreadyFiltered = !FiltersManager.areAllRarityFiltersActivated(currentGame, currentRarityFilters),
                     onIconClick = { isFilters ->
                         scaffoldScope.launch {
                             if (!isSheetExpanded) {
@@ -197,15 +216,16 @@ fun SetScreen(
                         }
                     },
                     onFiltersChanged = {
-                        currentRarityFilters = FiltersManager.getActiveRarityFilters()
+                        currentRarityFilters = FiltersManager.getActiveRarityFilters(currentGame)
                     },
                     infoScreen = {
-                        val seriesMap = trackerViewModel.getSeriesMap()
+                        val seriesMap = trackerViewModel.getSeriesMap(currentGame)
                         InfoSetSheet(
+                            game = currentGame,
                             sets = seriesMap,
                             activeSets = currentSetFilters,
                             onSetClick = {
-                                currentSetFilters = FiltersManager.getActiveSetFilters()
+                                currentSetFilters = FiltersManager.getActiveSetFilters(currentGame)
                             },
                             rarities = currentRarityFilters,
                             viewModel = trackerViewModel
@@ -220,8 +240,8 @@ fun SetScreen(
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
-                val series = trackerViewModel.getSeriesMap()
-                val colors = trackerViewModel.getSetColors()
+                val series = trackerViewModel.getSeriesMap(currentGame)
+                val colors = trackerViewModel.getSetColors(currentGame)
 
                 if (series.isEmpty()) {
                     Text(
@@ -267,7 +287,7 @@ fun SetScreen(
                                     screenSize = screenSize,
                                     isSheetExpanded = isSheetExpanded,
                                     isListView = isListMode,
-                                    onSetTap = { set -> onSetTap(set) }
+                                    onSetTap = { set -> onSetTap(currentGame, set) }
                                 )
                             }
                         }
@@ -524,6 +544,7 @@ fun EmptyBox(modifier: Modifier = Modifier) {
 
 @Composable
 fun InfoSetSheet(
+    game: String,
     sets: Map<String, List<Set>>,
     activeSets: List<String>,
     rarities: List<String>,
@@ -544,6 +565,7 @@ fun InfoSetSheet(
                 val isSpecial = viewModel.isSetSpecial(set.set)
                 if (!viewModel.isSetPromo(set.set)) {
                     InfoSetElement(
+                        game = game,
                         set = set,
                         isActive = activeSets.contains(set.set),
                         rarities = rarities,
@@ -558,6 +580,7 @@ fun InfoSetSheet(
 
 @Composable
 fun InfoSetElement(
+    game: String,
     set: Set,
     isActive: Boolean,
     rarities: List<String>,
@@ -589,9 +612,9 @@ fun InfoSetElement(
         disabledIndeterminateBorderColor = setColor
     )
 
-    var probableBooster = SetsData.getMostProbableBooster(set.set, rarities)
+    var probableBooster = SetsData.getMostProbableBooster(game, set.set, rarities)
     if (probableBooster == null) {
-        probableBooster = Pair(OriginsData.getOriginByID(set.origins[0])!!, 0.0f)
+        probableBooster = Pair(OriginsData.getOriginByID(game, set.origins[0])!!, 0.0f)
     }
 
     val greyStrength = if (isActive || isSpecial) 1.0f else 0.5f
@@ -635,9 +658,9 @@ fun InfoSetElement(
                     onCheckedChange = { checkState ->
                         if (!isSpecial) {
                             if (checkState) {
-                                FiltersManager.addFilter(set.set)
+                                FiltersManager.addFilter(game, set.set)
                             } else {
-                                FiltersManager.removeFilter(set.set)
+                                FiltersManager.removeFilter(game, set.set)
                             }
                             onSetClick()
                             isFilterActive = checkState

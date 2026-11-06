@@ -11,6 +11,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.boogie_knight.tcgtracker.repositories.AssetsRepository
 import com.boogie_knight.tcgtracker.models.Card
+import com.boogie_knight.tcgtracker.models.Game
+import com.boogie_knight.tcgtracker.models.GameIcon
 import com.boogie_knight.tcgtracker.services.CardsData
 import com.boogie_knight.tcgtracker.services.Concepts
 import com.boogie_knight.tcgtracker.models.Origin
@@ -19,7 +21,7 @@ import com.boogie_knight.tcgtracker.services.OriginsData
 import com.boogie_knight.tcgtracker.models.Set
 import com.boogie_knight.tcgtracker.services.SetsData
 import com.boogie_knight.tcgtracker.repositories.UserRepository
-import com.boogie_knight.tcgtracker.services.Routes
+import com.boogie_knight.tcgtracker.services.GamesData
 import com.boogie_knight.tcgtracker.ui.screens.binder.FiltersManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -75,46 +77,45 @@ class TrackerViewModel() : ViewModel() {
             AssetsRepository.init(context)
             UserRepository.init(context)
 
+            GamesData.loadGamesData()
+
             Concepts.loadJSONData()
             CardsData.loadImageJSONData()
             OriginsData.loadJSONData()
             SetsData.loadJSONData()
             FiltersManager.initiateFilters()
 
-            setPocketActive(context)
-
             endLoading()
         }
-    }
-
-    fun setPocketActive(context: Context) {
-        Concepts.setActiveConcept(Routes.Game.POCKET)
-        CardsData.setActiveCollection(Routes.Game.POCKET)
-        OriginsData.setActiveOrigins(Routes.Game.POCKET)
-        SetsData.setActiveList(Routes.Game.POCKET)
-    }
-
-    fun setAlysionActive(context: Context) {
-        Concepts.setActiveConcept(Routes.Game.ALYSION)
-        CardsData.setActiveCollection(Routes.Game.ALYSION)
-        OriginsData.setActiveOrigins(Routes.Game.ALYSION)
-        SetsData.setActiveList(Routes.Game.ALYSION)
     }
     //endregion
 
     //region Functions to get data from objects outside viewModel
-    fun getPrettyCardsList(set: String): List<Card> {
+    fun getGamesList(): List<String> {
+        return GamesData.getGamesList()
+    }
+
+    fun getGameIconsMap(): Map<String, GameIcon> {
+        return GamesData.getGameIcons()
+    }
+
+    fun getGameName(gameCode: String): String {
+        return GamesData.getGameName(gameCode)
+    }
+
+    fun getPrettyCardsList(game: String, set: String): List<Card> {
         return CardsData.getCardList(
+            game = game,
             set = set
         ).map{ card ->
             Card(
                 id = card.id,
                 name = card.name,
-                type = Concepts.getTypeUrl(card.type),
+                type = Concepts.getTypeUrl(game, card.type),
                 origins = card.origins.map { origin ->
-                    OriginsData.getOriginName(origin)
+                    OriginsData.getOriginName(game, origin)
                 },
-                rarity = Concepts.getPrettyRarity(card.rarity),
+                rarity = Concepts.getPrettyRarity(game, card.rarity),
                 image = card.image,
                 owned = card.owned,
                 extra = card.extra,
@@ -123,22 +124,23 @@ class TrackerViewModel() : ViewModel() {
         }
     }
 
-    fun getRawCardList(set: String): List<Card> {
+    fun getRawCardList(game: String, set: String): List<Card> {
         return CardsData.getCardList(
+            game = game,
             set = set
         )
     }
 
-    fun getSeriesMap(): Map<String, List<Set>> {
-        return SetsData.getSeriesMap()
+    fun getSeriesMap(game: String): Map<String, List<Set>> {
+        return SetsData.getSeriesMap(game)
     }
 
     fun getSetNameFromID(id: String): String {
         return SetsData.getSetName(id)
     }
 
-    fun getSetColors(): Map<String, Color> {
-        return SetsData.getSetColors()
+    fun getSetColors(game: String): Map<String, Color> {
+        return SetsData.getSetColors(game)
     }
 
     fun getSetColorFromID(id: String): Color? {
@@ -162,6 +164,7 @@ class TrackerViewModel() : ViewModel() {
     }
 
     fun getPrettyRaritiesOwnedData(
+        game: String,
         setID: String,
         filters: List<String>
     ): Map<String, OwnedData> {
@@ -173,7 +176,7 @@ class TrackerViewModel() : ViewModel() {
         val outputMap = mutableMapOf<String, OwnedData>()
         set.numbers.byRarity?.forEach{ rarity ->
             if (filters.contains(rarity.key)) {
-                val prettyRarity = Concepts.getPrettyRarity(rarity.key)
+                val prettyRarity = Concepts.getPrettyRarity(game = game, rarity = rarity.key)
                 outputMap.put(prettyRarity, rarity.value)
             }
         }
@@ -181,13 +184,14 @@ class TrackerViewModel() : ViewModel() {
     }
 
     fun getBoostersWithProbabilities(
+        game: String,
         set: String,
         rarities: List<String>
     ): Map<Origin, List<Float>> {
         val boostersIDs = SetsData.getSetFromID(set)?.origins
         val boosters = mutableListOf<Origin>()
         boostersIDs?.forEach{ id ->
-            val origin = OriginsData.getOriginByID(id)
+            val origin = OriginsData.getOriginByID(game, id)
             if (origin != null) boosters.add(origin)
         }
         if (boosters.isEmpty()) return mapOf()
@@ -218,11 +222,12 @@ class TrackerViewModel() : ViewModel() {
         return probableOrigin
     }
 
-    fun getMostProbableSet(filter: List<String> = listOf()): Pair<Set, Origin>? {
-        return SetsData.getMostProbableSet(filter)
+    fun getMostProbableSet(game: String, filter: List<String> = listOf()): Pair<Set, Origin>? {
+        return SetsData.getMostProbableSet(game, filter)
     }
 
     fun getMostProbableSetFromList(
+        game: String,
         sets: List<String>,
         filter: List<String> = listOf()
     ): Pair<Set, Origin>? {
@@ -232,18 +237,19 @@ class TrackerViewModel() : ViewModel() {
             if (set != null) setList.add(set)
         }
 
-        return SetsData.getMostProbableSetFromList(setList, filter)
+        return SetsData.getMostProbableSetFromList(game, setList, filter)
     }
 
     fun getMostProbableBoosterFromSet(
+        game: String,
         set: String,
         filter: List<String> = listOf()
     ): Pair<Origin, Float>? {
-        return SetsData.getMostProbableBooster(set, filter)
+        return SetsData.getMostProbableBooster(game, set, filter)
     }
 
-    fun getOriginsColorMap(): Map<String, Color> {
-        return OriginsData.getOriginsNameColorMap()
+    fun getOriginsColorMap(game: String): Map<String, Color> {
+        return OriginsData.getOriginsNameColorMap(game)
     }
 
     fun isOriginIdBooster(id: String): Boolean {
@@ -253,23 +259,23 @@ class TrackerViewModel() : ViewModel() {
     //endregion
 
     //region Functions to change data from objects outside viewModel
-    fun changeOwnedCardState(set: String, cardIndex: Int) {
+    fun changeOwnedCardState(game: String, set: String, cardIndex: Int) {
         viewModelScope.launch {
             startLoading()
-            CardsData.changeCardState(set, cardIndex)
-            val cardList = getRawCardList(set)
-            SetsData.recalculateSetData(cardList, set)
+            CardsData.changeCardState(game, set, cardIndex)
+            val cardList = getRawCardList(game, set)
+            SetsData.recalculateSetData(game, cardList, set)
             endLoading()
         }
     }
 
-    fun reloadOwnedCardState(sets: List<String>) {
+    fun reloadOwnedCardState(game: String, sets: List<String>) {
         viewModelScope.launch {
             startLoading()
-            CardsData.reloadUserData(sets)
+            CardsData.reloadUserData(game, sets)
             sets.forEach { set ->
-                val cardList = getRawCardList(set)
-                SetsData.recalculateSetData(cardList, set)
+                val cardList = getRawCardList(game, set)
+                SetsData.recalculateSetData(game, cardList, set)
             }
             endLoading()
         }

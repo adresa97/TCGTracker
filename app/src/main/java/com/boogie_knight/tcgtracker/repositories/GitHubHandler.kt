@@ -31,7 +31,7 @@ data object AssetsRepository{
     fun checkVersion() {
         if (handler == null) return
         val local = handler!!.getVersion()
-        val remote = NetworkFetchUtils.fetch(BASE_URL + "PTCGPocket/version").toIntOrNull()
+        val remote = NetworkFetchUtils.fetch(BASE_URL + "version").toIntOrNull()
         if (remote != null && (local == null || remote > local)) {
             handler!!.reset()
             handler!!.saveVersion(remote)

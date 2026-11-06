@@ -8,12 +8,12 @@ import com.boogie_knight.tcgtracker.utils.ParseJSON
 
 object OriginsData {
     private val originsDataMap = mutableMapOf<String, List<Origin>>()
-    private var activeOriginsData = ""
 
     fun loadJSONData() {
-        for (game in Routes.Game.entries)
+        val games = GamesData.getGamesList()
+        for (game in games)
         {
-            val jsonString = AssetsRepository.getData(Routes.getRoute(game, Routes.File.ORIGINS))
+            val jsonString = AssetsRepository.getData(GamesData.getGameOriginsRoute(game))
             val jsonData = ParseJSON(jsonString, Array<JsonOrigin>::class.java)?.asList()
                 ?.map{ origin ->
                     val color = Color(origin.color[0]/255, origin.color[1]/255, origin.color[2]/255)
@@ -27,105 +27,103 @@ object OriginsData {
                         odds = origin.odds
                     )
                 } ?: listOf()
-            originsDataMap.put(game.route, jsonData)
+            originsDataMap.put(game, jsonData)
         }
     }
 
-    fun setActiveOrigins(game: Routes.Game) {
-        activeOriginsData = game.route
+    fun getGlobalList(): List<Origin> {
+        val originList = mutableListOf<Origin>()
+        originsDataMap.forEach{ origin ->
+            originList.addAll(origin.value)
+        }
+        return originList
     }
 
-    private fun getActiveOrigins(): List<Origin> {
-        return originsDataMap[activeOriginsData] ?: emptyList()
+    fun getGameList(game: String): List<Origin> {
+        val originList = originsDataMap[game]
+        if (originList == null) return emptyList()
+        return originList
     }
 
     fun getBoostersList(): List<Origin> {
-        return getActiveOrigins().filter{ origin -> origin.type == "BOOSTER" }
+        return getGlobalList().filter{ origin -> origin.type == "BOOSTER" }
     }
 
     fun getPromoOriginsList(): List<Origin> {
-        return getActiveOrigins().filter{ origin -> origin.type == "PROMO" }
+        return getGlobalList().filter{ origin -> origin.type == "PROMO" }
     }
 
     fun getSpecialBoostersList(): List<Origin> {
-        return getActiveOrigins().filter{ origin -> origin.type == "SPECIAL" }
+        return getGlobalList().filter{ origin -> origin.type == "SPECIAL" }
     }
 
     fun getOriginsID(): List<String> {
-        return getActiveOrigins().map{ origin -> origin.id }
+        return getGlobalList().map{ origin -> origin.id }
     }
 
     fun getOriginID(name: String): String {
-        val origins = getActiveOrigins().filter{ origin -> origin.name.es == name }
+        val origins = getGlobalList().filter{ origin -> origin.name.es == name }
         if (origins.isEmpty()) return ""
         return origins[0].id
     }
 
     fun getOriginsName(): List<String> {
-        return getActiveOrigins().map{ origin -> origin.name.es }
+        return getGlobalList().map{ origin -> origin.name.es }
     }
 
-    fun getOriginName(id: String): String {
-        val origins = getActiveOrigins().filter{ origin -> origin.id == id }
+    fun getOriginName(game: String, id: String): String {
+        val origins = getGameList(game).filter{ origin -> origin.id == id }
         if (origins.isEmpty()) return ""
         return origins[0].name.es
     }
 
-    fun getOriginsNameColorMap(): Map<String, Color> {
+    fun getOriginsNameColorMap(game: String): Map<String, Color> {
         val outputMap = mutableMapOf<String, Color>()
-        getActiveOrigins().forEach{ origin ->
+        getGameList(game).forEach{ origin ->
             outputMap.put(origin.name.es, origin.color)
         }
         return outputMap
     }
 
-    fun getOriginColor(booster:String): Color? {
-        val byName = getActiveOrigins().find{ origin -> origin.name.es == booster }?.color
+    fun getOriginColor(game: String, booster: String): Color? {
+        val byName = getGameList(game).find{ origin -> origin.name.es == booster }?.color
         if (byName != null) return byName
-        return getActiveOrigins().find{ origin -> origin.id == booster }?.color
+        return getGameList(game).find{ origin -> origin.id == booster }?.color
     }
 
-    fun getOriginCardCount(booster: String): Int {
-        val byName = getActiveOrigins().find{ origin -> origin.name.es == booster }?.cardCount ?: 0
+    fun getOriginCardCount(game: String, booster: String): Int {
+        val byName = getGameList(game).find{ origin -> origin.name.es == booster }?.cardCount ?: 0
         if (byName != 0) return byName
-        return getActiveOrigins().find{ origin -> origin.id == booster }?.cardCount ?: 0
+        return getGameList(game).find{ origin -> origin.id == booster }?.cardCount ?: 0
     }
 
-    fun getBoosterOdds(booster: String): Map<String, List<Float>> {
-        var origin = getActiveOrigins().find{ origin -> origin.name.es == booster }
-        if (origin == null) origin = getActiveOrigins().find{ origin -> origin.id == booster }
+    fun getBoosterOdds(game: String, booster: String): Map<String, List<Float>> {
+        var origin = getGameList(game).find{ origin -> origin.name.es == booster }
+        if (origin == null) origin = getGlobalList().find{ origin -> origin.id == booster }
         if (origin == null) return mapOf()
         if (origin.type != "BOOSTER") return mapOf()
         return origin.odds ?: mapOf()
     }
 
-    fun getOriginType(value: String): String {
-        val byName = getActiveOrigins().find{ origin -> origin.name.es == value }?.type ?: ""
+    fun getOriginType(game: String, value: String): String {
+        val byName = getGameList(game).find{ origin -> origin.name.es == value }?.type ?: ""
         if (byName.isNotEmpty()) return byName
-        return getActiveOrigins().find{ origin -> origin.id == value }?.type ?: ""
+        return getGameList(game).find{ origin -> origin.id == value }?.type ?: ""
     }
 
-    fun getOriginByID(id: String): Origin? {
-        return getActiveOrigins().find{ origin -> origin.id == id }
-    }
-
-    fun getAllOrigins(): List<Origin> {
-        val origins = mutableListOf<Origin>()
-        originsDataMap.forEach{ originsData ->
-            origins.addAll(originsData.value)
-        }
-        return origins
+    fun getOriginByID(game: String, id: String): Origin? {
+        return getGameList(game).find{ origin -> origin.id == id }
     }
 
     fun isOriginBooster(id: String): Boolean {
-        return getAllOrigins().find{ origin -> origin.id == id }?.type == "BOOSTER"
+        return getGlobalList().find{ origin -> origin.id == id }?.type == "BOOSTER"
     }
 
     fun isOriginPromo(id: String): Boolean {
-        return getAllOrigins().find{ origin -> origin.id == id }?.type == "PROMO"
+        return getGlobalList().find{ origin -> origin.id == id }?.type == "PROMO"
     }
 
     fun isOriginSpecial(id: String): Boolean {
-        return getAllOrigins().find{ origin -> origin.id == id }?.type == "SPECIAL"
+        return getGlobalList().find{ origin -> origin.id == id }?.type == "SPECIAL"
     }
 }

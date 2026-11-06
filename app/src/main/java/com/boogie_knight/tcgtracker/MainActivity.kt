@@ -9,6 +9,8 @@ import androidx.activity.enableEdgeToEdge
 import com.boogie_knight.tcgtracker.ui.screens.Navigation
 import com.boogie_knight.tcgtracker.ui.theme.TCGTrackerTheme
 
+const val POCKET_GAME_KEY = "POCKET"
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         //TODO: Make it Asynchronous

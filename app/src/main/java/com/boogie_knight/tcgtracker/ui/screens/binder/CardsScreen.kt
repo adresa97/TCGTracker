@@ -76,11 +76,12 @@ import kotlinx.serialization.Serializable
 import kotlin.math.ceil
 
 @Serializable
-data class CardsScreen(val currentSet: String): NavKey
+data class CardsScreen(val currentGame: String, val currentSet: String): NavKey
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CardsScreen(
+    currentGame: String,
     currentSet: String,
     onBackTap: () -> Unit,
     onOptionsTap: () -> Unit,
@@ -96,7 +97,7 @@ fun CardsScreen(
 
     // Get active rarities from FiltersManager
     var currentFilters: List<String> by rememberSaveable {
-        mutableStateOf(FiltersManager.getActiveRarityFilters())
+        mutableStateOf(FiltersManager.getActiveRarityFilters(currentGame))
     }
 
     // UI color
@@ -116,6 +117,7 @@ fun CardsScreen(
     var boostersWithProbabilities by rememberSaveable {
         mutableStateOf(
             value = trackerViewModel.getBoostersWithProbabilities(
+                game = currentGame,
                 set = currentSet,
                 rarities = currentFilters))
     }
@@ -153,7 +155,7 @@ fun CardsScreen(
                         containerColor = uiColor,
                         titleContentColor = MaterialTheme.colorScheme.onSurface
                     ),
-                    title = { Text(text = SetsData.getSetName(currentSet)) },
+                    title = { Text(text = SetsData.getSetName(currentSet), style = MaterialTheme.typography.titleLarge) },
                     modifier = Modifier,
                     navigationIcon = {
                         IconButton(
@@ -210,13 +212,14 @@ fun CardsScreen(
                     if (originName == "") MaterialTheme.colorScheme.surface
                     else probableBooster?.first?.color ?: MaterialTheme.colorScheme.surface
                 BottomSheet(
+                    game = currentGame,
                     title = originName,
                     uiColor = uiColor,
                     trackerColor = originColor,
                     peekArea = bottomBarHeight,
                     safeArea = safeArea,
                     isFiltersSheet = isFiltersSheet,
-                    isAlreadyFiltered = !FiltersManager.areAllRarityFiltersActivated(currentFilters),
+                    isAlreadyFiltered = !FiltersManager.areAllRarityFiltersActivated(currentGame, currentFilters),
                     onIconClick = { isFilters ->
                         scaffoldScope.launch {
                             if (!isSheetExpanded) {
@@ -234,8 +237,9 @@ fun CardsScreen(
                         }
                     },
                     onFiltersChanged = {
-                        currentFilters = FiltersManager.getActiveRarityFilters()
+                        currentFilters = FiltersManager.getActiveRarityFilters(currentGame)
                         boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
+                            game = currentGame,
                             set = currentSet,
                             rarities = currentFilters
                         )
@@ -253,8 +257,9 @@ fun CardsScreen(
                             InfoRaritySheet(
                                 setID = currentSet,
                                 rarityCards = trackerViewModel.getPrettyRaritiesOwnedData(
+                                    game = currentGame,
                                     setID = currentSet,
-                                    filters = FiltersManager.getRarityFilters().keys.toList()
+                                    filters = FiltersManager.getRarityFilters(currentGame).keys.toList()
                                 )
                             )
                         }
@@ -277,12 +282,12 @@ fun CardsScreen(
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
-                val cardList = trackerViewModel.getPrettyCardsList(currentSet)
-                val colors = trackerViewModel.getOriginsColorMap()
+                val cardList = trackerViewModel.getPrettyCardsList(currentGame, currentSet)
+                val colors = trackerViewModel.getOriginsColorMap(currentGame)
 
                 val filteredCardList =
                     if (trackerViewModel.isSetPromo(currentSet)) cardList
-                    else cardList.filter { card -> FiltersManager.isFilterActivated(card.rarity, true) }
+                    else cardList.filter { card -> FiltersManager.isFilterActivated(currentGame, card.rarity, true) }
                 if (filteredCardList.isEmpty()) {
                     if (cardList.isEmpty()) {
                         Text(
@@ -319,10 +324,12 @@ fun CardsScreen(
                             isSheetExpanded = isSheetExpanded,
                             onCardTap = { index ->
                                 trackerViewModel.changeOwnedCardState(
+                                    game = currentGame,
                                     set = currentSet,
                                     cardIndex = index
                                 )
                                 boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
+                                    game = currentGame,
                                     set = currentSet,
                                     rarities = currentFilters
                                 )
@@ -337,10 +344,12 @@ fun CardsScreen(
                             isSheetExpanded = isSheetExpanded,
                             onCardTap = { index ->
                                 trackerViewModel.changeOwnedCardState(
+                                    game = currentGame,
                                     set = currentSet,
                                     cardIndex = index
                                 )
                                 boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
+                                    game = currentGame,
                                     set = currentSet,
                                     rarities = currentFilters
                                 )

@@ -27,6 +27,7 @@ import androidx.navigation3.ui.NavDisplay
 import androidx.navigation3.ui.rememberSceneSetupNavEntryDecorator
 import com.boogie_knight.tcgtracker.ui.TrackerViewModel
 import com.boogie_knight.tcgtracker.ui.screens.binder.CardsScreen
+import com.boogie_knight.tcgtracker.ui.screens.binder.GameScreen
 import com.boogie_knight.tcgtracker.ui.screens.binder.SetScreen
 import com.boogie_knight.tcgtracker.ui.screens.options.OptionsScreen
 
@@ -40,7 +41,7 @@ fun Navigation (
     trackerViewModel.loadData(context)
 
     // Create navigation backstack
-    val backStack = rememberNavBackStack(SetScreen)
+    val backStack = rememberNavBackStack(GameScreen)
 
     // Navigation
     Surface(
@@ -67,19 +68,39 @@ fun Navigation (
             },
             // sceneStrategy = rememberListDetailSceneStrategy(),
             entryProvider = entryProvider {
+                entry<GameScreen>(
+                    metadata = ListDetailSceneStrategy.listPane(
+                        detailPlaceholder = {
+                            Text("Elige un juego para ver sus colecciones")
+                        }
+                    )
+                ) {
+                    GameScreen(
+                        onOptionsTap = {
+                            backStack.add(OptionsScreen)
+                        },
+                        onGameTap = { selectedGame ->
+                            backStack.add(SetScreen(selectedGame))
+                        }
+                    )
+                }
                 entry<SetScreen>(
                     metadata = ListDetailSceneStrategy.listPane(
                         detailPlaceholder = {
                             Text("Elige un set para ver sus cartas")
                         }
                     )
-                ) {
+                ) { currentGame ->
                     SetScreen(
+                        currentGame = currentGame.currentGame,
+                        onBackTap = {
+                            backStack.removeLastOrNull()
+                        },
                         onOptionsTap = {
                             backStack.add(OptionsScreen)
                         },
-                        onSetTap = { selectedSet ->
-                            backStack.add(CardsScreen(selectedSet))
+                        onSetTap = { currentGame: String, selectedSet: String ->
+                            backStack.add(CardsScreen(currentGame, selectedSet))
                         }
                     )
                 }
@@ -87,6 +108,7 @@ fun Navigation (
                     metadata = ListDetailSceneStrategy.detailPane()
                 ) { currentSet ->
                     CardsScreen(
+                        currentGame = currentSet.currentGame,
                         currentSet = currentSet.currentSet,
                         onBackTap = {
                             backStack.removeLastOrNull()

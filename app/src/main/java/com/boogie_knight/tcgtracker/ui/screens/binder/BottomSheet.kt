@@ -52,6 +52,7 @@ import com.boogie_knight.tcgtracker.ui.theme.getSimilarColor
 
 @Composable
 fun BottomSheet(
+    game: String,
     title: String,
     uiColor: Color,
     trackerColor: Color,
@@ -129,8 +130,9 @@ fun BottomSheet(
                     )
             ) {
                 if (isFiltersSheet) {
-                    val filtersState = FiltersManager.getRarityFilters()
+                    val filtersState = FiltersManager.getRarityFilters(game)
                     FiltersSheet(
+                        game = game,
                         checkColor = uiColor,
                         backColor = MaterialTheme.colorScheme.tertiaryContainer,
                         filtersState = filtersState,
@@ -327,6 +329,7 @@ fun PeekArea(
 
 @Composable
 fun FiltersSheet(
+    game: String,
     checkColor: Color,
     backColor: Color,
     filtersState: Map<String, Boolean>,
@@ -342,10 +345,11 @@ fun FiltersSheet(
     ) {
         // Diamonds Column
         RaritiesFilterColumn(
+            game = game,
             checkColor = checkColor,
             backColor = backColor,
             filtersState = filtersState,
-            rarities = Concepts.getDiamondRarities(),
+            rarities = Concepts.getDiamondRarities(game),
             onCheckChange = {
                 onFiltersChanged()
             },
@@ -354,10 +358,11 @@ fun FiltersSheet(
 
         // Star and crown column
         RaritiesFilterColumn(
+            game = game,
             checkColor = checkColor,
             backColor = backColor,
             filtersState = filtersState,
-            rarities = Concepts.getStarCrownRarities(),
+            rarities = Concepts.getStarCrownRarities(game),
             onCheckChange = {
                 onFiltersChanged()
             },
@@ -366,10 +371,11 @@ fun FiltersSheet(
 
         // Shiny and anomaly column
         RaritiesFilterColumn(
+            game = game,
             checkColor = checkColor,
             backColor = backColor,
             filtersState = filtersState,
-            rarities = Concepts.getShinyAnomalyRarities(),
+            rarities = Concepts.getShinyAnomalyRarities(game),
             onCheckChange = {
                 onFiltersChanged()
             },
@@ -380,6 +386,7 @@ fun FiltersSheet(
 
 @Composable
 fun RaritiesFilterColumn(
+    game: String,
     checkColor: Color,
     backColor: Color,
     filtersState: Map<String, Boolean>,
@@ -423,16 +430,16 @@ fun RaritiesFilterColumn(
                     colors = checkColors,
                     onCheckedChange = { isActive ->
                         if (isActive) {
-                            FiltersManager.addFilter(rarity)
+                            FiltersManager.addFilter(game, rarity)
                         } else {
-                            FiltersManager.removeFilter(rarity)
+                            FiltersManager.removeFilter(game, rarity)
                         }
                         onCheckChange()
                         isFilterActive = isActive
                     }
                 )
                 Text(
-                    text = Concepts.getPrettyRarity(rarity),
+                    text = Concepts.getPrettyRarity(game, rarity),
                     fontFamily = FontFamily.Monospace,
                     color = MaterialTheme.colorScheme.onTertiaryContainer
                 )
