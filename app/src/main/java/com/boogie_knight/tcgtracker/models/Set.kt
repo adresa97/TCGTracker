@@ -29,7 +29,6 @@ data class Set(
     val color: Color,
     val cardCount: Int,
     val origins: List<String>,
-    val availableRarities: Map<String, List<String>>,
     var numbers: OwnedSetData
 )
 
