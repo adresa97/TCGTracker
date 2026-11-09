@@ -110,7 +110,7 @@ data object UserRepository{
 
     fun getStartScreen(): String {
         if (handler == null) return ""
-        var startScreen = handler!!.getUserOption(STARTSCREEN)
+        val startScreen = handler!!.getUserOption(STARTSCREEN)
         return if (startScreen == "") UserOptions.StartScreen.SELECTOR.name else startScreen
     }
 

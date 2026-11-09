@@ -1,11 +1,13 @@
 package com.boogie_knight.tcgtracker.ui
 
 import android.content.Context
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -91,6 +93,15 @@ class TrackerViewModel() : ViewModel() {
             endLoading()
         }
     }
+
+    @Composable
+    fun LoadImages() {
+        startLoading()
+
+        GamesData.loadPlaceholders()
+
+        endLoading()
+    }
     //endregion
 
     //region Functions to get data from objects outside viewModel
@@ -108,6 +119,10 @@ class TrackerViewModel() : ViewModel() {
 
     fun isGameInDatabase(gameCode: String): Boolean {
         return GamesData.isGameInData(gameCode)
+    }
+
+    fun getGameCardPlaceholder(gameCode: String): Painter? {
+        return GamesData.getGameCardPlaceholder(gameCode)
     }
 
     fun getStartScreenMap(): Map<String, String> {
@@ -197,13 +212,17 @@ class TrackerViewModel() : ViewModel() {
         val set = SetsData.getSetFromID(game, setID)
         if (set == null) return mapOf()
 
-        val outputMap = mutableMapOf<String, OwnedData>()
+        val order = Concepts.getPrettyRarities(game)
+        val outputMap = sortedMapOf<String, OwnedData>(comparator = {
+             first, second -> order.indexOf(first).compareTo(order.indexOf(second))
+        })
         set.numbers.byRarity?.forEach{ rarity ->
             if (filters.contains(rarity.key)) {
                 val prettyRarity = Concepts.getPrettyRarity(game = game, rarity = rarity.key)
                 outputMap.put(prettyRarity, rarity.value)
             }
         }
+
         return outputMap
     }
 

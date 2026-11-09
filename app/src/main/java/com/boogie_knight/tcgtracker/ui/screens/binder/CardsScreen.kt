@@ -39,7 +39,9 @@ import androidx.compose.material3.rememberBottomSheetScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
@@ -48,6 +50,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -63,6 +66,7 @@ import com.boogie_knight.tcgtracker.R
 import com.boogie_knight.tcgtracker.models.Card
 import com.boogie_knight.tcgtracker.models.Origin
 import com.boogie_knight.tcgtracker.models.OwnedData
+import com.boogie_knight.tcgtracker.services.Concepts
 import com.boogie_knight.tcgtracker.services.SetsData
 import com.boogie_knight.tcgtracker.ui.TrackerViewModel
 import com.boogie_knight.tcgtracker.ui.theme.PocketBlack
@@ -95,11 +99,6 @@ fun CardsScreen(
         mutableStateOf(trackerUIState.isListMode)
     }
 
-    // Get active rarities from FiltersManager
-    var currentFilters: List<String> by rememberSaveable {
-        mutableStateOf(FiltersManager.getActiveRarityFilters(currentGame))
-    }
-
     // UI color
     val uiColor = SetsData.getSetColor(currentGame, currentSet)
         ?: MaterialTheme.colorScheme.primaryContainer
@@ -113,13 +112,20 @@ fun CardsScreen(
     // Bottom sheet info state
     var isBoosterView: Boolean by rememberSaveable { mutableStateOf(true) }
 
+    // Get active filters
+    var currentFilters by rememberSaveable {
+        mutableStateOf(FiltersManager.getActiveRarityFilters(currentGame))
+    }
+
     // Map of origins and probabilities
     var boostersWithProbabilities by rememberSaveable {
         mutableStateOf(
             value = trackerViewModel.getBoostersWithProbabilities(
                 game = currentGame,
                 set = currentSet,
-                rarities = currentFilters))
+                rarities = currentFilters
+            )
+        )
     }
 
     // Probable booster to show on bottom sheet
@@ -127,6 +133,16 @@ fun CardsScreen(
         mutableStateOf(
             value = trackerViewModel.getMostProbableBoosterFromList(
                 boosters = boostersWithProbabilities)
+        )
+    }
+
+    var raritiesOwnedMap by rememberSaveable {
+        mutableStateOf(
+            value = trackerViewModel.getPrettyRaritiesOwnedData(
+                game = currentGame,
+                setID = currentSet,
+                filters = currentFilters
+            )
         )
     }
 
@@ -219,7 +235,10 @@ fun CardsScreen(
                     peekArea = bottomBarHeight,
                     safeArea = safeArea,
                     isFiltersSheet = isFiltersSheet,
-                    isAlreadyFiltered = !FiltersManager.areAllRarityFiltersActivated(currentGame, currentFilters),
+                    isAlreadyFiltered = !FiltersManager.areAllRarityFiltersActivated(
+                        game = currentGame,
+                        activatedFilters = currentFilters
+                    ),
                     onIconClick = { isFilters ->
                         scaffoldScope.launch {
                             if (!isSheetExpanded) {
@@ -246,6 +265,11 @@ fun CardsScreen(
                         probableBooster = trackerViewModel.getMostProbableBoosterFromList(
                             boosters = boostersWithProbabilities
                         )
+                        raritiesOwnedMap = trackerViewModel.getPrettyRaritiesOwnedData(
+                            game = currentGame,
+                            setID = currentSet,
+                            filters = currentFilters
+                        )
                     },
                     infoScreen = {
                         if (isBoosterView) {
@@ -255,12 +279,10 @@ fun CardsScreen(
                             )
                         } else {
                             InfoRaritySheet(
+                                viewModel = trackerViewModel,
+                                game = currentGame,
                                 setID = currentSet,
-                                rarityCards = trackerViewModel.getPrettyRaritiesOwnedData(
-                                    game = currentGame,
-                                    setID = currentSet,
-                                    filters = FiltersManager.getRarityFilters(currentGame).keys.toList()
-                                )
+                                rarityCards = raritiesOwnedMap
                             )
                         }
                     },
@@ -286,8 +308,16 @@ fun CardsScreen(
                 val colors = trackerViewModel.getOriginsColorMap(currentGame)
 
                 val filteredCardList =
-                    if (trackerViewModel.isSetPromo(currentGame, currentSet)) cardList
-                    else cardList.filter { card -> FiltersManager.isFilterActivated(currentGame, card.rarity, true) }
+                    if (trackerViewModel.isSetPromo(currentGame, currentSet)) {
+                        cardList
+                    }
+                    else {
+                        cardList.filter { card ->
+                            val rawRarity = Concepts.getRawRarity(currentGame, card.rarity)
+                            currentFilters.contains(rawRarity)
+                        }
+                    }
+
                 if (filteredCardList.isEmpty()) {
                     if (cardList.isEmpty()) {
                         Text(
@@ -328,6 +358,7 @@ fun CardsScreen(
                                     set = currentSet,
                                     cardIndex = index
                                 )
+                                currentFilters = FiltersManager.getActiveRarityFilters(currentGame)
                                 boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
                                     game = currentGame,
                                     set = currentSet,
@@ -336,11 +367,17 @@ fun CardsScreen(
                                 probableBooster = trackerViewModel.getMostProbableBoosterFromList(
                                     boosters = boostersWithProbabilities
                                 )
+                                raritiesOwnedMap = trackerViewModel.getPrettyRaritiesOwnedData(
+                                    game = currentGame,
+                                    setID = currentSet,
+                                    filters = currentFilters
+                                )
                             }
                         )
                     } else {
                         CardGridView(
                             cardList = filteredCardList,
+                            placeholder = trackerViewModel.getGameCardPlaceholder(currentGame),
                             isSheetExpanded = isSheetExpanded,
                             onCardTap = { index ->
                                 trackerViewModel.changeOwnedCardState(
@@ -348,6 +385,7 @@ fun CardsScreen(
                                     set = currentSet,
                                     cardIndex = index
                                 )
+                                currentFilters = FiltersManager.getActiveRarityFilters(currentGame)
                                 boostersWithProbabilities = trackerViewModel.getBoostersWithProbabilities(
                                     game = currentGame,
                                     set = currentSet,
@@ -355,6 +393,11 @@ fun CardsScreen(
                                 )
                                 probableBooster = trackerViewModel.getMostProbableBoosterFromList(
                                     boosters = boostersWithProbabilities
+                                )
+                                raritiesOwnedMap = trackerViewModel.getPrettyRaritiesOwnedData(
+                                    game = currentGame,
+                                    setID = currentSet,
+                                    filters = currentFilters
                                 )
                             }
                         )
@@ -377,6 +420,7 @@ fun CardsScreen(
 @Composable
 fun CardGridView(
     cardList: List<Card>,
+    placeholder: Painter?,
     isSheetExpanded: Boolean,
     onCardTap: (cardIndex: Int) -> Unit = {},
     modifier: Modifier = Modifier
@@ -396,6 +440,7 @@ fun CardGridView(
                 id = cardList[index].id,
                 isOwned = cardOwnership,
                 image = cardList[index].image,
+                placeholder = placeholder,
                 modifier = Modifier.clickable(enabled = !isSheetExpanded) {
                     onCardTap(index)
                     cardOwnership = !cardOwnership
@@ -479,6 +524,7 @@ fun CardImage(
     id: String,
     isOwned: Boolean,
     image: String?,
+    placeholder: Painter?,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -488,8 +534,8 @@ fun CardImage(
         AsyncImage(
             modifier = if (isOwned) Modifier else Modifier.greyScale(0.1f).alpha(0.5f),
             model = image,
-            error = painterResource(R.drawable.card_back),
-            placeholder = painterResource(R.drawable.card_back),
+            error = placeholder ?: painterResource(R.drawable.card_back),
+            placeholder = placeholder ?: painterResource(R.drawable.card_back),
             contentDescription = null,
             contentScale = ContentScale.Fit
         )
@@ -719,6 +765,8 @@ fun InfoBoosterElement(
 
 @Composable
 fun InfoRaritySheet(
+    viewModel: TrackerViewModel,
+    game: String,
     setID: String,
     rarityCards: Map<String, OwnedData>,
     modifier: Modifier = Modifier
@@ -730,7 +778,7 @@ fun InfoRaritySheet(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {
-        if (!setID.contains("P-")) {
+        if (!viewModel.isSetPromo(game, setID)) {
             if (rarityCards.isNotEmpty()) {
                 val entryList = rarityCards.entries.toList()
                 items(rarityCards.size){ index ->

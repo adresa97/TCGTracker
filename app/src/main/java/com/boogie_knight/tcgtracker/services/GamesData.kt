@@ -1,7 +1,14 @@
 package com.boogie_knight.tcgtracker.services
 
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.res.painterResource
+import coil3.compose.AsyncImagePainter
+import coil3.compose.rememberAsyncImagePainter
+import com.boogie_knight.tcgtracker.R
 import com.boogie_knight.tcgtracker.models.Game
 import com.boogie_knight.tcgtracker.models.GameIcon
 import com.boogie_knight.tcgtracker.models.JsonGame
@@ -20,11 +27,13 @@ object GamesData {
         if (jsonData == null) return
         jsonData.forEach{ game ->
             val color = Color(game.color[0] / 255, game.color[1] / 255, game.color[2] / 255)
+
             games.put(game.key, Game(
                 name = game.name,
                 compactName = game.compactName,
                 folder = game.folder,
                 logo = game.logo,
+                cardBack = Pair(game.cardBack, null),
                 color = color,
                 concepts = game.concepts,
                 origins = game.origins,
@@ -32,6 +41,19 @@ object GamesData {
                 imageSources = game.imageSources,
                 cards = game.cards
             ))
+        }
+    }
+
+    @Composable
+    fun loadPlaceholders() {
+        games.forEach { game ->
+            val cardUrl = game.value.cardBack.first
+            val placeholder = rememberAsyncImagePainter(
+                model = cardUrl,
+                error = painterResource(R.drawable.card_back),
+                placeholder = painterResource(R.drawable.card_back)
+            )
+            game.value.cardBack = Pair(cardUrl, placeholder)
         }
     }
 
@@ -76,6 +98,11 @@ object GamesData {
         val game = games[key]
         if (game == null) return ""
         return game.logo
+    }
+
+    fun getGameCardPlaceholder(key: String): AsyncImagePainter? {
+        val game = games[key]
+        return game?.cardBack?.second
     }
 
     fun getGameConceptsRoute(key: String): String {

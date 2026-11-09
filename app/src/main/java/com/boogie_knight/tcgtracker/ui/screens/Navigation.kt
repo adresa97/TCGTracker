@@ -41,6 +41,9 @@ fun Navigation (
     // Load data
     trackerViewModel.loadData(context)
 
+    // Load placeholder images
+    trackerViewModel.LoadImages()
+
     // Get initial screen from stored user options
     val startingOptions = trackerViewModel.getUserStartScreen()
     var initialScreen = ""

@@ -46,6 +46,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
@@ -294,6 +295,7 @@ fun SetScreen(
                             item {
                                 SeriesContent(
                                     expansions = expansionsMap,
+                                    placeholder = null,
                                     colors = colors,
                                     screenSize = screenSize,
                                     isSheetExpanded = isSheetExpanded,
@@ -328,6 +330,7 @@ fun getExpansionsMap(
 @Composable
 fun SeriesContent(
     expansions: Map<String, List<Set>>,
+    placeholder: Painter?,
     colors: Map<String, Color>,
     screenSize: Int,
     isSheetExpanded: Boolean,
@@ -365,6 +368,7 @@ fun SeriesContent(
                 while (startIndex < setsCount) {
                     CollectionRow(
                         expansion.value.subList(startIndex, endIndex),
+                        placeholder,
                         !isSheetExpanded,
                         screenSize,
                         onSetTap,
@@ -474,6 +478,7 @@ fun CollectionCell(
 @Composable
 fun CollectionRow(
     sets: List<Set>,
+    placeholder: Painter?,
     isEnabled: Boolean,
     screenSize: Int,
     onSetTap: (String) -> Unit,
@@ -494,6 +499,7 @@ fun CollectionRow(
             SetButton(
                 collection = set.set,
                 imageURL = set.cover,
+                placeholder = placeholder,
                 modifier = Modifier
                     .weight(1.0f)
                     .clickable(
@@ -520,6 +526,7 @@ fun CollectionRow(
 fun SetButton(
     collection: String,
     imageURL: String,
+    placeholder: Painter?,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -530,8 +537,8 @@ fun SetButton(
         AsyncImage(
             modifier = Modifier.weight(1.0f),
             model = imageURL,
-            error = painterResource(R.drawable.booster_placeholder),
-            placeholder = painterResource(R.drawable.booster_placeholder),
+            error = placeholder ?: painterResource(R.drawable.booster_placeholder),
+            placeholder = placeholder ?: painterResource(R.drawable.booster_placeholder),
             contentDescription = null,
             contentScale = ContentScale.Inside
         )
