@@ -230,9 +230,10 @@ fun PeekArea(
 ) {
     val probableColor = getSimilarColor(
         color = trackerColor,
-        minSaturation = 0.4f,
-        maxSaturation = 0.6f,
-        value = 0.9f
+        minSaturation = 0.0f,
+        maxSaturation = 0.8f,
+        minValue = 0.0f,
+        maxValue = 0.75f
     )
 
     val backFilterColor = getHighlightColor(

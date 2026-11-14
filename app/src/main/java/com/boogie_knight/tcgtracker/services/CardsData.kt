@@ -163,6 +163,9 @@ object CardsData {
         val number = cardID.substringAfterLast('-')
         val single = number.toInt().toString()
 
+        val set2 = cardID.substringBefore('-')
+        val number2 = cardID.substringAfter('-')
+
         var lang2 = "es"
         var lang3 = "SPA"
 
@@ -173,7 +176,9 @@ object CardsData {
 
         val url = "${source.host}${source.folder}${source.file}"
             .replace("#set#", set)
+            .replace("#set2", set2)
             .replace("#number#", number)
+            .replace("#number2", number2)
             .replace("#single#", single)
             .replace("#lang2#", lang2)
             .replace("#lang3#", lang3)

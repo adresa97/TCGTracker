@@ -100,8 +100,13 @@ fun CardsScreen(
     }
 
     // UI color
-    val uiColor = SetsData.getSetColor(currentGame, currentSet)
-        ?: MaterialTheme.colorScheme.primaryContainer
+    val uiColor = getSimilarColor(
+        color = SetsData.getSetColor(currentGame, currentSet) ?: MaterialTheme.colorScheme.primaryContainer,
+        minSaturation = 0.0f,
+        maxSaturation = 0.8f,
+        minValue = 0.0f,
+        maxValue = 0.75f
+    )
 
     // Bottom sheet state
     val scaffoldScope = rememberCoroutineScope()
