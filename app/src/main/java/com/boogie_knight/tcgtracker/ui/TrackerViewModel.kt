@@ -44,6 +44,8 @@ class TrackerViewModel() : ViewModel() {
     private val _uiState = MutableStateFlow(TrackerUIState())
     val uiState: StateFlow<TrackerUIState> = _uiState.asStateFlow()
 
+    val inData = mutableListOf<String>()
+
     var isLoading = SavedStateHandle(mutableMapOf(Pair("value", uiState.value.isLoading)))
 
     //region Modify state values
@@ -74,6 +76,38 @@ class TrackerViewModel() : ViewModel() {
     //endregion
 
     //region Functions to setup outside objects data
+    fun initialLoad(context: Context) {
+        viewModelScope.launch {
+            startLoading()
+
+            AssetsRepository.init(context)
+            UserRepository.init(context)
+
+            GamesData.loadGamesData()
+            UserOptions.initUserOptions()
+
+            endLoading()
+        }
+    }
+
+    fun loadGameData(context: Context, game: String) {
+        viewModelScope.launch {
+            startLoading()
+
+            if (!inData.contains(game)) {
+                Concepts.loadGameData(game)
+                CardsData.loadGameImageData(game)
+                OriginsData.loadGameData(game)
+                SetsData.loadGameData(game)
+                FiltersManager.initiateGameFilters(game)
+
+                inData.add(game)
+            }
+
+            endLoading()
+        }
+    }
+    
     fun loadData(context: Context) {
         viewModelScope.launch {
             startLoading()
@@ -134,12 +168,20 @@ class TrackerViewModel() : ViewModel() {
         return userOptions
     }
 
+    fun getDeckVisibility(): Boolean {
+        return UserRepository.getDeckVisibility()
+    }
+
     fun saveStartScreen(startScreen: String) {
         UserRepository.saveStartScreen(startScreen)
     }
 
     fun saveLastOpened(lastOpened: String) {
         UserRepository.saveLastOpened(lastOpened)
+    }
+
+    fun saveDeckVisibility(isVisible: Boolean) {
+        UserRepository.saveDeckVisibility(isVisible)
     }
 
     fun getPrettyCardsList(game: String, set: String): List<Card> {
@@ -174,6 +216,19 @@ class TrackerViewModel() : ViewModel() {
         return SetsData.getSeriesMap(game)
     }
 
+    fun getNonDeckSeriesMap(game: String): Map<String, List<Set>> {
+        val seriesMap = getSeriesMap(game)
+        val outMap = mutableMapOf<String, List<Set>>()
+        seriesMap.forEach{ series ->
+            val seriesList = mutableListOf<Set>()
+            series.value.forEach{ set ->
+                if (!isSetDeck(game, set.set)) seriesList.add(set)
+            }
+            if (seriesList.isNotEmpty()) outMap.put(series.key, seriesList)
+        }
+        return outMap
+    }
+
     fun getSetNameFromID(game: String, id: String): String {
         return SetsData.getSetName(game, id)
     }
@@ -198,6 +253,14 @@ class TrackerViewModel() : ViewModel() {
         val set = SetsData.getSetFromID(game, id)
         set?.origins?.forEach{ origin ->
             if (OriginsData.isOriginSpecial(origin)) return true
+        }
+        return false
+    }
+
+    fun isSetDeck(game: String, id: String): Boolean {
+        val set = SetsData.getSetFromID(game, id)
+        set?.origins?.forEach{ origin ->
+            if (OriginsData.isOriginDeck(origin)) return true
         }
         return false
     }

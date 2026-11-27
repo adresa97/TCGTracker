@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.absolutePadding
 import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -62,6 +63,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavKey
 import coil3.compose.AsyncImage
+import coil3.compose.rememberAsyncImagePainter
 import com.boogie_knight.tcgtracker.R
 import com.boogie_knight.tcgtracker.models.Card
 import com.boogie_knight.tcgtracker.models.Origin
@@ -280,7 +282,9 @@ fun CardsScreen(
                         if (isBoosterView) {
                             InfoBoosterSheet(
                                 setID = currentSet,
-                                boosters = boostersWithProbabilities
+                                boosters = boostersWithProbabilities,
+                                game = currentGame,
+                                trackerViewModel = trackerViewModel
                             )
                         } else {
                             InfoRaritySheet(
@@ -492,11 +496,7 @@ fun CardListView(
                 "Todos" -> Color(0xFFefefef)
                 else -> {
                     val rawColor = colors[booster] ?: MaterialTheme.colorScheme.primaryContainer
-                    val hsv = colorToHSV(rawColor)
-                    if (hsv[1] < 0.4f) hsv[1] = 0.4f
-                    else if (hsv[1] > 0.6f) hsv[1] = 0.6f
-                    hsv[2] = 0.9f
-                    Color(hsvToColorInt(hsv))
+                    getSimilarColor(rawColor, 0.2f, 0.3f, 0.9f)
                 }
             }
 
@@ -533,11 +533,11 @@ fun CardImage(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier.padding(vertical = 20.dp),
+        modifier = modifier.heightIn(min = 200.dp, max = 230.dp).padding(vertical = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         AsyncImage(
-            modifier = if (isOwned) Modifier else Modifier.greyScale(0.1f).alpha(0.5f),
+            modifier = if (isOwned) Modifier.fillMaxWidth() else Modifier.fillMaxWidth().greyScale(0.1f).alpha(0.5f),
             model = image,
             error = placeholder ?: painterResource(R.drawable.card_back),
             placeholder = placeholder ?: painterResource(R.drawable.card_back),
@@ -545,8 +545,8 @@ fun CardImage(
             contentScale = ContentScale.Fit
         )
         Text(
-            text = id.substringAfterLast('-'),
-            modifier = Modifier.padding(bottom = 0.dp)
+            text = id,
+            modifier = Modifier.padding(top = 10.dp, bottom = 0.dp)
         )
     }
 }
@@ -649,8 +649,10 @@ fun CardBullet(
 
 @Composable
 fun InfoBoosterSheet(
+    game: String,
     setID: String,
     boosters: Map<Origin, List<Float>>,
+    trackerViewModel: TrackerViewModel,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(
@@ -660,23 +662,34 @@ fun InfoBoosterSheet(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {
-        if (!setID.contains("P-")) {
-            if (boosters.isNotEmpty()) {
-                boosters.forEach{ origin ->
-                    item {
-                        InfoBoosterElement(
-                            booster = origin.key,
-                            probabilities = origin.value
-                        )
-                    }
-                }
-            } else {
+        if (!trackerViewModel.isSetPromo(game, setID)) {
+            if (trackerViewModel.isSetDeck(game, setID)) {
                 item {
                     Text(
-                        text = "No se encontraron sobres en ${setID}",
+                        text = "${setID} es un deck preconstruido",
                         textAlign = TextAlign.Center,
                         color = MaterialTheme.colorScheme.onSurface
                     )
+                }
+            }
+            else {
+                if (boosters.isNotEmpty()) {
+                    boosters.forEach { origin ->
+                        item {
+                            InfoBoosterElement(
+                                booster = origin.key,
+                                probabilities = origin.value
+                            )
+                        }
+                    }
+                } else {
+                    item {
+                        Text(
+                            text = "No se encontraron sobres en ${setID}",
+                            textAlign = TextAlign.Center,
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                    }
                 }
             }
         } else {

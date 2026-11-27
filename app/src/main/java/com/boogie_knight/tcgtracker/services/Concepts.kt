@@ -17,6 +17,28 @@ object Concepts {
 
     private val conceptDataMap = mutableMapOf<String, ConceptData>()
 
+    fun loadGameData(game: String) {
+        if (conceptDataMap.containsKey(game)) return
+
+        val jsonString = AssetsRepository.getData(GamesData.getGameConceptsRoute(game))
+        val jsonData = ParseJSON(jsonString, JsonConcepts::class.java)
+        if (jsonData != null) {
+            val reverseRarities = mutableMapOf<String, String>()
+            jsonData.rarities.forEach { rarity ->
+                reverseRarities.put(key = rarity.value, value = rarity.key)
+            }
+            conceptDataMap.put(game, ConceptData(
+                types = jsonData.types,
+                rarities = jsonData.rarities,
+                common = jsonData.common,
+                uncommon = jsonData.uncommon,
+                rare = jsonData.rare,
+                reverseRarities = reverseRarities,
+                parallel = jsonData.parallel ?: mapOf()
+            ))
+        }
+    }
+
     fun loadJSONData() {
         val games = GamesData.getGamesList()
         for (game in games) {

@@ -17,6 +17,45 @@ object SetsData {
     private val setListMap = mutableMapOf<String, MutableList<Set>>()
 
     // Populate collections list
+    fun loadGameData(game: String) {
+        // If data already stored end function
+        if (!setListMap.containsKey(game)) setListMap.put(game, mutableListOf<Set>())
+        if (!(setListMap[game]?.isEmpty() ?: true)) return
+
+        // Get inner data (objective data of every set)
+        val innerJsonString = AssetsRepository.getData(GamesData.getGameSetsRoute(game))
+        val innerJsonData = ParseJSON(innerJsonString, Array<InnerJsonSet>::class.java)?.asList() ?: listOf()
+
+        // Map data into collection
+        innerJsonData.forEach { set ->
+            // Turn set color string to Color object
+            val color = Color(set.color[0] / 255, set.color[1] / 255, set.color[2] / 255)
+
+            // Get precalculations
+            val precalculations = getPrecalculations(game, set.set, set.origins)
+
+            // Add this set entry to collections.
+            // If calculated numbers aren't stored in user data, calculate them from cards data
+            setListMap[game]?.add(
+                Set(
+                    series = set.series,
+                    expansion = set.expansion,
+                    set = set.set,
+                    name = set.name,
+                    cover = set.cover,
+                    color = color,
+                    cardCount = set.cardCount,
+                    origins = set.origins,
+                    numbers = precalculations ?: calculateNumbers(
+                        game = game,
+                        set = set.set,
+                        cardList = CardsData.getCardList(game, set.set)
+                    )
+                )
+            )
+        }
+    }
+
     fun loadJSONData() {
         val games = GamesData.getGamesList()
         for (game in games)
@@ -288,7 +327,7 @@ object SetsData {
                 var i = 0
                 var isSpecial = false
                 while (i < originsCount && !isSpecial) {
-                    if (OriginsData.isOriginSpecial(set.origins[i])) isSpecial = true
+                    if (OriginsData.isOriginNotBooster(set.origins[i])) isSpecial = true
                     i++
                 }
                 if (!isSpecial) ids.add(set.set)
@@ -296,6 +335,21 @@ object SetsData {
             map.put(game.key, ids)
         }
         return map
+    }
+
+    fun getBoosterIDs(game: String): List<String> {
+        val list = mutableListOf<String>()
+        setListMap[game]?.forEach{ set ->
+            val originsCount = set.origins.size
+            var i = 0
+            var isBooster = true
+            while (i < originsCount && isBooster) {
+                if (OriginsData.isOriginNotBooster(set.origins[i])) isBooster = false
+                i++
+            }
+            if (isBooster) list.add(set.set)
+        }
+        return list
     }
 
     fun getGlobalBoosterSetIDs(): List<String> {

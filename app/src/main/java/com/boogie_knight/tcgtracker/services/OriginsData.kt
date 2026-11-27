@@ -9,6 +9,26 @@ import com.boogie_knight.tcgtracker.utils.ParseJSON
 object OriginsData {
     private val originsDataMap = mutableMapOf<String, List<Origin>>()
 
+    fun loadGameData(game: String) {
+        if (originsDataMap.containsKey(game)) return
+
+        val jsonString = AssetsRepository.getData(GamesData.getGameOriginsRoute(game))
+        val jsonData = ParseJSON(jsonString, Array<JsonOrigin>::class.java)?.asList()
+            ?.map{ origin ->
+                val color = Color(origin.color[0]/255, origin.color[1]/255, origin.color[2]/255)
+                Origin(
+                    id = origin.id,
+                    name = origin.name,
+                    type = origin.type,
+                    color = color,
+                    cardCount = origin.cardCount,
+                    packSize = origin.packSize,
+                    odds = origin.odds
+                )
+            } ?: listOf()
+        originsDataMap.put(game, jsonData)
+    }
+
     fun loadJSONData() {
         val games = GamesData.getGamesList()
         for (game in games)
@@ -125,6 +145,14 @@ object OriginsData {
 
     fun isOriginSpecial(id: String): Boolean {
         return getGlobalList().find{ origin -> origin.id == id }?.type == "SPECIAL"
+    }
+
+    fun isOriginDeck(id: String): Boolean {
+        return getGlobalList().find{ origin -> origin.id == id }?.type == "DECK"
+    }
+
+    fun isOriginNotBooster(id: String): Boolean {
+        return getGlobalList().find{ origin -> origin.id == id }?.type != "BOOSTER"
     }
 
     fun isOriginInGame(game: String, id: String): Boolean {

@@ -12,15 +12,55 @@ enum class FilterType(val value: String) {
 }
 
 object FiltersManager {
-    private val rarityFiltersMap = Concepts.getGlobalRaritiesMap().mapValues{ rarities->
-        rarities.value.associateBy({key -> key}, {key -> true})
-            .toMutableMap()
-    }.toMutableMap()
+    private val rarityFiltersMap = mutableMapOf<String, MutableMap<String, Boolean>>()
+    private val setFiltersMap = mutableMapOf<String, MutableMap<String, Boolean>>()
 
-    private val setFiltersMap = SetsData.getGlobalBoosterIDsMap().mapValues{ rarities->
-        rarities.value.associateBy({key -> key}, {key -> true})
-            .toMutableMap()
-    }.toMutableMap()
+    fun initiateGameFilters(game: String) {
+        val toSaveList = mutableListOf<SQLFilterConfig>()
+
+        val raritiesStates = mutableMapOf<String, Boolean>()
+        val rarities = Concepts.getRarities(game).associateBy({key -> key}, {key -> true})
+        rarities.forEach{ rarity ->
+            val storedState = UserRepository.getFilterState(
+                filter = rarity.key,
+                game = game,
+                type = FilterType.RARITY.value
+            )
+            if (storedState == null) {
+                toSaveList.add(SQLFilterConfig(
+                    filter = rarity.key,
+                    game = game,
+                    type = FilterType.RARITY.value,
+                    state = 1
+                ))
+            }
+            else raritiesStates.put(rarity.key, storedState)
+        }
+        if (!raritiesStates.isEmpty()) rarityFiltersMap.put(game, raritiesStates)
+
+        val setsStates = mutableMapOf<String, Boolean>()
+        val sets = SetsData.getBoosterIDs(game).associateBy({key -> key}, {key -> true})
+        sets.forEach{ set ->
+            val storedState = UserRepository.getFilterState(
+                filter = set.key,
+                game = game,
+                type = FilterType.SET.value
+            )
+            if (storedState == null) {
+                toSaveList.add(
+                    SQLFilterConfig(
+                        filter = set.key,
+                        game = game,
+                        type = FilterType.SET.value,
+                        state = 1
+                    )
+                )
+            } else setsStates.put(set.key, storedState)
+        }
+        if (!setsStates.isEmpty()) setFiltersMap.put(game, setsStates)
+
+        UserRepository.saveFilters(toSaveList)
+    }
 
     fun initiateFilters() {
         val toSaveList = mutableListOf<SQLFilterConfig>()

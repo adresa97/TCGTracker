@@ -14,9 +14,15 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi
 import androidx.compose.material3.adaptive.navigation3.ListDetailSceneStrategy
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
 import androidx.navigation3.runtime.entry
@@ -38,8 +44,14 @@ fun Navigation (
     context: Context,
     trackerViewModel: TrackerViewModel = viewModel()
 ) {
+    // Collect uiState
+    val trackerUIState by trackerViewModel.uiState.collectAsState()
+    var isLoading: Boolean by rememberSaveable {
+        mutableStateOf(false)
+    }
+
     // Load data
-    trackerViewModel.loadData(context)
+    trackerViewModel.initialLoad(context)
 
     // Load placeholder images
     trackerViewModel.LoadImages()
@@ -54,12 +66,16 @@ fun Navigation (
 
     // Create navigation backstack
     val backStack = rememberNavBackStack(GameScreen)
-    if (initialScreen != "") backStack.add(SetScreen(initialScreen))
+    if (initialScreen != "") {
+        trackerViewModel.loadGameData(context, initialScreen)
+        backStack.add(SetScreen(initialScreen))
+    }
 
     // Navigation
     Surface(
         modifier = Modifier.background(MaterialTheme.colorScheme.surface)
     ) {
+        // Navigator
         NavDisplay(
             backStack = backStack,
             entryDecorators = listOf(
@@ -93,8 +109,11 @@ fun Navigation (
                             backStack.add(OptionsScreen)
                         },
                         onGameTap = { selectedGame ->
+                            isLoading = true
+                            trackerViewModel.loadGameData(context, selectedGame)
                             backStack.add(SetScreen(selectedGame))
                             trackerViewModel.saveLastOpened(selectedGame)
+                            isLoading = false
                         }
                     )
                 }
@@ -114,7 +133,9 @@ fun Navigation (
                             backStack.add(OptionsScreen)
                         },
                         onSetTap = { currentGame: String, selectedSet: String ->
+                            isLoading = true
                             backStack.add(CardsScreen(currentGame, selectedSet))
+                            isLoading = false
                         }
                     )
                 }
@@ -144,11 +165,11 @@ fun Navigation (
         )
 
         // Loading Overlay
-        if (trackerViewModel.isLoading()) {
+        if (isLoading) {
             Box(
                 modifier = Modifier.fillMaxSize()
                     .alpha(0.6f)
-                    .background(MaterialTheme.colorScheme.surface),
+                    .background(Color(0.0f, 0.0f, 0.0f)),
                 contentAlignment = Alignment.Center
             ) {
                 CircularProgressIndicator()

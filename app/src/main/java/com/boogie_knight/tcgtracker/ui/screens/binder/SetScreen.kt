@@ -101,6 +101,11 @@ fun SetScreen(
         mutableStateOf(FiltersManager.getActiveSetFilters(currentGame))
     }
 
+    // Save whether deck sets are visible or not
+    var areDecksVisible: Boolean by rememberSaveable {
+        mutableStateOf(trackerViewModel.getDeckVisibility())
+    }
+
     // Screen title
     val gameName = trackerViewModel.getGameName(currentGame)
 
@@ -115,6 +120,11 @@ fun SetScreen(
         saturation = 0.2f,
         value = 0.4f
     )
+
+    // This game series of sets
+    val nonDeckSeries = trackerViewModel.getNonDeckSeriesMap(currentGame)
+    val series = trackerViewModel.getSeriesMap(currentGame)
+    val hasDecks = nonDeckSeries.size != series.size
 
     // Bottom sheet state
     val scaffoldScope = rememberCoroutineScope()
@@ -163,6 +173,21 @@ fun SetScreen(
                         }
                     },
                     actions = {
+                        if (hasDecks) {
+                            IconButton(
+                                onClick = {
+                                    areDecksVisible = !areDecksVisible
+                                    trackerViewModel.saveDeckVisibility(areDecksVisible)
+                                }
+                            ) {
+                                Icon(
+                                    painter = if (areDecksVisible) painterResource(R.drawable.visibility_on)
+                                        else painterResource(R.drawable.visibility_off),
+                                    tint = MaterialTheme.colorScheme.onSurface,
+                                    contentDescription = null
+                                )
+                            }
+                        }
                         IconButton(
                             onClick = {
                                 trackerViewModel.changeViewMode()
@@ -252,7 +277,6 @@ fun SetScreen(
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
-                val series = trackerViewModel.getSeriesMap(currentGame)
                 val colors = trackerViewModel.getSetColors(currentGame)
 
                 if (series.isEmpty()) {
@@ -275,33 +299,71 @@ fun SetScreen(
                         modifier = Modifier.fillMaxSize(),
                         userScrollEnabled = !isSheetExpanded
                     ) {
-                        series.forEach { element ->
-                            stickyHeader {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth()
-                                        .background(headerColor),
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Text(
-                                        modifier = Modifier.padding(horizontal = 15.dp, vertical = 5.dp),
-                                        text = element.key,
-                                        fontSize = 22.sp,
-                                        color = MaterialTheme.colorScheme.secondary
+                        if (areDecksVisible) {
+                            series.forEach { element ->
+                                stickyHeader {
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth()
+                                            .background(headerColor),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Text(
+                                            modifier = Modifier.padding(
+                                                horizontal = 15.dp,
+                                                vertical = 5.dp
+                                            ),
+                                            text = element.key,
+                                            fontSize = 22.sp,
+                                            color = MaterialTheme.colorScheme.secondary
+                                        )
+                                    }
+                                }
+
+                                val expansionsMap = getExpansionsMap(series, element.key)
+                                item {
+                                    SeriesContent(
+                                        expansions = expansionsMap,
+                                        placeholder = null,
+                                        colors = colors,
+                                        screenSize = screenSize,
+                                        isSheetExpanded = isSheetExpanded,
+                                        isListView = isListMode,
+                                        onSetTap = { set -> onSetTap(currentGame, set) }
                                     )
                                 }
                             }
+                        } else {
+                            nonDeckSeries.forEach { element ->
+                                stickyHeader {
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth()
+                                            .background(headerColor),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Text(
+                                            modifier = Modifier.padding(
+                                                horizontal = 15.dp,
+                                                vertical = 5.dp
+                                            ),
+                                            text = element.key,
+                                            fontSize = 22.sp,
+                                            color = MaterialTheme.colorScheme.secondary
+                                        )
+                                    }
+                                }
 
-                            val expansionsMap = getExpansionsMap(series, element.key)
-                            item {
-                                SeriesContent(
-                                    expansions = expansionsMap,
-                                    placeholder = null,
-                                    colors = colors,
-                                    screenSize = screenSize,
-                                    isSheetExpanded = isSheetExpanded,
-                                    isListView = isListMode,
-                                    onSetTap = { set -> onSetTap(currentGame, set) }
-                                )
+                                val expansionsMap = getExpansionsMap(series, element.key)
+                                item {
+                                    SeriesContent(
+                                        expansions = expansionsMap,
+                                        placeholder = null,
+                                        colors = colors,
+                                        screenSize = screenSize,
+                                        isSheetExpanded = isSheetExpanded,
+                                        isListView = isListMode,
+                                        onSetTap = { set -> onSetTap(currentGame, set) }
+                                    )
+                                }
                             }
                         }
                     }
@@ -485,11 +547,10 @@ fun CollectionRow(
     modifier: Modifier = Modifier
 ) {
     var rowHeight = (screenSize.toFloat() / 4.5f).dp
-    if (rowHeight < 100.dp) rowHeight = 100.dp
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .height(rowHeight),
+            .heightIn(min = 100.dp, max = rowHeight),
         horizontalArrangement = Arrangement.spacedBy(5.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -535,18 +596,17 @@ fun SetButton(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         AsyncImage(
-            modifier = Modifier.weight(1.0f),
+            modifier = Modifier.fillMaxWidth(),
             model = imageURL,
             error = placeholder ?: painterResource(R.drawable.booster_placeholder),
             placeholder = placeholder ?: painterResource(R.drawable.booster_placeholder),
             contentDescription = null,
-            contentScale = ContentScale.Inside
+            contentScale = ContentScale.Fit
         )
         Text(
             text = collection,
             modifier = Modifier
-                .fillMaxHeight(0.2f)
-                .padding(bottom = 0.dp)
+                .padding(top = 10.dp, bottom = 0.dp)
         )
     }
 }
@@ -582,12 +642,15 @@ fun InfoSetSheet(
         sets.forEach{ series ->
             counter++
             val divider = if (counter == seriesCount) 0 else 1
-            val setsCount = series.value.size + divider
-            items(count = setsCount) { index ->
-                if (index < setsCount - divider) {
-                    val set = series.value[index]
-                    val isSpecial = viewModel.isSetSpecial(game, set.set)
-                    if (!viewModel.isSetPromo(game, set.set)) {
+            val filteredSets = series.value.filter{ set ->
+                !viewModel.isSetPromo(game, set.set) && !viewModel.isSetDeck(game, set.set)
+            }
+            val setsCount = filteredSets.size + divider
+            if (filteredSets.size > 0) {
+                items(count = setsCount) { index ->
+                    if (index < setsCount - divider) {
+                        val set = filteredSets[index]
+                        val isSpecial = viewModel.isSetSpecial(game, set.set)
                         InfoSetElement(
                             game = game,
                             set = set,
@@ -596,16 +659,16 @@ fun InfoSetSheet(
                             isSpecial = isSpecial,
                             onSetClick = onSetClick
                         )
+                    } else {
+                        HorizontalDivider(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 5.dp, bottom = 5.dp)
+                                .alpha(0.25f),
+                            thickness = 2.dp,
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
                     }
-                } else {
-                    HorizontalDivider(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 5.dp)
-                            .alpha(0.25f),
-                        thickness = 2.dp,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
                 }
             }
         }

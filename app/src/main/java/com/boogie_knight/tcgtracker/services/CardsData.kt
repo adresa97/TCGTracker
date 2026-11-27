@@ -1,5 +1,6 @@
 package com.boogie_knight.tcgtracker.services
 
+import android.annotation.SuppressLint
 import com.boogie_knight.tcgtracker.repositories.AssetsRepository
 import com.boogie_knight.tcgtracker.models.Card
 import com.boogie_knight.tcgtracker.models.ImageURLData
@@ -18,6 +19,36 @@ object CardsData {
     private val cardCollectionMap = mutableMapOf<String, CardCollection>()
 
     // Load image url constructors from repository
+    fun loadGameImageData(game: String) {
+        if (cardCollectionMap.containsKey(game)) return
+
+        val jsonString = AssetsRepository.getData(GamesData.getGameImageSourcesRoute(game))
+        val jsonData = ParseJSON(jsonString, Array<JsonImageURL>::class.java)?.asList()
+
+        if (jsonData != null)
+        {
+            val sources = mutableMapOf<String, ImageURLData>()
+            jsonData.forEach { source ->
+                sources.put(source.code, ImageURLData(
+                    source.host,
+                    source.folder,
+                    source.file
+                ))
+            }
+
+            if (cardCollectionMap[game] == null) {
+                cardCollectionMap.put(
+                    game, CardCollection(
+                        cardMap = mutableMapOf(),
+                        imageSources = sources
+                    )
+                )
+            } else {
+                cardCollectionMap[game]?.imageSources?.putAll(sources)
+            }
+        }
+    }
+
     fun loadImageJSONData() {
         val games = GamesData.getGamesList()
         for (game in games)
@@ -156,6 +187,7 @@ object CardsData {
 
     private fun getImageUrl(game: String, cardID: String, urlCode: String?): String {
         val code = urlCode ?: "v1"
+        if (code.startsWith("https")) return code
         val source = getGameCollection(game)?.imageSources[code]
         if (source == null) return ""
 
@@ -165,6 +197,12 @@ object CardsData {
 
         val set2 = cardID.substringBefore('-')
         val number2 = cardID.substringAfter('-')
+
+        val setLetters = set2.split(Regex("\\d+"))[0]
+        val setNumbers = set2.subSequence(setLetters.length, set2.length).toString()
+        var setNumeral = 0
+        if (setNumbers != "") setNumeral = setNumbers.toInt()
+        val set3 = setLetters + String.format("%02d", setNumeral)
 
         var lang2 = "es"
         var lang3 = "SPA"
@@ -176,9 +214,10 @@ object CardsData {
 
         val url = "${source.host}${source.folder}${source.file}"
             .replace("#set#", set)
-            .replace("#set2", set2)
+            .replace("#set2#", set2)
+            .replace("#set3#", set3)
             .replace("#number#", number)
-            .replace("#number2", number2)
+            .replace("#number2#", number2)
             .replace("#single#", single)
             .replace("#lang2#", lang2)
             .replace("#lang3#", lang3)

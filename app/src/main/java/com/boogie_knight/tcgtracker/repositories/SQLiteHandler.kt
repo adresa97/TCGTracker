@@ -16,6 +16,7 @@ data object UserRepository{
 
     private const val STARTSCREEN = "startScreen"
     private const val LASTOPENED = "lastOpened"
+    private const val DECK_VISIBILITY = "deckVisibility"
 
     fun init(context: Context) {
         handler = SQLiteHandler(context)
@@ -58,6 +59,14 @@ data object UserRepository{
     ) {
         if (handler == null) return
         handler!!.saveUserOption(LASTOPENED, lastOpened)
+    }
+
+    fun saveDeckVisibility(
+        isVisible: Boolean
+    ) {
+        if (handler == null) return
+        val value = if (isVisible) "TRUE" else "FALSE"
+        handler!!.saveUserOption(DECK_VISIBILITY, value)
     }
 
     fun deleteCards(
@@ -117,6 +126,12 @@ data object UserRepository{
     fun getLastOpened(): String {
         if (handler == null) return ""
         return handler!!.getUserOption(LASTOPENED)
+    }
+
+    fun getDeckVisibility(): Boolean {
+        if (handler == null) return true
+        val text = handler!!.getUserOption(DECK_VISIBILITY)
+        return text != "FALSE"
     }
 }
 
